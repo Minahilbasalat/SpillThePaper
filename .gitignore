@@ -1,0 +1,23 @@
+# Downloaded raw papers and extracted text (reproduced by our scripts)
+data/raw/
+data/interim/
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Secrets / editor / OS
+.env
+.vscode/
+.DS_Store
+Thumbs.db
+
+# LaTeX build files
+report/*.aux
+report/*.log
+report/*.out
+report/*.toc
+report/*.synctex.gz
