@@ -1,0 +1,45 @@
+# Regular expressions (case-insensitive) used to recognise what a file is.
+# They are checked on the file name first, then on folder names from the deepest upwards.
+# The first match wins. Order inside "assessment_patterns" does not matter.
+
+assessment_patterns:
+  final: '(?<![a-z])final'
+  mid: '(?:(?<![a-z])|(?<=sp)|(?<=fa)|(?<=su))mid(?:term|s)?(?![a-z])|sessional|semesteral|mid(?=[\s\-_]?\d)'
+  quiz: '(?<![a-z])quiz|(?<![a-z])qz(?![a-z])'
+
+# Fallback: looks like an exam paper but does not say quiz/mid/final
+# (e.g. a photo inside a "Past Papers" folder). Kept as type "exam_unspecified".
+fallback_exam_pattern: 'past[\s\-_]*papers?|mock[\s\-_]*exam|unknown[\s\-_]*paper'
+
+# A file whose NAME matches this is a course outline (even outside the outline folder).
+outline_pattern: 'outline|syllabus'
+
+# Folders (below the subject folder) that hold non-exam material.
+# A file inside them is skipped unless its own name looks like an exam.
+exclude_folder_patterns:
+  - 'assign'
+  - 'homework'
+  - 'slide'
+  - 'lecture'
+  - 'note'
+  - 'book'
+  - 'project'
+  - 'activit'
+  - '^labs?$'
+  - 'tutorial'
+  - 'source'
+  - 'code'
+  - 'reference'
+  - 'resource'
+  - 'material'
+
+# File NAMES that are clearly not exams. These are ALWAYS skipped,
+# even if the name also says mid/final (e.g. "Mid-I Prep Assignment").
+exclude_filename_patterns:
+  - 'assign'
+  - 'homework'
+  - 'slide'
+  - 'lecture'
+  - '(?<![a-z])lec[\s\-_]'
+  - 'activity'
+  - 'handout'

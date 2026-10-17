@@ -1,0 +1,26 @@
+# Which files do we keep? All rules are data, so new subjects need NO code change.
+
+# Folders at the top of the repo that are not subjects and must be skipped completely.
+exclude_top_level:
+  - "---- Books & Notes ----"
+
+# Folders that CONTAIN subjects: the subject name is the folder one level below.
+# Example: "---- Course Outlines ----/Big Data/outline.pdf" -> subject = "Big Data"
+container_folders:
+  - "---- Course Outlines ----"
+  - "Paper Bucket"
+
+# Files inside these containers are course outlines.
+outline_containers:
+  - "---- Course Outlines ----"
+
+# File types we are willing to download (text PDFs, Word files, photos of papers).
+allowed_extensions: [".pdf", ".docx", ".jpg", ".jpeg", ".png"]
+
+# Leave empty to collect every subject. For a quick pilot, list folder names here,
+# e.g. ["Artificial Intelligence", "SCD", "PF"].
+subject_whitelist: []
+
+
+# Files bigger than this are skipped (and recorded in the manifest). Exam papers are small.
+max_download_mb: 100

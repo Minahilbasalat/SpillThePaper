@@ -1,0 +1,4 @@
+# Where the data comes from. Change this file (not the code) to point at another repo/branch.
+owner: saleha-muzammil
+repo: Academic-Time-Machine
+branch: main
