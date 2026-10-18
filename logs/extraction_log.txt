@@ -1,51 +1,42 @@
-[2026-10-18 12:07:39] 3567 downloaded files in the manifest
-[2026-10-18 12:07:39]   progress: 100/3567
-[2026-10-18 12:07:39]   progress: 200/3567
-[2026-10-18 12:07:39]   progress: 300/3567
-[2026-10-18 12:07:39]   progress: 400/3567
-[2026-10-18 12:07:39]   progress: 500/3567
-[2026-10-18 12:07:39]   progress: 600/3567
-[2026-10-18 12:07:39]   progress: 700/3567
-[2026-10-18 12:07:39]   progress: 800/3567
-[2026-10-18 12:07:39]   progress: 900/3567
-[2026-10-18 12:07:39]   progress: 1000/3567
-[2026-10-18 12:07:39]   progress: 1100/3567
-[2026-10-18 12:07:39]   progress: 1200/3567
-[2026-10-18 12:07:39]   progress: 1300/3567
-[2026-10-18 12:07:39]   progress: 1400/3567
-[2026-10-18 12:07:39]   progress: 1500/3567
-[2026-10-18 12:07:39]   progress: 1600/3567
-[2026-10-18 12:07:39]   progress: 1700/3567
-[2026-10-18 12:07:40]   progress: 1800/3567
-[2026-10-18 12:07:40]   progress: 1900/3567
-[2026-10-18 12:07:40]   progress: 2000/3567
-[2026-10-18 12:07:40]   progress: 2100/3567
-[2026-10-18 12:07:40]   progress: 2200/3567
-[2026-10-18 12:07:40]   progress: 2300/3567
-[2026-10-18 12:07:40]   progress: 2400/3567
-[2026-10-18 12:07:40]   progress: 2500/3567
-[2026-10-18 12:07:40]   progress: 2600/3567
-[2026-10-18 12:07:40]   progress: 2700/3567
-[2026-10-18 12:07:40]   progress: 2800/3567
-[2026-10-18 12:07:40]   progress: 2900/3567
-[2026-10-18 12:07:40]   progress: 3000/3567
-[2026-10-18 12:07:40]   progress: 3100/3567
-[2026-10-18 12:07:40]   progress: 3200/3567
-[2026-10-18 12:07:40]   progress: 3300/3567
-[2026-10-18 12:07:40]   progress: 3400/3567
-[2026-10-18 12:07:40]   progress: 3500/3567
-[2026-10-18 12:07:40]   progress: 3567/3567
-[2026-10-18 12:07:40] Extraction methods: {'error': 3223, 'needs_ocr': 344}
-[2026-10-18 12:07:40] Files needing OCR: 344
-[2026-10-18 12:07:40] Files with errors: 3223
-[2026-10-18 12:07:40]   error f3ec88d9b672: FileNotFoundError: no such file: 'C:\Users\HP\Desktop\AI proj\SpillThePaper\data\raw\f3ec88d9b672.pdf'
-[2026-10-18 12:07:40]   error e5d5033bb42b: FileNotFoundError: no such file: 'C:\Users\HP\Desktop\AI proj\SpillThePaper\data\raw\e5d5033bb42b.pdf'
-[2026-10-18 12:07:40]   error e92982102497: FileNotFoundError: no such file: 'C:\Users\HP\Desktop\AI proj\SpillThePaper\data\raw\e92982102497.pdf'
-[2026-10-18 12:07:40]   error 060acf629e36: FileNotFoundError: no such file: 'C:\Users\HP\Desktop\AI proj\SpillThePaper\data\raw\060acf629e36.pdf'
-[2026-10-18 12:07:40]   error b6da5d7eaa29: FileNotFoundError: no such file: 'C:\Users\HP\Desktop\AI proj\SpillThePaper\data\raw\b6da5d7eaa29.pdf'
-[2026-10-18 12:07:40]   error 8c31bbdea8d2: FileNotFoundError: no such file: 'C:\Users\HP\Desktop\AI proj\SpillThePaper\data\raw\8c31bbdea8d2.pdf'
-[2026-10-18 12:07:40]   error c5e13a53dd03: FileNotFoundError: no such file: 'C:\Users\HP\Desktop\AI proj\SpillThePaper\data\raw\c5e13a53dd03.pdf'
-[2026-10-18 12:07:40]   error 53be9f5514cb: FileNotFoundError: no such file: 'C:\Users\HP\Desktop\AI proj\SpillThePaper\data\raw\53be9f5514cb.pdf'
-[2026-10-18 12:07:40]   error 5ed859550fce: FileNotFoundError: no such file: 'C:\Users\HP\Desktop\AI proj\SpillThePaper\data\raw\5ed859550fce.pdf'
-[2026-10-18 12:07:40]   error 92182ffdf549: FileNotFoundError: no such file: 'C:\Users\HP\Desktop\AI proj\SpillThePaper\data\raw\92182ffdf549.pdf'
-[2026-10-18 12:07:40] Saved C:\Users\HP\Desktop\AI proj\SpillThePaper\data\processed\extraction_results.csv
+[2026-10-18 02:33:58] 3567 downloaded files in the manifest
+[2026-10-18 02:34:01]   progress: 100/3567
+[2026-10-18 02:34:03]   progress: 200/3567
+[2026-10-18 02:34:10]   progress: 300/3567
+[2026-10-18 02:34:12]   progress: 400/3567
+[2026-10-18 02:34:16]   progress: 500/3567
+[2026-10-18 02:34:18]   progress: 600/3567
+[2026-10-18 02:34:20]   progress: 700/3567
+[2026-10-18 02:34:25]   progress: 800/3567
+[2026-10-18 02:34:31]   progress: 900/3567
+[2026-10-18 02:34:33]   progress: 1000/3567
+[2026-10-18 02:34:37]   progress: 1100/3567
+[2026-10-18 02:34:40]   progress: 1200/3567
+[2026-10-18 02:34:43]   progress: 1300/3567
+[2026-10-18 02:34:45]   progress: 1400/3567
+[2026-10-18 02:34:52]   progress: 1500/3567
+[2026-10-18 02:34:53]   progress: 1600/3567
+[2026-10-18 02:34:57]   progress: 1700/3567
+[2026-10-18 02:35:01]   progress: 1800/3567
+[2026-10-18 02:35:04]   progress: 1900/3567
+[2026-10-18 02:35:07]   progress: 2000/3567
+[2026-10-18 02:35:10]   progress: 2100/3567
+[2026-10-18 02:35:12]   progress: 2200/3567
+[2026-10-18 02:35:14]   progress: 2300/3567
+[2026-10-18 02:35:17]   progress: 2400/3567
+[2026-10-18 02:35:20]   progress: 2500/3567
+[2026-10-18 02:35:25]   progress: 2600/3567
+[2026-10-18 02:35:29]   progress: 2700/3567
+[2026-10-18 02:35:32]   progress: 2800/3567
+[2026-10-18 02:35:36]   progress: 2900/3567
+[2026-10-18 02:35:39]   progress: 3000/3567
+[2026-10-18 02:35:42]   progress: 3100/3567
+[2026-10-18 02:35:45]   progress: 3200/3567
+[2026-10-18 02:35:49]   progress: 3300/3567
+[2026-10-18 02:35:49]   progress: 3400/3567
+[2026-10-18 02:35:53]   progress: 3500/3567
+[2026-10-18 02:35:55]   progress: 3567/3567
+[2026-10-18 02:35:55] Extraction methods: {'pdf_text': 2132, 'needs_ocr': 1123, 'docx': 311, 'error': 1}
+[2026-10-18 02:35:55] Files needing OCR: 1123
+[2026-10-18 02:35:55] Files with errors: 1
+[2026-10-18 02:35:55]   error 975e746493d9: BadZipFile: File is not a zip file
+[2026-10-18 02:35:55] Saved C:\Dev\SpillThePaper\data\processed\extraction_results.csv
