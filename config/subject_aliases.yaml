@@ -1,0 +1,24 @@
+# SpillThePaper - subject name cleaning.
+# Format:  "clean name": ["folder name", "another folder name"]
+# Names are NOT case-sensitive. Write each folder name only ONCE in the whole file.
+# Only merge folders that are the SAME course. Labs stay separate from theory courses.
+
+# ---- Safe merges: the full name exists as its own folder, or it is the same name in a different case ----
+"Civics and Community Engagement": ["Civics and Community Engagement"]   # also covers "Civics And ..."
+"Fundamentals of Software Engineering": ["Fundamentals of Software Engineering", "Fundamentals of Software Engineering (FSE)"]
+"Multi Variable Calculus": ["Multi Variable Calculus", "MVC (Calculus-III)"]
+"Object Oriented Programming": ["OOP", "Object Oriented Programming"]
+"Database Systems": ["DB", "Database Systems"]
+"Computer Organization and Assembly Language": ["COAL", "Computer Organization and Assembly Language"]
+"Software Quality Engineering": ["SQE", "Software Quality Engineering"]
+
+# ---- Spelling fixes (no merging) ----
+"Applied Artificial Intelligence": ["Applied Artifical Intelligence"]
+"Data Analysis and Visualization": ["Data Analysis and Vizualization"]
+
+# ---- PROBABLY the same course: verify first (see peek_subject.py), then remove the leading '#' ----
+# "Calculus and Analytical Geometry": ["Calculus", "Calculus and Analytical Geometry"]
+# "Probability and Statistics": ["Probability", "Probability and Statistics"]
+# "Data Warehousing and Data Mining": ["DW", "Data Warehousing and Data Mining"]
+# "Parallel and Distributed Computing": ["PDC", "Parallel and Distributed Computing"]
+# "Internet of Things": ["IOT", "Intro to Internet of Things"]
