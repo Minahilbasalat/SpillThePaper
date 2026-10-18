@@ -2,6 +2,6 @@ pandas
 matplotlib
 seaborn
 pyyaml
-pypdf
 pymupdf
+python-docx
 requests
