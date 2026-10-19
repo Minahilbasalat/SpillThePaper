@@ -1,0 +1,4 @@
+assessment_type,column,n_values,lower,upper,flagged
+final,page_count,125,1.0,1.0,0
+mid,page_count,116,1.0,1.0,0
+quiz,page_count,86,1.0,1.0,0

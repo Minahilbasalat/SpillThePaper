@@ -1,0 +1,26 @@
+[2026-10-20 02:11:48] Building table for 3567 files (without subject_aliases.yaml)
+[2026-10-20 02:11:50] papers.csv: 3443 rows   outlines.csv: 124 rows
+[2026-10-20 02:11:50] Subjects (clean names): 132
+[2026-10-20 02:11:50] Term source counts: {'path': 2015, 'none': 1249, 'path_year_only': 179}
+[2026-10-20 02:11:50] Flags: solution=984 merged=52 retake=20
+[2026-10-20 02:11:50] Missing values:
+[2026-10-20 02:11:50]   subject: 2/3443 (0.1%)
+[2026-10-20 02:11:50]   assessment_type = exam_unspecified: 9/3443 (0.3%)
+[2026-10-20 02:11:50]   year: 1249/3443 (36.3%)
+[2026-10-20 02:11:50]   term (season): 179/2194 (8.2%)
+[2026-10-20 02:11:50]   assessment_number (mid/quiz only): 374/2615 (14.3%)
+[2026-10-20 02:11:50]   section_raw: 3268/3443 (94.9%)
+[2026-10-20 02:11:50]   text (has_text = False): 3443/3443 (100.0%)
+[2026-10-20 02:11:50]   total_marks (among papers with text): 0/0 (0.0%)
+[2026-10-20 02:11:50]   question_count_est (among papers with text): 0/0 (0.0%)
+[2026-10-20 02:12:04] Cleaning 3443 exam papers
+[2026-10-20 02:12:10] Rows after each step (flagged = newly excluded):
+[2026-10-20 02:12:10]   start: flagged 0, remaining 3443
+[2026-10-20 02:12:10]   exact_duplicate: flagged 160, remaining 3283
+[2026-10-20 02:12:10]   same_text_duplicate: flagged 0, remaining 3283
+[2026-10-20 02:12:10]   merged_compilation: flagged 52, remaining 3231
+[2026-10-20 02:12:10]   solution_companion: flagged 251, remaining 2980
+[2026-10-20 02:12:10] Invalid total_marks set to missing: 0
+[2026-10-20 02:12:10] Outliers flagged (kept rows): pages=0 words=0 marks=0 questions=0  any=0
+[2026-10-20 02:12:10] Final clean table: 2980 rows, 131 subjects
+[2026-10-20 02:12:10] Clean rows with readable text: 0
