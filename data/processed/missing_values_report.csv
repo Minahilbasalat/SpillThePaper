@@ -1,0 +1,10 @@
+field,missing,out_of,note,percent
+subject,2,3443,no subject folder (root-level file),0.1
+assessment_type = exam_unspecified,9,3443,type not written in path,0.3
+year,583,3443,no year in path or header,16.9
+term (season),219,2860,year known but season unknown,7.7
+assessment_number (mid/quiz only),374,2615,e.g. folder just says 'Mids',14.3
+section_raw,3268,3443,section not written,94.9
+text (has_text = False),1123,3443,scanned PDF / photo / error,32.6
+total_marks (among papers with text),852,2320,no 'Total Marks' in header,36.7
+question_count_est (among papers with text),732,2320,no Q1/Question 1 pattern,31.6

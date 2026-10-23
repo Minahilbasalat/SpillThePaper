@@ -1,0 +1,13 @@
+assessment_type,column,n_values,lower,upper,flagged
+final,page_count,648,-7.0,17.0,10
+mid,page_count,952,-5.0,11.0,4
+quiz,page_count,1039,-0.5,3.5,80
+final,word_count,332,-777.4,3273.6,9
+mid,word_count,564,-326.5,1673.5,23
+quiz,word_count,923,-220.0,692.0,41
+final,total_marks,249,-4.0,140.0,1
+mid,total_marks,444,15.0,55.0,39
+quiz,total_marks,506,-2.0,30.0,7
+final,question_count_est,257,-2.0,14.0,7
+mid,question_count_est,477,-1.0,7.0,34
+quiz,question_count_est,506,0.5,4.5,43

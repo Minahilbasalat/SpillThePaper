@@ -1,0 +1,12 @@
+feature,type,encoding,scaling,normalization / transform,reason
+assessment_type,categorical (nominal),one-hot,no,no,"few categories, no natural order"
+term (Spring/Fall/Summer/Unknown),categorical (nominal),one-hot,no,no,few categories; 'Unknown' kept as its own category instead of dropping rows
+subject,categorical (high cardinality),NOT one-hot; frequency count kept,no,no,too many values with few papers each; richer encoding deferred to Phase 3
+"is_solution, is_retake, is_lab_subject, has_text, outlier_any",binary,0/1,no,no,already two-valued
+year,numeric (time),no,min-max to 0..1 (2008-2026),no,bounded value used as recency; unknown years stay missing + year_missing flag
+page_count,numeric (count),no,z-score after log1p,log1p,skewness 4.5; 226 missing filled with median of assessment type + page_count_missing flag
+word_count,numeric (count),no,z-score after log1p,log1p,skewness 2.53; 1051 missing filled with median of assessment type + word_count_missing flag
+total_marks,numeric (count),no,z-score after log1p,log1p,skewness 1.04; 1674 missing filled with median of assessment type + total_marks_missing flag
+question_count_est,numeric (count),no,z-score after log1p,log1p,skewness 2.58; 1630 missing filled with median of assessment type + question_count_est_missing flag
+subject_paper_count,numeric (count),no,z-score after log1p,log1p,skewness 1.45; derived from subject (frequency encoding)
+question text / paper text,text,no (Phase 3),no,not applicable,numeric scaling is meaningless for text; vectorisation happens in Phase 3
