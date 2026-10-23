@@ -156,9 +156,9 @@ All values below come from the logs in `logs/` and the tables in `data/processed
 
 | Name | Roll number |
 |---|---|
-| [Minahil Basalat] | [24l-3082] |
-| [Iman Abid] | [24l-0707] |
-| [Khadija Rao] | [24l-3042] |
+| Minahil Basalat | 24L-3082 |
+| Iman Abid | 24L-0707 |
+| Khadija Rao | 24L-3042 |
 
 ## 12. Acknowledgements and data notes
 
