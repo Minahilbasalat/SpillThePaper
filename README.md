@@ -143,16 +143,7 @@ All values below come from the logs in `logs/` and the tables in `data/processed
 * No professor-specific analysis (no reliable instructor information for papers or quizzes).
 * The source archive is community-maintained and may contain mislabelled or incomplete files. Course outlines come from different terms, so none can be assumed to be the current syllabus.
 
-## 10. Future work
-
-* **Phase 3:** question-level extraction, topic and question-type labelling, frequency/recency/syllabus-relevance signals, probability model, tentative paper generation.
-* **OCR** for scanned papers, starting with finals.
-* **Current syllabus:** let a student upload or select the current course outline.
-* **Personalisation:** attempt, weakness analysis, targeted follow-up paper.
-* **Professor-specific quiz patterns** if a reliable quiz-to-instructor mapping becomes available.
-* **Phases 4 to 6:** backtesting evaluation with bias check, hosted web application, final report.
-
-## 11. Team
+## 10. Team
 
 | Name | Roll number |
 |---|---|
@@ -160,7 +151,7 @@ All values below come from the logs in `logs/` and the tables in `data/processed
 | Iman Abid | 24L-0707 |
 | Khadija Rao | 24L-3042 |
 
-## 12. Acknowledgements and data notes
+## 11. Acknowledgements and data notes
 
 * Past papers and outlines come from the community archive *Academic-Time-Machine*; credit to its maintainers and contributors.
 * Raw files are not redistributed here. Course outlines may name instructors; instructor names are not used or published in this project.
