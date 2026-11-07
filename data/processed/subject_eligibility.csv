@@ -1,0 +1,106 @@
+subject,train_papers,train_years,train_questions,later_papers,eligible,reason,k,silhouette
+Design and Analysis of Algorithms,86,9,304,12,True,,10.0,0.2006
+Computer Architecture,65,4,167,0,True,,10.0,0.112
+Object Oriented Programming,65,9,166,10,True,,10.0,0.0652
+IR,58,4,317,2,True,,10.0,0.0691
+Artificial Intelligence,50,7,285,21,True,,10.0,0.0756
+Computer Networks,37,7,163,80,True,,10.0,0.0654
+SMD,35,4,97,2,True,,9.0,0.1539
+Theory of Automata,33,8,128,16,True,,9.0,0.1082
+Web Programming,28,3,181,8,True,,8.0,0.1188
+Advanced Programming,27,2,177,0,False,fewer than 3 train years,,
+Database Systems,27,10,183,16,True,,10.0,0.0858
+PF Lab,25,2,73,0,False,fewer than 3 train years,,
+OS,24,7,148,4,True,,10.0,0.0515
+PP,23,6,159,22,True,,10.0,0.038
+Cloud Computing,22,3,201,3,True,,9.0,0.0611
+Computer Organization and Assembly Language,22,7,112,3,True,,10.0,0.06
+Advanced Database Concepts,19,3,87,7,True,,5.0,0.1742
+DLD,19,3,87,3,True,,8.0,0.1742
+Computer Networks Lab,19,2,214,3,False,fewer than 3 train years,,
+Advanced Computer Architecture,19,3,67,0,True,,6.0,0.1481
+Software Design and Analysis,18,9,68,0,True,,5.0,0.0694
+HCI,18,4,116,1,True,,10.0,0.0828
+Computer Vision,17,1,31,1,False,fewer than 3 train years,,
+Compiler Construction,16,5,52,5,True,,5.0,0.1284
+COAL Lab,16,2,30,4,False,fewer than 3 train years,,
+Software Engineering,15,4,70,23,True,,7.0,0.0613
+Software Process Management and Metrics,15,2,96,0,False,fewer than 3 train years,,
+OOP Lab,13,3,51,3,True,,5.0,0.1378
+IOT,13,3,43,13,True,,4.0,0.0663
+SDA Lab,13,2,54,0,False,fewer than 3 train years,,
+NLP,12,4,101,8,True,,9.0,0.1446
+DLD Lab,12,2,30,1,False,fewer than 3 train years,,
+Discrete Structures,12,1,35,4,False,fewer than 3 train years,,
+Stat and Math Methods for Data Science,12,2,51,0,False,fewer than 3 train years,,
+Parallel and Distributed Computing,11,1,87,21,False,fewer than 3 train years,,
+Data Structures,10,3,34,6,False,fewer than 40 train questions,,
+Data Science,10,5,91,11,True,,9.0,0.132
+PDC,10,1,49,0,False,fewer than 3 train years,,
+PF,10,4,46,1,True,,4.0,0.0835
+EIS,9,1,45,1,False,fewer than 10 train papers,,
+DW,9,3,44,3,False,fewer than 10 train papers,,
+SE Technologies,9,2,63,0,False,fewer than 10 train papers,,
+Statistical Pattern Recognition and Learning,8,1,31,0,False,fewer than 10 train papers,,
+Advanced Operating System,8,3,54,0,False,fewer than 10 train papers,,
+Ecommerce,8,1,19,0,False,fewer than 10 train papers,,
+NS,7,2,87,0,False,fewer than 10 train papers,,
+Big Data,6,1,16,0,False,fewer than 10 train papers,,
+DB Lab,6,2,24,2,False,fewer than 10 train papers,,
+TPL,6,2,32,0,False,fewer than 10 train papers,,
+OS Lab,6,3,20,10,False,fewer than 10 train papers,,
+Social Network Analysis,6,1,23,0,False,fewer than 10 train papers,,
+Management and Organizational Behavior,5,1,32,0,False,fewer than 10 train papers,,
+ISE,5,2,28,4,False,fewer than 10 train papers,,
+Applied Physics,5,2,37,0,False,fewer than 10 train papers,,
+Advanced Software Engineering,4,2,16,0,False,fewer than 10 train papers,,
+Differential Equations (Cal-II),4,3,26,1,False,fewer than 10 train papers,,
+Digital Image Processing,4,1,20,0,False,fewer than 10 train papers,,
+Software Quality Engineering,4,1,16,6,False,fewer than 10 train papers,,
+IS,4,2,20,35,False,fewer than 10 train papers,,
+Software Testing,4,2,13,4,False,fewer than 10 train papers,,
+Computer Modelling Simulation,3,1,18,0,False,fewer than 10 train papers,,
+Software Requirements Engineering,3,2,22,11,False,fewer than 10 train papers,,
+SCD,3,1,12,8,False,fewer than 10 train papers,,
+Evolutionary Computation,3,1,15,0,False,fewer than 10 train papers,,
+HRM,2,1,10,0,False,fewer than 10 train papers,,
+Islamic Studies,2,2,7,0,False,fewer than 10 train papers,,
+Intro to Data Science,2,1,21,1,False,fewer than 10 train papers,,
+Deep Learning,2,1,19,0,False,fewer than 10 train papers,,
+SQA,2,1,19,0,False,fewer than 10 train papers,,
+IICT,2,1,86,1,False,fewer than 10 train papers,,
+Accounting and Finance,1,1,9,0,False,fewer than 10 train papers,,
+Data Analysis and Visualization,1,1,15,1,False,fewer than 10 train papers,,
+Probability,1,1,5,2,False,fewer than 10 train papers,,
+Marketing Management,1,1,3,0,False,fewer than 10 train papers,,
+Brand Management,0,0,0,2,False,fewer than 10 train papers,,
+Critical Thinking,0,0,0,1,False,fewer than 10 train papers,,
+Artificial Intelligence Lab,0,0,0,7,False,fewer than 10 train papers,,
+Civics and Community Engagement,0,0,0,1,False,fewer than 10 train papers,,
+Cyber Security Tools and Technologies,0,0,0,2,False,fewer than 10 train papers,,
+Advanced Stats,0,0,0,1,False,fewer than 10 train papers,,
+Applied HCI,0,0,0,3,False,fewer than 10 train papers,,
+Data Structures Lab,0,0,0,4,False,fewer than 10 train papers,,
+HPC,0,0,0,5,False,fewer than 10 train papers,,
+Fundamentals of Management,0,0,0,3,False,fewer than 10 train papers,,
+Game Design and Development,0,0,0,3,False,fewer than 10 train papers,,
+Formal Methods,0,0,0,17,False,fewer than 10 train papers,,
+Generative AI,0,0,0,2,False,fewer than 10 train papers,,
+International Relations,0,0,0,1,False,fewer than 10 train papers,,
+Intro to Internet of Things,0,0,0,7,False,fewer than 10 train papers,,
+Operations Research,0,0,0,4,False,fewer than 10 train papers,,
+Numerical Computing,0,0,0,2,False,fewer than 10 train papers,,
+Machine Learning for Robotics,0,0,0,5,False,fewer than 10 train papers,,
+Modern Politics and Government,0,0,0,1,False,fewer than 10 train papers,,
+Introduction to Cybersecurity,0,0,0,2,False,fewer than 10 train papers,,
+Principles of Leadership,0,0,0,1,False,fewer than 10 train papers,,
+Pakistan Studies,0,0,0,2,False,fewer than 10 train papers,,
+Quantum Computing,0,0,0,2,False,fewer than 10 train papers,,
+Simulation and Modeling,0,0,0,6,False,fewer than 10 train papers,,
+SPM,0,0,0,4,False,fewer than 10 train papers,,
+Psychology,0,0,0,9,False,fewer than 10 train papers,,
+Software Design and Architecture Lab,0,0,0,2,False,fewer than 10 train papers,,
+Software Re-Engineering,0,0,0,8,False,fewer than 10 train papers,,
+Software for Mobile Devices,0,0,0,2,False,fewer than 10 train papers,,
+Web Engineering,0,0,0,6,False,fewer than 10 train papers,,
+Web Engineering Lab,0,0,0,5,False,fewer than 10 train papers,,

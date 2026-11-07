@@ -1,0 +1,213 @@
+subject,topic_id,keywords,train_questions,all_questions
+Advanced Computer Architecture,0,"branch, dynamic branch, predictor, taken",5,5
+Advanced Computer Architecture,1,"hazard, types hazards, sub types, load add",4,4
+Advanced Computer Architecture,2,"bits, cache, size, address",11,11
+Advanced Computer Architecture,3,"rate, miss, clock rate, clock",11,11
+Advanced Computer Architecture,4,"cycle, loop, instruction, latency",31,31
+Advanced Computer Architecture,5,"stalls, stalls required, execution code, code",5,5
+Advanced Database Concepts,0,"query, index, hash, computer",24,47
+Advanced Database Concepts,1,"relation, relation stored, index, stored",17,17
+Advanced Database Concepts,2,"schedule, strict, graph, serializable",19,23
+Advanced Database Concepts,3,"transaction, log, undo, recovery",18,34
+Advanced Database Concepts,4,"bytes, block, number, ca",9,13
+Artificial Intelligence,0,"player, game, perfect, tree",22,25
+Artificial Intelligence,1,"course, course code, code, semester",24,28
+Artificial Intelligence,2,"heuristic, puzzle, goal, admissible",15,17
+Artificial Intelligence,3,"decision tree, decision, tree, data",26,27
+Artificial Intelligence,4,"search, expanded, nodes, path",46,79
+Artificial Intelligence,5,"weights, perceptron, output, regression",48,93
+Artificial Intelligence,6,"paper gets, gets, satisfies, gets satisfies",7,7
+Artificial Intelligence,7,"registration, probability, student, bayes",36,40
+Artificial Intelligence,8,"fitness, chromosome, population, selection",16,27
+Artificial Intelligence,9,"school, school computer, computer science, science",45,52
+Cloud Computing,0,"client, server, function, clients",23,23
+Cloud Computing,1,"aws, true, cdn, does",64,70
+Cloud Computing,2,"deployment engine, engine, sequence, deployment",15,15
+Cloud Computing,3,"code, lambda, aws lambda, aws",6,6
+Cloud Computing,4,"document, google, word, index",9,9
+Cloud Computing,5,"amazon, api, dynamodb, api gateway",26,26
+Cloud Computing,6,"iaas, paas saas, paas, saas",5,5
+Cloud Computing,7,"cloud, computing, cloud computing, server",37,46
+Cloud Computing,8,"tier, servers, aggregation, center",16,16
+Compiler Construction,0,"regular, tokens, regular definition, definition",20,30
+Compiler Construction,1,"precedence, bf, set, bf bf",8,8
+Compiler Construction,2,"pc, quad, instruction, quad pc",4,4
+Compiler Construction,3,"id, actions, translation, scheme",12,14
+Compiler Construction,4,"scheme, translation scheme, translation, lex",8,8
+Computer Architecture,0,"cache, bits, size, tag",22,22
+Computer Architecture,1,"instruction, lw, register, cycle",56,56
+Computer Architecture,2,"code, remove, stalls, code remove",17,17
+Computer Architecture,3,"cache, miss, hit, rate",12,12
+Computer Architecture,4,"circuit, expressions, sequential, sequential circuit",11,11
+Computer Architecture,5,"numbers, destination, assuming, bit",8,8
+Computer Architecture,6,"clock, program, cpi, clock rate",11,11
+Computer Architecture,7,"hazard, pseudo code, code detect, detect",8,8
+Computer Architecture,8,"difference, times, branch prediction, prediction",13,13
+Computer Architecture,9,"computer, date, computer architecture, architecture",9,9
+Computer Networks,0,"routing, nodes, node, protocol",14,35
+Computer Networks,1,"layer, packet, data, delay",35,99
+Computer Networks,2,"port, destination, source, port number",11,19
+Computer Networks,3,"address, ip, differences, ip address",13,58
+Computer Networks,4,"frame, link, bit, mbps",26,64
+Computer Networks,5,"course, computer, paper, fall",12,26
+Computer Networks,6,"sender, receiver, table, sequence",17,43
+Computer Networks,7,"transmission round, segment, round, rtt",12,22
+Computer Networks,8,"seg x+, x+, seg, acknowledgement",7,10
+Computer Networks,9,"http, connection, object, client",16,41
+Computer Organization and Assembly Language,0,"descriptor, gdt, descriptor table, table",7,7
+Computer Organization and Assembly Language,1,"instruction, pascal, trap, calling",12,12
+Computer Organization and Assembly Language,2,"carry, al, mov, zf",12,12
+Computer Organization and Assembly Language,3,"ah, int, service, bios",26,28
+Computer Organization and Assembly Language,4,"screen, school computing, computing, school",8,8
+Computer Organization and Assembly Language,5,"cache, sequence, tag, binary",3,3
+Computer Organization and Assembly Language,6,"pipeline, stage, bscs, pipeline processor",3,3
+Computer Organization and Assembly Language,7,"language, assembly language, assembly, array",8,8
+Computer Organization and Assembly Language,8,"address, memory, dx, mov",14,18
+Computer Organization and Assembly Language,9,"mov, ax, push, pop",19,30
+DLD,0,"table, flop, flip flop, flip",15,17
+DLD,1,"sum, form, product, sum products",8,8
+DLD,2,"course, science semester, minutes, weight exam",5,5
+DLD,3,"line, decoder, circuit, implemented",11,12
+DLD,4,"output, bit, sequence, diagram",27,37
+DLD,5,"flops, flip flops, flip, convert",14,16
+DLD,6,"strictly, notes, number solve, instruction",3,3
+DLD,7,"prove, identity optimize, identity, optimize expressions",4,4
+Data Science,0,"outliers, iqr, plot data, minimum",4,6
+Data Science,1,"decision, boundary, decision boundary, classifier",12,14
+Data Science,2,"logistic, logistic regression, estimate, regression",10,11
+Data Science,3,"data, think, fitting training, hypothesis fitting",28,90
+Data Science,4,"gradient, gradient descent, descent, student",11,15
+Data Science,5,"pca, variance, principal, data",13,15
+Data Science,6,"relationship, line, transformation, fit linear",5,5
+Data Science,7,"performance, cause hypothesis, value cause, overfit",5,5
+Data Science,8,"imbalanced class, imbalanced, class problems, good",3,3
+Database Systems,0,"diagram, number, eer, model",36,64
+Database Systems,1,"bcnf, normal, normal form, form",17,28
+Database Systems,2,"select, query, sql, result",33,80
+Database Systems,3,"dependencies, fds, functional dependencies, functional",16,20
+Database Systems,4,"schedule, transactions, serializable, graph",18,21
+Database Systems,5,"update, tuple, constraint, delete",14,20
+Database Systems,6,"anomalies, inconsistency, deptno, redundancy",9,9
+Database Systems,7,"minimal, minimal cover, cover, ab",15,22
+Database Systems,8,"relation, decomposition, ab, lossless",18,24
+Database Systems,9,"iii, ii, ii iii, iii ii",7,8
+Design and Analysis of Algorithms,0,"campus, national, computer emerging, national university",25,25
+Design and Analysis of Algorithms,1,"course, exam, section, science",43,43
+Design and Analysis of Algorithms,2,"vertex, shortest, graph, path",34,36
+Design and Analysis of Algorithms,3,"true, ln, ln true, lg ln",10,10
+Design and Analysis of Algorithms,4,"bcs, sections, algorithm, english",20,20
+Design and Analysis of Algorithms,5,"space requirements, requirements, requirements adjacency, space",8,8
+Design and Analysis of Algorithms,6,"edge, graph, weights, edge weights",29,40
+Design and Analysis of Algorithms,7,"section, sort, problem, running",96,127
+Design and Analysis of Algorithms,8,"array, element, algorithm, sum",34,43
+Design and Analysis of Algorithms,9,"loop, loop invariant, invariant, proof",5,5
+HCI,0,"example, design, gulf, ui",13,13
+HCI,1,"mouse, mouse mouse, keyboard, button",14,14
+HCI,2,"speech, recognition, speech recognition, product",12,12
+HCI,3,"applying, applying heuristics, heuristics, execute",11,11
+HCI,4,"false, correct, interface, true",17,21
+HCI,5,"restaurant, ari, hof, specifications",7,7
+HCI,6,"rule deletion, deletion, rule, ms",4,4
+HCI,7,"output, input, course, interaction",18,19
+HCI,8,"layout, help, label, environment",6,6
+HCI,9,"memory, user, web, memory load",14,14
+IOT,0,"internet, things, smart, networks",8,20
+IOT,1,"iot, low, domain, challenges",14,123
+IOT,2,"byte, bytes, header, length",9,15
+IOT,3,"numbers, names, main, address",12,59
+IR,0,"iterations means, yes say, observations clusters, observations",2,2
+IR,1,"campus, national, computer emerging, national university",13,13
+IR,2,"documents, document, query, school computer",263,283
+IR,3,"rss, value, squares different, table gives",3,3
+IR,4,"length posting, posting, length, complexity",10,10
+IR,5,"collection, text collection, values words, suppose add",4,4
+IR,6,"encoding, numbers, fixed length, fixed",10,10
+IR,7,"porter, stemmer, stemmed version, version words",5,5
+IR,8,"occurs, retrieval, information, note documents",4,4
+IR,9,"performance, mean, situation mean, precision performance",3,3
+NLP,0,"like, weight, trigram, bikes",5,9
+NLP,1,"model assigns, set perplexity, test set, word test",2,2
+NLP,2,"word, words, sentence, probability",79,102
+NLP,3,"students, words follows, ali likes, alleviate",2,2
+NLP,4,"neural language, language modeling, modeling, neural",3,3
+NLP,5,"word vectors, vectors, vectors like, advantages dense",2,2
+NLP,6,"object, duty, assert, words appear",3,3
+NLP,7,"documents, doc, terms, doc doc",3,3
+NLP,8,"size neural, text generation, neural text, generation",2,2
+OOP Lab,0,"mylist, example mylist, example, item",7,7
+OOP Lab,1,"application, class, function, word",24,52
+OOP Lab,2,"course, lab, semester, computer",12,12
+OOP Lab,3,"pass, integer, arrays, identical",3,3
+OOP Lab,4,"matrix, matrices, split, sub",5,5
+OS,0,"class, iterator, definition, class definition",5,5
+OS,1,"computer, program, open, register",21,21
+OS,2,"memory, hole, process, access",13,14
+OS,3,"scheduling, preemptive, non, waiting",19,21
+OS,4,"pid, fork, int, include",14,16
+OS,5,"int, block, bytes, index",14,14
+OS,6,"process, address, memory, cpu",30,43
+OS,7,"initial values, semaphores, initial, values semaphores",11,11
+OS,8,"signal, wait, semaphore, semaphores",12,13
+OS,9,"true, true false, false, deadlock",9,9
+Object Oriented Programming,0,"function, recursive, array, int",25,29
+Object Oriented Programming,1,"example, return, int, char",25,33
+Object Oriented Programming,2,"course, program bs, semester, bs",13,13
+Object Oriented Programming,3,"int, cout, size, output code",17,26
+Object Oriented Programming,4,"num, size, int size, temp",13,13
+Object Oriented Programming,5,"cout, print, endl, print cout",23,30
+Object Oriented Programming,6,"error, arr, ptr, output error",15,18
+Object Oriented Programming,7,"option, option option, select correct, select",4,4
+Object Oriented Programming,8,"bar, foo, count, function bar",9,9
+Object Oriented Programming,9,"class, public, value, base",22,28
+PF,0,"float, type, double float, type variables",5,5
+PF,1,"program, endl, number, cout",18,36
+PF,2,"cout, int, int cout, cout cout",12,25
+PF,3,"function, tasks, array, example",11,30
+PP,0,"year, rate, value, years",10,18
+PP,1,"company, software, product, business",44,136
+PP,2,"school, computer, science, school computer",21,30
+PP,3,"paper, exam, solve exam, solve",4,6
+PP,4,"illegal, consumer, integration, benefits",25,37
+PP,5,"roll section, student roll, student, roll",4,4
+PP,6,"score, complete, roll number, clarification",4,4
+PP,7,"law, courts, trial, common",21,33
+PP,8,"trade secret, secret, trade, programming",8,12
+PP,9,"professional, ethics, term, inflation",18,35
+SMD,0,"android, briefly, role, steps android",9,9
+SMD,1,"username, username password, password, email",15,15
+SMD,2,"course, weight exam, paper, reg",25,25
+SMD,3,"strings, activity, xml, code",17,22
+SMD,4,"intent, example, pending intent, pending",5,5
+SMD,5,"service, types services, service types, remote",7,7
+SMD,6,"university, emerging sciences, emerging, national",4,4
+SMD,7,"android android, red, grid, android",5,5
+SMD,8,"permissions, toggle, toggle button, strategy",10,10
+Software Design and Analysis,0,"forum, user, topics, discussion",13,13
+Software Design and Analysis,1,"course, paper, computer, program",10,10
+Software Design and Analysis,2,"diagram, description, provide, identify",13,13
+Software Design and Analysis,3,"design, diagram, class, provided",24,24
+Software Design and Analysis,4,"computingpage, fast school, school, school computingpage",8,8
+Software Engineering,0,"model, requirements, software, testing",20,57
+Software Engineering,1,"invalid, ecs, customer account, account",3,3
+Software Engineering,2,"transaction, dfd, architecture, level",17,110
+Software Engineering,3,"stands, function, clearly, assumptions",9,19
+Software Engineering,4,"int, code, cases, graph",6,18
+Software Engineering,5,"product, software, type software, type",7,9
+Software Engineering,6,"customer, account, funds, bank",8,10
+Theory of Automata,0,"school computer, computer science, science, computer",32,37
+Theory of Automata,1,"sept, prove extended, problem design, sept problem",4,4
+Theory of Automata,2,"cfl, non, language, sum",15,25
+Theory of Automata,3,"dfa, nfa, nfa dfa, convert",12,14
+Theory of Automata,4,"tape, machine, fast school, computing",16,24
+Theory of Automata,5,"grammar, cfg, required, aba",24,54
+Theory of Automata,6,"false, true, true false, theory",12,13
+Theory of Automata,7,"ba, ab, applying, ab ba",7,7
+Theory of Automata,8,"course, game, coin, automata",6,32
+Web Programming,0,"students, section, section students, section section",5,5
+Web Programming,1,"university computer, computer emerging, campus, national university",17,17
+Web Programming,2,"nu fall, fast nu, fast, nu",14,14
+Web Programming,3,"object, method, servlet, container",27,27
+Web Programming,4,"style, text, javascript, css",66,135
+Web Programming,5,"student, course, roll section, student roll",16,17
+Web Programming,6,"choose, choose apply, apply, objects",16,16
+Web Programming,7,"mvc, routing, net mvc, asp",20,20
