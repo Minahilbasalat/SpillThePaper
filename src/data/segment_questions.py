@@ -22,6 +22,20 @@ BOILERPLATE_LINE = re.compile(
     r"national university|department of|good luck|best of luck|page\s*\d+\s*(of\s*\d+)?\s*$)"
 )
 
+# chunks that are not questions: worked solutions and grading-table headers
+SOLUTION_HEAD = re.compile(
+    r"(?i)^\W*(?:(?:question|ques|q)\s*[.:#\-]?\s*\d{1,2}\s*[.:)\-]?\s*)?"
+    r"(?:solution\b|(?:answer|ans)\s*[:.\-)])"
+)
+GRADING_TABLE = re.compile(r"(?i)total marks.*obtained marks|obtained marks.*total marks")
+
+
+def _is_question(chunk: str) -> bool:
+    if SOLUTION_HEAD.match(chunk):
+        return False
+    if GRADING_TABLE.search(chunk[:300]):
+        return False
+    return True
 
 def _clean_lines(text: str) -> str:
     lines = [ln for ln in text.splitlines() if not BOILERPLATE_LINE.match(ln)]
@@ -65,5 +79,5 @@ def segment_questions(text: str):
     if chunks is None:
         chunks = _split_paragraphs(text)
     questions = [_normalise(c) for c in chunks]
-    questions = [q for q in questions if len(q.split()) >= MIN_WORDS]
+    questions = [q for q in questions if len(q.split()) >= MIN_WORDS and _is_question(q)]
     return questions, method
