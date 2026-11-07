@@ -25,9 +25,9 @@ OUT_CATALOG = ROOT / "data" / "processed" / "topic_catalog.csv"
 OUT_ELIGIBILITY = ROOT / "data" / "processed" / "subject_eligibility.csv"
 
 # ---- settings (these go in the report's settings table) ----
-MIN_TRAIN_PAPERS = 10      # a subject needs this many train-period papers ...
+MIN_TRAIN_PAPERS = 6      # a subject needs this many train-period papers ...
 MIN_TRAIN_YEARS = 3        # ... from at least this many distinct years ...
-MIN_TRAIN_QUESTIONS = 40   # ... and this many train-period questions
+MIN_TRAIN_QUESTIONS = 30   # ... and this many train-period questions
 K_MIN, K_MAX = 4, 10       # range of topic counts tried per subject (silhouette)
 QUESTIONS_PER_TOPIC = 10   # K is also capped at n_train_questions // this
 TFIDF_MAX_FEATURES = 2000
@@ -42,7 +42,9 @@ EXAM_STOPWORDS = {
     "show", "state", "define", "describe", "discuss", "list", "find", "draw", "mid",
     "final", "quiz", "points", "point", "part", "page", "total", "time", "attempt",
     "assume", "also", "case", "shown", "below", "above", "figure", "fig", "each",
-    "let", "need", "must", "will", "would", "may", "one", "two", "three", "following",
+    "let", "need", "must", "will", "would", "may", "one", "two", "three", "following",    "course", "code", "semester", "school", "university", "campus", "national",
+    "fast", "nu", "fall", "spring", "summer", "section", "students", "student",
+    "roll", "paper", "gets", "satisfies", "emerging", "computer", "science",
 }
 STOP_WORDS = sorted(set(ENGLISH_STOP_WORDS) | EXAM_STOPWORDS)
 TOKEN_PATTERN = r"(?u)\b[a-zA-Z][a-zA-Z+#]{1,}\b"   # keeps tokens like c++ and c#
