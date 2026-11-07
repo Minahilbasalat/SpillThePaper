@@ -155,3 +155,11 @@ All values below come from the logs in `logs/` and the tables in `data/processed
 
 * Past papers and outlines come from the community archive *Academic-Time-Machine*; credit to its maintainers and contributors.
 * Raw files are not redistributed here. Course outlines may name instructors; instructor names are not used or published in this project.
+
+
+## Phase 3: data and labels (Minahil)
+
+python -m src.data.build_questions     # segment papers into questions
+python -m src.data.topics              # per-subject topics (train years only)
+python -m src.data.build_dataset       # train/val/test in data/processed/model/
+python -m pytest tests -q              # unit tests, including the leakage test
