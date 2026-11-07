@@ -37,3 +37,14 @@ def test_drops_solutions_and_grading_table():
     qs, _ = segment_questions(text)
     assert len(qs) == 2
     assert not any("Solution" in q for q in qs)    
+
+def test_drops_header_chunks():
+    text = (
+        "National University of Computer and Emerging Sciences\n\n"
+        "Course Code: CS3001 Semester: Fall 2022 Section: A Roll No: ____\n\n"
+        "Explain the difference between TCP and UDP with one real example each.\n\n"
+        "Describe how a router uses its forwarding table to move packets onward."
+    )
+    qs, _ = segment_questions(text)
+    assert qs, "real questions must survive"
+    assert not any("Roll No" in q or "National University" in q for q in qs)    

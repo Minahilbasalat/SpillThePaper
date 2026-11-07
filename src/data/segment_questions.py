@@ -28,12 +28,30 @@ SOLUTION_HEAD = re.compile(
     r"(?:solution\b|(?:answer|ans)\s*[:.\-)])"
 )
 GRADING_TABLE = re.compile(r"(?i)total marks.*obtained marks|obtained marks.*total marks")
+# paper headers (university, course, section ...) that are not questions.
+# A chunk is a header if it contains at least two DISTINCT header terms.
+HEADER_TERMS = re.compile(
+    r"(?i)national university|fast[\s-]*nu\b|school of computing|department of|"
+    r"course code|course title|course instructor|instructor|semester|campus|"
+    r"roll\s*(?:no|number)|student\s*(?:id|name)|\bsection\b|time allowed|"
+    r"total marks|do not (?:use|write)|instructions?:|best of luck|good luck|"
+    r"paper gets|\bname:|\bcnic\b|emerging sciences"
+)
+HEADER_MAX_WORDS = 150
 
+
+def _is_header(chunk: str) -> bool:
+    if len(chunk.split()) > HEADER_MAX_WORDS:
+        return False
+    found = {m.group(0).lower() for m in HEADER_TERMS.finditer(chunk)}
+    return len(found) >= 2
 
 def _is_question(chunk: str) -> bool:
     if SOLUTION_HEAD.match(chunk):
         return False
     if GRADING_TABLE.search(chunk[:300]):
+        return False
+    if _is_header(chunk):
         return False
     return True
 
@@ -55,7 +73,8 @@ def _split_on(pattern: re.Pattern, text: str):
 
 
 def _split_paragraphs(text: str):
-    paragraphs = [p for p in re.split(r"\n\s*\n", text) if p.strip()]
+    paragraphs = [p for p in re.split(r"\n\s*\n", text)
+                  if p.strip() and not _is_header(p)]
     chunks, current = [], ""
     for p in paragraphs:
         current = f"{current}\n{p}" if current else p
