@@ -27,3 +27,13 @@ def test_paragraph_fallback():
     qs, method = segment_questions(text)
     assert method == "paragraph"
     assert len(qs) >= 1
+
+def test_drops_solutions_and_grading_table():
+    text = (
+        "Q1: Explain the OSI model layers in detail.\n"
+        "Q2: What is the difference between TCP and UDP?\n"
+        "Q2 Solution: TCP is connection oriented while UDP is not.\n"
+    )
+    qs, _ = segment_questions(text)
+    assert len(qs) == 2
+    assert not any("Solution" in q for q in qs)    
