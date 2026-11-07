@@ -20,5 +20,6 @@ appears in that exam. Features use ONLY papers with year < target_year.
 | type_rate_prior | float | appearance rate within the same assessment type |
 | label | int | 1 if topic appears in the target exam, else 0 |
 
-Files (in data/model/): train.csv, val.csv, test.csv, split by target_year
+Files (in data/processed/model/): train.csv, val.csv, test.csv, split by target_year
 (train <= 2022, val = 2023, test >= 2024; may be adjusted after checking counts).
+Dummy files with the same schema (random values, for development only) are in data/processed/model_dummy/
