@@ -21,6 +21,7 @@ import pandas as pd
 from src.data.schema import DUMMY_DATA_DIR, MODEL_DATA_DIR
 from src.evaluation.baselines import BASELINES, FIXED_THRESHOLDS, UNIT_RANGE
 from src.evaluation.metrics import METRIC_NAMES, best_f1_threshold, evaluate_with_ci
+from src.evaluation.plots import make_figures
 from src.evaluation.predictions_io import REPO_ROOT, read_split, validate_predictions
 
 LEARNED = ["logreg", "random_forest", "mlp"]
@@ -134,6 +135,10 @@ def main() -> None:
         table.to_csv(path, index=False)
         print(f"\n[{split}] wrote {path.relative_to(REPO_ROOT)}")
         print(table[show].round(3).to_string(index=False))
+    written = make_figures(preds, rows, paths["fig_dir"])
+    print("\nfigures written:")
+    for p in written:
+        print("  ", p.relative_to(REPO_ROOT))
 
 
 if __name__ == "__main__":
