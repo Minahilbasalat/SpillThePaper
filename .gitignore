@@ -25,3 +25,5 @@ report/*.synctex.gz
 models/*.pt
 models/*.pkl
 models/*.joblib
+
+results/dummy/
