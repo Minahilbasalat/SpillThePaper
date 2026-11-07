@@ -1,0 +1,10 @@
+metric,value
+papers_with_text_and_year,1638.0
+papers_with_at_least_one_question,1575.0
+total_questions,7780.0
+questions_per_paper_mean,4.94
+questions_per_paper_median,3.0
+questions_per_paper_max,70.0
+papers_segmented_by_marker,1001.0
+papers_segmented_by_paragraph,322.0
+papers_segmented_by_numbered,252.0

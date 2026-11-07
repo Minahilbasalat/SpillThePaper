@@ -1,0 +1,4 @@
+split,rows,positives,positive_rate,subjects,target_exams,min_year,max_year
+train,1421,672,0.4729,28,166,2014,2022
+val,301,118,0.392,22,36,2023,2023
+test,568,197,0.3468,21,67,2024,2026
