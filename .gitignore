@@ -21,3 +21,7 @@ report/*.log
 report/*.out
 report/*.toc
 report/*.synctex.gz
+
+models/*.pt
+models/*.pkl
+models/*.joblib

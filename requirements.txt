@@ -5,3 +5,6 @@ pyyaml
 pymupdf
 python-docx
 requests
+scikit-learn>=1.4
+torch>=2.2
+joblib>=1.3
