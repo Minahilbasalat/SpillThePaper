@@ -67,4 +67,4 @@ Small data, noisy topic labels, a small validation set, and tuning noise
 between seeds. The positive rate drifts down over time (47% -> 39% -> 35%),
 so probabilities may be miscalibrated on newer exams.
 
-Model weights (`mlp_best.pt` and `preprocess.joblib`): https://drive.google.com/drive/folders/1ycMTnsQdGk_N9M4kaGhIubkWxM5UzW6c
+Model weights (`mlp_best.pt` and `preprocess.joblib`): https://drive.google.com/drive/folders/1IQb9xincr7PjG4kQvqEmj8jBBezRqQRZ?usp=drive_link
