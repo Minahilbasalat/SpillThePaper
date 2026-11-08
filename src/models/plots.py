@@ -27,7 +27,7 @@ N_FEATURES = 12
 def _box(ax, x, y, w, h, text, color):
     ax.add_patch(FancyBboxPatch((x, y), w, h, boxstyle="round,pad=0.02",
                                 fc=color, ec="black", lw=1.2))
-    ax.text(x + w / 2, y + h / 2, text, ha="center", va="center", fontsize=9)
+    ax.text(x + w / 2, y + h / 2, text, ha="center", va="center", fontsize=13)
 
 
 def _arrow(ax, x0, x1, y):
@@ -59,13 +59,13 @@ def plot_architecture(cfg: dict) -> None:
     for i in range(len(boxes) - 1):
         x_end = boxes[i][0] + widths[i]
         _arrow(ax, x_end + 0.03, boxes[i + 1][0] - 0.03, y + h / 2)
-    ax.text(11.7, 0.6, "logit", ha="center", fontsize=9)
+    ax.text(11.4, 0.6, "logit", ha="center", fontsize=13)
     _arrow(ax, 12.4, 12.9, y + h / 2)
-    ax.text(12.45, 2.75, "sigmoid", ha="center", fontsize=9)
-    ax.text(12.45, 0.6, "P(label = 1)", ha="center", fontsize=8)
+    ax.text(12.45, 2.75, "sigmoid", ha="center", fontsize=13)
+    ax.text(12.4, 0.6, "P(label = 1)", ha="center", fontsize=11)
     ax.set_title("MLP architecture (loss: BCEWithLogitsLoss; "
                  f"optimizer: {cfg['optimizer'].upper()}, lr = {cfg['lr']})",
-                 fontsize=11)
+                 fontsize=14)
     fig.tight_layout()
     fig.savefig(FIG_DIR / "model_architecture.png", dpi=200)
     plt.close(fig)
