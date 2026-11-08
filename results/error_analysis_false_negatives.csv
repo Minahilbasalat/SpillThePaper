@@ -1,0 +1,11 @@
+subject,topic_id,topic_label,n_fn,n_test_rows
+Computer Networks,3,"node, algorithm, shortest, paths",5,8
+Computer Networks,1,"connection, http, tcp, object",4,8
+Computer Networks,8,"transmission round, round, rtt, transmission",4,8
+Computer Networks,0,"frame, sends frame, replies frame, replies",2,8
+Computer Networks,5,"segment, port, port number, destination port",2,8
+Computer Networks,7,"circuit, switching, switched, circuit switching",2,8
+Database Systems,4,"customer, number, branch, account",2,7
+PP,3,"law, ethics, example, pakistan",2,6
+PP,8,"year, rate, years, value",2,6
+Theory of Automata,7,"grammar, false, true, context free",2,6
