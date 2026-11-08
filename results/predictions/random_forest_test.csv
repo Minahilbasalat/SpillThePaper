@@ -1,0 +1,569 @@
+row_idx,subject,topic_id,target_year,target_type,label,score,model,split
+0,Advanced Database Concepts,0,2024,final,0,0.39151288927660705,random_forest,test
+1,Advanced Database Concepts,1,2024,final,1,0.619388239770774,random_forest,test
+2,Advanced Database Concepts,2,2024,final,1,0.6701410632011676,random_forest,test
+3,Advanced Database Concepts,3,2024,final,0,0.4654056542827188,random_forest,test
+4,Advanced Database Concepts,4,2024,final,0,0.5533502289432021,random_forest,test
+5,Advanced Database Concepts,5,2024,final,1,0.6145428648584066,random_forest,test
+6,Advanced Database Concepts,6,2024,final,0,0.21484247301991838,random_forest,test
+7,Advanced Database Concepts,7,2024,final,1,0.6355735560798119,random_forest,test
+8,Advanced Database Concepts,0,2024,mid,0,0.226948338456245,random_forest,test
+9,Advanced Database Concepts,1,2024,mid,0,0.6161960605772813,random_forest,test
+10,Advanced Database Concepts,2,2024,mid,1,0.6336579907563508,random_forest,test
+11,Advanced Database Concepts,3,2024,mid,0,0.42396567278413966,random_forest,test
+12,Advanced Database Concepts,4,2024,mid,0,0.5540854024140814,random_forest,test
+13,Advanced Database Concepts,5,2024,mid,1,0.5418290588370496,random_forest,test
+14,Advanced Database Concepts,6,2024,mid,0,0.2185093203286804,random_forest,test
+15,Advanced Database Concepts,7,2024,mid,1,0.622083220792395,random_forest,test
+16,Advanced Database Concepts,0,2025,quiz,0,0.41893483926188174,random_forest,test
+17,Advanced Database Concepts,1,2025,quiz,0,0.638464538839637,random_forest,test
+18,Advanced Database Concepts,2,2025,quiz,0,0.6136682524266274,random_forest,test
+19,Advanced Database Concepts,3,2025,quiz,0,0.38077346881161483,random_forest,test
+20,Advanced Database Concepts,4,2025,quiz,0,0.32558427002602014,random_forest,test
+21,Advanced Database Concepts,5,2025,quiz,1,0.40171358040389876,random_forest,test
+22,Advanced Database Concepts,6,2025,quiz,0,0.40934731856071727,random_forest,test
+23,Advanced Database Concepts,7,2025,quiz,0,0.41906929678064236,random_forest,test
+24,Artificial Intelligence,0,2024,final,1,0.6811995327973841,random_forest,test
+25,Artificial Intelligence,1,2024,final,1,0.68323879812779,random_forest,test
+26,Artificial Intelligence,2,2024,final,1,0.7603534969305198,random_forest,test
+27,Artificial Intelligence,3,2024,final,0,0.21113692803994902,random_forest,test
+28,Artificial Intelligence,4,2024,final,1,0.6004941159413497,random_forest,test
+29,Artificial Intelligence,5,2024,final,1,0.6749367046079938,random_forest,test
+30,Artificial Intelligence,6,2024,final,0,0.2491328980325774,random_forest,test
+31,Artificial Intelligence,7,2024,final,0,0.3672875540579527,random_forest,test
+32,Artificial Intelligence,8,2024,final,0,0.5656486733155888,random_forest,test
+33,Artificial Intelligence,0,2024,mid,0,0.6433926892159111,random_forest,test
+34,Artificial Intelligence,1,2024,mid,1,0.6705281900491571,random_forest,test
+35,Artificial Intelligence,2,2024,mid,1,0.6697301281571858,random_forest,test
+36,Artificial Intelligence,3,2024,mid,0,0.11046350453157944,random_forest,test
+37,Artificial Intelligence,4,2024,mid,1,0.5947251041793667,random_forest,test
+38,Artificial Intelligence,5,2024,mid,1,0.6764735604909138,random_forest,test
+39,Artificial Intelligence,6,2024,mid,0,0.09774323448050865,random_forest,test
+40,Artificial Intelligence,7,2024,mid,1,0.3920682687970252,random_forest,test
+41,Artificial Intelligence,8,2024,mid,0,0.58681858971784,random_forest,test
+42,Artificial Intelligence,0,2025,mid,0,0.6273333848748454,random_forest,test
+43,Artificial Intelligence,1,2025,mid,0,0.6582835730829429,random_forest,test
+44,Artificial Intelligence,2,2025,mid,0,0.6567599529885799,random_forest,test
+45,Artificial Intelligence,3,2025,mid,0,0.11079250474312548,random_forest,test
+46,Artificial Intelligence,4,2025,mid,1,0.6808587166237546,random_forest,test
+47,Artificial Intelligence,5,2025,mid,1,0.6719889799931338,random_forest,test
+48,Artificial Intelligence,6,2025,mid,0,0.09793559220408588,random_forest,test
+49,Artificial Intelligence,7,2025,mid,0,0.43543682233321857,random_forest,test
+50,Artificial Intelligence,8,2025,mid,0,0.541702272397643,random_forest,test
+51,Artificial Intelligence,0,2026,quiz,1,0.6848581795565498,random_forest,test
+52,Artificial Intelligence,1,2026,quiz,1,0.6965336726457758,random_forest,test
+53,Artificial Intelligence,2,2026,quiz,1,0.6823661237236626,random_forest,test
+54,Artificial Intelligence,3,2026,quiz,0,0.2805503307814528,random_forest,test
+55,Artificial Intelligence,4,2026,quiz,0,0.4837818045332129,random_forest,test
+56,Artificial Intelligence,5,2026,quiz,1,0.6428835248756677,random_forest,test
+57,Artificial Intelligence,6,2026,quiz,0,0.2584404858003088,random_forest,test
+58,Artificial Intelligence,7,2026,quiz,0,0.34770731294648966,random_forest,test
+59,Artificial Intelligence,8,2026,quiz,0,0.4000711805712493,random_forest,test
+60,Cloud Computing,0,2025,final,0,0.3593330413956561,random_forest,test
+61,Cloud Computing,1,2025,final,0,0.3696177378685115,random_forest,test
+62,Cloud Computing,2,2025,final,1,0.6674576883499229,random_forest,test
+63,Cloud Computing,3,2025,final,0,0.5686538577060122,random_forest,test
+64,Cloud Computing,4,2025,final,0,0.20024012891354082,random_forest,test
+65,Cloud Computing,5,2025,final,0,0.35779502400488744,random_forest,test
+66,Cloud Computing,6,2025,final,0,0.22889695878809235,random_forest,test
+67,Cloud Computing,7,2025,final,1,0.7246181332823958,random_forest,test
+68,Cloud Computing,8,2025,final,0,0.3593330413956561,random_forest,test
+69,Cloud Computing,0,2025,mid,0,0.18753680846246207,random_forest,test
+70,Cloud Computing,1,2025,mid,0,0.5096956839357086,random_forest,test
+71,Cloud Computing,2,2025,mid,1,0.6315516669585607,random_forest,test
+72,Cloud Computing,3,2025,mid,0,0.5716403104092348,random_forest,test
+73,Cloud Computing,4,2025,mid,0,0.21125926866056494,random_forest,test
+74,Cloud Computing,5,2025,mid,0,0.2141442893809166,random_forest,test
+75,Cloud Computing,6,2025,mid,0,0.341259612308298,random_forest,test
+76,Cloud Computing,7,2025,mid,1,0.680807234102835,random_forest,test
+77,Cloud Computing,8,2025,mid,0,0.18753680846246207,random_forest,test
+78,Compiler Construction,0,2024,final,0,0.8141007545094321,random_forest,test
+79,Compiler Construction,1,2024,final,0,0.6348604193537674,random_forest,test
+80,Compiler Construction,2,2024,final,0,0.2988884017335421,random_forest,test
+81,Compiler Construction,3,2024,final,0,0.7131321320302982,random_forest,test
+82,Compiler Construction,4,2024,final,1,0.5029005084154153,random_forest,test
+83,Compiler Construction,0,2024,mid,1,0.7214983724703425,random_forest,test
+84,Compiler Construction,1,2024,mid,1,0.5559467484062123,random_forest,test
+85,Compiler Construction,2,2024,mid,0,0.47225302308179967,random_forest,test
+86,Compiler Construction,3,2024,mid,1,0.6289087666705547,random_forest,test
+87,Compiler Construction,4,2024,mid,0,0.4960351931885132,random_forest,test
+88,Compiler Construction,0,2025,mid,1,0.6610642262010731,random_forest,test
+89,Compiler Construction,1,2025,mid,0,0.598123595308361,random_forest,test
+90,Compiler Construction,2,2025,mid,0,0.39461519825841757,random_forest,test
+91,Compiler Construction,3,2025,mid,1,0.6368195127413468,random_forest,test
+92,Compiler Construction,4,2025,mid,0,0.5955369248264918,random_forest,test
+93,Computer Networks,0,2024,final,0,0.09596655681241327,random_forest,test
+94,Computer Networks,1,2024,final,1,0.5844601788983407,random_forest,test
+95,Computer Networks,2,2024,final,1,0.7036856783020551,random_forest,test
+96,Computer Networks,3,2024,final,1,0.4411911821755935,random_forest,test
+97,Computer Networks,4,2024,final,1,0.654107979216936,random_forest,test
+98,Computer Networks,5,2024,final,0,0.13920062858982502,random_forest,test
+99,Computer Networks,6,2024,final,1,0.7270430657683847,random_forest,test
+100,Computer Networks,7,2024,final,0,0.4176106859719312,random_forest,test
+101,Computer Networks,8,2024,final,0,0.3728982684580507,random_forest,test
+102,Computer Networks,9,2024,final,0,0.2165240634581239,random_forest,test
+103,Computer Networks,0,2024,mid,0,0.26861546246394047,random_forest,test
+104,Computer Networks,1,2024,mid,1,0.5782599116737125,random_forest,test
+105,Computer Networks,2,2024,mid,1,0.6785942238807311,random_forest,test
+106,Computer Networks,3,2024,mid,0,0.197476391752454,random_forest,test
+107,Computer Networks,4,2024,mid,1,0.6343539357268073,random_forest,test
+108,Computer Networks,5,2024,mid,0,0.18039896267608324,random_forest,test
+109,Computer Networks,6,2024,mid,1,0.6999462415814172,random_forest,test
+110,Computer Networks,7,2024,mid,1,0.40169277048214125,random_forest,test
+111,Computer Networks,8,2024,mid,1,0.30321682684658186,random_forest,test
+112,Computer Networks,9,2024,mid,0,0.1111550465296094,random_forest,test
+113,Computer Networks,0,2024,quiz,1,0.2352524120964453,random_forest,test
+114,Computer Networks,1,2024,quiz,1,0.5395372069637595,random_forest,test
+115,Computer Networks,2,2024,quiz,1,0.6319743488664664,random_forest,test
+116,Computer Networks,3,2024,quiz,1,0.40335699988904666,random_forest,test
+117,Computer Networks,4,2024,quiz,1,0.6407110745304231,random_forest,test
+118,Computer Networks,5,2024,quiz,0,0.39817742396474226,random_forest,test
+119,Computer Networks,6,2024,quiz,1,0.6620928517590289,random_forest,test
+120,Computer Networks,7,2024,quiz,0,0.3757092841776799,random_forest,test
+121,Computer Networks,8,2024,quiz,1,0.25749309828395445,random_forest,test
+122,Computer Networks,9,2024,quiz,0,0.255703365624512,random_forest,test
+123,Computer Networks,0,2025,mid,0,0.26506983611710677,random_forest,test
+124,Computer Networks,1,2025,mid,1,0.5823127570184516,random_forest,test
+125,Computer Networks,2,2025,mid,1,0.6885310708346143,random_forest,test
+126,Computer Networks,3,2025,mid,0,0.22880569728429032,random_forest,test
+127,Computer Networks,4,2025,mid,1,0.6094903303346949,random_forest,test
+128,Computer Networks,5,2025,mid,0,0.14910316842216711,random_forest,test
+129,Computer Networks,6,2025,mid,1,0.6919668519350057,random_forest,test
+130,Computer Networks,7,2025,mid,0,0.42209292324640657,random_forest,test
+131,Computer Networks,8,2025,mid,1,0.39946410238988733,random_forest,test
+132,Computer Networks,9,2025,mid,0,0.12549649844085084,random_forest,test
+133,Computer Networks,0,2025,quiz,0,0.24118241787969733,random_forest,test
+134,Computer Networks,1,2025,quiz,1,0.5523114480967467,random_forest,test
+135,Computer Networks,2,2025,quiz,1,0.6434294089655869,random_forest,test
+136,Computer Networks,3,2025,quiz,1,0.4551809898161258,random_forest,test
+137,Computer Networks,4,2025,quiz,1,0.609998871010217,random_forest,test
+138,Computer Networks,5,2025,quiz,1,0.2759181643187501,random_forest,test
+139,Computer Networks,6,2025,quiz,1,0.6584581314311699,random_forest,test
+140,Computer Networks,7,2025,quiz,1,0.32252658477324686,random_forest,test
+141,Computer Networks,8,2025,quiz,1,0.3056807791537676,random_forest,test
+142,Computer Networks,9,2025,quiz,0,0.28277364885884404,random_forest,test
+143,Computer Networks,0,2026,final,0,0.12785544663313014,random_forest,test
+144,Computer Networks,1,2026,final,0,0.5796727863496215,random_forest,test
+145,Computer Networks,2,2026,final,1,0.7212166876105734,random_forest,test
+146,Computer Networks,3,2026,final,1,0.5064202850471434,random_forest,test
+147,Computer Networks,4,2026,final,1,0.596558491914613,random_forest,test
+148,Computer Networks,5,2026,final,0,0.12005729096178674,random_forest,test
+149,Computer Networks,6,2026,final,1,0.7213273104176668,random_forest,test
+150,Computer Networks,7,2026,final,0,0.4385027730233451,random_forest,test
+151,Computer Networks,8,2026,final,0,0.5052467991855929,random_forest,test
+152,Computer Networks,9,2026,final,0,0.2456488467653226,random_forest,test
+153,Computer Networks,0,2026,mid,0,0.14256635781086996,random_forest,test
+154,Computer Networks,1,2026,mid,1,0.5848991289353528,random_forest,test
+155,Computer Networks,2,2026,mid,1,0.689072948188449,random_forest,test
+156,Computer Networks,3,2026,mid,0,0.24067852045529353,random_forest,test
+157,Computer Networks,4,2026,mid,1,0.5940862789342203,random_forest,test
+158,Computer Networks,5,2026,mid,0,0.1559464648059171,random_forest,test
+159,Computer Networks,6,2026,mid,1,0.693406845461874,random_forest,test
+160,Computer Networks,7,2026,mid,0,0.4286752249735992,random_forest,test
+161,Computer Networks,8,2026,mid,0,0.49913992512786637,random_forest,test
+162,Computer Networks,9,2026,mid,0,0.1403078697003773,random_forest,test
+163,Computer Networks,0,2026,quiz,1,0.26388429874473157,random_forest,test
+164,Computer Networks,1,2026,quiz,1,0.5470829657252255,random_forest,test
+165,Computer Networks,2,2026,quiz,1,0.6648370288261348,random_forest,test
+166,Computer Networks,3,2026,quiz,1,0.47930542342907084,random_forest,test
+167,Computer Networks,4,2026,quiz,1,0.5916765917427952,random_forest,test
+168,Computer Networks,5,2026,quiz,1,0.26523998970477025,random_forest,test
+169,Computer Networks,6,2026,quiz,1,0.6575188882752212,random_forest,test
+170,Computer Networks,7,2026,quiz,0,0.32490120186635174,random_forest,test
+171,Computer Networks,8,2026,quiz,0,0.36476006403864014,random_forest,test
+172,Computer Networks,9,2026,quiz,1,0.33185463710093754,random_forest,test
+173,Computer Organization and Assembly Language,0,2025,final,0,0.3206292553910456,random_forest,test
+174,Computer Organization and Assembly Language,1,2025,final,1,0.8472987232162135,random_forest,test
+175,Computer Organization and Assembly Language,2,2025,final,0,0.37646826380365417,random_forest,test
+176,Computer Organization and Assembly Language,3,2025,final,0,0.300249471297545,random_forest,test
+177,Computer Organization and Assembly Language,4,2025,final,0,0.4526319603705229,random_forest,test
+178,Computer Organization and Assembly Language,5,2025,final,0,0.1958471572594254,random_forest,test
+179,Computer Organization and Assembly Language,6,2025,final,0,0.1958471572594254,random_forest,test
+180,Computer Organization and Assembly Language,7,2025,final,0,0.5838591491013084,random_forest,test
+181,Computer Organization and Assembly Language,8,2025,final,0,0.3031809008363431,random_forest,test
+182,Computer Organization and Assembly Language,9,2025,final,0,0.2025054095662247,random_forest,test
+183,DLD,0,2025,final,1,0.639949312139217,random_forest,test
+184,DLD,1,2025,final,0,0.38488638695362604,random_forest,test
+185,DLD,2,2025,final,0,0.36273284876313555,random_forest,test
+186,DLD,3,2025,final,1,0.6687900786196782,random_forest,test
+187,DLD,4,2025,final,0,0.6757020654783766,random_forest,test
+188,DLD,5,2025,final,1,0.6757020654783766,random_forest,test
+189,DLD,6,2025,final,0,0.38488638695362604,random_forest,test
+190,DLD,7,2025,final,0,0.21602890245486292,random_forest,test
+191,DLD,0,2026,mid,0,0.6847285683733727,random_forest,test
+192,DLD,1,2026,mid,0,0.3599746896917801,random_forest,test
+193,DLD,2,2026,mid,0,0.19846311938428626,random_forest,test
+194,DLD,3,2026,mid,1,0.6509901937370773,random_forest,test
+195,DLD,4,2026,mid,0,0.49037742900071046,random_forest,test
+196,DLD,5,2026,mid,1,0.6738073031946548,random_forest,test
+197,DLD,6,2026,mid,0,0.2054778579378518,random_forest,test
+198,DLD,7,2026,mid,0,0.19846311938428626,random_forest,test
+199,DW,0,2024,mid,1,0.6074359877500838,random_forest,test
+200,DW,1,2024,mid,0,0.24492306384589904,random_forest,test
+201,DW,2,2024,mid,1,0.67837572749553,random_forest,test
+202,DW,3,2024,mid,0,0.5988515755986664,random_forest,test
+203,Data Science,0,2024,mid,0,0.4028488246951028,random_forest,test
+204,Data Science,1,2024,mid,0,0.4028488246951028,random_forest,test
+205,Data Science,2,2024,mid,0,0.5941388569417921,random_forest,test
+206,Data Science,3,2024,mid,0,0.5387287413354607,random_forest,test
+207,Data Science,4,2024,mid,1,0.8880340658831769,random_forest,test
+208,Data Science,5,2024,mid,0,0.28387743978992713,random_forest,test
+209,Data Science,6,2024,mid,0,0.28745399316263603,random_forest,test
+210,Data Science,7,2024,mid,0,0.20658377276253126,random_forest,test
+211,Data Science,8,2024,mid,0,0.5660156153348521,random_forest,test
+212,Data Science,0,2025,mid,0,0.3887415338380454,random_forest,test
+213,Data Science,1,2025,mid,0,0.3887415338380454,random_forest,test
+214,Data Science,2,2025,mid,0,0.5122458040936383,random_forest,test
+215,Data Science,3,2025,mid,0,0.5131589481735038,random_forest,test
+216,Data Science,4,2025,mid,1,0.8779165027547784,random_forest,test
+217,Data Science,5,2025,mid,0,0.2777750983429904,random_forest,test
+218,Data Science,6,2025,mid,0,0.274304755095074,random_forest,test
+219,Data Science,7,2025,mid,0,0.20061257610490632,random_forest,test
+220,Data Science,8,2025,mid,0,0.4693035638978259,random_forest,test
+221,Data Science,0,2026,final,0,0.3796427025417224,random_forest,test
+222,Data Science,1,2026,final,0,0.3796427025417224,random_forest,test
+223,Data Science,2,2026,final,0,0.46357025864601603,random_forest,test
+224,Data Science,3,2026,final,0,0.5087325962666622,random_forest,test
+225,Data Science,4,2026,final,1,0.8782988007475939,random_forest,test
+226,Data Science,5,2026,final,0,0.3464785689697249,random_forest,test
+227,Data Science,6,2026,final,0,0.3267142441773859,random_forest,test
+228,Data Science,7,2026,final,0,0.3441434219739337,random_forest,test
+229,Data Science,8,2026,final,0,0.36965657691758386,random_forest,test
+230,Data Science,0,2026,mid,0,0.3401719345316791,random_forest,test
+231,Data Science,1,2026,mid,0,0.3401719345316791,random_forest,test
+232,Data Science,2,2026,mid,0,0.4589341726995198,random_forest,test
+233,Data Science,3,2026,mid,0,0.43648595666074264,random_forest,test
+234,Data Science,4,2026,mid,1,0.8723441259434179,random_forest,test
+235,Data Science,5,2026,mid,0,0.2870862915489514,random_forest,test
+236,Data Science,6,2026,mid,0,0.27398758892622777,random_forest,test
+237,Data Science,7,2026,mid,0,0.20004205860032842,random_forest,test
+238,Data Science,8,2026,mid,0,0.3508941010063108,random_forest,test
+239,Database Systems,0,2024,final,1,0.6068335438792567,random_forest,test
+240,Database Systems,1,2024,final,1,0.6844304716907974,random_forest,test
+241,Database Systems,2,2024,final,1,0.7273841572913523,random_forest,test
+242,Database Systems,3,2024,final,0,0.3112612952920462,random_forest,test
+243,Database Systems,4,2024,final,0,0.6367220928334939,random_forest,test
+244,Database Systems,5,2024,final,1,0.6383163490862885,random_forest,test
+245,Database Systems,6,2024,final,1,0.7483080620523281,random_forest,test
+246,Database Systems,7,2024,final,1,0.6135337454609613,random_forest,test
+247,Database Systems,8,2024,final,0,0.31093272684625506,random_forest,test
+248,Database Systems,0,2024,mid,0,0.4998443471028427,random_forest,test
+249,Database Systems,1,2024,mid,1,0.652861965030307,random_forest,test
+250,Database Systems,2,2024,mid,1,0.6323590471154782,random_forest,test
+251,Database Systems,3,2024,mid,0,0.14924774327448115,random_forest,test
+252,Database Systems,4,2024,mid,0,0.6169829498062397,random_forest,test
+253,Database Systems,5,2024,mid,0,0.5590328455516701,random_forest,test
+254,Database Systems,6,2024,mid,1,0.6466018100203528,random_forest,test
+255,Database Systems,7,2024,mid,0,0.6443820838306694,random_forest,test
+256,Database Systems,8,2024,mid,0,0.146958818172691,random_forest,test
+257,Database Systems,0,2025,final,1,0.6072864748344762,random_forest,test
+258,Database Systems,1,2025,final,1,0.6615945866543195,random_forest,test
+259,Database Systems,2,2025,final,1,0.7129498889181991,random_forest,test
+260,Database Systems,3,2025,final,0,0.2776525393875797,random_forest,test
+261,Database Systems,4,2025,final,1,0.6206440102545637,random_forest,test
+262,Database Systems,5,2025,final,1,0.6365839090955715,random_forest,test
+263,Database Systems,6,2025,final,1,0.7066589105297423,random_forest,test
+264,Database Systems,7,2025,final,0,0.6184879166792407,random_forest,test
+265,Database Systems,8,2025,final,0,0.30684876883759593,random_forest,test
+266,Database Systems,0,2025,mid,0,0.34131564342898996,random_forest,test
+267,Database Systems,1,2025,mid,1,0.6405608574682748,random_forest,test
+268,Database Systems,2,2025,mid,1,0.6159889646027005,random_forest,test
+269,Database Systems,3,2025,mid,0,0.13461137708012713,random_forest,test
+270,Database Systems,4,2025,mid,0,0.6009688484859104,random_forest,test
+271,Database Systems,5,2025,mid,0,0.562228712652897,random_forest,test
+272,Database Systems,6,2025,mid,1,0.6111698558666255,random_forest,test
+273,Database Systems,7,2025,mid,1,0.6260318813335026,random_forest,test
+274,Database Systems,8,2025,mid,0,0.14517694495485414,random_forest,test
+275,Database Systems,0,2026,final,0,0.6241961901483974,random_forest,test
+276,Database Systems,1,2026,final,0,0.6565405753278736,random_forest,test
+277,Database Systems,2,2026,final,1,0.692084522607729,random_forest,test
+278,Database Systems,3,2026,final,0,0.2924862777404132,random_forest,test
+279,Database Systems,4,2026,final,0,0.5909151271836635,random_forest,test
+280,Database Systems,5,2026,final,1,0.656057464336132,random_forest,test
+281,Database Systems,6,2026,final,1,0.7243390712775786,random_forest,test
+282,Database Systems,7,2026,final,0,0.6253659158848388,random_forest,test
+283,Database Systems,8,2026,final,0,0.3091117382978173,random_forest,test
+284,Database Systems,0,2026,mid,0,0.3420463229673507,random_forest,test
+285,Database Systems,1,2026,mid,1,0.6227361285859516,random_forest,test
+286,Database Systems,2,2026,mid,1,0.6001038436891935,random_forest,test
+287,Database Systems,3,2026,mid,0,0.13685814061998924,random_forest,test
+288,Database Systems,4,2026,mid,0,0.5778668725322873,random_forest,test
+289,Database Systems,5,2026,mid,0,0.5597553529507745,random_forest,test
+290,Database Systems,6,2026,mid,0,0.6352252829260607,random_forest,test
+291,Database Systems,7,2026,mid,0,0.6413602726924118,random_forest,test
+292,Database Systems,8,2026,mid,0,0.14768913618358057,random_forest,test
+293,Database Systems,0,2026,quiz,0,0.3984057896627985,random_forest,test
+294,Database Systems,1,2026,quiz,0,0.43771469758465836,random_forest,test
+295,Database Systems,2,2026,quiz,0,0.6020360388694099,random_forest,test
+296,Database Systems,3,2026,quiz,0,0.30838780738668786,random_forest,test
+297,Database Systems,4,2026,quiz,1,0.41692337875299806,random_forest,test
+298,Database Systems,5,2026,quiz,1,0.6226096942786651,random_forest,test
+299,Database Systems,6,2026,quiz,1,0.6335637685335662,random_forest,test
+300,Database Systems,7,2026,quiz,0,0.4416969445598711,random_forest,test
+301,Database Systems,8,2026,quiz,0,0.3330184208585944,random_forest,test
+302,Design and Analysis of Algorithms,0,2024,final,0,0.30249179385551,random_forest,test
+303,Design and Analysis of Algorithms,1,2024,final,0,0.14845553022752217,random_forest,test
+304,Design and Analysis of Algorithms,2,2024,final,0,0.11215637469366299,random_forest,test
+305,Design and Analysis of Algorithms,3,2024,final,0,0.14845553022752217,random_forest,test
+306,Design and Analysis of Algorithms,4,2024,final,0,0.6769197535849617,random_forest,test
+307,Design and Analysis of Algorithms,5,2024,final,1,0.7456133352722188,random_forest,test
+308,Design and Analysis of Algorithms,6,2024,final,1,0.6549598739313728,random_forest,test
+309,Design and Analysis of Algorithms,7,2024,final,0,0.7336530683093517,random_forest,test
+310,Design and Analysis of Algorithms,8,2024,final,1,0.5911551962902304,random_forest,test
+311,Design and Analysis of Algorithms,0,2024,mid,0,0.2763172353577524,random_forest,test
+312,Design and Analysis of Algorithms,1,2024,mid,0,0.1263004490886208,random_forest,test
+313,Design and Analysis of Algorithms,2,2024,mid,0,0.10021068432145887,random_forest,test
+314,Design and Analysis of Algorithms,3,2024,mid,0,0.1263004490886208,random_forest,test
+315,Design and Analysis of Algorithms,4,2024,mid,1,0.6404470652692055,random_forest,test
+316,Design and Analysis of Algorithms,5,2024,mid,1,0.6686103629786454,random_forest,test
+317,Design and Analysis of Algorithms,6,2024,mid,1,0.6574114757557535,random_forest,test
+318,Design and Analysis of Algorithms,7,2024,mid,0,0.652537091487618,random_forest,test
+319,Design and Analysis of Algorithms,8,2024,mid,0,0.5601138252340074,random_forest,test
+320,Design and Analysis of Algorithms,0,2025,final,0,0.30346134560711746,random_forest,test
+321,Design and Analysis of Algorithms,1,2025,final,0,0.15875439681198708,random_forest,test
+322,Design and Analysis of Algorithms,2,2025,final,0,0.1382222814832664,random_forest,test
+323,Design and Analysis of Algorithms,3,2025,final,0,0.15875439681198708,random_forest,test
+324,Design and Analysis of Algorithms,4,2025,final,0,0.6939026537596705,random_forest,test
+325,Design and Analysis of Algorithms,5,2025,final,0,0.7327690671166196,random_forest,test
+326,Design and Analysis of Algorithms,6,2025,final,1,0.6423753755207096,random_forest,test
+327,Design and Analysis of Algorithms,7,2025,final,0,0.7157673076496213,random_forest,test
+328,Design and Analysis of Algorithms,8,2025,final,0,0.5761729470828537,random_forest,test
+329,Design and Analysis of Algorithms,0,2025,quiz,0,0.2945441984860444,random_forest,test
+330,Design and Analysis of Algorithms,1,2025,quiz,0,0.31095281481319603,random_forest,test
+331,Design and Analysis of Algorithms,2,2025,quiz,0,0.29264263164132714,random_forest,test
+332,Design and Analysis of Algorithms,3,2025,quiz,0,0.31095281481319603,random_forest,test
+333,Design and Analysis of Algorithms,4,2025,quiz,0,0.6204110922885494,random_forest,test
+334,Design and Analysis of Algorithms,5,2025,quiz,1,0.6461147667586785,random_forest,test
+335,Design and Analysis of Algorithms,6,2025,quiz,0,0.6465992233632228,random_forest,test
+336,Design and Analysis of Algorithms,7,2025,quiz,1,0.6568117416282204,random_forest,test
+337,Design and Analysis of Algorithms,8,2025,quiz,1,0.4127404515736546,random_forest,test
+338,IOT,0,2024,quiz,1,0.5114142740786111,random_forest,test
+339,IOT,1,2024,quiz,1,0.6356398497012993,random_forest,test
+340,IOT,2,2024,quiz,1,0.6096108009188708,random_forest,test
+341,IOT,3,2024,quiz,1,0.6319316301762511,random_forest,test
+342,IOT,0,2025,mid,0,0.6543645074599838,random_forest,test
+343,IOT,1,2025,mid,1,0.7853776221345214,random_forest,test
+344,IOT,2,2025,mid,0,0.618648812261281,random_forest,test
+345,IOT,3,2025,mid,1,0.6415808929760711,random_forest,test
+346,NLP,0,2024,quiz,0,0.3432801828574216,random_forest,test
+347,NLP,1,2024,quiz,1,0.8801924999014907,random_forest,test
+348,NLP,2,2024,quiz,1,0.6008711472220618,random_forest,test
+349,NLP,3,2024,quiz,0,0.3565051053306975,random_forest,test
+350,NLP,4,2024,quiz,0,0.34248697707361,random_forest,test
+351,NLP,5,2024,quiz,0,0.34237642646730393,random_forest,test
+352,NLP,6,2024,quiz,0,0.3459366745559531,random_forest,test
+353,NLP,7,2024,quiz,0,0.34237642646730393,random_forest,test
+354,NLP,8,2024,quiz,0,0.3459366745559531,random_forest,test
+355,NLP,9,2024,quiz,0,0.3459366745559531,random_forest,test
+356,OOP Lab,0,2025,mid,1,0.6846573090340334,random_forest,test
+357,OOP Lab,1,2025,mid,0,0.1809698778575063,random_forest,test
+358,OOP Lab,2,2025,mid,0,0.1815832111908396,random_forest,test
+359,OOP Lab,3,2025,mid,0,0.39558814994998764,random_forest,test
+360,OS,0,2025,quiz,0,0.3933804067083425,random_forest,test
+361,OS,1,2025,quiz,0,0.26423012521209616,random_forest,test
+362,OS,2,2025,quiz,0,0.4769969104060821,random_forest,test
+363,OS,3,2025,quiz,0,0.5548063945025213,random_forest,test
+364,OS,4,2025,quiz,0,0.6027889081035834,random_forest,test
+365,OS,5,2025,quiz,0,0.29759470983039626,random_forest,test
+366,OS,6,2025,quiz,0,0.6248955409194501,random_forest,test
+367,OS,7,2025,quiz,1,0.5644498310925875,random_forest,test
+368,OS,8,2025,quiz,0,0.5571412179969918,random_forest,test
+369,OS,9,2025,quiz,0,0.6811228160892875,random_forest,test
+370,Object Oriented Programming,0,2024,mid,1,0.49177297508047757,random_forest,test
+371,Object Oriented Programming,1,2024,mid,0,0.168223296758872,random_forest,test
+372,Object Oriented Programming,2,2024,mid,0,0.10977477077614552,random_forest,test
+373,Object Oriented Programming,3,2024,mid,0,0.181157377606304,random_forest,test
+374,Object Oriented Programming,4,2024,mid,1,0.7518629850936892,random_forest,test
+375,Object Oriented Programming,5,2024,mid,0,0.2716464102119598,random_forest,test
+376,Object Oriented Programming,6,2024,mid,0,0.6412276520229644,random_forest,test
+377,Object Oriented Programming,7,2024,mid,0,0.10069469799531162,random_forest,test
+378,Object Oriented Programming,8,2024,mid,0,0.607757611816308,random_forest,test
+379,Object Oriented Programming,0,2025,final,0,0.30240873930434325,random_forest,test
+380,Object Oriented Programming,1,2025,final,0,0.35019338218993784,random_forest,test
+381,Object Oriented Programming,2,2025,final,1,0.13330128218350384,random_forest,test
+382,Object Oriented Programming,3,2025,final,0,0.11286335096887994,random_forest,test
+383,Object Oriented Programming,4,2025,final,1,0.7648929668456591,random_forest,test
+384,Object Oriented Programming,5,2025,final,0,0.2788859712327453,random_forest,test
+385,Object Oriented Programming,6,2025,final,1,0.6745296855901382,random_forest,test
+386,Object Oriented Programming,7,2025,final,0,0.11199876710856667,random_forest,test
+387,Object Oriented Programming,8,2025,final,1,0.6228997109646803,random_forest,test
+388,Object Oriented Programming,0,2026,mid,0,0.5735099529501659,random_forest,test
+389,Object Oriented Programming,1,2026,mid,0,0.11487462862799652,random_forest,test
+390,Object Oriented Programming,2,2026,mid,0,0.20621995304721039,random_forest,test
+391,Object Oriented Programming,3,2026,mid,0,0.17190602945127148,random_forest,test
+392,Object Oriented Programming,4,2026,mid,1,0.7584764927108724,random_forest,test
+393,Object Oriented Programming,5,2026,mid,0,0.26482523583966877,random_forest,test
+394,Object Oriented Programming,6,2026,mid,0,0.6400967391876576,random_forest,test
+395,Object Oriented Programming,7,2026,mid,0,0.10154079704287595,random_forest,test
+396,Object Oriented Programming,8,2026,mid,1,0.613685508312665,random_forest,test
+397,Object Oriented Programming,0,2026,quiz,1,0.6247784456979996,random_forest,test
+398,Object Oriented Programming,1,2026,quiz,0,0.24897424395546983,random_forest,test
+399,Object Oriented Programming,2,2026,quiz,0,0.3014043341676403,random_forest,test
+400,Object Oriented Programming,3,2026,quiz,0,0.23155751282243864,random_forest,test
+401,Object Oriented Programming,4,2026,quiz,1,0.6545730107362221,random_forest,test
+402,Object Oriented Programming,5,2026,quiz,0,0.262931423633721,random_forest,test
+403,Object Oriented Programming,6,2026,quiz,1,0.6142437816042052,random_forest,test
+404,Object Oriented Programming,7,2026,quiz,0,0.24376238173875076,random_forest,test
+405,Object Oriented Programming,8,2026,quiz,0,0.45658494562219537,random_forest,test
+406,PP,0,2024,final,0,0.5705870802317724,random_forest,test
+407,PP,1,2024,final,0,0.7029260613543749,random_forest,test
+408,PP,2,2024,final,0,0.4245768569089351,random_forest,test
+409,PP,3,2024,final,0,0.6279454231350394,random_forest,test
+410,PP,4,2024,final,0,0.17701398607342264,random_forest,test
+411,PP,5,2024,final,0,0.6346218043600678,random_forest,test
+412,PP,6,2024,final,0,0.3755377035367283,random_forest,test
+413,PP,7,2024,final,0,0.6105677945141174,random_forest,test
+414,PP,8,2024,final,0,0.6237939825539456,random_forest,test
+415,PP,9,2024,final,1,0.8475000774123154,random_forest,test
+416,PP,0,2024,mid,0,0.5184779286103443,random_forest,test
+417,PP,1,2024,mid,1,0.6574302852433237,random_forest,test
+418,PP,2,2024,mid,0,0.19461166294863014,random_forest,test
+419,PP,3,2024,mid,1,0.6064137125413229,random_forest,test
+420,PP,4,2024,mid,0,0.14537179271531694,random_forest,test
+421,PP,5,2024,mid,0,0.6210350186269987,random_forest,test
+422,PP,6,2024,mid,0,0.36117922162325744,random_forest,test
+423,PP,7,2024,mid,0,0.5986736799756124,random_forest,test
+424,PP,8,2024,mid,1,0.6016348025843299,random_forest,test
+425,PP,9,2024,mid,1,0.8503954087149275,random_forest,test
+426,PP,0,2025,final,0,0.4390950144549542,random_forest,test
+427,PP,1,2025,final,1,0.7063212799544712,random_forest,test
+428,PP,2,2025,final,0,0.2948525478073713,random_forest,test
+429,PP,3,2025,final,0,0.6024570401179975,random_forest,test
+430,PP,4,2025,final,0,0.18088340274265605,random_forest,test
+431,PP,5,2025,final,0,0.6462180467500767,random_forest,test
+432,PP,6,2025,final,0,0.25788555062920077,random_forest,test
+433,PP,7,2025,final,0,0.42637379150146804,random_forest,test
+434,PP,8,2025,final,0,0.6465332278567175,random_forest,test
+435,PP,9,2025,final,1,0.8474863616161644,random_forest,test
+436,PP,0,2025,mid,0,0.3867492447715145,random_forest,test
+437,PP,1,2025,mid,0,0.6640424930852644,random_forest,test
+438,PP,2,2025,mid,0,0.12279175340792858,random_forest,test
+439,PP,3,2025,mid,0,0.5949804603492157,random_forest,test
+440,PP,4,2025,mid,0,0.15117877945612668,random_forest,test
+441,PP,5,2025,mid,0,0.6217188811927633,random_forest,test
+442,PP,6,2025,mid,0,0.23133204970722177,random_forest,test
+443,PP,7,2025,mid,0,0.4172552077981966,random_forest,test
+444,PP,8,2025,mid,0,0.6262337609386925,random_forest,test
+445,PP,9,2025,mid,1,0.8500544013251944,random_forest,test
+446,PP,0,2026,mid,0,0.2650128627861891,random_forest,test
+447,PP,1,2026,mid,0,0.6375762065568,random_forest,test
+448,PP,2,2026,mid,0,0.11116744518147534,random_forest,test
+449,PP,3,2026,mid,1,0.6112674777956529,random_forest,test
+450,PP,4,2026,mid,0,0.13814001014212182,random_forest,test
+451,PP,5,2026,mid,0,0.5209785704591238,random_forest,test
+452,PP,6,2026,mid,0,0.22053295178866064,random_forest,test
+453,PP,7,2026,mid,0,0.40930173124848296,random_forest,test
+454,PP,8,2026,mid,1,0.5802816895816104,random_forest,test
+455,PP,9,2026,mid,1,0.828559487405581,random_forest,test
+456,PP,0,2026,quiz,0,0.2576553209975673,random_forest,test
+457,PP,1,2026,quiz,1,0.6439709774858546,random_forest,test
+458,PP,2,2026,quiz,0,0.2977993829236812,random_forest,test
+459,PP,3,2026,quiz,0,0.6696312710337358,random_forest,test
+460,PP,4,2026,quiz,0,0.31472415644528806,random_forest,test
+461,PP,5,2026,quiz,0,0.5497972734667218,random_forest,test
+462,PP,6,2026,quiz,0,0.22977760170471437,random_forest,test
+463,PP,7,2026,quiz,0,0.3379973564341297,random_forest,test
+464,PP,8,2026,quiz,1,0.44641944788672105,random_forest,test
+465,PP,9,2026,quiz,1,0.8209032589044188,random_forest,test
+466,SMD,0,2024,mid,0,0.652501244528442,random_forest,test
+467,SMD,1,2024,mid,0,0.32108895612805743,random_forest,test
+468,SMD,2,2024,mid,0,0.3166428043708077,random_forest,test
+469,SMD,3,2024,mid,0,0.1769847446156546,random_forest,test
+470,SMD,4,2024,mid,0,0.1278658149339506,random_forest,test
+471,SMD,5,2024,mid,1,0.59803077101618,random_forest,test
+472,SMD,6,2024,mid,0,0.12736803715617284,random_forest,test
+473,SMD,7,2024,mid,0,0.197303379300457,random_forest,test
+474,SMD,0,2026,final,0,0.5806448214165847,random_forest,test
+475,SMD,1,2026,final,0,0.18073941726848616,random_forest,test
+476,SMD,2,2026,final,0,0.339997909551598,random_forest,test
+477,SMD,3,2026,final,0,0.18274727981490466,random_forest,test
+478,SMD,4,2026,final,0,0.2738679237569925,random_forest,test
+479,SMD,5,2026,final,1,0.6275012155208003,random_forest,test
+480,SMD,6,2026,final,0,0.16355472780373975,random_forest,test
+481,SMD,7,2026,final,0,0.1986197990957871,random_forest,test
+482,Software Engineering,0,2024,mid,0,0.5844798922852562,random_forest,test
+483,Software Engineering,1,2024,mid,0,0.4299763962816711,random_forest,test
+484,Software Engineering,2,2024,mid,0,0.25485640412434524,random_forest,test
+485,Software Engineering,3,2024,mid,0,0.17230518096578729,random_forest,test
+486,Software Engineering,4,2024,mid,1,0.8062928947367174,random_forest,test
+487,Software Engineering,5,2024,mid,0,0.5216430678173153,random_forest,test
+488,Software Engineering,0,2024,quiz,1,0.5834677688718585,random_forest,test
+489,Software Engineering,1,2024,quiz,1,0.3104323130720595,random_forest,test
+490,Software Engineering,2,2024,quiz,1,0.5004943386022,random_forest,test
+491,Software Engineering,3,2024,quiz,0,0.3765547856157543,random_forest,test
+492,Software Engineering,4,2024,quiz,1,0.7545339458638415,random_forest,test
+493,Software Engineering,5,2024,quiz,1,0.5372778512625944,random_forest,test
+494,Software Engineering,0,2025,final,1,0.27052455306259604,random_forest,test
+495,Software Engineering,1,2025,final,0,0.4231825055236902,random_forest,test
+496,Software Engineering,2,2025,final,1,0.5159018734531629,random_forest,test
+497,Software Engineering,3,2025,final,0,0.16512100029863483,random_forest,test
+498,Software Engineering,4,2025,final,1,0.8194920093405464,random_forest,test
+499,Software Engineering,5,2025,final,1,0.6069582986797071,random_forest,test
+500,Theory of Automata,0,2024,final,1,0.3503688351448595,random_forest,test
+501,Theory of Automata,1,2024,final,1,0.6690123463513943,random_forest,test
+502,Theory of Automata,2,2024,final,1,0.48124823911587383,random_forest,test
+503,Theory of Automata,3,2024,final,0,0.19596309750634863,random_forest,test
+504,Theory of Automata,4,2024,final,0,0.2705232082716615,random_forest,test
+505,Theory of Automata,5,2024,final,1,0.6448460401138537,random_forest,test
+506,Theory of Automata,6,2024,final,0,0.6488163309113376,random_forest,test
+507,Theory of Automata,7,2024,final,1,0.5211190251693362,random_forest,test
+508,Theory of Automata,0,2024,mid,0,0.3202201050760661,random_forest,test
+509,Theory of Automata,1,2024,mid,1,0.7065559838820928,random_forest,test
+510,Theory of Automata,2,2024,mid,0,0.4014576001601659,random_forest,test
+511,Theory of Automata,3,2024,mid,0,0.2200228540187931,random_forest,test
+512,Theory of Automata,4,2024,mid,0,0.1354300038154957,random_forest,test
+513,Theory of Automata,5,2024,mid,0,0.657640889286864,random_forest,test
+514,Theory of Automata,6,2024,mid,0,0.6437433405616003,random_forest,test
+515,Theory of Automata,7,2024,mid,1,0.498313414574087,random_forest,test
+516,Theory of Automata,0,2024,quiz,0,0.259529357835419,random_forest,test
+517,Theory of Automata,1,2024,quiz,1,0.6494118434333841,random_forest,test
+518,Theory of Automata,2,2024,quiz,1,0.3003604166636617,random_forest,test
+519,Theory of Automata,3,2024,quiz,0,0.44962086891655767,random_forest,test
+520,Theory of Automata,4,2024,quiz,0,0.23672764131773477,random_forest,test
+521,Theory of Automata,5,2024,quiz,0,0.47340055198236203,random_forest,test
+522,Theory of Automata,6,2024,quiz,0,0.6290839035443974,random_forest,test
+523,Theory of Automata,7,2024,quiz,0,0.3590452892184369,random_forest,test
+524,Theory of Automata,0,2025,final,0,0.4048942035142165,random_forest,test
+525,Theory of Automata,1,2025,final,1,0.678570929293543,random_forest,test
+526,Theory of Automata,2,2025,final,1,0.559414062443783,random_forest,test
+527,Theory of Automata,3,2025,final,0,0.11301852322212899,random_forest,test
+528,Theory of Automata,4,2025,final,0,0.2527114520165446,random_forest,test
+529,Theory of Automata,5,2025,final,0,0.6634832634837612,random_forest,test
+530,Theory of Automata,6,2025,final,0,0.5400982285898736,random_forest,test
+531,Theory of Automata,7,2025,final,0,0.6170700051551886,random_forest,test
+532,Theory of Automata,0,2025,mid,0,0.36524895214443964,random_forest,test
+533,Theory of Automata,1,2025,mid,1,0.6836437052683408,random_forest,test
+534,Theory of Automata,2,2025,mid,0,0.49894456867753556,random_forest,test
+535,Theory of Automata,3,2025,mid,0,0.12516123178490782,random_forest,test
+536,Theory of Automata,4,2025,mid,0,0.12581359498265623,random_forest,test
+537,Theory of Automata,5,2025,mid,0,0.6542613302926243,random_forest,test
+538,Theory of Automata,6,2025,mid,0,0.5314064037345254,random_forest,test
+539,Theory of Automata,7,2025,mid,0,0.5939849749979428,random_forest,test
+540,Theory of Automata,0,2025,quiz,0,0.2513533808656574,random_forest,test
+541,Theory of Automata,1,2025,quiz,0,0.6556658341327765,random_forest,test
+542,Theory of Automata,2,2025,quiz,0,0.38612023812198176,random_forest,test
+543,Theory of Automata,3,2025,quiz,0,0.27272935991036407,random_forest,test
+544,Theory of Automata,4,2025,quiz,1,0.21990850271807527,random_forest,test
+545,Theory of Automata,5,2025,quiz,1,0.47682855414119,random_forest,test
+546,Theory of Automata,6,2025,quiz,1,0.5304160484892652,random_forest,test
+547,Theory of Automata,7,2025,quiz,1,0.4205673276187031,random_forest,test
+548,Web Programming,0,2025,final,0,0.14944387371109166,random_forest,test
+549,Web Programming,1,2025,final,0,0.5644294144818951,random_forest,test
+550,Web Programming,2,2025,final,1,0.6424204815088776,random_forest,test
+551,Web Programming,3,2025,final,0,0.3156471809364592,random_forest,test
+552,Web Programming,4,2025,final,0,0.4653321110874082,random_forest,test
+553,Web Programming,5,2025,final,0,0.16398248357002324,random_forest,test
+554,Web Programming,6,2025,final,0,0.15821883617572438,random_forest,test
+555,Web Programming,7,2025,final,0,0.31706578756657366,random_forest,test
+556,Web Programming,8,2025,final,0,0.16824399124935094,random_forest,test
+557,Web Programming,9,2025,final,0,0.19520818543635063,random_forest,test
+558,Web Programming,0,2025,quiz,1,0.32433934784477114,random_forest,test
+559,Web Programming,1,2025,quiz,0,0.6031515942023047,random_forest,test
+560,Web Programming,2,2025,quiz,1,0.6860375335568818,random_forest,test
+561,Web Programming,3,2025,quiz,0,0.3313688941055318,random_forest,test
+562,Web Programming,4,2025,quiz,0,0.4490254910736388,random_forest,test
+563,Web Programming,5,2025,quiz,0,0.3383423452947378,random_forest,test
+564,Web Programming,6,2025,quiz,0,0.304551571803659,random_forest,test
+565,Web Programming,7,2025,quiz,0,0.34315472613840414,random_forest,test
+566,Web Programming,8,2025,quiz,1,0.3527633590721892,random_forest,test
+567,Web Programming,9,2025,quiz,0,0.35129791697877755,random_forest,test
