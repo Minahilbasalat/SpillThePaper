@@ -16,7 +16,9 @@ from pathlib import Path
 import joblib
 import numpy as np
 import pandas as pd
+import torch
 
+from src.models.mlp import MLP, predict_proba
 from src.models.preprocess import (
     ROOT,
     load_preprocessor,
@@ -79,10 +81,23 @@ def export_sklearn(model_name: str, pre) -> None:
     write_predictions(model_name, scores)
 
 
+def export_mlp(pre) -> None:
+    ckpt = torch.load(MODELS_DIR / "mlp_best.pt")
+    h1, h2 = ckpt["config"]["hidden"]
+    model = MLP(ckpt["in_features"], h1, h2, ckpt["config"]["dropout"])
+    model.load_state_dict(ckpt["state_dict"])
+    scores = {}
+    for split in ("val", "test"):
+        X, _ = split_to_xy(load_split(split), pre)
+        scores[split] = predict_proba(model, X)
+    write_predictions("mlp", scores)
+
+
 def main() -> None:
     pre = load_preprocessor()
     for name in SKLEARN_MODELS:
         export_sklearn(name, pre)
+    export_mlp(pre)
 
 
 if __name__ == "__main__":
