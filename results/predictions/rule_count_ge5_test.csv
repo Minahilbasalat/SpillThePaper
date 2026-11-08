@@ -1,0 +1,569 @@
+row_idx,subject,topic_id,target_year,target_type,label,score,model,split
+0,Advanced Database Concepts,0,2024,final,0,5.0,rule_count_ge5,test
+1,Advanced Database Concepts,1,2024,final,1,8.0,rule_count_ge5,test
+2,Advanced Database Concepts,2,2024,final,1,9.0,rule_count_ge5,test
+3,Advanced Database Concepts,3,2024,final,0,6.0,rule_count_ge5,test
+4,Advanced Database Concepts,4,2024,final,0,5.0,rule_count_ge5,test
+5,Advanced Database Concepts,5,2024,final,1,6.0,rule_count_ge5,test
+6,Advanced Database Concepts,6,2024,final,0,4.0,rule_count_ge5,test
+7,Advanced Database Concepts,7,2024,final,1,8.0,rule_count_ge5,test
+8,Advanced Database Concepts,0,2024,mid,0,5.0,rule_count_ge5,test
+9,Advanced Database Concepts,1,2024,mid,0,8.0,rule_count_ge5,test
+10,Advanced Database Concepts,2,2024,mid,1,9.0,rule_count_ge5,test
+11,Advanced Database Concepts,3,2024,mid,0,6.0,rule_count_ge5,test
+12,Advanced Database Concepts,4,2024,mid,0,5.0,rule_count_ge5,test
+13,Advanced Database Concepts,5,2024,mid,1,6.0,rule_count_ge5,test
+14,Advanced Database Concepts,6,2024,mid,0,4.0,rule_count_ge5,test
+15,Advanced Database Concepts,7,2024,mid,1,8.0,rule_count_ge5,test
+16,Advanced Database Concepts,0,2025,quiz,0,5.0,rule_count_ge5,test
+17,Advanced Database Concepts,1,2025,quiz,0,9.0,rule_count_ge5,test
+18,Advanced Database Concepts,2,2025,quiz,0,11.0,rule_count_ge5,test
+19,Advanced Database Concepts,3,2025,quiz,0,6.0,rule_count_ge5,test
+20,Advanced Database Concepts,4,2025,quiz,0,5.0,rule_count_ge5,test
+21,Advanced Database Concepts,5,2025,quiz,1,8.0,rule_count_ge5,test
+22,Advanced Database Concepts,6,2025,quiz,0,4.0,rule_count_ge5,test
+23,Advanced Database Concepts,7,2025,quiz,0,10.0,rule_count_ge5,test
+24,Artificial Intelligence,0,2024,final,1,28.0,rule_count_ge5,test
+25,Artificial Intelligence,1,2024,final,1,22.0,rule_count_ge5,test
+26,Artificial Intelligence,2,2024,final,1,23.0,rule_count_ge5,test
+27,Artificial Intelligence,3,2024,final,0,3.0,rule_count_ge5,test
+28,Artificial Intelligence,4,2024,final,1,15.0,rule_count_ge5,test
+29,Artificial Intelligence,5,2024,final,1,26.0,rule_count_ge5,test
+30,Artificial Intelligence,6,2024,final,0,5.0,rule_count_ge5,test
+31,Artificial Intelligence,7,2024,final,0,8.0,rule_count_ge5,test
+32,Artificial Intelligence,8,2024,final,0,12.0,rule_count_ge5,test
+33,Artificial Intelligence,0,2024,mid,0,28.0,rule_count_ge5,test
+34,Artificial Intelligence,1,2024,mid,1,22.0,rule_count_ge5,test
+35,Artificial Intelligence,2,2024,mid,1,23.0,rule_count_ge5,test
+36,Artificial Intelligence,3,2024,mid,0,3.0,rule_count_ge5,test
+37,Artificial Intelligence,4,2024,mid,1,15.0,rule_count_ge5,test
+38,Artificial Intelligence,5,2024,mid,1,26.0,rule_count_ge5,test
+39,Artificial Intelligence,6,2024,mid,0,5.0,rule_count_ge5,test
+40,Artificial Intelligence,7,2024,mid,1,8.0,rule_count_ge5,test
+41,Artificial Intelligence,8,2024,mid,0,12.0,rule_count_ge5,test
+42,Artificial Intelligence,0,2025,mid,0,29.0,rule_count_ge5,test
+43,Artificial Intelligence,1,2025,mid,0,24.0,rule_count_ge5,test
+44,Artificial Intelligence,2,2025,mid,0,25.0,rule_count_ge5,test
+45,Artificial Intelligence,3,2025,mid,0,3.0,rule_count_ge5,test
+46,Artificial Intelligence,4,2025,mid,1,18.0,rule_count_ge5,test
+47,Artificial Intelligence,5,2025,mid,1,28.0,rule_count_ge5,test
+48,Artificial Intelligence,6,2025,mid,0,5.0,rule_count_ge5,test
+49,Artificial Intelligence,7,2025,mid,0,9.0,rule_count_ge5,test
+50,Artificial Intelligence,8,2025,mid,0,12.0,rule_count_ge5,test
+51,Artificial Intelligence,0,2026,quiz,1,29.0,rule_count_ge5,test
+52,Artificial Intelligence,1,2026,quiz,1,24.0,rule_count_ge5,test
+53,Artificial Intelligence,2,2026,quiz,1,25.0,rule_count_ge5,test
+54,Artificial Intelligence,3,2026,quiz,0,3.0,rule_count_ge5,test
+55,Artificial Intelligence,4,2026,quiz,0,19.0,rule_count_ge5,test
+56,Artificial Intelligence,5,2026,quiz,1,29.0,rule_count_ge5,test
+57,Artificial Intelligence,6,2026,quiz,0,5.0,rule_count_ge5,test
+58,Artificial Intelligence,7,2026,quiz,0,9.0,rule_count_ge5,test
+59,Artificial Intelligence,8,2026,quiz,0,12.0,rule_count_ge5,test
+60,Cloud Computing,0,2025,final,0,1.0,rule_count_ge5,test
+61,Cloud Computing,1,2025,final,0,10.0,rule_count_ge5,test
+62,Cloud Computing,2,2025,final,1,14.0,rule_count_ge5,test
+63,Cloud Computing,3,2025,final,0,13.0,rule_count_ge5,test
+64,Cloud Computing,4,2025,final,0,4.0,rule_count_ge5,test
+65,Cloud Computing,5,2025,final,0,3.0,rule_count_ge5,test
+66,Cloud Computing,6,2025,final,0,3.0,rule_count_ge5,test
+67,Cloud Computing,7,2025,final,1,18.0,rule_count_ge5,test
+68,Cloud Computing,8,2025,final,0,1.0,rule_count_ge5,test
+69,Cloud Computing,0,2025,mid,0,1.0,rule_count_ge5,test
+70,Cloud Computing,1,2025,mid,0,10.0,rule_count_ge5,test
+71,Cloud Computing,2,2025,mid,1,14.0,rule_count_ge5,test
+72,Cloud Computing,3,2025,mid,0,13.0,rule_count_ge5,test
+73,Cloud Computing,4,2025,mid,0,4.0,rule_count_ge5,test
+74,Cloud Computing,5,2025,mid,0,3.0,rule_count_ge5,test
+75,Cloud Computing,6,2025,mid,0,3.0,rule_count_ge5,test
+76,Cloud Computing,7,2025,mid,1,18.0,rule_count_ge5,test
+77,Cloud Computing,8,2025,mid,0,1.0,rule_count_ge5,test
+78,Compiler Construction,0,2024,final,0,13.0,rule_count_ge5,test
+79,Compiler Construction,1,2024,final,0,11.0,rule_count_ge5,test
+80,Compiler Construction,2,2024,final,0,6.0,rule_count_ge5,test
+81,Compiler Construction,3,2024,final,0,8.0,rule_count_ge5,test
+82,Compiler Construction,4,2024,final,1,8.0,rule_count_ge5,test
+83,Compiler Construction,0,2024,mid,1,13.0,rule_count_ge5,test
+84,Compiler Construction,1,2024,mid,1,11.0,rule_count_ge5,test
+85,Compiler Construction,2,2024,mid,0,6.0,rule_count_ge5,test
+86,Compiler Construction,3,2024,mid,1,8.0,rule_count_ge5,test
+87,Compiler Construction,4,2024,mid,0,8.0,rule_count_ge5,test
+88,Compiler Construction,0,2025,mid,1,14.0,rule_count_ge5,test
+89,Compiler Construction,1,2025,mid,0,12.0,rule_count_ge5,test
+90,Compiler Construction,2,2025,mid,0,6.0,rule_count_ge5,test
+91,Compiler Construction,3,2025,mid,1,10.0,rule_count_ge5,test
+92,Compiler Construction,4,2025,mid,0,9.0,rule_count_ge5,test
+93,Computer Networks,0,2024,final,0,4.0,rule_count_ge5,test
+94,Computer Networks,1,2024,final,1,13.0,rule_count_ge5,test
+95,Computer Networks,2,2024,final,1,20.0,rule_count_ge5,test
+96,Computer Networks,3,2024,final,1,8.0,rule_count_ge5,test
+97,Computer Networks,4,2024,final,1,17.0,rule_count_ge5,test
+98,Computer Networks,5,2024,final,0,6.0,rule_count_ge5,test
+99,Computer Networks,6,2024,final,1,24.0,rule_count_ge5,test
+100,Computer Networks,7,2024,final,0,10.0,rule_count_ge5,test
+101,Computer Networks,8,2024,final,0,7.0,rule_count_ge5,test
+102,Computer Networks,9,2024,final,0,1.0,rule_count_ge5,test
+103,Computer Networks,0,2024,mid,0,4.0,rule_count_ge5,test
+104,Computer Networks,1,2024,mid,1,13.0,rule_count_ge5,test
+105,Computer Networks,2,2024,mid,1,20.0,rule_count_ge5,test
+106,Computer Networks,3,2024,mid,0,8.0,rule_count_ge5,test
+107,Computer Networks,4,2024,mid,1,17.0,rule_count_ge5,test
+108,Computer Networks,5,2024,mid,0,6.0,rule_count_ge5,test
+109,Computer Networks,6,2024,mid,1,24.0,rule_count_ge5,test
+110,Computer Networks,7,2024,mid,1,10.0,rule_count_ge5,test
+111,Computer Networks,8,2024,mid,1,7.0,rule_count_ge5,test
+112,Computer Networks,9,2024,mid,0,1.0,rule_count_ge5,test
+113,Computer Networks,0,2024,quiz,1,4.0,rule_count_ge5,test
+114,Computer Networks,1,2024,quiz,1,13.0,rule_count_ge5,test
+115,Computer Networks,2,2024,quiz,1,20.0,rule_count_ge5,test
+116,Computer Networks,3,2024,quiz,1,8.0,rule_count_ge5,test
+117,Computer Networks,4,2024,quiz,1,17.0,rule_count_ge5,test
+118,Computer Networks,5,2024,quiz,0,6.0,rule_count_ge5,test
+119,Computer Networks,6,2024,quiz,1,24.0,rule_count_ge5,test
+120,Computer Networks,7,2024,quiz,0,10.0,rule_count_ge5,test
+121,Computer Networks,8,2024,quiz,1,7.0,rule_count_ge5,test
+122,Computer Networks,9,2024,quiz,0,1.0,rule_count_ge5,test
+123,Computer Networks,0,2025,mid,0,5.0,rule_count_ge5,test
+124,Computer Networks,1,2025,mid,1,18.0,rule_count_ge5,test
+125,Computer Networks,2,2025,mid,1,28.0,rule_count_ge5,test
+126,Computer Networks,3,2025,mid,0,11.0,rule_count_ge5,test
+127,Computer Networks,4,2025,mid,1,22.0,rule_count_ge5,test
+128,Computer Networks,5,2025,mid,0,6.0,rule_count_ge5,test
+129,Computer Networks,6,2025,mid,1,33.0,rule_count_ge5,test
+130,Computer Networks,7,2025,mid,0,11.0,rule_count_ge5,test
+131,Computer Networks,8,2025,mid,1,9.0,rule_count_ge5,test
+132,Computer Networks,9,2025,mid,0,1.0,rule_count_ge5,test
+133,Computer Networks,0,2025,quiz,0,5.0,rule_count_ge5,test
+134,Computer Networks,1,2025,quiz,1,18.0,rule_count_ge5,test
+135,Computer Networks,2,2025,quiz,1,28.0,rule_count_ge5,test
+136,Computer Networks,3,2025,quiz,1,11.0,rule_count_ge5,test
+137,Computer Networks,4,2025,quiz,1,22.0,rule_count_ge5,test
+138,Computer Networks,5,2025,quiz,1,6.0,rule_count_ge5,test
+139,Computer Networks,6,2025,quiz,1,33.0,rule_count_ge5,test
+140,Computer Networks,7,2025,quiz,1,11.0,rule_count_ge5,test
+141,Computer Networks,8,2025,quiz,1,9.0,rule_count_ge5,test
+142,Computer Networks,9,2025,quiz,0,1.0,rule_count_ge5,test
+143,Computer Networks,0,2026,final,0,5.0,rule_count_ge5,test
+144,Computer Networks,1,2026,final,0,24.0,rule_count_ge5,test
+145,Computer Networks,2,2026,final,1,39.0,rule_count_ge5,test
+146,Computer Networks,3,2026,final,1,14.0,rule_count_ge5,test
+147,Computer Networks,4,2026,final,1,27.0,rule_count_ge5,test
+148,Computer Networks,5,2026,final,0,7.0,rule_count_ge5,test
+149,Computer Networks,6,2026,final,1,44.0,rule_count_ge5,test
+150,Computer Networks,7,2026,final,0,12.0,rule_count_ge5,test
+151,Computer Networks,8,2026,final,0,12.0,rule_count_ge5,test
+152,Computer Networks,9,2026,final,0,1.0,rule_count_ge5,test
+153,Computer Networks,0,2026,mid,0,5.0,rule_count_ge5,test
+154,Computer Networks,1,2026,mid,1,24.0,rule_count_ge5,test
+155,Computer Networks,2,2026,mid,1,39.0,rule_count_ge5,test
+156,Computer Networks,3,2026,mid,0,14.0,rule_count_ge5,test
+157,Computer Networks,4,2026,mid,1,27.0,rule_count_ge5,test
+158,Computer Networks,5,2026,mid,0,7.0,rule_count_ge5,test
+159,Computer Networks,6,2026,mid,1,44.0,rule_count_ge5,test
+160,Computer Networks,7,2026,mid,0,12.0,rule_count_ge5,test
+161,Computer Networks,8,2026,mid,0,12.0,rule_count_ge5,test
+162,Computer Networks,9,2026,mid,0,1.0,rule_count_ge5,test
+163,Computer Networks,0,2026,quiz,1,5.0,rule_count_ge5,test
+164,Computer Networks,1,2026,quiz,1,24.0,rule_count_ge5,test
+165,Computer Networks,2,2026,quiz,1,39.0,rule_count_ge5,test
+166,Computer Networks,3,2026,quiz,1,14.0,rule_count_ge5,test
+167,Computer Networks,4,2026,quiz,1,27.0,rule_count_ge5,test
+168,Computer Networks,5,2026,quiz,1,7.0,rule_count_ge5,test
+169,Computer Networks,6,2026,quiz,1,44.0,rule_count_ge5,test
+170,Computer Networks,7,2026,quiz,0,12.0,rule_count_ge5,test
+171,Computer Networks,8,2026,quiz,0,12.0,rule_count_ge5,test
+172,Computer Networks,9,2026,quiz,1,1.0,rule_count_ge5,test
+173,Computer Organization and Assembly Language,0,2025,final,0,3.0,rule_count_ge5,test
+174,Computer Organization and Assembly Language,1,2025,final,1,20.0,rule_count_ge5,test
+175,Computer Organization and Assembly Language,2,2025,final,0,7.0,rule_count_ge5,test
+176,Computer Organization and Assembly Language,3,2025,final,0,9.0,rule_count_ge5,test
+177,Computer Organization and Assembly Language,4,2025,final,0,4.0,rule_count_ge5,test
+178,Computer Organization and Assembly Language,5,2025,final,0,2.0,rule_count_ge5,test
+179,Computer Organization and Assembly Language,6,2025,final,0,2.0,rule_count_ge5,test
+180,Computer Organization and Assembly Language,7,2025,final,0,8.0,rule_count_ge5,test
+181,Computer Organization and Assembly Language,8,2025,final,0,4.0,rule_count_ge5,test
+182,Computer Organization and Assembly Language,9,2025,final,0,3.0,rule_count_ge5,test
+183,DLD,0,2025,final,1,10.0,rule_count_ge5,test
+184,DLD,1,2025,final,0,5.0,rule_count_ge5,test
+185,DLD,2,2025,final,0,4.0,rule_count_ge5,test
+186,DLD,3,2025,final,1,8.0,rule_count_ge5,test
+187,DLD,4,2025,final,0,9.0,rule_count_ge5,test
+188,DLD,5,2025,final,1,9.0,rule_count_ge5,test
+189,DLD,6,2025,final,0,5.0,rule_count_ge5,test
+190,DLD,7,2025,final,0,4.0,rule_count_ge5,test
+191,DLD,0,2026,mid,0,11.0,rule_count_ge5,test
+192,DLD,1,2026,mid,0,5.0,rule_count_ge5,test
+193,DLD,2,2026,mid,0,4.0,rule_count_ge5,test
+194,DLD,3,2026,mid,1,9.0,rule_count_ge5,test
+195,DLD,4,2026,mid,0,9.0,rule_count_ge5,test
+196,DLD,5,2026,mid,1,10.0,rule_count_ge5,test
+197,DLD,6,2026,mid,0,5.0,rule_count_ge5,test
+198,DLD,7,2026,mid,0,4.0,rule_count_ge5,test
+199,DW,0,2024,mid,1,6.0,rule_count_ge5,test
+200,DW,1,2024,mid,0,3.0,rule_count_ge5,test
+201,DW,2,2024,mid,1,9.0,rule_count_ge5,test
+202,DW,3,2024,mid,0,5.0,rule_count_ge5,test
+203,Data Science,0,2024,mid,0,5.0,rule_count_ge5,test
+204,Data Science,1,2024,mid,0,5.0,rule_count_ge5,test
+205,Data Science,2,2024,mid,0,7.0,rule_count_ge5,test
+206,Data Science,3,2024,mid,0,7.0,rule_count_ge5,test
+207,Data Science,4,2024,mid,1,15.0,rule_count_ge5,test
+208,Data Science,5,2024,mid,0,3.0,rule_count_ge5,test
+209,Data Science,6,2024,mid,0,3.0,rule_count_ge5,test
+210,Data Science,7,2024,mid,0,3.0,rule_count_ge5,test
+211,Data Science,8,2024,mid,0,5.0,rule_count_ge5,test
+212,Data Science,0,2025,mid,0,5.0,rule_count_ge5,test
+213,Data Science,1,2025,mid,0,5.0,rule_count_ge5,test
+214,Data Science,2,2025,mid,0,7.0,rule_count_ge5,test
+215,Data Science,3,2025,mid,0,7.0,rule_count_ge5,test
+216,Data Science,4,2025,mid,1,16.0,rule_count_ge5,test
+217,Data Science,5,2025,mid,0,3.0,rule_count_ge5,test
+218,Data Science,6,2025,mid,0,3.0,rule_count_ge5,test
+219,Data Science,7,2025,mid,0,3.0,rule_count_ge5,test
+220,Data Science,8,2025,mid,0,5.0,rule_count_ge5,test
+221,Data Science,0,2026,final,0,5.0,rule_count_ge5,test
+222,Data Science,1,2026,final,0,5.0,rule_count_ge5,test
+223,Data Science,2,2026,final,0,7.0,rule_count_ge5,test
+224,Data Science,3,2026,final,0,7.0,rule_count_ge5,test
+225,Data Science,4,2026,final,1,18.0,rule_count_ge5,test
+226,Data Science,5,2026,final,0,3.0,rule_count_ge5,test
+227,Data Science,6,2026,final,0,3.0,rule_count_ge5,test
+228,Data Science,7,2026,final,0,3.0,rule_count_ge5,test
+229,Data Science,8,2026,final,0,5.0,rule_count_ge5,test
+230,Data Science,0,2026,mid,0,5.0,rule_count_ge5,test
+231,Data Science,1,2026,mid,0,5.0,rule_count_ge5,test
+232,Data Science,2,2026,mid,0,7.0,rule_count_ge5,test
+233,Data Science,3,2026,mid,0,7.0,rule_count_ge5,test
+234,Data Science,4,2026,mid,1,18.0,rule_count_ge5,test
+235,Data Science,5,2026,mid,0,3.0,rule_count_ge5,test
+236,Data Science,6,2026,mid,0,3.0,rule_count_ge5,test
+237,Data Science,7,2026,mid,0,3.0,rule_count_ge5,test
+238,Data Science,8,2026,mid,0,5.0,rule_count_ge5,test
+239,Database Systems,0,2024,final,1,10.0,rule_count_ge5,test
+240,Database Systems,1,2024,final,1,13.0,rule_count_ge5,test
+241,Database Systems,2,2024,final,1,20.0,rule_count_ge5,test
+242,Database Systems,3,2024,final,0,7.0,rule_count_ge5,test
+243,Database Systems,4,2024,final,0,14.0,rule_count_ge5,test
+244,Database Systems,5,2024,final,1,12.0,rule_count_ge5,test
+245,Database Systems,6,2024,final,1,17.0,rule_count_ge5,test
+246,Database Systems,7,2024,final,1,13.0,rule_count_ge5,test
+247,Database Systems,8,2024,final,0,7.0,rule_count_ge5,test
+248,Database Systems,0,2024,mid,0,10.0,rule_count_ge5,test
+249,Database Systems,1,2024,mid,1,13.0,rule_count_ge5,test
+250,Database Systems,2,2024,mid,1,20.0,rule_count_ge5,test
+251,Database Systems,3,2024,mid,0,7.0,rule_count_ge5,test
+252,Database Systems,4,2024,mid,0,14.0,rule_count_ge5,test
+253,Database Systems,5,2024,mid,0,12.0,rule_count_ge5,test
+254,Database Systems,6,2024,mid,1,17.0,rule_count_ge5,test
+255,Database Systems,7,2024,mid,0,13.0,rule_count_ge5,test
+256,Database Systems,8,2024,mid,0,7.0,rule_count_ge5,test
+257,Database Systems,0,2025,final,1,11.0,rule_count_ge5,test
+258,Database Systems,1,2025,final,1,15.0,rule_count_ge5,test
+259,Database Systems,2,2025,final,1,22.0,rule_count_ge5,test
+260,Database Systems,3,2025,final,0,7.0,rule_count_ge5,test
+261,Database Systems,4,2025,final,1,14.0,rule_count_ge5,test
+262,Database Systems,5,2025,final,1,13.0,rule_count_ge5,test
+263,Database Systems,6,2025,final,1,20.0,rule_count_ge5,test
+264,Database Systems,7,2025,final,0,14.0,rule_count_ge5,test
+265,Database Systems,8,2025,final,0,7.0,rule_count_ge5,test
+266,Database Systems,0,2025,mid,0,11.0,rule_count_ge5,test
+267,Database Systems,1,2025,mid,1,15.0,rule_count_ge5,test
+268,Database Systems,2,2025,mid,1,22.0,rule_count_ge5,test
+269,Database Systems,3,2025,mid,0,7.0,rule_count_ge5,test
+270,Database Systems,4,2025,mid,0,14.0,rule_count_ge5,test
+271,Database Systems,5,2025,mid,0,13.0,rule_count_ge5,test
+272,Database Systems,6,2025,mid,1,20.0,rule_count_ge5,test
+273,Database Systems,7,2025,mid,1,14.0,rule_count_ge5,test
+274,Database Systems,8,2025,mid,0,7.0,rule_count_ge5,test
+275,Database Systems,0,2026,final,0,12.0,rule_count_ge5,test
+276,Database Systems,1,2026,final,0,17.0,rule_count_ge5,test
+277,Database Systems,2,2026,final,1,24.0,rule_count_ge5,test
+278,Database Systems,3,2026,final,0,7.0,rule_count_ge5,test
+279,Database Systems,4,2026,final,0,15.0,rule_count_ge5,test
+280,Database Systems,5,2026,final,1,14.0,rule_count_ge5,test
+281,Database Systems,6,2026,final,1,22.0,rule_count_ge5,test
+282,Database Systems,7,2026,final,0,15.0,rule_count_ge5,test
+283,Database Systems,8,2026,final,0,7.0,rule_count_ge5,test
+284,Database Systems,0,2026,mid,0,12.0,rule_count_ge5,test
+285,Database Systems,1,2026,mid,1,17.0,rule_count_ge5,test
+286,Database Systems,2,2026,mid,1,24.0,rule_count_ge5,test
+287,Database Systems,3,2026,mid,0,7.0,rule_count_ge5,test
+288,Database Systems,4,2026,mid,0,15.0,rule_count_ge5,test
+289,Database Systems,5,2026,mid,0,14.0,rule_count_ge5,test
+290,Database Systems,6,2026,mid,0,22.0,rule_count_ge5,test
+291,Database Systems,7,2026,mid,0,15.0,rule_count_ge5,test
+292,Database Systems,8,2026,mid,0,7.0,rule_count_ge5,test
+293,Database Systems,0,2026,quiz,0,12.0,rule_count_ge5,test
+294,Database Systems,1,2026,quiz,0,17.0,rule_count_ge5,test
+295,Database Systems,2,2026,quiz,0,24.0,rule_count_ge5,test
+296,Database Systems,3,2026,quiz,0,7.0,rule_count_ge5,test
+297,Database Systems,4,2026,quiz,1,15.0,rule_count_ge5,test
+298,Database Systems,5,2026,quiz,1,14.0,rule_count_ge5,test
+299,Database Systems,6,2026,quiz,1,22.0,rule_count_ge5,test
+300,Database Systems,7,2026,quiz,0,15.0,rule_count_ge5,test
+301,Database Systems,8,2026,quiz,0,7.0,rule_count_ge5,test
+302,Design and Analysis of Algorithms,0,2024,final,0,9.0,rule_count_ge5,test
+303,Design and Analysis of Algorithms,1,2024,final,0,2.0,rule_count_ge5,test
+304,Design and Analysis of Algorithms,2,2024,final,0,4.0,rule_count_ge5,test
+305,Design and Analysis of Algorithms,3,2024,final,0,2.0,rule_count_ge5,test
+306,Design and Analysis of Algorithms,4,2024,final,0,23.0,rule_count_ge5,test
+307,Design and Analysis of Algorithms,5,2024,final,1,34.0,rule_count_ge5,test
+308,Design and Analysis of Algorithms,6,2024,final,1,29.0,rule_count_ge5,test
+309,Design and Analysis of Algorithms,7,2024,final,0,24.0,rule_count_ge5,test
+310,Design and Analysis of Algorithms,8,2024,final,1,14.0,rule_count_ge5,test
+311,Design and Analysis of Algorithms,0,2024,mid,0,9.0,rule_count_ge5,test
+312,Design and Analysis of Algorithms,1,2024,mid,0,2.0,rule_count_ge5,test
+313,Design and Analysis of Algorithms,2,2024,mid,0,4.0,rule_count_ge5,test
+314,Design and Analysis of Algorithms,3,2024,mid,0,2.0,rule_count_ge5,test
+315,Design and Analysis of Algorithms,4,2024,mid,1,23.0,rule_count_ge5,test
+316,Design and Analysis of Algorithms,5,2024,mid,1,34.0,rule_count_ge5,test
+317,Design and Analysis of Algorithms,6,2024,mid,1,29.0,rule_count_ge5,test
+318,Design and Analysis of Algorithms,7,2024,mid,0,24.0,rule_count_ge5,test
+319,Design and Analysis of Algorithms,8,2024,mid,0,14.0,rule_count_ge5,test
+320,Design and Analysis of Algorithms,0,2025,final,0,9.0,rule_count_ge5,test
+321,Design and Analysis of Algorithms,1,2025,final,0,2.0,rule_count_ge5,test
+322,Design and Analysis of Algorithms,2,2025,final,0,4.0,rule_count_ge5,test
+323,Design and Analysis of Algorithms,3,2025,final,0,2.0,rule_count_ge5,test
+324,Design and Analysis of Algorithms,4,2025,final,0,24.0,rule_count_ge5,test
+325,Design and Analysis of Algorithms,5,2025,final,0,38.0,rule_count_ge5,test
+326,Design and Analysis of Algorithms,6,2025,final,1,33.0,rule_count_ge5,test
+327,Design and Analysis of Algorithms,7,2025,final,0,24.0,rule_count_ge5,test
+328,Design and Analysis of Algorithms,8,2025,final,0,15.0,rule_count_ge5,test
+329,Design and Analysis of Algorithms,0,2025,quiz,0,9.0,rule_count_ge5,test
+330,Design and Analysis of Algorithms,1,2025,quiz,0,2.0,rule_count_ge5,test
+331,Design and Analysis of Algorithms,2,2025,quiz,0,4.0,rule_count_ge5,test
+332,Design and Analysis of Algorithms,3,2025,quiz,0,2.0,rule_count_ge5,test
+333,Design and Analysis of Algorithms,4,2025,quiz,0,24.0,rule_count_ge5,test
+334,Design and Analysis of Algorithms,5,2025,quiz,1,38.0,rule_count_ge5,test
+335,Design and Analysis of Algorithms,6,2025,quiz,0,33.0,rule_count_ge5,test
+336,Design and Analysis of Algorithms,7,2025,quiz,1,24.0,rule_count_ge5,test
+337,Design and Analysis of Algorithms,8,2025,quiz,1,15.0,rule_count_ge5,test
+338,IOT,0,2024,quiz,1,5.0,rule_count_ge5,test
+339,IOT,1,2024,quiz,1,10.0,rule_count_ge5,test
+340,IOT,2,2024,quiz,1,8.0,rule_count_ge5,test
+341,IOT,3,2024,quiz,1,8.0,rule_count_ge5,test
+342,IOT,0,2025,mid,0,13.0,rule_count_ge5,test
+343,IOT,1,2025,mid,1,20.0,rule_count_ge5,test
+344,IOT,2,2025,mid,0,10.0,rule_count_ge5,test
+345,IOT,3,2025,mid,1,16.0,rule_count_ge5,test
+346,NLP,0,2024,quiz,0,2.0,rule_count_ge5,test
+347,NLP,1,2024,quiz,1,14.0,rule_count_ge5,test
+348,NLP,2,2024,quiz,1,6.0,rule_count_ge5,test
+349,NLP,3,2024,quiz,0,2.0,rule_count_ge5,test
+350,NLP,4,2024,quiz,0,2.0,rule_count_ge5,test
+351,NLP,5,2024,quiz,0,3.0,rule_count_ge5,test
+352,NLP,6,2024,quiz,0,2.0,rule_count_ge5,test
+353,NLP,7,2024,quiz,0,3.0,rule_count_ge5,test
+354,NLP,8,2024,quiz,0,2.0,rule_count_ge5,test
+355,NLP,9,2024,quiz,0,2.0,rule_count_ge5,test
+356,OOP Lab,0,2025,mid,1,10.0,rule_count_ge5,test
+357,OOP Lab,1,2025,mid,0,1.0,rule_count_ge5,test
+358,OOP Lab,2,2025,mid,0,1.0,rule_count_ge5,test
+359,OOP Lab,3,2025,mid,0,4.0,rule_count_ge5,test
+360,OS,0,2025,quiz,0,8.0,rule_count_ge5,test
+361,OS,1,2025,quiz,0,7.0,rule_count_ge5,test
+362,OS,2,2025,quiz,0,12.0,rule_count_ge5,test
+363,OS,3,2025,quiz,0,8.0,rule_count_ge5,test
+364,OS,4,2025,quiz,0,9.0,rule_count_ge5,test
+365,OS,5,2025,quiz,0,6.0,rule_count_ge5,test
+366,OS,6,2025,quiz,0,10.0,rule_count_ge5,test
+367,OS,7,2025,quiz,1,9.0,rule_count_ge5,test
+368,OS,8,2025,quiz,0,8.0,rule_count_ge5,test
+369,OS,9,2025,quiz,0,19.0,rule_count_ge5,test
+370,Object Oriented Programming,0,2024,mid,1,15.0,rule_count_ge5,test
+371,Object Oriented Programming,1,2024,mid,0,7.0,rule_count_ge5,test
+372,Object Oriented Programming,2,2024,mid,0,2.0,rule_count_ge5,test
+373,Object Oriented Programming,3,2024,mid,0,3.0,rule_count_ge5,test
+374,Object Oriented Programming,4,2024,mid,1,36.0,rule_count_ge5,test
+375,Object Oriented Programming,5,2024,mid,0,9.0,rule_count_ge5,test
+376,Object Oriented Programming,6,2024,mid,0,20.0,rule_count_ge5,test
+377,Object Oriented Programming,7,2024,mid,0,4.0,rule_count_ge5,test
+378,Object Oriented Programming,8,2024,mid,0,18.0,rule_count_ge5,test
+379,Object Oriented Programming,0,2025,final,0,16.0,rule_count_ge5,test
+380,Object Oriented Programming,1,2025,final,0,7.0,rule_count_ge5,test
+381,Object Oriented Programming,2,2025,final,1,2.0,rule_count_ge5,test
+382,Object Oriented Programming,3,2025,final,0,3.0,rule_count_ge5,test
+383,Object Oriented Programming,4,2025,final,1,37.0,rule_count_ge5,test
+384,Object Oriented Programming,5,2025,final,0,9.0,rule_count_ge5,test
+385,Object Oriented Programming,6,2025,final,1,20.0,rule_count_ge5,test
+386,Object Oriented Programming,7,2025,final,0,4.0,rule_count_ge5,test
+387,Object Oriented Programming,8,2025,final,1,18.0,rule_count_ge5,test
+388,Object Oriented Programming,0,2026,mid,0,16.0,rule_count_ge5,test
+389,Object Oriented Programming,1,2026,mid,0,7.0,rule_count_ge5,test
+390,Object Oriented Programming,2,2026,mid,0,3.0,rule_count_ge5,test
+391,Object Oriented Programming,3,2026,mid,0,3.0,rule_count_ge5,test
+392,Object Oriented Programming,4,2026,mid,1,38.0,rule_count_ge5,test
+393,Object Oriented Programming,5,2026,mid,0,9.0,rule_count_ge5,test
+394,Object Oriented Programming,6,2026,mid,0,21.0,rule_count_ge5,test
+395,Object Oriented Programming,7,2026,mid,0,4.0,rule_count_ge5,test
+396,Object Oriented Programming,8,2026,mid,1,19.0,rule_count_ge5,test
+397,Object Oriented Programming,0,2026,quiz,1,16.0,rule_count_ge5,test
+398,Object Oriented Programming,1,2026,quiz,0,7.0,rule_count_ge5,test
+399,Object Oriented Programming,2,2026,quiz,0,3.0,rule_count_ge5,test
+400,Object Oriented Programming,3,2026,quiz,0,3.0,rule_count_ge5,test
+401,Object Oriented Programming,4,2026,quiz,1,38.0,rule_count_ge5,test
+402,Object Oriented Programming,5,2026,quiz,0,9.0,rule_count_ge5,test
+403,Object Oriented Programming,6,2026,quiz,1,21.0,rule_count_ge5,test
+404,Object Oriented Programming,7,2026,quiz,0,4.0,rule_count_ge5,test
+405,Object Oriented Programming,8,2026,quiz,0,19.0,rule_count_ge5,test
+406,PP,0,2024,final,0,8.0,rule_count_ge5,test
+407,PP,1,2024,final,0,14.0,rule_count_ge5,test
+408,PP,2,2024,final,0,5.0,rule_count_ge5,test
+409,PP,3,2024,final,0,12.0,rule_count_ge5,test
+410,PP,4,2024,final,0,2.0,rule_count_ge5,test
+411,PP,5,2024,final,0,14.0,rule_count_ge5,test
+412,PP,6,2024,final,0,5.0,rule_count_ge5,test
+413,PP,7,2024,final,0,10.0,rule_count_ge5,test
+414,PP,8,2024,final,0,11.0,rule_count_ge5,test
+415,PP,9,2024,final,1,28.0,rule_count_ge5,test
+416,PP,0,2024,mid,0,8.0,rule_count_ge5,test
+417,PP,1,2024,mid,1,14.0,rule_count_ge5,test
+418,PP,2,2024,mid,0,5.0,rule_count_ge5,test
+419,PP,3,2024,mid,1,12.0,rule_count_ge5,test
+420,PP,4,2024,mid,0,2.0,rule_count_ge5,test
+421,PP,5,2024,mid,0,14.0,rule_count_ge5,test
+422,PP,6,2024,mid,0,5.0,rule_count_ge5,test
+423,PP,7,2024,mid,0,10.0,rule_count_ge5,test
+424,PP,8,2024,mid,1,11.0,rule_count_ge5,test
+425,PP,9,2024,mid,1,28.0,rule_count_ge5,test
+426,PP,0,2025,final,0,8.0,rule_count_ge5,test
+427,PP,1,2025,final,1,16.0,rule_count_ge5,test
+428,PP,2,2025,final,0,5.0,rule_count_ge5,test
+429,PP,3,2025,final,0,13.0,rule_count_ge5,test
+430,PP,4,2025,final,0,2.0,rule_count_ge5,test
+431,PP,5,2025,final,0,14.0,rule_count_ge5,test
+432,PP,6,2025,final,0,5.0,rule_count_ge5,test
+433,PP,7,2025,final,0,10.0,rule_count_ge5,test
+434,PP,8,2025,final,0,12.0,rule_count_ge5,test
+435,PP,9,2025,final,1,31.0,rule_count_ge5,test
+436,PP,0,2025,mid,0,8.0,rule_count_ge5,test
+437,PP,1,2025,mid,0,16.0,rule_count_ge5,test
+438,PP,2,2025,mid,0,5.0,rule_count_ge5,test
+439,PP,3,2025,mid,0,13.0,rule_count_ge5,test
+440,PP,4,2025,mid,0,2.0,rule_count_ge5,test
+441,PP,5,2025,mid,0,14.0,rule_count_ge5,test
+442,PP,6,2025,mid,0,5.0,rule_count_ge5,test
+443,PP,7,2025,mid,0,10.0,rule_count_ge5,test
+444,PP,8,2025,mid,0,12.0,rule_count_ge5,test
+445,PP,9,2025,mid,1,31.0,rule_count_ge5,test
+446,PP,0,2026,mid,0,8.0,rule_count_ge5,test
+447,PP,1,2026,mid,0,17.0,rule_count_ge5,test
+448,PP,2,2026,mid,0,5.0,rule_count_ge5,test
+449,PP,3,2026,mid,1,13.0,rule_count_ge5,test
+450,PP,4,2026,mid,0,2.0,rule_count_ge5,test
+451,PP,5,2026,mid,0,14.0,rule_count_ge5,test
+452,PP,6,2026,mid,0,5.0,rule_count_ge5,test
+453,PP,7,2026,mid,0,10.0,rule_count_ge5,test
+454,PP,8,2026,mid,1,12.0,rule_count_ge5,test
+455,PP,9,2026,mid,1,34.0,rule_count_ge5,test
+456,PP,0,2026,quiz,0,8.0,rule_count_ge5,test
+457,PP,1,2026,quiz,1,17.0,rule_count_ge5,test
+458,PP,2,2026,quiz,0,5.0,rule_count_ge5,test
+459,PP,3,2026,quiz,0,13.0,rule_count_ge5,test
+460,PP,4,2026,quiz,0,2.0,rule_count_ge5,test
+461,PP,5,2026,quiz,0,14.0,rule_count_ge5,test
+462,PP,6,2026,quiz,0,5.0,rule_count_ge5,test
+463,PP,7,2026,quiz,0,10.0,rule_count_ge5,test
+464,PP,8,2026,quiz,1,12.0,rule_count_ge5,test
+465,PP,9,2026,quiz,1,34.0,rule_count_ge5,test
+466,SMD,0,2024,mid,0,15.0,rule_count_ge5,test
+467,SMD,1,2024,mid,0,9.0,rule_count_ge5,test
+468,SMD,2,2024,mid,0,9.0,rule_count_ge5,test
+469,SMD,3,2024,mid,0,7.0,rule_count_ge5,test
+470,SMD,4,2024,mid,0,2.0,rule_count_ge5,test
+471,SMD,5,2024,mid,1,11.0,rule_count_ge5,test
+472,SMD,6,2024,mid,0,2.0,rule_count_ge5,test
+473,SMD,7,2024,mid,0,9.0,rule_count_ge5,test
+474,SMD,0,2026,final,0,15.0,rule_count_ge5,test
+475,SMD,1,2026,final,0,9.0,rule_count_ge5,test
+476,SMD,2,2026,final,0,9.0,rule_count_ge5,test
+477,SMD,3,2026,final,0,7.0,rule_count_ge5,test
+478,SMD,4,2026,final,0,2.0,rule_count_ge5,test
+479,SMD,5,2026,final,1,12.0,rule_count_ge5,test
+480,SMD,6,2026,final,0,2.0,rule_count_ge5,test
+481,SMD,7,2026,final,0,9.0,rule_count_ge5,test
+482,Software Engineering,0,2024,mid,0,10.0,rule_count_ge5,test
+483,Software Engineering,1,2024,mid,0,4.0,rule_count_ge5,test
+484,Software Engineering,2,2024,mid,0,7.0,rule_count_ge5,test
+485,Software Engineering,3,2024,mid,0,1.0,rule_count_ge5,test
+486,Software Engineering,4,2024,mid,1,20.0,rule_count_ge5,test
+487,Software Engineering,5,2024,mid,0,9.0,rule_count_ge5,test
+488,Software Engineering,0,2024,quiz,1,10.0,rule_count_ge5,test
+489,Software Engineering,1,2024,quiz,1,4.0,rule_count_ge5,test
+490,Software Engineering,2,2024,quiz,1,7.0,rule_count_ge5,test
+491,Software Engineering,3,2024,quiz,0,1.0,rule_count_ge5,test
+492,Software Engineering,4,2024,quiz,1,20.0,rule_count_ge5,test
+493,Software Engineering,5,2024,quiz,1,9.0,rule_count_ge5,test
+494,Software Engineering,0,2025,final,1,11.0,rule_count_ge5,test
+495,Software Engineering,1,2025,final,0,5.0,rule_count_ge5,test
+496,Software Engineering,2,2025,final,1,8.0,rule_count_ge5,test
+497,Software Engineering,3,2025,final,0,1.0,rule_count_ge5,test
+498,Software Engineering,4,2025,final,1,31.0,rule_count_ge5,test
+499,Software Engineering,5,2025,final,1,11.0,rule_count_ge5,test
+500,Theory of Automata,0,2024,final,1,6.0,rule_count_ge5,test
+501,Theory of Automata,1,2024,final,1,26.0,rule_count_ge5,test
+502,Theory of Automata,2,2024,final,1,8.0,rule_count_ge5,test
+503,Theory of Automata,3,2024,final,0,6.0,rule_count_ge5,test
+504,Theory of Automata,4,2024,final,0,5.0,rule_count_ge5,test
+505,Theory of Automata,5,2024,final,1,14.0,rule_count_ge5,test
+506,Theory of Automata,6,2024,final,0,16.0,rule_count_ge5,test
+507,Theory of Automata,7,2024,final,1,10.0,rule_count_ge5,test
+508,Theory of Automata,0,2024,mid,0,6.0,rule_count_ge5,test
+509,Theory of Automata,1,2024,mid,1,26.0,rule_count_ge5,test
+510,Theory of Automata,2,2024,mid,0,8.0,rule_count_ge5,test
+511,Theory of Automata,3,2024,mid,0,6.0,rule_count_ge5,test
+512,Theory of Automata,4,2024,mid,0,5.0,rule_count_ge5,test
+513,Theory of Automata,5,2024,mid,0,14.0,rule_count_ge5,test
+514,Theory of Automata,6,2024,mid,0,16.0,rule_count_ge5,test
+515,Theory of Automata,7,2024,mid,1,10.0,rule_count_ge5,test
+516,Theory of Automata,0,2024,quiz,0,6.0,rule_count_ge5,test
+517,Theory of Automata,1,2024,quiz,1,26.0,rule_count_ge5,test
+518,Theory of Automata,2,2024,quiz,1,8.0,rule_count_ge5,test
+519,Theory of Automata,3,2024,quiz,0,6.0,rule_count_ge5,test
+520,Theory of Automata,4,2024,quiz,0,5.0,rule_count_ge5,test
+521,Theory of Automata,5,2024,quiz,0,14.0,rule_count_ge5,test
+522,Theory of Automata,6,2024,quiz,0,16.0,rule_count_ge5,test
+523,Theory of Automata,7,2024,quiz,0,10.0,rule_count_ge5,test
+524,Theory of Automata,0,2025,final,0,7.0,rule_count_ge5,test
+525,Theory of Automata,1,2025,final,1,30.0,rule_count_ge5,test
+526,Theory of Automata,2,2025,final,1,10.0,rule_count_ge5,test
+527,Theory of Automata,3,2025,final,0,6.0,rule_count_ge5,test
+528,Theory of Automata,4,2025,final,0,5.0,rule_count_ge5,test
+529,Theory of Automata,5,2025,final,0,15.0,rule_count_ge5,test
+530,Theory of Automata,6,2025,final,0,16.0,rule_count_ge5,test
+531,Theory of Automata,7,2025,final,0,12.0,rule_count_ge5,test
+532,Theory of Automata,0,2025,mid,0,7.0,rule_count_ge5,test
+533,Theory of Automata,1,2025,mid,1,30.0,rule_count_ge5,test
+534,Theory of Automata,2,2025,mid,0,10.0,rule_count_ge5,test
+535,Theory of Automata,3,2025,mid,0,6.0,rule_count_ge5,test
+536,Theory of Automata,4,2025,mid,0,5.0,rule_count_ge5,test
+537,Theory of Automata,5,2025,mid,0,15.0,rule_count_ge5,test
+538,Theory of Automata,6,2025,mid,0,16.0,rule_count_ge5,test
+539,Theory of Automata,7,2025,mid,0,12.0,rule_count_ge5,test
+540,Theory of Automata,0,2025,quiz,0,7.0,rule_count_ge5,test
+541,Theory of Automata,1,2025,quiz,0,30.0,rule_count_ge5,test
+542,Theory of Automata,2,2025,quiz,0,10.0,rule_count_ge5,test
+543,Theory of Automata,3,2025,quiz,0,6.0,rule_count_ge5,test
+544,Theory of Automata,4,2025,quiz,1,5.0,rule_count_ge5,test
+545,Theory of Automata,5,2025,quiz,1,15.0,rule_count_ge5,test
+546,Theory of Automata,6,2025,quiz,1,16.0,rule_count_ge5,test
+547,Theory of Automata,7,2025,quiz,1,12.0,rule_count_ge5,test
+548,Web Programming,0,2025,final,0,4.0,rule_count_ge5,test
+549,Web Programming,1,2025,final,0,16.0,rule_count_ge5,test
+550,Web Programming,2,2025,final,1,19.0,rule_count_ge5,test
+551,Web Programming,3,2025,final,0,4.0,rule_count_ge5,test
+552,Web Programming,4,2025,final,0,10.0,rule_count_ge5,test
+553,Web Programming,5,2025,final,0,6.0,rule_count_ge5,test
+554,Web Programming,6,2025,final,0,3.0,rule_count_ge5,test
+555,Web Programming,7,2025,final,0,7.0,rule_count_ge5,test
+556,Web Programming,8,2025,final,0,7.0,rule_count_ge5,test
+557,Web Programming,9,2025,final,0,2.0,rule_count_ge5,test
+558,Web Programming,0,2025,quiz,1,4.0,rule_count_ge5,test
+559,Web Programming,1,2025,quiz,0,16.0,rule_count_ge5,test
+560,Web Programming,2,2025,quiz,1,19.0,rule_count_ge5,test
+561,Web Programming,3,2025,quiz,0,4.0,rule_count_ge5,test
+562,Web Programming,4,2025,quiz,0,10.0,rule_count_ge5,test
+563,Web Programming,5,2025,quiz,0,6.0,rule_count_ge5,test
+564,Web Programming,6,2025,quiz,0,3.0,rule_count_ge5,test
+565,Web Programming,7,2025,quiz,0,7.0,rule_count_ge5,test
+566,Web Programming,8,2025,quiz,1,7.0,rule_count_ge5,test
+567,Web Programming,9,2025,quiz,0,2.0,rule_count_ge5,test

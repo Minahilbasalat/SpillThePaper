@@ -1,0 +1,569 @@
+row_idx,subject,topic_id,target_year,target_type,label,score,model,split
+0,Advanced Database Concepts,0,2024,final,0,0.2778,topic_rate_only,test
+1,Advanced Database Concepts,1,2024,final,1,0.4444,topic_rate_only,test
+2,Advanced Database Concepts,2,2024,final,1,0.5,topic_rate_only,test
+3,Advanced Database Concepts,3,2024,final,0,0.3333,topic_rate_only,test
+4,Advanced Database Concepts,4,2024,final,0,0.2778,topic_rate_only,test
+5,Advanced Database Concepts,5,2024,final,1,0.3333,topic_rate_only,test
+6,Advanced Database Concepts,6,2024,final,0,0.2222,topic_rate_only,test
+7,Advanced Database Concepts,7,2024,final,1,0.4444,topic_rate_only,test
+8,Advanced Database Concepts,0,2024,mid,0,0.2778,topic_rate_only,test
+9,Advanced Database Concepts,1,2024,mid,0,0.4444,topic_rate_only,test
+10,Advanced Database Concepts,2,2024,mid,1,0.5,topic_rate_only,test
+11,Advanced Database Concepts,3,2024,mid,0,0.3333,topic_rate_only,test
+12,Advanced Database Concepts,4,2024,mid,0,0.2778,topic_rate_only,test
+13,Advanced Database Concepts,5,2024,mid,1,0.3333,topic_rate_only,test
+14,Advanced Database Concepts,6,2024,mid,0,0.2222,topic_rate_only,test
+15,Advanced Database Concepts,7,2024,mid,1,0.4444,topic_rate_only,test
+16,Advanced Database Concepts,0,2025,quiz,0,0.25,topic_rate_only,test
+17,Advanced Database Concepts,1,2025,quiz,0,0.45,topic_rate_only,test
+18,Advanced Database Concepts,2,2025,quiz,0,0.55,topic_rate_only,test
+19,Advanced Database Concepts,3,2025,quiz,0,0.3,topic_rate_only,test
+20,Advanced Database Concepts,4,2025,quiz,0,0.25,topic_rate_only,test
+21,Advanced Database Concepts,5,2025,quiz,1,0.4,topic_rate_only,test
+22,Advanced Database Concepts,6,2025,quiz,0,0.2,topic_rate_only,test
+23,Advanced Database Concepts,7,2025,quiz,0,0.5,topic_rate_only,test
+24,Artificial Intelligence,0,2024,final,1,0.5833,topic_rate_only,test
+25,Artificial Intelligence,1,2024,final,1,0.4583,topic_rate_only,test
+26,Artificial Intelligence,2,2024,final,1,0.4792,topic_rate_only,test
+27,Artificial Intelligence,3,2024,final,0,0.0625,topic_rate_only,test
+28,Artificial Intelligence,4,2024,final,1,0.3125,topic_rate_only,test
+29,Artificial Intelligence,5,2024,final,1,0.5417,topic_rate_only,test
+30,Artificial Intelligence,6,2024,final,0,0.1042,topic_rate_only,test
+31,Artificial Intelligence,7,2024,final,0,0.1667,topic_rate_only,test
+32,Artificial Intelligence,8,2024,final,0,0.25,topic_rate_only,test
+33,Artificial Intelligence,0,2024,mid,0,0.5833,topic_rate_only,test
+34,Artificial Intelligence,1,2024,mid,1,0.4583,topic_rate_only,test
+35,Artificial Intelligence,2,2024,mid,1,0.4792,topic_rate_only,test
+36,Artificial Intelligence,3,2024,mid,0,0.0625,topic_rate_only,test
+37,Artificial Intelligence,4,2024,mid,1,0.3125,topic_rate_only,test
+38,Artificial Intelligence,5,2024,mid,1,0.5417,topic_rate_only,test
+39,Artificial Intelligence,6,2024,mid,0,0.1042,topic_rate_only,test
+40,Artificial Intelligence,7,2024,mid,1,0.1667,topic_rate_only,test
+41,Artificial Intelligence,8,2024,mid,0,0.25,topic_rate_only,test
+42,Artificial Intelligence,0,2025,mid,0,0.5686,topic_rate_only,test
+43,Artificial Intelligence,1,2025,mid,0,0.4706,topic_rate_only,test
+44,Artificial Intelligence,2,2025,mid,0,0.4902,topic_rate_only,test
+45,Artificial Intelligence,3,2025,mid,0,0.0588,topic_rate_only,test
+46,Artificial Intelligence,4,2025,mid,1,0.3529,topic_rate_only,test
+47,Artificial Intelligence,5,2025,mid,1,0.549,topic_rate_only,test
+48,Artificial Intelligence,6,2025,mid,0,0.098,topic_rate_only,test
+49,Artificial Intelligence,7,2025,mid,0,0.1765,topic_rate_only,test
+50,Artificial Intelligence,8,2025,mid,0,0.2353,topic_rate_only,test
+51,Artificial Intelligence,0,2026,quiz,1,0.5577,topic_rate_only,test
+52,Artificial Intelligence,1,2026,quiz,1,0.4615,topic_rate_only,test
+53,Artificial Intelligence,2,2026,quiz,1,0.4808,topic_rate_only,test
+54,Artificial Intelligence,3,2026,quiz,0,0.0577,topic_rate_only,test
+55,Artificial Intelligence,4,2026,quiz,0,0.3654,topic_rate_only,test
+56,Artificial Intelligence,5,2026,quiz,1,0.5577,topic_rate_only,test
+57,Artificial Intelligence,6,2026,quiz,0,0.0962,topic_rate_only,test
+58,Artificial Intelligence,7,2026,quiz,0,0.1731,topic_rate_only,test
+59,Artificial Intelligence,8,2026,quiz,0,0.2308,topic_rate_only,test
+60,Cloud Computing,0,2025,final,0,0.0455,topic_rate_only,test
+61,Cloud Computing,1,2025,final,0,0.4545,topic_rate_only,test
+62,Cloud Computing,2,2025,final,1,0.6364,topic_rate_only,test
+63,Cloud Computing,3,2025,final,0,0.5909,topic_rate_only,test
+64,Cloud Computing,4,2025,final,0,0.1818,topic_rate_only,test
+65,Cloud Computing,5,2025,final,0,0.1364,topic_rate_only,test
+66,Cloud Computing,6,2025,final,0,0.1364,topic_rate_only,test
+67,Cloud Computing,7,2025,final,1,0.8182,topic_rate_only,test
+68,Cloud Computing,8,2025,final,0,0.0455,topic_rate_only,test
+69,Cloud Computing,0,2025,mid,0,0.0455,topic_rate_only,test
+70,Cloud Computing,1,2025,mid,0,0.4545,topic_rate_only,test
+71,Cloud Computing,2,2025,mid,1,0.6364,topic_rate_only,test
+72,Cloud Computing,3,2025,mid,0,0.5909,topic_rate_only,test
+73,Cloud Computing,4,2025,mid,0,0.1818,topic_rate_only,test
+74,Cloud Computing,5,2025,mid,0,0.1364,topic_rate_only,test
+75,Cloud Computing,6,2025,mid,0,0.1364,topic_rate_only,test
+76,Cloud Computing,7,2025,mid,1,0.8182,topic_rate_only,test
+77,Cloud Computing,8,2025,mid,0,0.0455,topic_rate_only,test
+78,Compiler Construction,0,2024,final,0,0.7647,topic_rate_only,test
+79,Compiler Construction,1,2024,final,0,0.6471,topic_rate_only,test
+80,Compiler Construction,2,2024,final,0,0.3529,topic_rate_only,test
+81,Compiler Construction,3,2024,final,0,0.4706,topic_rate_only,test
+82,Compiler Construction,4,2024,final,1,0.4706,topic_rate_only,test
+83,Compiler Construction,0,2024,mid,1,0.7647,topic_rate_only,test
+84,Compiler Construction,1,2024,mid,1,0.6471,topic_rate_only,test
+85,Compiler Construction,2,2024,mid,0,0.3529,topic_rate_only,test
+86,Compiler Construction,3,2024,mid,1,0.4706,topic_rate_only,test
+87,Compiler Construction,4,2024,mid,0,0.4706,topic_rate_only,test
+88,Compiler Construction,0,2025,mid,1,0.7,topic_rate_only,test
+89,Compiler Construction,1,2025,mid,0,0.6,topic_rate_only,test
+90,Compiler Construction,2,2025,mid,0,0.3,topic_rate_only,test
+91,Compiler Construction,3,2025,mid,1,0.5,topic_rate_only,test
+92,Compiler Construction,4,2025,mid,0,0.45,topic_rate_only,test
+93,Computer Networks,0,2024,final,0,0.08,topic_rate_only,test
+94,Computer Networks,1,2024,final,1,0.26,topic_rate_only,test
+95,Computer Networks,2,2024,final,1,0.4,topic_rate_only,test
+96,Computer Networks,3,2024,final,1,0.16,topic_rate_only,test
+97,Computer Networks,4,2024,final,1,0.34,topic_rate_only,test
+98,Computer Networks,5,2024,final,0,0.12,topic_rate_only,test
+99,Computer Networks,6,2024,final,1,0.48,topic_rate_only,test
+100,Computer Networks,7,2024,final,0,0.2,topic_rate_only,test
+101,Computer Networks,8,2024,final,0,0.14,topic_rate_only,test
+102,Computer Networks,9,2024,final,0,0.02,topic_rate_only,test
+103,Computer Networks,0,2024,mid,0,0.08,topic_rate_only,test
+104,Computer Networks,1,2024,mid,1,0.26,topic_rate_only,test
+105,Computer Networks,2,2024,mid,1,0.4,topic_rate_only,test
+106,Computer Networks,3,2024,mid,0,0.16,topic_rate_only,test
+107,Computer Networks,4,2024,mid,1,0.34,topic_rate_only,test
+108,Computer Networks,5,2024,mid,0,0.12,topic_rate_only,test
+109,Computer Networks,6,2024,mid,1,0.48,topic_rate_only,test
+110,Computer Networks,7,2024,mid,1,0.2,topic_rate_only,test
+111,Computer Networks,8,2024,mid,1,0.14,topic_rate_only,test
+112,Computer Networks,9,2024,mid,0,0.02,topic_rate_only,test
+113,Computer Networks,0,2024,quiz,1,0.08,topic_rate_only,test
+114,Computer Networks,1,2024,quiz,1,0.26,topic_rate_only,test
+115,Computer Networks,2,2024,quiz,1,0.4,topic_rate_only,test
+116,Computer Networks,3,2024,quiz,1,0.16,topic_rate_only,test
+117,Computer Networks,4,2024,quiz,1,0.34,topic_rate_only,test
+118,Computer Networks,5,2024,quiz,0,0.12,topic_rate_only,test
+119,Computer Networks,6,2024,quiz,1,0.48,topic_rate_only,test
+120,Computer Networks,7,2024,quiz,0,0.2,topic_rate_only,test
+121,Computer Networks,8,2024,quiz,1,0.14,topic_rate_only,test
+122,Computer Networks,9,2024,quiz,0,0.02,topic_rate_only,test
+123,Computer Networks,0,2025,mid,0,0.0725,topic_rate_only,test
+124,Computer Networks,1,2025,mid,1,0.2609,topic_rate_only,test
+125,Computer Networks,2,2025,mid,1,0.4058,topic_rate_only,test
+126,Computer Networks,3,2025,mid,0,0.1594,topic_rate_only,test
+127,Computer Networks,4,2025,mid,1,0.3188,topic_rate_only,test
+128,Computer Networks,5,2025,mid,0,0.087,topic_rate_only,test
+129,Computer Networks,6,2025,mid,1,0.4783,topic_rate_only,test
+130,Computer Networks,7,2025,mid,0,0.1594,topic_rate_only,test
+131,Computer Networks,8,2025,mid,1,0.1304,topic_rate_only,test
+132,Computer Networks,9,2025,mid,0,0.0145,topic_rate_only,test
+133,Computer Networks,0,2025,quiz,0,0.0725,topic_rate_only,test
+134,Computer Networks,1,2025,quiz,1,0.2609,topic_rate_only,test
+135,Computer Networks,2,2025,quiz,1,0.4058,topic_rate_only,test
+136,Computer Networks,3,2025,quiz,1,0.1594,topic_rate_only,test
+137,Computer Networks,4,2025,quiz,1,0.3188,topic_rate_only,test
+138,Computer Networks,5,2025,quiz,1,0.087,topic_rate_only,test
+139,Computer Networks,6,2025,quiz,1,0.4783,topic_rate_only,test
+140,Computer Networks,7,2025,quiz,1,0.1594,topic_rate_only,test
+141,Computer Networks,8,2025,quiz,1,0.1304,topic_rate_only,test
+142,Computer Networks,9,2025,quiz,0,0.0145,topic_rate_only,test
+143,Computer Networks,0,2026,final,0,0.0532,topic_rate_only,test
+144,Computer Networks,1,2026,final,0,0.2553,topic_rate_only,test
+145,Computer Networks,2,2026,final,1,0.4149,topic_rate_only,test
+146,Computer Networks,3,2026,final,1,0.1489,topic_rate_only,test
+147,Computer Networks,4,2026,final,1,0.2872,topic_rate_only,test
+148,Computer Networks,5,2026,final,0,0.0745,topic_rate_only,test
+149,Computer Networks,6,2026,final,1,0.4681,topic_rate_only,test
+150,Computer Networks,7,2026,final,0,0.1277,topic_rate_only,test
+151,Computer Networks,8,2026,final,0,0.1277,topic_rate_only,test
+152,Computer Networks,9,2026,final,0,0.0106,topic_rate_only,test
+153,Computer Networks,0,2026,mid,0,0.0532,topic_rate_only,test
+154,Computer Networks,1,2026,mid,1,0.2553,topic_rate_only,test
+155,Computer Networks,2,2026,mid,1,0.4149,topic_rate_only,test
+156,Computer Networks,3,2026,mid,0,0.1489,topic_rate_only,test
+157,Computer Networks,4,2026,mid,1,0.2872,topic_rate_only,test
+158,Computer Networks,5,2026,mid,0,0.0745,topic_rate_only,test
+159,Computer Networks,6,2026,mid,1,0.4681,topic_rate_only,test
+160,Computer Networks,7,2026,mid,0,0.1277,topic_rate_only,test
+161,Computer Networks,8,2026,mid,0,0.1277,topic_rate_only,test
+162,Computer Networks,9,2026,mid,0,0.0106,topic_rate_only,test
+163,Computer Networks,0,2026,quiz,1,0.0532,topic_rate_only,test
+164,Computer Networks,1,2026,quiz,1,0.2553,topic_rate_only,test
+165,Computer Networks,2,2026,quiz,1,0.4149,topic_rate_only,test
+166,Computer Networks,3,2026,quiz,1,0.1489,topic_rate_only,test
+167,Computer Networks,4,2026,quiz,1,0.2872,topic_rate_only,test
+168,Computer Networks,5,2026,quiz,1,0.0745,topic_rate_only,test
+169,Computer Networks,6,2026,quiz,1,0.4681,topic_rate_only,test
+170,Computer Networks,7,2026,quiz,0,0.1277,topic_rate_only,test
+171,Computer Networks,8,2026,quiz,0,0.1277,topic_rate_only,test
+172,Computer Networks,9,2026,quiz,1,0.0106,topic_rate_only,test
+173,Computer Organization and Assembly Language,0,2025,final,0,0.125,topic_rate_only,test
+174,Computer Organization and Assembly Language,1,2025,final,1,0.8333,topic_rate_only,test
+175,Computer Organization and Assembly Language,2,2025,final,0,0.2917,topic_rate_only,test
+176,Computer Organization and Assembly Language,3,2025,final,0,0.375,topic_rate_only,test
+177,Computer Organization and Assembly Language,4,2025,final,0,0.1667,topic_rate_only,test
+178,Computer Organization and Assembly Language,5,2025,final,0,0.0833,topic_rate_only,test
+179,Computer Organization and Assembly Language,6,2025,final,0,0.0833,topic_rate_only,test
+180,Computer Organization and Assembly Language,7,2025,final,0,0.3333,topic_rate_only,test
+181,Computer Organization and Assembly Language,8,2025,final,0,0.1667,topic_rate_only,test
+182,Computer Organization and Assembly Language,9,2025,final,0,0.125,topic_rate_only,test
+183,DLD,0,2025,final,1,0.5263,topic_rate_only,test
+184,DLD,1,2025,final,0,0.2632,topic_rate_only,test
+185,DLD,2,2025,final,0,0.2105,topic_rate_only,test
+186,DLD,3,2025,final,1,0.4211,topic_rate_only,test
+187,DLD,4,2025,final,0,0.4737,topic_rate_only,test
+188,DLD,5,2025,final,1,0.4737,topic_rate_only,test
+189,DLD,6,2025,final,0,0.2632,topic_rate_only,test
+190,DLD,7,2025,final,0,0.2105,topic_rate_only,test
+191,DLD,0,2026,mid,0,0.55,topic_rate_only,test
+192,DLD,1,2026,mid,0,0.25,topic_rate_only,test
+193,DLD,2,2026,mid,0,0.2,topic_rate_only,test
+194,DLD,3,2026,mid,1,0.45,topic_rate_only,test
+195,DLD,4,2026,mid,0,0.45,topic_rate_only,test
+196,DLD,5,2026,mid,1,0.5,topic_rate_only,test
+197,DLD,6,2026,mid,0,0.25,topic_rate_only,test
+198,DLD,7,2026,mid,0,0.2,topic_rate_only,test
+199,DW,0,2024,mid,1,0.5455,topic_rate_only,test
+200,DW,1,2024,mid,0,0.2727,topic_rate_only,test
+201,DW,2,2024,mid,1,0.8182,topic_rate_only,test
+202,DW,3,2024,mid,0,0.4545,topic_rate_only,test
+203,Data Science,0,2024,mid,0,0.3333,topic_rate_only,test
+204,Data Science,1,2024,mid,0,0.3333,topic_rate_only,test
+205,Data Science,2,2024,mid,0,0.4667,topic_rate_only,test
+206,Data Science,3,2024,mid,0,0.4667,topic_rate_only,test
+207,Data Science,4,2024,mid,1,1.0,topic_rate_only,test
+208,Data Science,5,2024,mid,0,0.2,topic_rate_only,test
+209,Data Science,6,2024,mid,0,0.2,topic_rate_only,test
+210,Data Science,7,2024,mid,0,0.2,topic_rate_only,test
+211,Data Science,8,2024,mid,0,0.3333,topic_rate_only,test
+212,Data Science,0,2025,mid,0,0.3125,topic_rate_only,test
+213,Data Science,1,2025,mid,0,0.3125,topic_rate_only,test
+214,Data Science,2,2025,mid,0,0.4375,topic_rate_only,test
+215,Data Science,3,2025,mid,0,0.4375,topic_rate_only,test
+216,Data Science,4,2025,mid,1,1.0,topic_rate_only,test
+217,Data Science,5,2025,mid,0,0.1875,topic_rate_only,test
+218,Data Science,6,2025,mid,0,0.1875,topic_rate_only,test
+219,Data Science,7,2025,mid,0,0.1875,topic_rate_only,test
+220,Data Science,8,2025,mid,0,0.3125,topic_rate_only,test
+221,Data Science,0,2026,final,0,0.2778,topic_rate_only,test
+222,Data Science,1,2026,final,0,0.2778,topic_rate_only,test
+223,Data Science,2,2026,final,0,0.3889,topic_rate_only,test
+224,Data Science,3,2026,final,0,0.3889,topic_rate_only,test
+225,Data Science,4,2026,final,1,1.0,topic_rate_only,test
+226,Data Science,5,2026,final,0,0.1667,topic_rate_only,test
+227,Data Science,6,2026,final,0,0.1667,topic_rate_only,test
+228,Data Science,7,2026,final,0,0.1667,topic_rate_only,test
+229,Data Science,8,2026,final,0,0.2778,topic_rate_only,test
+230,Data Science,0,2026,mid,0,0.2778,topic_rate_only,test
+231,Data Science,1,2026,mid,0,0.2778,topic_rate_only,test
+232,Data Science,2,2026,mid,0,0.3889,topic_rate_only,test
+233,Data Science,3,2026,mid,0,0.3889,topic_rate_only,test
+234,Data Science,4,2026,mid,1,1.0,topic_rate_only,test
+235,Data Science,5,2026,mid,0,0.1667,topic_rate_only,test
+236,Data Science,6,2026,mid,0,0.1667,topic_rate_only,test
+237,Data Science,7,2026,mid,0,0.1667,topic_rate_only,test
+238,Data Science,8,2026,mid,0,0.2778,topic_rate_only,test
+239,Database Systems,0,2024,final,1,0.3226,topic_rate_only,test
+240,Database Systems,1,2024,final,1,0.4194,topic_rate_only,test
+241,Database Systems,2,2024,final,1,0.6452,topic_rate_only,test
+242,Database Systems,3,2024,final,0,0.2258,topic_rate_only,test
+243,Database Systems,4,2024,final,0,0.4516,topic_rate_only,test
+244,Database Systems,5,2024,final,1,0.3871,topic_rate_only,test
+245,Database Systems,6,2024,final,1,0.5484,topic_rate_only,test
+246,Database Systems,7,2024,final,1,0.4194,topic_rate_only,test
+247,Database Systems,8,2024,final,0,0.2258,topic_rate_only,test
+248,Database Systems,0,2024,mid,0,0.3226,topic_rate_only,test
+249,Database Systems,1,2024,mid,1,0.4194,topic_rate_only,test
+250,Database Systems,2,2024,mid,1,0.6452,topic_rate_only,test
+251,Database Systems,3,2024,mid,0,0.2258,topic_rate_only,test
+252,Database Systems,4,2024,mid,0,0.4516,topic_rate_only,test
+253,Database Systems,5,2024,mid,0,0.3871,topic_rate_only,test
+254,Database Systems,6,2024,mid,1,0.5484,topic_rate_only,test
+255,Database Systems,7,2024,mid,0,0.4194,topic_rate_only,test
+256,Database Systems,8,2024,mid,0,0.2258,topic_rate_only,test
+257,Database Systems,0,2025,final,1,0.3235,topic_rate_only,test
+258,Database Systems,1,2025,final,1,0.4412,topic_rate_only,test
+259,Database Systems,2,2025,final,1,0.6471,topic_rate_only,test
+260,Database Systems,3,2025,final,0,0.2059,topic_rate_only,test
+261,Database Systems,4,2025,final,1,0.4118,topic_rate_only,test
+262,Database Systems,5,2025,final,1,0.3824,topic_rate_only,test
+263,Database Systems,6,2025,final,1,0.5882,topic_rate_only,test
+264,Database Systems,7,2025,final,0,0.4118,topic_rate_only,test
+265,Database Systems,8,2025,final,0,0.2059,topic_rate_only,test
+266,Database Systems,0,2025,mid,0,0.3235,topic_rate_only,test
+267,Database Systems,1,2025,mid,1,0.4412,topic_rate_only,test
+268,Database Systems,2,2025,mid,1,0.6471,topic_rate_only,test
+269,Database Systems,3,2025,mid,0,0.2059,topic_rate_only,test
+270,Database Systems,4,2025,mid,0,0.4118,topic_rate_only,test
+271,Database Systems,5,2025,mid,0,0.3824,topic_rate_only,test
+272,Database Systems,6,2025,mid,1,0.5882,topic_rate_only,test
+273,Database Systems,7,2025,mid,1,0.4118,topic_rate_only,test
+274,Database Systems,8,2025,mid,0,0.2059,topic_rate_only,test
+275,Database Systems,0,2026,final,0,0.3243,topic_rate_only,test
+276,Database Systems,1,2026,final,0,0.4595,topic_rate_only,test
+277,Database Systems,2,2026,final,1,0.6486,topic_rate_only,test
+278,Database Systems,3,2026,final,0,0.1892,topic_rate_only,test
+279,Database Systems,4,2026,final,0,0.4054,topic_rate_only,test
+280,Database Systems,5,2026,final,1,0.3784,topic_rate_only,test
+281,Database Systems,6,2026,final,1,0.5946,topic_rate_only,test
+282,Database Systems,7,2026,final,0,0.4054,topic_rate_only,test
+283,Database Systems,8,2026,final,0,0.1892,topic_rate_only,test
+284,Database Systems,0,2026,mid,0,0.3243,topic_rate_only,test
+285,Database Systems,1,2026,mid,1,0.4595,topic_rate_only,test
+286,Database Systems,2,2026,mid,1,0.6486,topic_rate_only,test
+287,Database Systems,3,2026,mid,0,0.1892,topic_rate_only,test
+288,Database Systems,4,2026,mid,0,0.4054,topic_rate_only,test
+289,Database Systems,5,2026,mid,0,0.3784,topic_rate_only,test
+290,Database Systems,6,2026,mid,0,0.5946,topic_rate_only,test
+291,Database Systems,7,2026,mid,0,0.4054,topic_rate_only,test
+292,Database Systems,8,2026,mid,0,0.1892,topic_rate_only,test
+293,Database Systems,0,2026,quiz,0,0.3243,topic_rate_only,test
+294,Database Systems,1,2026,quiz,0,0.4595,topic_rate_only,test
+295,Database Systems,2,2026,quiz,0,0.6486,topic_rate_only,test
+296,Database Systems,3,2026,quiz,0,0.1892,topic_rate_only,test
+297,Database Systems,4,2026,quiz,1,0.4054,topic_rate_only,test
+298,Database Systems,5,2026,quiz,1,0.3784,topic_rate_only,test
+299,Database Systems,6,2026,quiz,1,0.5946,topic_rate_only,test
+300,Database Systems,7,2026,quiz,0,0.4054,topic_rate_only,test
+301,Database Systems,8,2026,quiz,0,0.1892,topic_rate_only,test
+302,Design and Analysis of Algorithms,0,2024,final,0,0.1429,topic_rate_only,test
+303,Design and Analysis of Algorithms,1,2024,final,0,0.0317,topic_rate_only,test
+304,Design and Analysis of Algorithms,2,2024,final,0,0.0635,topic_rate_only,test
+305,Design and Analysis of Algorithms,3,2024,final,0,0.0317,topic_rate_only,test
+306,Design and Analysis of Algorithms,4,2024,final,0,0.3651,topic_rate_only,test
+307,Design and Analysis of Algorithms,5,2024,final,1,0.5397,topic_rate_only,test
+308,Design and Analysis of Algorithms,6,2024,final,1,0.4603,topic_rate_only,test
+309,Design and Analysis of Algorithms,7,2024,final,0,0.381,topic_rate_only,test
+310,Design and Analysis of Algorithms,8,2024,final,1,0.2222,topic_rate_only,test
+311,Design and Analysis of Algorithms,0,2024,mid,0,0.1429,topic_rate_only,test
+312,Design and Analysis of Algorithms,1,2024,mid,0,0.0317,topic_rate_only,test
+313,Design and Analysis of Algorithms,2,2024,mid,0,0.0635,topic_rate_only,test
+314,Design and Analysis of Algorithms,3,2024,mid,0,0.0317,topic_rate_only,test
+315,Design and Analysis of Algorithms,4,2024,mid,1,0.3651,topic_rate_only,test
+316,Design and Analysis of Algorithms,5,2024,mid,1,0.5397,topic_rate_only,test
+317,Design and Analysis of Algorithms,6,2024,mid,1,0.4603,topic_rate_only,test
+318,Design and Analysis of Algorithms,7,2024,mid,0,0.381,topic_rate_only,test
+319,Design and Analysis of Algorithms,8,2024,mid,0,0.2222,topic_rate_only,test
+320,Design and Analysis of Algorithms,0,2025,final,0,0.1324,topic_rate_only,test
+321,Design and Analysis of Algorithms,1,2025,final,0,0.0294,topic_rate_only,test
+322,Design and Analysis of Algorithms,2,2025,final,0,0.0588,topic_rate_only,test
+323,Design and Analysis of Algorithms,3,2025,final,0,0.0294,topic_rate_only,test
+324,Design and Analysis of Algorithms,4,2025,final,0,0.3529,topic_rate_only,test
+325,Design and Analysis of Algorithms,5,2025,final,0,0.5588,topic_rate_only,test
+326,Design and Analysis of Algorithms,6,2025,final,1,0.4853,topic_rate_only,test
+327,Design and Analysis of Algorithms,7,2025,final,0,0.3529,topic_rate_only,test
+328,Design and Analysis of Algorithms,8,2025,final,0,0.2206,topic_rate_only,test
+329,Design and Analysis of Algorithms,0,2025,quiz,0,0.1324,topic_rate_only,test
+330,Design and Analysis of Algorithms,1,2025,quiz,0,0.0294,topic_rate_only,test
+331,Design and Analysis of Algorithms,2,2025,quiz,0,0.0588,topic_rate_only,test
+332,Design and Analysis of Algorithms,3,2025,quiz,0,0.0294,topic_rate_only,test
+333,Design and Analysis of Algorithms,4,2025,quiz,0,0.3529,topic_rate_only,test
+334,Design and Analysis of Algorithms,5,2025,quiz,1,0.5588,topic_rate_only,test
+335,Design and Analysis of Algorithms,6,2025,quiz,0,0.4853,topic_rate_only,test
+336,Design and Analysis of Algorithms,7,2025,quiz,1,0.3529,topic_rate_only,test
+337,Design and Analysis of Algorithms,8,2025,quiz,1,0.2206,topic_rate_only,test
+338,IOT,0,2024,quiz,1,0.3333,topic_rate_only,test
+339,IOT,1,2024,quiz,1,0.6667,topic_rate_only,test
+340,IOT,2,2024,quiz,1,0.5333,topic_rate_only,test
+341,IOT,3,2024,quiz,1,0.5333,topic_rate_only,test
+342,IOT,0,2025,mid,0,0.52,topic_rate_only,test
+343,IOT,1,2025,mid,1,0.8,topic_rate_only,test
+344,IOT,2,2025,mid,0,0.4,topic_rate_only,test
+345,IOT,3,2025,mid,1,0.64,topic_rate_only,test
+346,NLP,0,2024,quiz,0,0.1429,topic_rate_only,test
+347,NLP,1,2024,quiz,1,1.0,topic_rate_only,test
+348,NLP,2,2024,quiz,1,0.4286,topic_rate_only,test
+349,NLP,3,2024,quiz,0,0.1429,topic_rate_only,test
+350,NLP,4,2024,quiz,0,0.1429,topic_rate_only,test
+351,NLP,5,2024,quiz,0,0.2143,topic_rate_only,test
+352,NLP,6,2024,quiz,0,0.1429,topic_rate_only,test
+353,NLP,7,2024,quiz,0,0.2143,topic_rate_only,test
+354,NLP,8,2024,quiz,0,0.1429,topic_rate_only,test
+355,NLP,9,2024,quiz,0,0.1429,topic_rate_only,test
+356,OOP Lab,0,2025,mid,1,0.7143,topic_rate_only,test
+357,OOP Lab,1,2025,mid,0,0.0714,topic_rate_only,test
+358,OOP Lab,2,2025,mid,0,0.0714,topic_rate_only,test
+359,OOP Lab,3,2025,mid,0,0.2857,topic_rate_only,test
+360,OS,0,2025,quiz,0,0.2963,topic_rate_only,test
+361,OS,1,2025,quiz,0,0.2593,topic_rate_only,test
+362,OS,2,2025,quiz,0,0.4444,topic_rate_only,test
+363,OS,3,2025,quiz,0,0.2963,topic_rate_only,test
+364,OS,4,2025,quiz,0,0.3333,topic_rate_only,test
+365,OS,5,2025,quiz,0,0.2222,topic_rate_only,test
+366,OS,6,2025,quiz,0,0.3704,topic_rate_only,test
+367,OS,7,2025,quiz,1,0.3333,topic_rate_only,test
+368,OS,8,2025,quiz,0,0.2963,topic_rate_only,test
+369,OS,9,2025,quiz,0,0.7037,topic_rate_only,test
+370,Object Oriented Programming,0,2024,mid,1,0.2239,topic_rate_only,test
+371,Object Oriented Programming,1,2024,mid,0,0.1045,topic_rate_only,test
+372,Object Oriented Programming,2,2024,mid,0,0.0299,topic_rate_only,test
+373,Object Oriented Programming,3,2024,mid,0,0.0448,topic_rate_only,test
+374,Object Oriented Programming,4,2024,mid,1,0.5373,topic_rate_only,test
+375,Object Oriented Programming,5,2024,mid,0,0.1343,topic_rate_only,test
+376,Object Oriented Programming,6,2024,mid,0,0.2985,topic_rate_only,test
+377,Object Oriented Programming,7,2024,mid,0,0.0597,topic_rate_only,test
+378,Object Oriented Programming,8,2024,mid,0,0.2687,topic_rate_only,test
+379,Object Oriented Programming,0,2025,final,0,0.2353,topic_rate_only,test
+380,Object Oriented Programming,1,2025,final,0,0.1029,topic_rate_only,test
+381,Object Oriented Programming,2,2025,final,1,0.0294,topic_rate_only,test
+382,Object Oriented Programming,3,2025,final,0,0.0441,topic_rate_only,test
+383,Object Oriented Programming,4,2025,final,1,0.5441,topic_rate_only,test
+384,Object Oriented Programming,5,2025,final,0,0.1324,topic_rate_only,test
+385,Object Oriented Programming,6,2025,final,1,0.2941,topic_rate_only,test
+386,Object Oriented Programming,7,2025,final,0,0.0588,topic_rate_only,test
+387,Object Oriented Programming,8,2025,final,1,0.2647,topic_rate_only,test
+388,Object Oriented Programming,0,2026,mid,0,0.2319,topic_rate_only,test
+389,Object Oriented Programming,1,2026,mid,0,0.1014,topic_rate_only,test
+390,Object Oriented Programming,2,2026,mid,0,0.0435,topic_rate_only,test
+391,Object Oriented Programming,3,2026,mid,0,0.0435,topic_rate_only,test
+392,Object Oriented Programming,4,2026,mid,1,0.5507,topic_rate_only,test
+393,Object Oriented Programming,5,2026,mid,0,0.1304,topic_rate_only,test
+394,Object Oriented Programming,6,2026,mid,0,0.3043,topic_rate_only,test
+395,Object Oriented Programming,7,2026,mid,0,0.058,topic_rate_only,test
+396,Object Oriented Programming,8,2026,mid,1,0.2754,topic_rate_only,test
+397,Object Oriented Programming,0,2026,quiz,1,0.2319,topic_rate_only,test
+398,Object Oriented Programming,1,2026,quiz,0,0.1014,topic_rate_only,test
+399,Object Oriented Programming,2,2026,quiz,0,0.0435,topic_rate_only,test
+400,Object Oriented Programming,3,2026,quiz,0,0.0435,topic_rate_only,test
+401,Object Oriented Programming,4,2026,quiz,1,0.5507,topic_rate_only,test
+402,Object Oriented Programming,5,2026,quiz,0,0.1304,topic_rate_only,test
+403,Object Oriented Programming,6,2026,quiz,1,0.3043,topic_rate_only,test
+404,Object Oriented Programming,7,2026,quiz,0,0.058,topic_rate_only,test
+405,Object Oriented Programming,8,2026,quiz,0,0.2754,topic_rate_only,test
+406,PP,0,2024,final,0,0.2759,topic_rate_only,test
+407,PP,1,2024,final,0,0.4828,topic_rate_only,test
+408,PP,2,2024,final,0,0.1724,topic_rate_only,test
+409,PP,3,2024,final,0,0.4138,topic_rate_only,test
+410,PP,4,2024,final,0,0.069,topic_rate_only,test
+411,PP,5,2024,final,0,0.4828,topic_rate_only,test
+412,PP,6,2024,final,0,0.1724,topic_rate_only,test
+413,PP,7,2024,final,0,0.3448,topic_rate_only,test
+414,PP,8,2024,final,0,0.3793,topic_rate_only,test
+415,PP,9,2024,final,1,0.9655,topic_rate_only,test
+416,PP,0,2024,mid,0,0.2759,topic_rate_only,test
+417,PP,1,2024,mid,1,0.4828,topic_rate_only,test
+418,PP,2,2024,mid,0,0.1724,topic_rate_only,test
+419,PP,3,2024,mid,1,0.4138,topic_rate_only,test
+420,PP,4,2024,mid,0,0.069,topic_rate_only,test
+421,PP,5,2024,mid,0,0.4828,topic_rate_only,test
+422,PP,6,2024,mid,0,0.1724,topic_rate_only,test
+423,PP,7,2024,mid,0,0.3448,topic_rate_only,test
+424,PP,8,2024,mid,1,0.3793,topic_rate_only,test
+425,PP,9,2024,mid,1,0.9655,topic_rate_only,test
+426,PP,0,2025,final,0,0.25,topic_rate_only,test
+427,PP,1,2025,final,1,0.5,topic_rate_only,test
+428,PP,2,2025,final,0,0.1562,topic_rate_only,test
+429,PP,3,2025,final,0,0.4062,topic_rate_only,test
+430,PP,4,2025,final,0,0.0625,topic_rate_only,test
+431,PP,5,2025,final,0,0.4375,topic_rate_only,test
+432,PP,6,2025,final,0,0.1562,topic_rate_only,test
+433,PP,7,2025,final,0,0.3125,topic_rate_only,test
+434,PP,8,2025,final,0,0.375,topic_rate_only,test
+435,PP,9,2025,final,1,0.9688,topic_rate_only,test
+436,PP,0,2025,mid,0,0.25,topic_rate_only,test
+437,PP,1,2025,mid,0,0.5,topic_rate_only,test
+438,PP,2,2025,mid,0,0.1562,topic_rate_only,test
+439,PP,3,2025,mid,0,0.4062,topic_rate_only,test
+440,PP,4,2025,mid,0,0.0625,topic_rate_only,test
+441,PP,5,2025,mid,0,0.4375,topic_rate_only,test
+442,PP,6,2025,mid,0,0.1562,topic_rate_only,test
+443,PP,7,2025,mid,0,0.3125,topic_rate_only,test
+444,PP,8,2025,mid,0,0.375,topic_rate_only,test
+445,PP,9,2025,mid,1,0.9688,topic_rate_only,test
+446,PP,0,2026,mid,0,0.2286,topic_rate_only,test
+447,PP,1,2026,mid,0,0.4857,topic_rate_only,test
+448,PP,2,2026,mid,0,0.1429,topic_rate_only,test
+449,PP,3,2026,mid,1,0.3714,topic_rate_only,test
+450,PP,4,2026,mid,0,0.0571,topic_rate_only,test
+451,PP,5,2026,mid,0,0.4,topic_rate_only,test
+452,PP,6,2026,mid,0,0.1429,topic_rate_only,test
+453,PP,7,2026,mid,0,0.2857,topic_rate_only,test
+454,PP,8,2026,mid,1,0.3429,topic_rate_only,test
+455,PP,9,2026,mid,1,0.9714,topic_rate_only,test
+456,PP,0,2026,quiz,0,0.2286,topic_rate_only,test
+457,PP,1,2026,quiz,1,0.4857,topic_rate_only,test
+458,PP,2,2026,quiz,0,0.1429,topic_rate_only,test
+459,PP,3,2026,quiz,0,0.3714,topic_rate_only,test
+460,PP,4,2026,quiz,0,0.0571,topic_rate_only,test
+461,PP,5,2026,quiz,0,0.4,topic_rate_only,test
+462,PP,6,2026,quiz,0,0.1429,topic_rate_only,test
+463,PP,7,2026,quiz,0,0.2857,topic_rate_only,test
+464,PP,8,2026,quiz,1,0.3429,topic_rate_only,test
+465,PP,9,2026,quiz,1,0.9714,topic_rate_only,test
+466,SMD,0,2024,mid,0,0.4286,topic_rate_only,test
+467,SMD,1,2024,mid,0,0.2571,topic_rate_only,test
+468,SMD,2,2024,mid,0,0.2571,topic_rate_only,test
+469,SMD,3,2024,mid,0,0.2,topic_rate_only,test
+470,SMD,4,2024,mid,0,0.0571,topic_rate_only,test
+471,SMD,5,2024,mid,1,0.3143,topic_rate_only,test
+472,SMD,6,2024,mid,0,0.0571,topic_rate_only,test
+473,SMD,7,2024,mid,0,0.2571,topic_rate_only,test
+474,SMD,0,2026,final,0,0.4167,topic_rate_only,test
+475,SMD,1,2026,final,0,0.25,topic_rate_only,test
+476,SMD,2,2026,final,0,0.25,topic_rate_only,test
+477,SMD,3,2026,final,0,0.1944,topic_rate_only,test
+478,SMD,4,2026,final,0,0.0556,topic_rate_only,test
+479,SMD,5,2026,final,1,0.3333,topic_rate_only,test
+480,SMD,6,2026,final,0,0.0556,topic_rate_only,test
+481,SMD,7,2026,final,0,0.25,topic_rate_only,test
+482,Software Engineering,0,2024,mid,0,0.4167,topic_rate_only,test
+483,Software Engineering,1,2024,mid,0,0.1667,topic_rate_only,test
+484,Software Engineering,2,2024,mid,0,0.2917,topic_rate_only,test
+485,Software Engineering,3,2024,mid,0,0.0417,topic_rate_only,test
+486,Software Engineering,4,2024,mid,1,0.8333,topic_rate_only,test
+487,Software Engineering,5,2024,mid,0,0.375,topic_rate_only,test
+488,Software Engineering,0,2024,quiz,1,0.4167,topic_rate_only,test
+489,Software Engineering,1,2024,quiz,1,0.1667,topic_rate_only,test
+490,Software Engineering,2,2024,quiz,1,0.2917,topic_rate_only,test
+491,Software Engineering,3,2024,quiz,0,0.0417,topic_rate_only,test
+492,Software Engineering,4,2024,quiz,1,0.8333,topic_rate_only,test
+493,Software Engineering,5,2024,quiz,1,0.375,topic_rate_only,test
+494,Software Engineering,0,2025,final,1,0.3143,topic_rate_only,test
+495,Software Engineering,1,2025,final,0,0.1429,topic_rate_only,test
+496,Software Engineering,2,2025,final,1,0.2286,topic_rate_only,test
+497,Software Engineering,3,2025,final,0,0.0286,topic_rate_only,test
+498,Software Engineering,4,2025,final,1,0.8857,topic_rate_only,test
+499,Software Engineering,5,2025,final,1,0.3143,topic_rate_only,test
+500,Theory of Automata,0,2024,final,1,0.1667,topic_rate_only,test
+501,Theory of Automata,1,2024,final,1,0.7222,topic_rate_only,test
+502,Theory of Automata,2,2024,final,1,0.2222,topic_rate_only,test
+503,Theory of Automata,3,2024,final,0,0.1667,topic_rate_only,test
+504,Theory of Automata,4,2024,final,0,0.1389,topic_rate_only,test
+505,Theory of Automata,5,2024,final,1,0.3889,topic_rate_only,test
+506,Theory of Automata,6,2024,final,0,0.4444,topic_rate_only,test
+507,Theory of Automata,7,2024,final,1,0.2778,topic_rate_only,test
+508,Theory of Automata,0,2024,mid,0,0.1667,topic_rate_only,test
+509,Theory of Automata,1,2024,mid,1,0.7222,topic_rate_only,test
+510,Theory of Automata,2,2024,mid,0,0.2222,topic_rate_only,test
+511,Theory of Automata,3,2024,mid,0,0.1667,topic_rate_only,test
+512,Theory of Automata,4,2024,mid,0,0.1389,topic_rate_only,test
+513,Theory of Automata,5,2024,mid,0,0.3889,topic_rate_only,test
+514,Theory of Automata,6,2024,mid,0,0.4444,topic_rate_only,test
+515,Theory of Automata,7,2024,mid,1,0.2778,topic_rate_only,test
+516,Theory of Automata,0,2024,quiz,0,0.1667,topic_rate_only,test
+517,Theory of Automata,1,2024,quiz,1,0.7222,topic_rate_only,test
+518,Theory of Automata,2,2024,quiz,1,0.2222,topic_rate_only,test
+519,Theory of Automata,3,2024,quiz,0,0.1667,topic_rate_only,test
+520,Theory of Automata,4,2024,quiz,0,0.1389,topic_rate_only,test
+521,Theory of Automata,5,2024,quiz,0,0.3889,topic_rate_only,test
+522,Theory of Automata,6,2024,quiz,0,0.4444,topic_rate_only,test
+523,Theory of Automata,7,2024,quiz,0,0.2778,topic_rate_only,test
+524,Theory of Automata,0,2025,final,0,0.1667,topic_rate_only,test
+525,Theory of Automata,1,2025,final,1,0.7143,topic_rate_only,test
+526,Theory of Automata,2,2025,final,1,0.2381,topic_rate_only,test
+527,Theory of Automata,3,2025,final,0,0.1429,topic_rate_only,test
+528,Theory of Automata,4,2025,final,0,0.119,topic_rate_only,test
+529,Theory of Automata,5,2025,final,0,0.3571,topic_rate_only,test
+530,Theory of Automata,6,2025,final,0,0.381,topic_rate_only,test
+531,Theory of Automata,7,2025,final,0,0.2857,topic_rate_only,test
+532,Theory of Automata,0,2025,mid,0,0.1667,topic_rate_only,test
+533,Theory of Automata,1,2025,mid,1,0.7143,topic_rate_only,test
+534,Theory of Automata,2,2025,mid,0,0.2381,topic_rate_only,test
+535,Theory of Automata,3,2025,mid,0,0.1429,topic_rate_only,test
+536,Theory of Automata,4,2025,mid,0,0.119,topic_rate_only,test
+537,Theory of Automata,5,2025,mid,0,0.3571,topic_rate_only,test
+538,Theory of Automata,6,2025,mid,0,0.381,topic_rate_only,test
+539,Theory of Automata,7,2025,mid,0,0.2857,topic_rate_only,test
+540,Theory of Automata,0,2025,quiz,0,0.1667,topic_rate_only,test
+541,Theory of Automata,1,2025,quiz,0,0.7143,topic_rate_only,test
+542,Theory of Automata,2,2025,quiz,0,0.2381,topic_rate_only,test
+543,Theory of Automata,3,2025,quiz,0,0.1429,topic_rate_only,test
+544,Theory of Automata,4,2025,quiz,1,0.119,topic_rate_only,test
+545,Theory of Automata,5,2025,quiz,1,0.3571,topic_rate_only,test
+546,Theory of Automata,6,2025,quiz,1,0.381,topic_rate_only,test
+547,Theory of Automata,7,2025,quiz,1,0.2857,topic_rate_only,test
+548,Web Programming,0,2025,final,0,0.1333,topic_rate_only,test
+549,Web Programming,1,2025,final,0,0.5333,topic_rate_only,test
+550,Web Programming,2,2025,final,1,0.6333,topic_rate_only,test
+551,Web Programming,3,2025,final,0,0.1333,topic_rate_only,test
+552,Web Programming,4,2025,final,0,0.3333,topic_rate_only,test
+553,Web Programming,5,2025,final,0,0.2,topic_rate_only,test
+554,Web Programming,6,2025,final,0,0.1,topic_rate_only,test
+555,Web Programming,7,2025,final,0,0.2333,topic_rate_only,test
+556,Web Programming,8,2025,final,0,0.2333,topic_rate_only,test
+557,Web Programming,9,2025,final,0,0.0667,topic_rate_only,test
+558,Web Programming,0,2025,quiz,1,0.1333,topic_rate_only,test
+559,Web Programming,1,2025,quiz,0,0.5333,topic_rate_only,test
+560,Web Programming,2,2025,quiz,1,0.6333,topic_rate_only,test
+561,Web Programming,3,2025,quiz,0,0.1333,topic_rate_only,test
+562,Web Programming,4,2025,quiz,0,0.3333,topic_rate_only,test
+563,Web Programming,5,2025,quiz,0,0.2,topic_rate_only,test
+564,Web Programming,6,2025,quiz,0,0.1,topic_rate_only,test
+565,Web Programming,7,2025,quiz,0,0.2333,topic_rate_only,test
+566,Web Programming,8,2025,quiz,1,0.2333,topic_rate_only,test
+567,Web Programming,9,2025,quiz,0,0.0667,topic_rate_only,test

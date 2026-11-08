@@ -1,0 +1,569 @@
+row_idx,subject,topic_id,target_year,target_type,label,score,model,split
+0,Advanced Database Concepts,0,2024,final,0,0.0002778,rule_last_year,test
+1,Advanced Database Concepts,1,2024,final,1,1.0004444,rule_last_year,test
+2,Advanced Database Concepts,2,2024,final,1,1.0005,rule_last_year,test
+3,Advanced Database Concepts,3,2024,final,0,0.00033329999999999997,rule_last_year,test
+4,Advanced Database Concepts,4,2024,final,0,1.0002778,rule_last_year,test
+5,Advanced Database Concepts,5,2024,final,1,1.0003333,rule_last_year,test
+6,Advanced Database Concepts,6,2024,final,0,0.0002222,rule_last_year,test
+7,Advanced Database Concepts,7,2024,final,1,1.0004444,rule_last_year,test
+8,Advanced Database Concepts,0,2024,mid,0,0.0002778,rule_last_year,test
+9,Advanced Database Concepts,1,2024,mid,0,1.0004444,rule_last_year,test
+10,Advanced Database Concepts,2,2024,mid,1,1.0005,rule_last_year,test
+11,Advanced Database Concepts,3,2024,mid,0,0.00033329999999999997,rule_last_year,test
+12,Advanced Database Concepts,4,2024,mid,0,1.0002778,rule_last_year,test
+13,Advanced Database Concepts,5,2024,mid,1,1.0003333,rule_last_year,test
+14,Advanced Database Concepts,6,2024,mid,0,0.0002222,rule_last_year,test
+15,Advanced Database Concepts,7,2024,mid,1,1.0004444,rule_last_year,test
+16,Advanced Database Concepts,0,2025,quiz,0,0.00025,rule_last_year,test
+17,Advanced Database Concepts,1,2025,quiz,0,1.00045,rule_last_year,test
+18,Advanced Database Concepts,2,2025,quiz,0,1.00055,rule_last_year,test
+19,Advanced Database Concepts,3,2025,quiz,0,0.0003,rule_last_year,test
+20,Advanced Database Concepts,4,2025,quiz,0,0.00025,rule_last_year,test
+21,Advanced Database Concepts,5,2025,quiz,1,1.0004,rule_last_year,test
+22,Advanced Database Concepts,6,2025,quiz,0,0.0002,rule_last_year,test
+23,Advanced Database Concepts,7,2025,quiz,0,1.0005,rule_last_year,test
+24,Artificial Intelligence,0,2024,final,1,1.0005833,rule_last_year,test
+25,Artificial Intelligence,1,2024,final,1,1.0004583,rule_last_year,test
+26,Artificial Intelligence,2,2024,final,1,1.0004792,rule_last_year,test
+27,Artificial Intelligence,3,2024,final,0,6.25e-05,rule_last_year,test
+28,Artificial Intelligence,4,2024,final,1,1.0003125,rule_last_year,test
+29,Artificial Intelligence,5,2024,final,1,1.0005417,rule_last_year,test
+30,Artificial Intelligence,6,2024,final,0,0.0001042,rule_last_year,test
+31,Artificial Intelligence,7,2024,final,0,0.00016669999999999999,rule_last_year,test
+32,Artificial Intelligence,8,2024,final,0,1.00025,rule_last_year,test
+33,Artificial Intelligence,0,2024,mid,0,1.0005833,rule_last_year,test
+34,Artificial Intelligence,1,2024,mid,1,1.0004583,rule_last_year,test
+35,Artificial Intelligence,2,2024,mid,1,1.0004792,rule_last_year,test
+36,Artificial Intelligence,3,2024,mid,0,6.25e-05,rule_last_year,test
+37,Artificial Intelligence,4,2024,mid,1,1.0003125,rule_last_year,test
+38,Artificial Intelligence,5,2024,mid,1,1.0005417,rule_last_year,test
+39,Artificial Intelligence,6,2024,mid,0,0.0001042,rule_last_year,test
+40,Artificial Intelligence,7,2024,mid,1,0.00016669999999999999,rule_last_year,test
+41,Artificial Intelligence,8,2024,mid,0,1.00025,rule_last_year,test
+42,Artificial Intelligence,0,2025,mid,0,1.0005686,rule_last_year,test
+43,Artificial Intelligence,1,2025,mid,0,1.0004706,rule_last_year,test
+44,Artificial Intelligence,2,2025,mid,0,1.0004902,rule_last_year,test
+45,Artificial Intelligence,3,2025,mid,0,5.88e-05,rule_last_year,test
+46,Artificial Intelligence,4,2025,mid,1,1.0003529,rule_last_year,test
+47,Artificial Intelligence,5,2025,mid,1,1.000549,rule_last_year,test
+48,Artificial Intelligence,6,2025,mid,0,9.800000000000001e-05,rule_last_year,test
+49,Artificial Intelligence,7,2025,mid,0,1.0001765,rule_last_year,test
+50,Artificial Intelligence,8,2025,mid,0,0.00023530000000000003,rule_last_year,test
+51,Artificial Intelligence,0,2026,quiz,1,0.0005577,rule_last_year,test
+52,Artificial Intelligence,1,2026,quiz,1,0.00046150000000000005,rule_last_year,test
+53,Artificial Intelligence,2,2026,quiz,1,0.00048080000000000003,rule_last_year,test
+54,Artificial Intelligence,3,2026,quiz,0,5.77e-05,rule_last_year,test
+55,Artificial Intelligence,4,2026,quiz,0,1.0003654,rule_last_year,test
+56,Artificial Intelligence,5,2026,quiz,1,1.0005577,rule_last_year,test
+57,Artificial Intelligence,6,2026,quiz,0,9.62e-05,rule_last_year,test
+58,Artificial Intelligence,7,2026,quiz,0,0.0001731,rule_last_year,test
+59,Artificial Intelligence,8,2026,quiz,0,0.0002308,rule_last_year,test
+60,Cloud Computing,0,2025,final,0,4.55e-05,rule_last_year,test
+61,Cloud Computing,1,2025,final,0,0.00045450000000000004,rule_last_year,test
+62,Cloud Computing,2,2025,final,1,0.0006364,rule_last_year,test
+63,Cloud Computing,3,2025,final,0,0.0005909,rule_last_year,test
+64,Cloud Computing,4,2025,final,0,0.0001818,rule_last_year,test
+65,Cloud Computing,5,2025,final,0,0.0001364,rule_last_year,test
+66,Cloud Computing,6,2025,final,0,0.0001364,rule_last_year,test
+67,Cloud Computing,7,2025,final,1,0.0008182,rule_last_year,test
+68,Cloud Computing,8,2025,final,0,4.55e-05,rule_last_year,test
+69,Cloud Computing,0,2025,mid,0,4.55e-05,rule_last_year,test
+70,Cloud Computing,1,2025,mid,0,0.00045450000000000004,rule_last_year,test
+71,Cloud Computing,2,2025,mid,1,0.0006364,rule_last_year,test
+72,Cloud Computing,3,2025,mid,0,0.0005909,rule_last_year,test
+73,Cloud Computing,4,2025,mid,0,0.0001818,rule_last_year,test
+74,Cloud Computing,5,2025,mid,0,0.0001364,rule_last_year,test
+75,Cloud Computing,6,2025,mid,0,0.0001364,rule_last_year,test
+76,Cloud Computing,7,2025,mid,1,0.0008182,rule_last_year,test
+77,Cloud Computing,8,2025,mid,0,4.55e-05,rule_last_year,test
+78,Compiler Construction,0,2024,final,0,1.0007647,rule_last_year,test
+79,Compiler Construction,1,2024,final,0,0.0006471000000000001,rule_last_year,test
+80,Compiler Construction,2,2024,final,0,0.0003529,rule_last_year,test
+81,Compiler Construction,3,2024,final,0,1.0004706,rule_last_year,test
+82,Compiler Construction,4,2024,final,1,0.00047060000000000005,rule_last_year,test
+83,Compiler Construction,0,2024,mid,1,1.0007647,rule_last_year,test
+84,Compiler Construction,1,2024,mid,1,0.0006471000000000001,rule_last_year,test
+85,Compiler Construction,2,2024,mid,0,0.0003529,rule_last_year,test
+86,Compiler Construction,3,2024,mid,1,1.0004706,rule_last_year,test
+87,Compiler Construction,4,2024,mid,0,0.00047060000000000005,rule_last_year,test
+88,Compiler Construction,0,2025,mid,1,1.0007,rule_last_year,test
+89,Compiler Construction,1,2025,mid,0,1.0006,rule_last_year,test
+90,Compiler Construction,2,2025,mid,0,0.0003,rule_last_year,test
+91,Compiler Construction,3,2025,mid,1,1.0005,rule_last_year,test
+92,Compiler Construction,4,2025,mid,0,1.00045,rule_last_year,test
+93,Computer Networks,0,2024,final,0,1.00008,rule_last_year,test
+94,Computer Networks,1,2024,final,1,1.00026,rule_last_year,test
+95,Computer Networks,2,2024,final,1,1.0004,rule_last_year,test
+96,Computer Networks,3,2024,final,1,1.00016,rule_last_year,test
+97,Computer Networks,4,2024,final,1,1.00034,rule_last_year,test
+98,Computer Networks,5,2024,final,0,1.00012,rule_last_year,test
+99,Computer Networks,6,2024,final,1,1.00048,rule_last_year,test
+100,Computer Networks,7,2024,final,0,0.0002,rule_last_year,test
+101,Computer Networks,8,2024,final,0,1.00014,rule_last_year,test
+102,Computer Networks,9,2024,final,0,2e-05,rule_last_year,test
+103,Computer Networks,0,2024,mid,0,1.00008,rule_last_year,test
+104,Computer Networks,1,2024,mid,1,1.00026,rule_last_year,test
+105,Computer Networks,2,2024,mid,1,1.0004,rule_last_year,test
+106,Computer Networks,3,2024,mid,0,1.00016,rule_last_year,test
+107,Computer Networks,4,2024,mid,1,1.00034,rule_last_year,test
+108,Computer Networks,5,2024,mid,0,1.00012,rule_last_year,test
+109,Computer Networks,6,2024,mid,1,1.00048,rule_last_year,test
+110,Computer Networks,7,2024,mid,1,0.0002,rule_last_year,test
+111,Computer Networks,8,2024,mid,1,1.00014,rule_last_year,test
+112,Computer Networks,9,2024,mid,0,2e-05,rule_last_year,test
+113,Computer Networks,0,2024,quiz,1,1.00008,rule_last_year,test
+114,Computer Networks,1,2024,quiz,1,1.00026,rule_last_year,test
+115,Computer Networks,2,2024,quiz,1,1.0004,rule_last_year,test
+116,Computer Networks,3,2024,quiz,1,1.00016,rule_last_year,test
+117,Computer Networks,4,2024,quiz,1,1.00034,rule_last_year,test
+118,Computer Networks,5,2024,quiz,0,1.00012,rule_last_year,test
+119,Computer Networks,6,2024,quiz,1,1.00048,rule_last_year,test
+120,Computer Networks,7,2024,quiz,0,0.0002,rule_last_year,test
+121,Computer Networks,8,2024,quiz,1,1.00014,rule_last_year,test
+122,Computer Networks,9,2024,quiz,0,2e-05,rule_last_year,test
+123,Computer Networks,0,2025,mid,0,1.0000725,rule_last_year,test
+124,Computer Networks,1,2025,mid,1,1.0002609,rule_last_year,test
+125,Computer Networks,2,2025,mid,1,1.0004058,rule_last_year,test
+126,Computer Networks,3,2025,mid,0,1.0001594,rule_last_year,test
+127,Computer Networks,4,2025,mid,1,1.0003188,rule_last_year,test
+128,Computer Networks,5,2025,mid,0,8.7e-05,rule_last_year,test
+129,Computer Networks,6,2025,mid,1,1.0004783,rule_last_year,test
+130,Computer Networks,7,2025,mid,0,1.0001594,rule_last_year,test
+131,Computer Networks,8,2025,mid,1,1.0001304,rule_last_year,test
+132,Computer Networks,9,2025,mid,0,1.4500000000000002e-05,rule_last_year,test
+133,Computer Networks,0,2025,quiz,0,1.0000725,rule_last_year,test
+134,Computer Networks,1,2025,quiz,1,1.0002609,rule_last_year,test
+135,Computer Networks,2,2025,quiz,1,1.0004058,rule_last_year,test
+136,Computer Networks,3,2025,quiz,1,1.0001594,rule_last_year,test
+137,Computer Networks,4,2025,quiz,1,1.0003188,rule_last_year,test
+138,Computer Networks,5,2025,quiz,1,8.7e-05,rule_last_year,test
+139,Computer Networks,6,2025,quiz,1,1.0004783,rule_last_year,test
+140,Computer Networks,7,2025,quiz,1,1.0001594,rule_last_year,test
+141,Computer Networks,8,2025,quiz,1,1.0001304,rule_last_year,test
+142,Computer Networks,9,2025,quiz,0,1.4500000000000002e-05,rule_last_year,test
+143,Computer Networks,0,2026,final,0,5.32e-05,rule_last_year,test
+144,Computer Networks,1,2026,final,0,1.0002553,rule_last_year,test
+145,Computer Networks,2,2026,final,1,1.0004149,rule_last_year,test
+146,Computer Networks,3,2026,final,1,1.0001489,rule_last_year,test
+147,Computer Networks,4,2026,final,1,1.0002872,rule_last_year,test
+148,Computer Networks,5,2026,final,0,1.0000745,rule_last_year,test
+149,Computer Networks,6,2026,final,1,1.0004681,rule_last_year,test
+150,Computer Networks,7,2026,final,0,1.0001277,rule_last_year,test
+151,Computer Networks,8,2026,final,0,1.0001277,rule_last_year,test
+152,Computer Networks,9,2026,final,0,1.06e-05,rule_last_year,test
+153,Computer Networks,0,2026,mid,0,5.32e-05,rule_last_year,test
+154,Computer Networks,1,2026,mid,1,1.0002553,rule_last_year,test
+155,Computer Networks,2,2026,mid,1,1.0004149,rule_last_year,test
+156,Computer Networks,3,2026,mid,0,1.0001489,rule_last_year,test
+157,Computer Networks,4,2026,mid,1,1.0002872,rule_last_year,test
+158,Computer Networks,5,2026,mid,0,1.0000745,rule_last_year,test
+159,Computer Networks,6,2026,mid,1,1.0004681,rule_last_year,test
+160,Computer Networks,7,2026,mid,0,1.0001277,rule_last_year,test
+161,Computer Networks,8,2026,mid,0,1.0001277,rule_last_year,test
+162,Computer Networks,9,2026,mid,0,1.06e-05,rule_last_year,test
+163,Computer Networks,0,2026,quiz,1,5.32e-05,rule_last_year,test
+164,Computer Networks,1,2026,quiz,1,1.0002553,rule_last_year,test
+165,Computer Networks,2,2026,quiz,1,1.0004149,rule_last_year,test
+166,Computer Networks,3,2026,quiz,1,1.0001489,rule_last_year,test
+167,Computer Networks,4,2026,quiz,1,1.0002872,rule_last_year,test
+168,Computer Networks,5,2026,quiz,1,1.0000745,rule_last_year,test
+169,Computer Networks,6,2026,quiz,1,1.0004681,rule_last_year,test
+170,Computer Networks,7,2026,quiz,0,1.0001277,rule_last_year,test
+171,Computer Networks,8,2026,quiz,0,1.0001277,rule_last_year,test
+172,Computer Networks,9,2026,quiz,1,1.06e-05,rule_last_year,test
+173,Computer Organization and Assembly Language,0,2025,final,0,0.000125,rule_last_year,test
+174,Computer Organization and Assembly Language,1,2025,final,1,0.0008333,rule_last_year,test
+175,Computer Organization and Assembly Language,2,2025,final,0,0.00029170000000000004,rule_last_year,test
+176,Computer Organization and Assembly Language,3,2025,final,0,0.000375,rule_last_year,test
+177,Computer Organization and Assembly Language,4,2025,final,0,0.00016669999999999999,rule_last_year,test
+178,Computer Organization and Assembly Language,5,2025,final,0,8.33e-05,rule_last_year,test
+179,Computer Organization and Assembly Language,6,2025,final,0,8.33e-05,rule_last_year,test
+180,Computer Organization and Assembly Language,7,2025,final,0,0.00033329999999999997,rule_last_year,test
+181,Computer Organization and Assembly Language,8,2025,final,0,0.00016669999999999999,rule_last_year,test
+182,Computer Organization and Assembly Language,9,2025,final,0,0.000125,rule_last_year,test
+183,DLD,0,2025,final,1,0.0005263,rule_last_year,test
+184,DLD,1,2025,final,0,0.0002632,rule_last_year,test
+185,DLD,2,2025,final,0,0.0002105,rule_last_year,test
+186,DLD,3,2025,final,1,0.0004211,rule_last_year,test
+187,DLD,4,2025,final,0,0.0004737,rule_last_year,test
+188,DLD,5,2025,final,1,0.0004737,rule_last_year,test
+189,DLD,6,2025,final,0,0.0002632,rule_last_year,test
+190,DLD,7,2025,final,0,0.0002105,rule_last_year,test
+191,DLD,0,2026,mid,0,1.00055,rule_last_year,test
+192,DLD,1,2026,mid,0,0.00025,rule_last_year,test
+193,DLD,2,2026,mid,0,0.0002,rule_last_year,test
+194,DLD,3,2026,mid,1,1.00045,rule_last_year,test
+195,DLD,4,2026,mid,0,0.00045000000000000004,rule_last_year,test
+196,DLD,5,2026,mid,1,1.0005,rule_last_year,test
+197,DLD,6,2026,mid,0,0.00025,rule_last_year,test
+198,DLD,7,2026,mid,0,0.0002,rule_last_year,test
+199,DW,0,2024,mid,1,1.0005455,rule_last_year,test
+200,DW,1,2024,mid,0,0.0002727,rule_last_year,test
+201,DW,2,2024,mid,1,1.0008182,rule_last_year,test
+202,DW,3,2024,mid,0,1.0004545,rule_last_year,test
+203,Data Science,0,2024,mid,0,0.00033329999999999997,rule_last_year,test
+204,Data Science,1,2024,mid,0,0.00033329999999999997,rule_last_year,test
+205,Data Science,2,2024,mid,0,1.0004667,rule_last_year,test
+206,Data Science,3,2024,mid,0,1.0004667,rule_last_year,test
+207,Data Science,4,2024,mid,1,1.001,rule_last_year,test
+208,Data Science,5,2024,mid,0,0.0002,rule_last_year,test
+209,Data Science,6,2024,mid,0,0.0002,rule_last_year,test
+210,Data Science,7,2024,mid,0,0.0002,rule_last_year,test
+211,Data Science,8,2024,mid,0,1.0003333,rule_last_year,test
+212,Data Science,0,2025,mid,0,0.0003125,rule_last_year,test
+213,Data Science,1,2025,mid,0,0.0003125,rule_last_year,test
+214,Data Science,2,2025,mid,0,0.0004375,rule_last_year,test
+215,Data Science,3,2025,mid,0,0.0004375,rule_last_year,test
+216,Data Science,4,2025,mid,1,1.001,rule_last_year,test
+217,Data Science,5,2025,mid,0,0.0001875,rule_last_year,test
+218,Data Science,6,2025,mid,0,0.0001875,rule_last_year,test
+219,Data Science,7,2025,mid,0,0.0001875,rule_last_year,test
+220,Data Science,8,2025,mid,0,0.0003125,rule_last_year,test
+221,Data Science,0,2026,final,0,0.0002778,rule_last_year,test
+222,Data Science,1,2026,final,0,0.0002778,rule_last_year,test
+223,Data Science,2,2026,final,0,0.0003889,rule_last_year,test
+224,Data Science,3,2026,final,0,0.0003889,rule_last_year,test
+225,Data Science,4,2026,final,1,1.001,rule_last_year,test
+226,Data Science,5,2026,final,0,0.00016669999999999999,rule_last_year,test
+227,Data Science,6,2026,final,0,0.00016669999999999999,rule_last_year,test
+228,Data Science,7,2026,final,0,0.00016669999999999999,rule_last_year,test
+229,Data Science,8,2026,final,0,0.0002778,rule_last_year,test
+230,Data Science,0,2026,mid,0,0.0002778,rule_last_year,test
+231,Data Science,1,2026,mid,0,0.0002778,rule_last_year,test
+232,Data Science,2,2026,mid,0,0.0003889,rule_last_year,test
+233,Data Science,3,2026,mid,0,0.0003889,rule_last_year,test
+234,Data Science,4,2026,mid,1,1.001,rule_last_year,test
+235,Data Science,5,2026,mid,0,0.00016669999999999999,rule_last_year,test
+236,Data Science,6,2026,mid,0,0.00016669999999999999,rule_last_year,test
+237,Data Science,7,2026,mid,0,0.00016669999999999999,rule_last_year,test
+238,Data Science,8,2026,mid,0,0.0002778,rule_last_year,test
+239,Database Systems,0,2024,final,1,1.0003226,rule_last_year,test
+240,Database Systems,1,2024,final,1,1.0004194,rule_last_year,test
+241,Database Systems,2,2024,final,1,1.0006452,rule_last_year,test
+242,Database Systems,3,2024,final,0,0.0002258,rule_last_year,test
+243,Database Systems,4,2024,final,0,1.0004516,rule_last_year,test
+244,Database Systems,5,2024,final,1,1.0003871,rule_last_year,test
+245,Database Systems,6,2024,final,1,1.0005484,rule_last_year,test
+246,Database Systems,7,2024,final,1,1.0004194,rule_last_year,test
+247,Database Systems,8,2024,final,0,0.0002258,rule_last_year,test
+248,Database Systems,0,2024,mid,0,1.0003226,rule_last_year,test
+249,Database Systems,1,2024,mid,1,1.0004194,rule_last_year,test
+250,Database Systems,2,2024,mid,1,1.0006452,rule_last_year,test
+251,Database Systems,3,2024,mid,0,0.0002258,rule_last_year,test
+252,Database Systems,4,2024,mid,0,1.0004516,rule_last_year,test
+253,Database Systems,5,2024,mid,0,1.0003871,rule_last_year,test
+254,Database Systems,6,2024,mid,1,1.0005484,rule_last_year,test
+255,Database Systems,7,2024,mid,0,1.0004194,rule_last_year,test
+256,Database Systems,8,2024,mid,0,0.0002258,rule_last_year,test
+257,Database Systems,0,2025,final,1,1.0003235,rule_last_year,test
+258,Database Systems,1,2025,final,1,1.0004412,rule_last_year,test
+259,Database Systems,2,2025,final,1,1.0006471,rule_last_year,test
+260,Database Systems,3,2025,final,0,0.00020590000000000002,rule_last_year,test
+261,Database Systems,4,2025,final,1,0.00041180000000000003,rule_last_year,test
+262,Database Systems,5,2025,final,1,1.0003824,rule_last_year,test
+263,Database Systems,6,2025,final,1,1.0005882,rule_last_year,test
+264,Database Systems,7,2025,final,0,1.0004118,rule_last_year,test
+265,Database Systems,8,2025,final,0,0.00020590000000000002,rule_last_year,test
+266,Database Systems,0,2025,mid,0,1.0003235,rule_last_year,test
+267,Database Systems,1,2025,mid,1,1.0004412,rule_last_year,test
+268,Database Systems,2,2025,mid,1,1.0006471,rule_last_year,test
+269,Database Systems,3,2025,mid,0,0.00020590000000000002,rule_last_year,test
+270,Database Systems,4,2025,mid,0,0.00041180000000000003,rule_last_year,test
+271,Database Systems,5,2025,mid,0,1.0003824,rule_last_year,test
+272,Database Systems,6,2025,mid,1,1.0005882,rule_last_year,test
+273,Database Systems,7,2025,mid,1,1.0004118,rule_last_year,test
+274,Database Systems,8,2025,mid,0,0.00020590000000000002,rule_last_year,test
+275,Database Systems,0,2026,final,0,1.0003243,rule_last_year,test
+276,Database Systems,1,2026,final,0,1.0004595,rule_last_year,test
+277,Database Systems,2,2026,final,1,1.0006486,rule_last_year,test
+278,Database Systems,3,2026,final,0,0.00018920000000000002,rule_last_year,test
+279,Database Systems,4,2026,final,0,1.0004054,rule_last_year,test
+280,Database Systems,5,2026,final,1,1.0003784,rule_last_year,test
+281,Database Systems,6,2026,final,1,1.0005946,rule_last_year,test
+282,Database Systems,7,2026,final,0,1.0004054,rule_last_year,test
+283,Database Systems,8,2026,final,0,0.00018920000000000002,rule_last_year,test
+284,Database Systems,0,2026,mid,0,1.0003243,rule_last_year,test
+285,Database Systems,1,2026,mid,1,1.0004595,rule_last_year,test
+286,Database Systems,2,2026,mid,1,1.0006486,rule_last_year,test
+287,Database Systems,3,2026,mid,0,0.00018920000000000002,rule_last_year,test
+288,Database Systems,4,2026,mid,0,1.0004054,rule_last_year,test
+289,Database Systems,5,2026,mid,0,1.0003784,rule_last_year,test
+290,Database Systems,6,2026,mid,0,1.0005946,rule_last_year,test
+291,Database Systems,7,2026,mid,0,1.0004054,rule_last_year,test
+292,Database Systems,8,2026,mid,0,0.00018920000000000002,rule_last_year,test
+293,Database Systems,0,2026,quiz,0,1.0003243,rule_last_year,test
+294,Database Systems,1,2026,quiz,0,1.0004595,rule_last_year,test
+295,Database Systems,2,2026,quiz,0,1.0006486,rule_last_year,test
+296,Database Systems,3,2026,quiz,0,0.00018920000000000002,rule_last_year,test
+297,Database Systems,4,2026,quiz,1,1.0004054,rule_last_year,test
+298,Database Systems,5,2026,quiz,1,1.0003784,rule_last_year,test
+299,Database Systems,6,2026,quiz,1,1.0005946,rule_last_year,test
+300,Database Systems,7,2026,quiz,0,1.0004054,rule_last_year,test
+301,Database Systems,8,2026,quiz,0,0.00018920000000000002,rule_last_year,test
+302,Design and Analysis of Algorithms,0,2024,final,0,0.0001429,rule_last_year,test
+303,Design and Analysis of Algorithms,1,2024,final,0,3.17e-05,rule_last_year,test
+304,Design and Analysis of Algorithms,2,2024,final,0,6.35e-05,rule_last_year,test
+305,Design and Analysis of Algorithms,3,2024,final,0,3.17e-05,rule_last_year,test
+306,Design and Analysis of Algorithms,4,2024,final,0,1.0003651,rule_last_year,test
+307,Design and Analysis of Algorithms,5,2024,final,1,1.0005397,rule_last_year,test
+308,Design and Analysis of Algorithms,6,2024,final,1,1.0004603,rule_last_year,test
+309,Design and Analysis of Algorithms,7,2024,final,0,1.000381,rule_last_year,test
+310,Design and Analysis of Algorithms,8,2024,final,1,1.0002222,rule_last_year,test
+311,Design and Analysis of Algorithms,0,2024,mid,0,0.0001429,rule_last_year,test
+312,Design and Analysis of Algorithms,1,2024,mid,0,3.17e-05,rule_last_year,test
+313,Design and Analysis of Algorithms,2,2024,mid,0,6.35e-05,rule_last_year,test
+314,Design and Analysis of Algorithms,3,2024,mid,0,3.17e-05,rule_last_year,test
+315,Design and Analysis of Algorithms,4,2024,mid,1,1.0003651,rule_last_year,test
+316,Design and Analysis of Algorithms,5,2024,mid,1,1.0005397,rule_last_year,test
+317,Design and Analysis of Algorithms,6,2024,mid,1,1.0004603,rule_last_year,test
+318,Design and Analysis of Algorithms,7,2024,mid,0,1.000381,rule_last_year,test
+319,Design and Analysis of Algorithms,8,2024,mid,0,1.0002222,rule_last_year,test
+320,Design and Analysis of Algorithms,0,2025,final,0,0.0001324,rule_last_year,test
+321,Design and Analysis of Algorithms,1,2025,final,0,2.94e-05,rule_last_year,test
+322,Design and Analysis of Algorithms,2,2025,final,0,5.88e-05,rule_last_year,test
+323,Design and Analysis of Algorithms,3,2025,final,0,2.94e-05,rule_last_year,test
+324,Design and Analysis of Algorithms,4,2025,final,0,1.0003529,rule_last_year,test
+325,Design and Analysis of Algorithms,5,2025,final,0,1.0005588,rule_last_year,test
+326,Design and Analysis of Algorithms,6,2025,final,1,1.0004853,rule_last_year,test
+327,Design and Analysis of Algorithms,7,2025,final,0,0.0003529,rule_last_year,test
+328,Design and Analysis of Algorithms,8,2025,final,0,1.0002206,rule_last_year,test
+329,Design and Analysis of Algorithms,0,2025,quiz,0,0.0001324,rule_last_year,test
+330,Design and Analysis of Algorithms,1,2025,quiz,0,2.94e-05,rule_last_year,test
+331,Design and Analysis of Algorithms,2,2025,quiz,0,5.88e-05,rule_last_year,test
+332,Design and Analysis of Algorithms,3,2025,quiz,0,2.94e-05,rule_last_year,test
+333,Design and Analysis of Algorithms,4,2025,quiz,0,1.0003529,rule_last_year,test
+334,Design and Analysis of Algorithms,5,2025,quiz,1,1.0005588,rule_last_year,test
+335,Design and Analysis of Algorithms,6,2025,quiz,0,1.0004853,rule_last_year,test
+336,Design and Analysis of Algorithms,7,2025,quiz,1,0.0003529,rule_last_year,test
+337,Design and Analysis of Algorithms,8,2025,quiz,1,1.0002206,rule_last_year,test
+338,IOT,0,2024,quiz,1,1.0003333,rule_last_year,test
+339,IOT,1,2024,quiz,1,1.0006667,rule_last_year,test
+340,IOT,2,2024,quiz,1,1.0005333,rule_last_year,test
+341,IOT,3,2024,quiz,1,1.0005333,rule_last_year,test
+342,IOT,0,2025,mid,0,1.00052,rule_last_year,test
+343,IOT,1,2025,mid,1,1.0008,rule_last_year,test
+344,IOT,2,2025,mid,0,1.0004,rule_last_year,test
+345,IOT,3,2025,mid,1,1.00064,rule_last_year,test
+346,NLP,0,2024,quiz,0,0.0001429,rule_last_year,test
+347,NLP,1,2024,quiz,1,1.001,rule_last_year,test
+348,NLP,2,2024,quiz,1,1.0004286,rule_last_year,test
+349,NLP,3,2024,quiz,0,0.0001429,rule_last_year,test
+350,NLP,4,2024,quiz,0,0.0001429,rule_last_year,test
+351,NLP,5,2024,quiz,0,0.0002143,rule_last_year,test
+352,NLP,6,2024,quiz,0,0.0001429,rule_last_year,test
+353,NLP,7,2024,quiz,0,0.0002143,rule_last_year,test
+354,NLP,8,2024,quiz,0,0.0001429,rule_last_year,test
+355,NLP,9,2024,quiz,0,0.0001429,rule_last_year,test
+356,OOP Lab,0,2025,mid,1,0.0007143000000000001,rule_last_year,test
+357,OOP Lab,1,2025,mid,0,7.14e-05,rule_last_year,test
+358,OOP Lab,2,2025,mid,0,7.14e-05,rule_last_year,test
+359,OOP Lab,3,2025,mid,0,0.0002857,rule_last_year,test
+360,OS,0,2025,quiz,0,0.0002963,rule_last_year,test
+361,OS,1,2025,quiz,0,0.00025929999999999996,rule_last_year,test
+362,OS,2,2025,quiz,0,0.0004444,rule_last_year,test
+363,OS,3,2025,quiz,0,0.0002963,rule_last_year,test
+364,OS,4,2025,quiz,0,0.00033329999999999997,rule_last_year,test
+365,OS,5,2025,quiz,0,0.0002222,rule_last_year,test
+366,OS,6,2025,quiz,0,0.0003704,rule_last_year,test
+367,OS,7,2025,quiz,1,0.00033329999999999997,rule_last_year,test
+368,OS,8,2025,quiz,0,0.0002963,rule_last_year,test
+369,OS,9,2025,quiz,0,0.0007037,rule_last_year,test
+370,Object Oriented Programming,0,2024,mid,1,1.0002239,rule_last_year,test
+371,Object Oriented Programming,1,2024,mid,0,1.0001045,rule_last_year,test
+372,Object Oriented Programming,2,2024,mid,0,2.9900000000000002e-05,rule_last_year,test
+373,Object Oriented Programming,3,2024,mid,0,4.48e-05,rule_last_year,test
+374,Object Oriented Programming,4,2024,mid,1,1.0005373,rule_last_year,test
+375,Object Oriented Programming,5,2024,mid,0,0.0001343,rule_last_year,test
+376,Object Oriented Programming,6,2024,mid,0,1.0002985,rule_last_year,test
+377,Object Oriented Programming,7,2024,mid,0,5.97e-05,rule_last_year,test
+378,Object Oriented Programming,8,2024,mid,0,1.0002687,rule_last_year,test
+379,Object Oriented Programming,0,2025,final,0,1.0002353,rule_last_year,test
+380,Object Oriented Programming,1,2025,final,0,0.00010290000000000001,rule_last_year,test
+381,Object Oriented Programming,2,2025,final,1,2.94e-05,rule_last_year,test
+382,Object Oriented Programming,3,2025,final,0,4.41e-05,rule_last_year,test
+383,Object Oriented Programming,4,2025,final,1,1.0005441,rule_last_year,test
+384,Object Oriented Programming,5,2025,final,0,0.0001324,rule_last_year,test
+385,Object Oriented Programming,6,2025,final,1,0.0002941,rule_last_year,test
+386,Object Oriented Programming,7,2025,final,0,5.88e-05,rule_last_year,test
+387,Object Oriented Programming,8,2025,final,1,0.0002647,rule_last_year,test
+388,Object Oriented Programming,0,2026,mid,0,0.0002319,rule_last_year,test
+389,Object Oriented Programming,1,2026,mid,0,0.00010140000000000001,rule_last_year,test
+390,Object Oriented Programming,2,2026,mid,0,1.0000435,rule_last_year,test
+391,Object Oriented Programming,3,2026,mid,0,4.35e-05,rule_last_year,test
+392,Object Oriented Programming,4,2026,mid,1,1.0005507,rule_last_year,test
+393,Object Oriented Programming,5,2026,mid,0,0.0001304,rule_last_year,test
+394,Object Oriented Programming,6,2026,mid,0,1.0003043,rule_last_year,test
+395,Object Oriented Programming,7,2026,mid,0,5.800000000000001e-05,rule_last_year,test
+396,Object Oriented Programming,8,2026,mid,1,1.0002754,rule_last_year,test
+397,Object Oriented Programming,0,2026,quiz,1,0.0002319,rule_last_year,test
+398,Object Oriented Programming,1,2026,quiz,0,0.00010140000000000001,rule_last_year,test
+399,Object Oriented Programming,2,2026,quiz,0,1.0000435,rule_last_year,test
+400,Object Oriented Programming,3,2026,quiz,0,4.35e-05,rule_last_year,test
+401,Object Oriented Programming,4,2026,quiz,1,1.0005507,rule_last_year,test
+402,Object Oriented Programming,5,2026,quiz,0,0.0001304,rule_last_year,test
+403,Object Oriented Programming,6,2026,quiz,1,1.0003043,rule_last_year,test
+404,Object Oriented Programming,7,2026,quiz,0,5.800000000000001e-05,rule_last_year,test
+405,Object Oriented Programming,8,2026,quiz,0,1.0002754,rule_last_year,test
+406,PP,0,2024,final,0,1.0002759,rule_last_year,test
+407,PP,1,2024,final,0,1.0004828,rule_last_year,test
+408,PP,2,2024,final,0,0.0001724,rule_last_year,test
+409,PP,3,2024,final,0,0.00041380000000000003,rule_last_year,test
+410,PP,4,2024,final,0,6.900000000000001e-05,rule_last_year,test
+411,PP,5,2024,final,0,1.0004828,rule_last_year,test
+412,PP,6,2024,final,0,0.0001724,rule_last_year,test
+413,PP,7,2024,final,0,0.0003448,rule_last_year,test
+414,PP,8,2024,final,0,1.0003793,rule_last_year,test
+415,PP,9,2024,final,1,1.0009655,rule_last_year,test
+416,PP,0,2024,mid,0,1.0002759,rule_last_year,test
+417,PP,1,2024,mid,1,1.0004828,rule_last_year,test
+418,PP,2,2024,mid,0,0.0001724,rule_last_year,test
+419,PP,3,2024,mid,1,0.00041380000000000003,rule_last_year,test
+420,PP,4,2024,mid,0,6.900000000000001e-05,rule_last_year,test
+421,PP,5,2024,mid,0,1.0004828,rule_last_year,test
+422,PP,6,2024,mid,0,0.0001724,rule_last_year,test
+423,PP,7,2024,mid,0,0.0003448,rule_last_year,test
+424,PP,8,2024,mid,1,1.0003793,rule_last_year,test
+425,PP,9,2024,mid,1,1.0009655,rule_last_year,test
+426,PP,0,2025,final,0,0.00025,rule_last_year,test
+427,PP,1,2025,final,1,1.0005,rule_last_year,test
+428,PP,2,2025,final,0,0.0001562,rule_last_year,test
+429,PP,3,2025,final,0,1.0004062,rule_last_year,test
+430,PP,4,2025,final,0,6.25e-05,rule_last_year,test
+431,PP,5,2025,final,0,0.0004375,rule_last_year,test
+432,PP,6,2025,final,0,0.0001562,rule_last_year,test
+433,PP,7,2025,final,0,0.0003125,rule_last_year,test
+434,PP,8,2025,final,0,1.000375,rule_last_year,test
+435,PP,9,2025,final,1,1.0009688,rule_last_year,test
+436,PP,0,2025,mid,0,0.00025,rule_last_year,test
+437,PP,1,2025,mid,0,1.0005,rule_last_year,test
+438,PP,2,2025,mid,0,0.0001562,rule_last_year,test
+439,PP,3,2025,mid,0,1.0004062,rule_last_year,test
+440,PP,4,2025,mid,0,6.25e-05,rule_last_year,test
+441,PP,5,2025,mid,0,0.0004375,rule_last_year,test
+442,PP,6,2025,mid,0,0.0001562,rule_last_year,test
+443,PP,7,2025,mid,0,0.0003125,rule_last_year,test
+444,PP,8,2025,mid,0,1.000375,rule_last_year,test
+445,PP,9,2025,mid,1,1.0009688,rule_last_year,test
+446,PP,0,2026,mid,0,0.0002286,rule_last_year,test
+447,PP,1,2026,mid,0,1.0004857,rule_last_year,test
+448,PP,2,2026,mid,0,0.0001429,rule_last_year,test
+449,PP,3,2026,mid,1,0.00037140000000000003,rule_last_year,test
+450,PP,4,2026,mid,0,5.71e-05,rule_last_year,test
+451,PP,5,2026,mid,0,0.0004,rule_last_year,test
+452,PP,6,2026,mid,0,0.0001429,rule_last_year,test
+453,PP,7,2026,mid,0,0.0002857,rule_last_year,test
+454,PP,8,2026,mid,1,0.0003429,rule_last_year,test
+455,PP,9,2026,mid,1,1.0009714,rule_last_year,test
+456,PP,0,2026,quiz,0,0.0002286,rule_last_year,test
+457,PP,1,2026,quiz,1,1.0004857,rule_last_year,test
+458,PP,2,2026,quiz,0,0.0001429,rule_last_year,test
+459,PP,3,2026,quiz,0,0.00037140000000000003,rule_last_year,test
+460,PP,4,2026,quiz,0,5.71e-05,rule_last_year,test
+461,PP,5,2026,quiz,0,0.0004,rule_last_year,test
+462,PP,6,2026,quiz,0,0.0001429,rule_last_year,test
+463,PP,7,2026,quiz,0,0.0002857,rule_last_year,test
+464,PP,8,2026,quiz,1,0.0003429,rule_last_year,test
+465,PP,9,2026,quiz,1,1.0009714,rule_last_year,test
+466,SMD,0,2024,mid,0,0.0004286,rule_last_year,test
+467,SMD,1,2024,mid,0,0.0002571,rule_last_year,test
+468,SMD,2,2024,mid,0,0.0002571,rule_last_year,test
+469,SMD,3,2024,mid,0,0.0002,rule_last_year,test
+470,SMD,4,2024,mid,0,5.71e-05,rule_last_year,test
+471,SMD,5,2024,mid,1,0.00031430000000000005,rule_last_year,test
+472,SMD,6,2024,mid,0,5.71e-05,rule_last_year,test
+473,SMD,7,2024,mid,0,0.0002571,rule_last_year,test
+474,SMD,0,2026,final,0,0.00041670000000000005,rule_last_year,test
+475,SMD,1,2026,final,0,0.00025,rule_last_year,test
+476,SMD,2,2026,final,0,0.00025,rule_last_year,test
+477,SMD,3,2026,final,0,0.00019439999999999998,rule_last_year,test
+478,SMD,4,2026,final,0,5.5599999999999996e-05,rule_last_year,test
+479,SMD,5,2026,final,1,0.00033329999999999997,rule_last_year,test
+480,SMD,6,2026,final,0,5.5599999999999996e-05,rule_last_year,test
+481,SMD,7,2026,final,0,0.00025,rule_last_year,test
+482,Software Engineering,0,2024,mid,0,1.0004167,rule_last_year,test
+483,Software Engineering,1,2024,mid,0,1.0001667,rule_last_year,test
+484,Software Engineering,2,2024,mid,0,1.0002917,rule_last_year,test
+485,Software Engineering,3,2024,mid,0,4.1700000000000004e-05,rule_last_year,test
+486,Software Engineering,4,2024,mid,1,1.0008333,rule_last_year,test
+487,Software Engineering,5,2024,mid,0,1.000375,rule_last_year,test
+488,Software Engineering,0,2024,quiz,1,1.0004167,rule_last_year,test
+489,Software Engineering,1,2024,quiz,1,1.0001667,rule_last_year,test
+490,Software Engineering,2,2024,quiz,1,1.0002917,rule_last_year,test
+491,Software Engineering,3,2024,quiz,0,4.1700000000000004e-05,rule_last_year,test
+492,Software Engineering,4,2024,quiz,1,1.0008333,rule_last_year,test
+493,Software Engineering,5,2024,quiz,1,1.000375,rule_last_year,test
+494,Software Engineering,0,2025,final,1,1.0003143,rule_last_year,test
+495,Software Engineering,1,2025,final,0,1.0001429,rule_last_year,test
+496,Software Engineering,2,2025,final,1,1.0002286,rule_last_year,test
+497,Software Engineering,3,2025,final,0,2.86e-05,rule_last_year,test
+498,Software Engineering,4,2025,final,1,1.0008857,rule_last_year,test
+499,Software Engineering,5,2025,final,1,1.0003143,rule_last_year,test
+500,Theory of Automata,0,2024,final,1,0.00016669999999999999,rule_last_year,test
+501,Theory of Automata,1,2024,final,1,1.0007222,rule_last_year,test
+502,Theory of Automata,2,2024,final,1,1.0002222,rule_last_year,test
+503,Theory of Automata,3,2024,final,0,0.00016669999999999999,rule_last_year,test
+504,Theory of Automata,4,2024,final,0,0.0001389,rule_last_year,test
+505,Theory of Automata,5,2024,final,1,1.0003889,rule_last_year,test
+506,Theory of Automata,6,2024,final,0,0.0004444,rule_last_year,test
+507,Theory of Automata,7,2024,final,1,1.0002778,rule_last_year,test
+508,Theory of Automata,0,2024,mid,0,0.00016669999999999999,rule_last_year,test
+509,Theory of Automata,1,2024,mid,1,1.0007222,rule_last_year,test
+510,Theory of Automata,2,2024,mid,0,1.0002222,rule_last_year,test
+511,Theory of Automata,3,2024,mid,0,0.00016669999999999999,rule_last_year,test
+512,Theory of Automata,4,2024,mid,0,0.0001389,rule_last_year,test
+513,Theory of Automata,5,2024,mid,0,1.0003889,rule_last_year,test
+514,Theory of Automata,6,2024,mid,0,0.0004444,rule_last_year,test
+515,Theory of Automata,7,2024,mid,1,1.0002778,rule_last_year,test
+516,Theory of Automata,0,2024,quiz,0,0.00016669999999999999,rule_last_year,test
+517,Theory of Automata,1,2024,quiz,1,1.0007222,rule_last_year,test
+518,Theory of Automata,2,2024,quiz,1,1.0002222,rule_last_year,test
+519,Theory of Automata,3,2024,quiz,0,0.00016669999999999999,rule_last_year,test
+520,Theory of Automata,4,2024,quiz,0,0.0001389,rule_last_year,test
+521,Theory of Automata,5,2024,quiz,0,1.0003889,rule_last_year,test
+522,Theory of Automata,6,2024,quiz,0,0.0004444,rule_last_year,test
+523,Theory of Automata,7,2024,quiz,0,1.0002778,rule_last_year,test
+524,Theory of Automata,0,2025,final,0,1.0001667,rule_last_year,test
+525,Theory of Automata,1,2025,final,1,1.0007143,rule_last_year,test
+526,Theory of Automata,2,2025,final,1,1.0002381,rule_last_year,test
+527,Theory of Automata,3,2025,final,0,0.0001429,rule_last_year,test
+528,Theory of Automata,4,2025,final,0,0.00011899999999999999,rule_last_year,test
+529,Theory of Automata,5,2025,final,0,1.0003571,rule_last_year,test
+530,Theory of Automata,6,2025,final,0,0.000381,rule_last_year,test
+531,Theory of Automata,7,2025,final,0,1.0002857,rule_last_year,test
+532,Theory of Automata,0,2025,mid,0,1.0001667,rule_last_year,test
+533,Theory of Automata,1,2025,mid,1,1.0007143,rule_last_year,test
+534,Theory of Automata,2,2025,mid,0,1.0002381,rule_last_year,test
+535,Theory of Automata,3,2025,mid,0,0.0001429,rule_last_year,test
+536,Theory of Automata,4,2025,mid,0,0.00011899999999999999,rule_last_year,test
+537,Theory of Automata,5,2025,mid,0,1.0003571,rule_last_year,test
+538,Theory of Automata,6,2025,mid,0,0.000381,rule_last_year,test
+539,Theory of Automata,7,2025,mid,0,1.0002857,rule_last_year,test
+540,Theory of Automata,0,2025,quiz,0,1.0001667,rule_last_year,test
+541,Theory of Automata,1,2025,quiz,0,1.0007143,rule_last_year,test
+542,Theory of Automata,2,2025,quiz,0,1.0002381,rule_last_year,test
+543,Theory of Automata,3,2025,quiz,0,0.0001429,rule_last_year,test
+544,Theory of Automata,4,2025,quiz,1,0.00011899999999999999,rule_last_year,test
+545,Theory of Automata,5,2025,quiz,1,1.0003571,rule_last_year,test
+546,Theory of Automata,6,2025,quiz,1,0.000381,rule_last_year,test
+547,Theory of Automata,7,2025,quiz,1,1.0002857,rule_last_year,test
+548,Web Programming,0,2025,final,0,0.00013330000000000001,rule_last_year,test
+549,Web Programming,1,2025,final,0,0.0005333,rule_last_year,test
+550,Web Programming,2,2025,final,1,0.0006332999999999999,rule_last_year,test
+551,Web Programming,3,2025,final,0,0.00013330000000000001,rule_last_year,test
+552,Web Programming,4,2025,final,0,0.00033329999999999997,rule_last_year,test
+553,Web Programming,5,2025,final,0,0.0002,rule_last_year,test
+554,Web Programming,6,2025,final,0,0.0001,rule_last_year,test
+555,Web Programming,7,2025,final,0,0.0002333,rule_last_year,test
+556,Web Programming,8,2025,final,0,0.0002333,rule_last_year,test
+557,Web Programming,9,2025,final,0,6.67e-05,rule_last_year,test
+558,Web Programming,0,2025,quiz,1,0.00013330000000000001,rule_last_year,test
+559,Web Programming,1,2025,quiz,0,0.0005333,rule_last_year,test
+560,Web Programming,2,2025,quiz,1,0.0006332999999999999,rule_last_year,test
+561,Web Programming,3,2025,quiz,0,0.00013330000000000001,rule_last_year,test
+562,Web Programming,4,2025,quiz,0,0.00033329999999999997,rule_last_year,test
+563,Web Programming,5,2025,quiz,0,0.0002,rule_last_year,test
+564,Web Programming,6,2025,quiz,0,0.0001,rule_last_year,test
+565,Web Programming,7,2025,quiz,0,0.0002333,rule_last_year,test
+566,Web Programming,8,2025,quiz,1,0.0002333,rule_last_year,test
+567,Web Programming,9,2025,quiz,0,6.67e-05,rule_last_year,test
