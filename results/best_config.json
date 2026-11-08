@@ -1,0 +1,12 @@
+{
+  "lr": 0.01,
+  "batch_size": 64,
+  "dropout": 0.4,
+  "hidden": [
+    16,
+    8
+  ],
+  "weight_decay": 0.0,
+  "optimizer": "adam",
+  "pos_weight": false
+}
