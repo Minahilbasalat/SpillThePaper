@@ -27,3 +27,4 @@ models/*.pkl
 models/*.joblib
 
 results/dummy/
+models/
