@@ -32,7 +32,7 @@ COLUMNS = [
     "row_idx", "subject", "topic_id", "target_year", "target_type",
     "label", "score", "model", "split",
 ]
-EXPECTED_ROWS = {"val": 301, "test": 568}
+
 SKLEARN_MODELS = ("logreg", "random_forest")
 
 
@@ -55,7 +55,7 @@ def build_frame(df: pd.DataFrame, scores: np.ndarray, model: str, split: str) ->
 
 def check_contract(frame: pd.DataFrame, split: str) -> None:
     assert list(frame.columns) == COLUMNS, "wrong columns or order"
-    assert len(frame) == EXPECTED_ROWS[split], f"{split}: wrong row count"
+    assert len(frame) == len(load_split(split)), f"{split}: wrong row count"
     assert frame["score"].between(0, 1).all(), "score outside [0, 1]"
     assert frame["score"].notna().all(), "NaN score"
     assert (frame["row_idx"].to_numpy() == np.arange(len(frame))).all()

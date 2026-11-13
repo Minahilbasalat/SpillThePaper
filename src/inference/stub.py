@@ -2,9 +2,7 @@ import numpy as np
 import pandas as pd
 
 
-class LowConfidenceError(Exception):
-    pass
-
+from src.inference.errors import LowConfidenceError  # noqa: F401
 
 class DummyPredictor:
     """Same interface as Predictor, with fake data, so the UI can be built early."""
