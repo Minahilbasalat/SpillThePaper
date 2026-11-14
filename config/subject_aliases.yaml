@@ -11,6 +11,9 @@
 "Database Systems": ["DB", "Database Systems"]
 "Computer Organization and Assembly Language": ["COAL", "Computer Organization and Assembly Language"]
 "Software Quality Engineering": ["SQE", "Software Quality Engineering"]
+"Parallel and Distributed Computing": ["PDC", "Parallel and Distributed Computing"]
+"Software Process Management and Metrics": ["SPM", "Software Process Management and Metrics"]
+"Data Warehousing and Data Mining": ["DW", "Data Warehousing and Data Mining"]
 
 # ---- Spelling fixes (no merging) ----
 "Applied Artificial Intelligence": ["Applied Artifical Intelligence"]
@@ -22,3 +25,6 @@
 # "Data Warehousing and Data Mining": ["DW", "Data Warehousing and Data Mining"]
 # "Parallel and Distributed Computing": ["PDC", "Parallel and Distributed Computing"]
 # "Internet of Things": ["IOT", "Intro to Internet of Things"]
+"Parallel and Distributed Computing": ["PDC", "Parallel and Distributed Computing"]
+"Software Process Management and Metrics": ["SPM", "Software Process Management and Metrics"]
+"Data Warehousing and Data Mining": ["DW", "Data Warehousing and Data Mining"]

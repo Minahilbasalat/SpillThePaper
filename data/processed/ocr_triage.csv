@@ -1,0 +1,60 @@
+file_id,pages,words,chars,mean_conf,status,error,subject,year,assessment_type,extension,in_clean_set,conf_band,rescuable
+dd0dd6d56e35,1,276,1200,54.6,rejected_low_quality,,Computer Networks,2025.0,final,.jpeg,True,45-55 (borderline),True
+e06d22cabde8,5,957,4615,54.6,rejected_low_quality,,Intro to Data Science,2023.0,mid,.pdf,True,45-55 (borderline),True
+35569894f6bf,10,2032,9794,54.3,rejected_low_quality,,,,,,False,45-55 (borderline),True
+54b090b58ac5,1,89,411,54.2,rejected_low_quality,,Linear Algebra,2025.0,quiz,.pdf,True,45-55 (borderline),True
+448a1a78e85d,3,216,1010,54.2,rejected_low_quality,,Marketing Management,2021.0,mid,.pdf,True,45-55 (borderline),True
+766317a977e5,2,336,1713,54.0,rejected_low_quality,,Design and Analysis of Algorithms,2025.0,quiz,.pdf,True,45-55 (borderline),True
+5d139f81b994,4,1053,5884,54.0,rejected_low_quality,,Database Systems,2026.0,mid,.pdf,True,45-55 (borderline),True
+f98263116271,2,1221,6838,53.6,rejected_low_quality,,CPS,2022.0,final,.pdf,True,45-55 (borderline),True
+41ff57816db7,1,170,816,53.3,rejected_low_quality,,Web Programming,,quiz,.jpg,True,45-55 (borderline),True
+72c049f6b90c,1,100,426,53.2,rejected_low_quality,,Theory of Automata,2015.0,final,.jpg,True,45-55 (borderline),True
+df081e805255,2,316,1646,53.2,rejected_low_quality,,OS,2013.0,final,.pdf,True,45-55 (borderline),True
+5cd63efb5312,3,258,1229,53.1,rejected_low_quality,,Theory of Automata,2022.0,quiz,.pdf,True,45-55 (borderline),True
+7837e1e09dd3,3,427,2207,52.5,rejected_low_quality,,Probability,2013.0,final,.pdf,True,45-55 (borderline),True
+20e0d88088cf,3,273,1390,52.3,rejected_low_quality,,Object Oriented Programming,2021.0,mid,.pdf,True,45-55 (borderline),True
+3a4ef8f6d0b8,1,122,595,52.1,rejected_low_quality,,Web Programming,,final,.jpg,True,45-55 (borderline),True
+713824adae5c,1,180,787,51.9,rejected_low_quality,,Software Design and Analysis,2022.0,quiz,.jpg,True,45-55 (borderline),True
+f6256aa46323,6,936,4602,51.8,rejected_low_quality,,SE Technologies,,quiz,.pdf,True,45-55 (borderline),True
+49b9dd641c74,2,297,1345,51.4,rejected_low_quality,,Data Structures,2020.0,quiz,.pdf,True,45-55 (borderline),True
+4af71b106441,12,905,3890,51.1,rejected_low_quality,,Data Science,2023.0,final,.pdf,True,45-55 (borderline),True
+1afcb91e248c,2,198,831,51.0,rejected_low_quality,,Artificial Intelligence,2026.0,quiz,.pdf,True,45-55 (borderline),True
+003352ba9bfa,4,138,722,50.9,rejected_low_quality,,Theory of Automata,2020.0,quiz,.pdf,True,45-55 (borderline),True
+ddc6ddab154a,4,756,3923,50.9,rejected_low_quality,,Design and Analysis of Algorithms,2025.0,quiz,.pdf,True,45-55 (borderline),True
+fdcbfa202dcb,4,408,1882,50.7,rejected_low_quality,,Data Structures,2023.0,mid,.pdf,True,45-55 (borderline),True
+fec63752d183,1,92,456,50.6,rejected_low_quality,,Web Programming,,final,.jpeg,True,45-55 (borderline),True
+585a6d5305eb,1,60,184,50.4,rejected_low_quality,,SDA Lab,,mid,.jpg,True,45-55 (borderline),True
+5fe71d043095,1,60,184,50.4,rejected_low_quality,,,,,,False,45-55 (borderline),True
+c8e037f17607,2,207,1075,50.1,rejected_low_quality,,Software Requirements Engineering,,quiz,.pdf,True,45-55 (borderline),True
+67afeff1d055,1,174,812,50.0,rejected_low_quality,,Web Programming,,quiz,.jpg,True,45-55 (borderline),True
+ff64c17098d5,3,302,1355,47.9,rejected_low_quality,,Theory of Automata,2022.0,quiz,.pdf,True,45-55 (borderline),True
+1cf78d98dc30,2,490,2838,47.4,rejected_low_quality,,English Comprehension Lab,2024.0,mid,.pdf,True,45-55 (borderline),True
+3c4793b2f8a3,1,145,721,46.9,rejected_low_quality,,Web Programming,,quiz,.jpg,True,45-55 (borderline),True
+c9aefb7e9126,6,703,3054,46.3,rejected_low_quality,,Linear Algebra,2024.0,mid,.pdf,True,45-55 (borderline),True
+2e5d78f9f574,12,1240,5516,45.9,rejected_low_quality,,Web Programming,2022.0,final,.pdf,True,45-55 (borderline),True
+fdce8c984eed,1,66,328,45.6,rejected_low_quality,,Web Programming,,mid,.jpg,True,45-55 (borderline),True
+7bef81e08bbc,1,75,346,45.3,rejected_low_quality,,Web Programming,,mid,.jpg,True,45-55 (borderline),True
+153332f42dd5,1,86,432,45.0,rejected_low_quality,,Web Programming,,mid,.jpg,True,30-45,True
+1739ee1c7f8c,3,282,1213,44.4,rejected_low_quality,,Theory of Automata,2022.0,quiz,.pdf,True,30-45,True
+1e8ab7f00e62,3,205,769,44.3,rejected_low_quality,,,,,,False,30-45,True
+a7346459b7a7,1,146,704,43.7,rejected_low_quality,,Linear Algebra,2025.0,quiz,.pdf,True,30-45,True
+0e0aec381b97,1,80,358,43.6,rejected_low_quality,,Web Programming,,quiz,.jpg,True,30-45,True
+2ec6e1da46a1,3,123,479,43.4,rejected_low_quality,,Theory of Automata,2024.0,quiz,.pdf,True,30-45,True
+94442825e4f3,6,144,560,43.2,rejected_low_quality,,Software Process Management and Metrics,,final,.pdf,True,30-45,True
+daf69231e56d,4,205,747,43.1,rejected_low_quality,,DLD,2026.0,mid,.pdf,True,30-45,True
+330674f222d5,2,163,606,43.0,rejected_low_quality,,Theory of Automata,2021.0,mid,.pdf,True,30-45,True
+ffcad11be676,2,391,2002,42.8,rejected_low_quality,,Differential Equations (Cal-II),2022.0,final,.pdf,True,30-45,True
+66bce94f169c,7,474,2021,42.2,rejected_low_quality,,Data Structures,2020.0,final,.pdf,True,30-45,True
+1aaeffd6bca2,3,172,583,42.1,rejected_low_quality,,Data Structures,,mid,.pdf,True,30-45,True
+b5f45f798ce1,1,93,421,42.0,rejected_low_quality,,Web Programming,,final,.jpg,True,30-45,True
+8d1c774131f1,1,83,369,42.0,rejected_low_quality,,Web Programming,,mid,.jpg,True,30-45,True
+249c12d0bb2a,7,765,3539,42.0,rejected_low_quality,,,,,,False,30-45,True
+c645fb96fbdc,4,89,397,41.8,rejected_low_quality,,,,,,False,30-45,True
+beb3b809bd06,1,71,273,41.5,rejected_low_quality,,Advanced Operating System,2020.0,quiz,.jpg,True,30-45,True
+4bcd649b9ee3,1,79,347,41.4,rejected_low_quality,,,,,,False,30-45,True
+eec13daa6c25,1,79,347,41.4,rejected_low_quality,,Theory of Automata,2015.0,final,.jpg,True,30-45,True
+d33f48b4d0c6,1,76,269,41.3,rejected_low_quality,,Web Programming,,final,.jpeg,True,30-45,True
+eef9addc863c,1,61,324,40.8,rejected_low_quality,,Web Programming,,mid,.jpg,True,30-45,True
+a23c8c2b387c,1,82,281,40.1,rejected_low_quality,,Computer Modelling Simulation,,mid,.jpg,True,30-45,True
+f549a6d1e6d5,3,218,849,40.1,rejected_low_quality,,Theory of Automata,2022.0,quiz,.pdf,True,30-45,True
+0b901c7413ca,1,118,497,40.1,rejected_low_quality,,Web Programming,,mid,.jpeg,True,30-45,True
