@@ -1,11 +1,11 @@
 subject,topic_id,topic_label,n_fn,n_test_rows
-Computer Networks,5,"http, object, server, client",7,9
-Computer Networks,3,"packet, switch, switching, message",5,9
-Computer Networks,8,"rtt, transmission round, round, transmission",5,9
-Computer Networks,2,"segment, port, destination port, port number",4,9
-Object Oriented Programming,7,"arr, ptr, error, int",2,7
-Design and Analysis of Algorithms,0,"problem, optimal, bcs, problem hint",2,5
-Design and Analysis of Algorithms,6,"big, notation, terms big, oh",2,5
-Software Engineering,1,"customer, account, bank, funds",2,5
+Computer Networks,8,"dns, com, fost, rrs",3,9
+Computer Networks,0,"node, routing, nodes, tables",2,9
+Computer Networks,4,"diagram, problem, delayed, delayed duplicates",2,9
+Object Oriented Programming,9,"cout, teacher, id, array",2,7
+PP,8,"trial, reservation, public, safety",2,7
+Computer Networks Lab,5,"udp, data, stops, starts stops",2,6
 OS,0,"problem, mutex, stack, wait",2,4
-Software Design and Analysis,1,"object, oriented, object oriented, mins",2,3
+Computer Networks,3,"seg x+, x+, seg, window",1,9
+Artificial Intelligence,7,"heuristic, description, admissible, goal",1,7
+Artificial Intelligence,8,"subset, sum, set, value",1,7

@@ -1,4 +1,6 @@
-"""Put the 3 filled files back together.   python scripts/label_merge.py"""
+﻿"""Put the 3 filled files back together AND print the accuracy.   python scripts/label_merge.py"""
+import subprocess
+import sys
 from pathlib import Path
 
 import pandas as pd
@@ -10,4 +12,5 @@ lab = pd.concat([pd.read_csv(P / "labeling" / f"labeler_{i}.csv") for i in (1, 2
 lab = lab.set_index("row_id")[["true_qtype", "true_marks"]]
 d = d.drop(columns=["true_qtype", "true_marks"]).merge(lab, left_on="row_id", right_index=True, how="left")
 d.drop(columns="row_id").to_csv(P / "question_label_sample.csv", index=False, encoding="utf-8")
-print("labelled rows:", int(d["true_qtype"].notna().sum()), "of", len(d))
+print("labelled rows:", int(d["true_qtype"].notna().sum()), "of", len(d), "\n")
+subprocess.run([sys.executable, "-m", "src.evaluation.question_type_check"])

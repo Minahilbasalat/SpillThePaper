@@ -1,1116 +1,1143 @@
 row_idx,subject,topic_id,target_year,target_type,label,score,model,split
-0,Advanced Database Concepts,0,2024,final,0,0.4167870581150055,mlp,test
-1,Advanced Database Concepts,1,2024,final,1,0.6019393801689148,mlp,test
-2,Advanced Database Concepts,2,2024,final,1,0.7275130152702332,mlp,test
-3,Advanced Database Concepts,3,2024,final,0,0.5769850611686707,mlp,test
-4,Advanced Database Concepts,4,2024,final,0,0.5630184412002563,mlp,test
-5,Advanced Database Concepts,5,2024,final,1,0.6912432909011841,mlp,test
-6,Advanced Database Concepts,6,2024,final,0,0.3377111256122589,mlp,test
-7,Advanced Database Concepts,7,2024,final,1,0.6597722768783569,mlp,test
-8,Advanced Database Concepts,0,2024,mid,0,0.34512248635292053,mlp,test
-9,Advanced Database Concepts,1,2024,mid,0,0.6394118666648865,mlp,test
-10,Advanced Database Concepts,2,2024,mid,1,0.658059298992157,mlp,test
-11,Advanced Database Concepts,3,2024,mid,0,0.44270840287208557,mlp,test
-12,Advanced Database Concepts,4,2024,mid,0,0.5410529375076294,mlp,test
-13,Advanced Database Concepts,5,2024,mid,1,0.5066618919372559,mlp,test
-14,Advanced Database Concepts,6,2024,mid,0,0.32500502467155457,mlp,test
-15,Advanced Database Concepts,7,2024,mid,1,0.6672360897064209,mlp,test
-16,Advanced Database Concepts,0,2025,final,0,0.40600237250328064,mlp,test
-17,Advanced Database Concepts,1,2025,final,1,0.6493604183197021,mlp,test
-18,Advanced Database Concepts,2,2025,final,0,0.7700496912002563,mlp,test
-19,Advanced Database Concepts,3,2025,final,1,0.5362427830696106,mlp,test
-20,Advanced Database Concepts,4,2025,final,0,0.42726024985313416,mlp,test
-21,Advanced Database Concepts,5,2025,final,1,0.7357555627822876,mlp,test
-22,Advanced Database Concepts,6,2025,final,0,0.333263635635376,mlp,test
-23,Advanced Database Concepts,7,2025,final,1,0.7218926548957825,mlp,test
-24,Advanced Database Concepts,0,2025,mid,0,0.32913222908973694,mlp,test
-25,Advanced Database Concepts,1,2025,mid,0,0.6347257494926453,mlp,test
-26,Advanced Database Concepts,2,2025,mid,0,0.7047432065010071,mlp,test
-27,Advanced Database Concepts,3,2025,mid,0,0.42117252945899963,mlp,test
-28,Advanced Database Concepts,4,2025,mid,0,0.35556477308273315,mlp,test
-29,Advanced Database Concepts,5,2025,mid,1,0.5672115683555603,mlp,test
-30,Advanced Database Concepts,6,2025,mid,0,0.31025975942611694,mlp,test
-31,Advanced Database Concepts,7,2025,mid,1,0.7123203277587891,mlp,test
-32,Advanced Database Concepts,0,2025,quiz,0,0.5097846388816833,mlp,test
-33,Advanced Database Concepts,1,2025,quiz,1,0.6081598401069641,mlp,test
-34,Advanced Database Concepts,2,2025,quiz,0,0.5867117643356323,mlp,test
-35,Advanced Database Concepts,3,2025,quiz,1,0.3920309543609619,mlp,test
-36,Advanced Database Concepts,4,2025,quiz,1,0.3294910192489624,mlp,test
-37,Advanced Database Concepts,5,2025,quiz,1,0.4511260688304901,mlp,test
-38,Advanced Database Concepts,6,2025,quiz,0,0.4910132586956024,mlp,test
-39,Advanced Database Concepts,7,2025,quiz,1,0.49883270263671875,mlp,test
-40,Artificial Intelligence,0,2024,final,1,0.8289721012115479,mlp,test
-41,Artificial Intelligence,1,2024,final,1,0.7592994570732117,mlp,test
-42,Artificial Intelligence,2,2024,final,1,0.8132355213165283,mlp,test
-43,Artificial Intelligence,3,2024,final,0,0.257535457611084,mlp,test
-44,Artificial Intelligence,4,2024,final,1,0.5415297150611877,mlp,test
-45,Artificial Intelligence,5,2024,final,1,0.8166802525520325,mlp,test
-46,Artificial Intelligence,6,2024,final,0,0.29543328285217285,mlp,test
-47,Artificial Intelligence,7,2024,final,0,0.2656174600124359,mlp,test
-48,Artificial Intelligence,8,2024,final,0,0.46237942576408386,mlp,test
-49,Artificial Intelligence,0,2024,mid,0,0.7833968997001648,mlp,test
-50,Artificial Intelligence,1,2024,mid,1,0.738075315952301,mlp,test
-51,Artificial Intelligence,2,2024,mid,1,0.7517600655555725,mlp,test
-52,Artificial Intelligence,3,2024,mid,0,0.1924370527267456,mlp,test
-53,Artificial Intelligence,4,2024,mid,1,0.6555368900299072,mlp,test
-54,Artificial Intelligence,5,2024,mid,1,0.8260502219200134,mlp,test
-55,Artificial Intelligence,6,2024,mid,0,0.19642439484596252,mlp,test
-56,Artificial Intelligence,7,2024,mid,1,0.27814003825187683,mlp,test
-57,Artificial Intelligence,8,2024,mid,0,0.5061168670654297,mlp,test
-58,Artificial Intelligence,0,2024,quiz,0,0.8345894813537598,mlp,test
-59,Artificial Intelligence,1,2024,quiz,0,0.7077347636222839,mlp,test
-60,Artificial Intelligence,2,2024,quiz,0,0.6981881260871887,mlp,test
-61,Artificial Intelligence,3,2024,quiz,0,0.24458491802215576,mlp,test
-62,Artificial Intelligence,4,2024,quiz,0,0.45466315746307373,mlp,test
-63,Artificial Intelligence,5,2024,quiz,1,0.7661358118057251,mlp,test
-64,Artificial Intelligence,6,2024,quiz,0,0.2523922920227051,mlp,test
-65,Artificial Intelligence,7,2024,quiz,0,0.25757768750190735,mlp,test
-66,Artificial Intelligence,8,2024,quiz,0,0.43431273102760315,mlp,test
-67,Artificial Intelligence,0,2025,final,0,0.8351839780807495,mlp,test
-68,Artificial Intelligence,1,2025,final,1,0.7735576629638672,mlp,test
-69,Artificial Intelligence,2,2025,final,1,0.8282715678215027,mlp,test
-70,Artificial Intelligence,3,2025,final,0,0.24213731288909912,mlp,test
-71,Artificial Intelligence,4,2025,final,1,0.5997720956802368,mlp,test
-72,Artificial Intelligence,5,2025,final,1,0.8394655585289001,mlp,test
-73,Artificial Intelligence,6,2025,final,0,0.2731698155403137,mlp,test
-74,Artificial Intelligence,7,2025,final,0,0.3008081614971161,mlp,test
-75,Artificial Intelligence,8,2025,final,0,0.33099237084388733,mlp,test
-76,Artificial Intelligence,0,2025,mid,0,0.7620697021484375,mlp,test
-77,Artificial Intelligence,1,2025,mid,0,0.7453817129135132,mlp,test
-78,Artificial Intelligence,2,2025,mid,1,0.7586947083473206,mlp,test
-79,Artificial Intelligence,3,2025,mid,0,0.1813129335641861,mlp,test
-80,Artificial Intelligence,4,2025,mid,1,0.6988456845283508,mlp,test
-81,Artificial Intelligence,5,2025,mid,1,0.8416123390197754,mlp,test
-82,Artificial Intelligence,6,2025,mid,0,0.18515051901340485,mlp,test
-83,Artificial Intelligence,7,2025,mid,0,0.37795767188072205,mlp,test
-84,Artificial Intelligence,8,2025,mid,0,0.3219505548477173,mlp,test
-85,Artificial Intelligence,0,2026,mid,0,0.6588249802589417,mlp,test
-86,Artificial Intelligence,1,2026,mid,1,0.7249343395233154,mlp,test
-87,Artificial Intelligence,2,2026,mid,0,0.7737318277359009,mlp,test
-88,Artificial Intelligence,3,2026,mid,0,0.1720360815525055,mlp,test
-89,Artificial Intelligence,4,2026,mid,1,0.7207123041152954,mlp,test
-90,Artificial Intelligence,5,2026,mid,1,0.8492230772972107,mlp,test
-91,Artificial Intelligence,6,2026,mid,0,0.17461788654327393,mlp,test
-92,Artificial Intelligence,7,2026,mid,0,0.2390671968460083,mlp,test
-93,Artificial Intelligence,8,2026,mid,0,0.2685524821281433,mlp,test
-94,Artificial Intelligence,0,2026,quiz,1,0.7853092551231384,mlp,test
-95,Artificial Intelligence,1,2026,quiz,1,0.7063888907432556,mlp,test
-96,Artificial Intelligence,2,2026,quiz,1,0.7166107296943665,mlp,test
-97,Artificial Intelligence,3,2026,quiz,0,0.221133291721344,mlp,test
-98,Artificial Intelligence,4,2026,quiz,0,0.512008011341095,mlp,test
-99,Artificial Intelligence,5,2026,quiz,1,0.8037384152412415,mlp,test
-100,Artificial Intelligence,6,2026,quiz,0,0.22400501370429993,mlp,test
-101,Artificial Intelligence,7,2026,quiz,0,0.22413721680641174,mlp,test
-102,Artificial Intelligence,8,2026,quiz,0,0.28891098499298096,mlp,test
-103,Cloud Computing,0,2025,final,0,0.3864440619945526,mlp,test
-104,Cloud Computing,1,2025,final,1,0.40024715662002563,mlp,test
-105,Cloud Computing,2,2025,final,1,0.7385988235473633,mlp,test
-106,Cloud Computing,3,2025,final,1,0.6112878918647766,mlp,test
-107,Cloud Computing,4,2025,final,0,0.33365464210510254,mlp,test
-108,Cloud Computing,5,2025,final,0,0.450348436832428,mlp,test
-109,Cloud Computing,6,2025,final,0,0.3370112180709839,mlp,test
-110,Cloud Computing,7,2025,final,1,0.7842020988464355,mlp,test
-111,Cloud Computing,8,2025,final,0,0.3864440619945526,mlp,test
-112,Cloud Computing,0,2025,mid,0,0.2760189175605774,mlp,test
-113,Cloud Computing,1,2025,mid,0,0.554319441318512,mlp,test
-114,Cloud Computing,2,2025,mid,1,0.7217709422111511,mlp,test
-115,Cloud Computing,3,2025,mid,0,0.5925381779670715,mlp,test
-116,Cloud Computing,4,2025,mid,0,0.31769195199012756,mlp,test
-117,Cloud Computing,5,2025,mid,0,0.3200293779373169,mlp,test
-118,Cloud Computing,6,2025,mid,0,0.35250401496887207,mlp,test
-119,Cloud Computing,7,2025,mid,1,0.7764326930046082,mlp,test
-120,Cloud Computing,8,2025,mid,0,0.2760189175605774,mlp,test
-121,Compiler Construction,0,2024,final,0,0.38096803426742554,mlp,test
-122,Compiler Construction,1,2024,final,0,0.42492467164993286,mlp,test
-123,Compiler Construction,2,2024,final,0,0.6394825577735901,mlp,test
-124,Compiler Construction,3,2024,final,1,0.7635678052902222,mlp,test
-125,Compiler Construction,4,2024,final,0,0.8273258805274963,mlp,test
-126,Compiler Construction,5,2024,final,0,0.5517700910568237,mlp,test
-127,Compiler Construction,0,2024,mid,0,0.23293913900852203,mlp,test
-128,Compiler Construction,1,2024,mid,0,0.4424962103366852,mlp,test
-129,Compiler Construction,2,2024,mid,0,0.6202062368392944,mlp,test
-130,Compiler Construction,3,2024,mid,1,0.6598659753799438,mlp,test
-131,Compiler Construction,4,2024,mid,1,0.7335119247436523,mlp,test
-132,Compiler Construction,5,2024,mid,0,0.611244797706604,mlp,test
-133,Compiler Construction,0,2024,quiz,0,0.32815057039260864,mlp,test
-134,Compiler Construction,1,2024,quiz,0,0.5007551908493042,mlp,test
-135,Compiler Construction,2,2024,quiz,0,0.6775762438774109,mlp,test
-136,Compiler Construction,3,2024,quiz,1,0.715162992477417,mlp,test
-137,Compiler Construction,4,2024,quiz,1,0.791445255279541,mlp,test
-138,Compiler Construction,5,2024,quiz,1,0.615312397480011,mlp,test
-139,Compiler Construction,0,2025,mid,0,0.21639838814735413,mlp,test
-140,Compiler Construction,1,2025,mid,0,0.371164470911026,mlp,test
-141,Compiler Construction,2,2025,mid,1,0.5406091809272766,mlp,test
-142,Compiler Construction,3,2025,mid,1,0.7122774720191956,mlp,test
-143,Compiler Construction,4,2025,mid,1,0.7677901387214661,mlp,test
-144,Compiler Construction,5,2025,mid,0,0.5555193424224854,mlp,test
-145,Compiler Construction,0,2026,mid,0,0.21119551360607147,mlp,test
-146,Compiler Construction,1,2026,mid,0,0.3384605646133423,mlp,test
-147,Compiler Construction,2,2026,mid,0,0.6185436248779297,mlp,test
-148,Compiler Construction,3,2026,mid,1,0.7528753280639648,mlp,test
-149,Compiler Construction,4,2026,mid,1,0.7619251012802124,mlp,test
-150,Compiler Construction,5,2026,mid,0,0.3974045217037201,mlp,test
-151,Computer Networks,0,2024,final,0,0.18123580515384674,mlp,test
-152,Computer Networks,1,2024,final,1,0.6035770773887634,mlp,test
-153,Computer Networks,2,2024,final,0,0.26174917817115784,mlp,test
-154,Computer Networks,3,2024,final,0,0.3917067050933838,mlp,test
-155,Computer Networks,4,2024,final,1,0.7990117073059082,mlp,test
-156,Computer Networks,5,2024,final,1,0.2934642732143402,mlp,test
-157,Computer Networks,6,2024,final,1,0.8201243281364441,mlp,test
-158,Computer Networks,7,2024,final,1,0.7891809940338135,mlp,test
-159,Computer Networks,8,2024,final,0,0.31847530603408813,mlp,test
-160,Computer Networks,0,2024,mid,0,0.15022772550582886,mlp,test
-161,Computer Networks,1,2024,mid,0,0.6806201934814453,mlp,test
-162,Computer Networks,2,2024,mid,0,0.2571606934070587,mlp,test
-163,Computer Networks,3,2024,mid,1,0.588040292263031,mlp,test
-164,Computer Networks,4,2024,mid,1,0.821994960308075,mlp,test
-165,Computer Networks,5,2024,mid,1,0.38522228598594666,mlp,test
-166,Computer Networks,6,2024,mid,1,0.8382481932640076,mlp,test
-167,Computer Networks,7,2024,mid,1,0.7337722182273865,mlp,test
-168,Computer Networks,8,2024,mid,1,0.3363499641418457,mlp,test
-169,Computer Networks,0,2024,quiz,0,0.18670447170734406,mlp,test
-170,Computer Networks,1,2024,quiz,1,0.6208658814430237,mlp,test
-171,Computer Networks,2,2024,quiz,0,0.30808666348457336,mlp,test
-172,Computer Networks,3,2024,quiz,1,0.49477264285087585,mlp,test
-173,Computer Networks,4,2024,quiz,1,0.7596331834793091,mlp,test
-174,Computer Networks,5,2024,quiz,1,0.337424635887146,mlp,test
-175,Computer Networks,6,2024,quiz,1,0.7072097063064575,mlp,test
-176,Computer Networks,7,2024,quiz,1,0.7657274007797241,mlp,test
-177,Computer Networks,8,2024,quiz,1,0.3090982139110565,mlp,test
-178,Computer Networks,0,2025,final,0,0.1422630399465561,mlp,test
-179,Computer Networks,1,2025,final,0,0.5227808952331543,mlp,test
-180,Computer Networks,2,2025,final,0,0.15435250103473663,mlp,test
-181,Computer Networks,3,2025,final,1,0.3197319209575653,mlp,test
-182,Computer Networks,4,2025,final,1,0.7845439910888672,mlp,test
-183,Computer Networks,5,2025,final,0,0.3138540983200073,mlp,test
-184,Computer Networks,6,2025,final,1,0.8669238090515137,mlp,test
-185,Computer Networks,7,2025,final,1,0.8229159712791443,mlp,test
-186,Computer Networks,8,2025,final,1,0.2531870901584625,mlp,test
-187,Computer Networks,0,2025,mid,0,0.12323157489299774,mlp,test
-188,Computer Networks,1,2025,mid,1,0.5537698268890381,mlp,test
-189,Computer Networks,2,2025,mid,1,0.1456173062324524,mlp,test
-190,Computer Networks,3,2025,mid,1,0.4769798219203949,mlp,test
-191,Computer Networks,4,2025,mid,1,0.7986100316047668,mlp,test
-192,Computer Networks,5,2025,mid,1,0.3656761944293976,mlp,test
-193,Computer Networks,6,2025,mid,1,0.8866779208183289,mlp,test
-194,Computer Networks,7,2025,mid,1,0.7574248313903809,mlp,test
-195,Computer Networks,8,2025,mid,1,0.26885831356048584,mlp,test
-196,Computer Networks,0,2025,quiz,0,0.15129682421684265,mlp,test
-197,Computer Networks,1,2025,quiz,1,0.5063729286193848,mlp,test
-198,Computer Networks,2,2025,quiz,1,0.18171773850917816,mlp,test
-199,Computer Networks,3,2025,quiz,1,0.40007486939430237,mlp,test
-200,Computer Networks,4,2025,quiz,1,0.7291536331176758,mlp,test
-201,Computer Networks,5,2025,quiz,1,0.33023250102996826,mlp,test
-202,Computer Networks,6,2025,quiz,1,0.7941451668739319,mlp,test
-203,Computer Networks,7,2025,quiz,1,0.7835738658905029,mlp,test
-204,Computer Networks,8,2025,quiz,1,0.2567027509212494,mlp,test
-205,Computer Networks,0,2026,final,0,0.09930279850959778,mlp,test
-206,Computer Networks,1,2026,final,1,0.41844096779823303,mlp,test
-207,Computer Networks,2,2026,final,0,0.13876011967658997,mlp,test
-208,Computer Networks,3,2026,final,1,0.266124427318573,mlp,test
-209,Computer Networks,4,2026,final,0,0.7876579165458679,mlp,test
-210,Computer Networks,5,2026,final,0,0.2638658285140991,mlp,test
-211,Computer Networks,6,2026,final,1,0.882477343082428,mlp,test
-212,Computer Networks,7,2026,final,1,0.8374541997909546,mlp,test
-213,Computer Networks,8,2026,final,0,0.2118278592824936,mlp,test
-214,Computer Networks,0,2026,mid,0,0.08608077466487885,mlp,test
-215,Computer Networks,1,2026,mid,1,0.5189899206161499,mlp,test
-216,Computer Networks,2,2026,mid,1,0.14025284349918365,mlp,test
-217,Computer Networks,3,2026,mid,1,0.3827821612358093,mlp,test
-218,Computer Networks,4,2026,mid,1,0.8138989806175232,mlp,test
-219,Computer Networks,5,2026,mid,1,0.34111353754997253,mlp,test
-220,Computer Networks,6,2026,mid,1,0.8991533517837524,mlp,test
-221,Computer Networks,7,2026,mid,1,0.7533081769943237,mlp,test
-222,Computer Networks,8,2026,mid,0,0.22353217005729675,mlp,test
-223,Computer Networks,0,2026,quiz,1,0.10780256986618042,mlp,test
-224,Computer Networks,1,2026,quiz,1,0.4424062967300415,mlp,test
-225,Computer Networks,2,2026,quiz,1,0.16587300598621368,mlp,test
-226,Computer Networks,3,2026,quiz,1,0.32232677936553955,mlp,test
-227,Computer Networks,4,2026,quiz,1,0.7713063955307007,mlp,test
-228,Computer Networks,5,2026,quiz,1,0.2957285940647125,mlp,test
-229,Computer Networks,6,2026,quiz,1,0.8409953117370605,mlp,test
-230,Computer Networks,7,2026,quiz,1,0.7993336915969849,mlp,test
-231,Computer Networks,8,2026,quiz,0,0.21619214117527008,mlp,test
-232,Computer Networks Lab,0,2024,final,1,0.5327699780464172,mlp,test
-233,Computer Networks Lab,1,2024,final,0,0.543362021446228,mlp,test
-234,Computer Networks Lab,2,2024,final,0,0.588022768497467,mlp,test
-235,Computer Networks Lab,3,2024,final,0,0.45524898171424866,mlp,test
-236,Computer Networks Lab,4,2024,final,1,0.7922415137290955,mlp,test
-237,Computer Networks Lab,5,2024,final,0,0.3912225365638733,mlp,test
-238,Computer Networks Lab,6,2024,final,0,0.31989380717277527,mlp,test
-239,Computer Networks Lab,7,2024,final,0,0.45524898171424866,mlp,test
-240,Computer Networks Lab,8,2024,final,0,0.3989368677139282,mlp,test
-241,Computer Networks Lab,0,2024,mid,0,0.4669607877731323,mlp,test
-242,Computer Networks Lab,1,2024,mid,0,0.5868844389915466,mlp,test
-243,Computer Networks Lab,2,2024,mid,0,0.605609655380249,mlp,test
-244,Computer Networks Lab,3,2024,mid,0,0.5439950227737427,mlp,test
-245,Computer Networks Lab,4,2024,mid,1,0.8129286766052246,mlp,test
-246,Computer Networks Lab,5,2024,mid,0,0.27240002155303955,mlp,test
-247,Computer Networks Lab,6,2024,mid,0,0.23232001066207886,mlp,test
-248,Computer Networks Lab,7,2024,mid,0,0.5439950227737427,mlp,test
-249,Computer Networks Lab,8,2024,mid,0,0.5273386836051941,mlp,test
-250,Computer Networks Lab,0,2024,quiz,1,0.6845617890357971,mlp,test
-251,Computer Networks Lab,1,2024,quiz,0,0.43472638726234436,mlp,test
-252,Computer Networks Lab,2,2024,quiz,0,0.45520099997520447,mlp,test
-253,Computer Networks Lab,3,2024,quiz,0,0.3896276354789734,mlp,test
-254,Computer Networks Lab,4,2024,quiz,1,0.8515207171440125,mlp,test
-255,Computer Networks Lab,5,2024,quiz,0,0.4198724329471588,mlp,test
-256,Computer Networks Lab,6,2024,quiz,0,0.29126787185668945,mlp,test
-257,Computer Networks Lab,7,2024,quiz,0,0.3896276354789734,mlp,test
-258,Computer Networks Lab,8,2024,quiz,0,0.3863757848739624,mlp,test
-259,Computer Networks Lab,0,2025,final,1,0.5706906318664551,mlp,test
-260,Computer Networks Lab,1,2025,final,0,0.39976242184638977,mlp,test
-261,Computer Networks Lab,2,2025,final,0,0.4559510350227356,mlp,test
-262,Computer Networks Lab,3,2025,final,0,0.31509482860565186,mlp,test
-263,Computer Networks Lab,4,2025,final,1,0.8320995569229126,mlp,test
-264,Computer Networks Lab,5,2025,final,0,0.36957111954689026,mlp,test
-265,Computer Networks Lab,6,2025,final,0,0.3078792989253998,mlp,test
-266,Computer Networks Lab,7,2025,final,0,0.31509482860565186,mlp,test
-267,Computer Networks Lab,8,2025,final,0,0.26977553963661194,mlp,test
-268,Computer Networks Lab,0,2025,mid,0,0.4604603052139282,mlp,test
-269,Computer Networks Lab,1,2025,mid,0,0.36766746640205383,mlp,test
-270,Computer Networks Lab,2,2025,mid,0,0.3977935314178467,mlp,test
-271,Computer Networks Lab,3,2025,mid,0,0.33113592863082886,mlp,test
-272,Computer Networks Lab,4,2025,mid,1,0.8528181314468384,mlp,test
-273,Computer Networks Lab,5,2025,mid,0,0.2582196295261383,mlp,test
-274,Computer Networks Lab,6,2025,mid,0,0.22107188403606415,mlp,test
-275,Computer Networks Lab,7,2025,mid,0,0.33113592863082886,mlp,test
-276,Computer Networks Lab,8,2025,mid,0,0.30702176690101624,mlp,test
-277,Computer Networks Lab,0,2026,final,1,0.589200496673584,mlp,test
-278,Computer Networks Lab,1,2026,final,0,0.3606407344341278,mlp,test
-279,Computer Networks Lab,2,2026,final,0,0.40977850556373596,mlp,test
-280,Computer Networks Lab,3,2026,final,0,0.2837264835834503,mlp,test
-281,Computer Networks Lab,4,2026,final,1,0.8506810069084167,mlp,test
-282,Computer Networks Lab,5,2026,final,0,0.3584567904472351,mlp,test
-283,Computer Networks Lab,6,2026,final,0,0.30400046706199646,mlp,test
-284,Computer Networks Lab,7,2026,final,0,0.2837264835834503,mlp,test
-285,Computer Networks Lab,8,2026,final,0,0.2501578629016876,mlp,test
-286,Computer Organization and Assembly Language,0,2024,final,0,0.4038900136947632,mlp,test
-287,Computer Organization and Assembly Language,1,2024,final,1,0.49412715435028076,mlp,test
-288,Computer Organization and Assembly Language,2,2024,final,1,0.787651538848877,mlp,test
-289,Computer Organization and Assembly Language,3,2024,final,0,0.3452383279800415,mlp,test
-290,Computer Organization and Assembly Language,4,2024,final,0,0.2026657611131668,mlp,test
-291,Computer Organization and Assembly Language,5,2024,final,0,0.25192299485206604,mlp,test
-292,Computer Organization and Assembly Language,6,2024,final,0,0.5556755661964417,mlp,test
-293,Computer Organization and Assembly Language,7,2024,final,0,0.2837561368942261,mlp,test
-294,Computer Organization and Assembly Language,8,2024,final,0,0.7459579110145569,mlp,test
-295,Computer Organization and Assembly Language,9,2024,final,0,0.38033485412597656,mlp,test
-296,Computer Organization and Assembly Language,0,2024,mid,1,0.5508826375007629,mlp,test
-297,Computer Organization and Assembly Language,1,2024,mid,0,0.37393680214881897,mlp,test
-298,Computer Organization and Assembly Language,2,2024,mid,1,0.7910668849945068,mlp,test
-299,Computer Organization and Assembly Language,3,2024,mid,0,0.23028622567653656,mlp,test
-300,Computer Organization and Assembly Language,4,2024,mid,0,0.17851488292217255,mlp,test
-301,Computer Organization and Assembly Language,5,2024,mid,0,0.16613410413265228,mlp,test
-302,Computer Organization and Assembly Language,6,2024,mid,1,0.3325578272342682,mlp,test
-303,Computer Organization and Assembly Language,7,2024,mid,1,0.22329404950141907,mlp,test
-304,Computer Organization and Assembly Language,8,2024,mid,1,0.6794900894165039,mlp,test
-305,Computer Organization and Assembly Language,9,2024,mid,1,0.3726743161678314,mlp,test
-306,Computer Organization and Assembly Language,0,2025,final,0,0.39433321356773376,mlp,test
-307,Computer Organization and Assembly Language,1,2025,final,1,0.5671710968017578,mlp,test
-308,Computer Organization and Assembly Language,2,2025,final,1,0.8266445398330688,mlp,test
-309,Computer Organization and Assembly Language,3,2025,final,0,0.3260471522808075,mlp,test
-310,Computer Organization and Assembly Language,4,2025,final,0,0.20205503702163696,mlp,test
-311,Computer Organization and Assembly Language,5,2025,final,0,0.2295258790254593,mlp,test
-312,Computer Organization and Assembly Language,6,2025,final,0,0.5344341397285461,mlp,test
-313,Computer Organization and Assembly Language,7,2025,final,0,0.30763161182403564,mlp,test
-314,Computer Organization and Assembly Language,8,2025,final,1,0.7273316383361816,mlp,test
-315,Computer Organization and Assembly Language,9,2025,final,0,0.41986361145973206,mlp,test
-316,Computer Organization and Assembly Language,0,2025,mid,1,0.5405413508415222,mlp,test
-317,Computer Organization and Assembly Language,1,2025,mid,0,0.43282243609428406,mlp,test
-318,Computer Organization and Assembly Language,2,2025,mid,1,0.8302633166313171,mlp,test
-319,Computer Organization and Assembly Language,3,2025,mid,0,0.2250066101551056,mlp,test
-320,Computer Organization and Assembly Language,4,2025,mid,0,0.16966599225997925,mlp,test
-321,Computer Organization and Assembly Language,5,2025,mid,0,0.15198522806167603,mlp,test
-322,Computer Organization and Assembly Language,6,2025,mid,0,0.3446066379547119,mlp,test
-323,Computer Organization and Assembly Language,7,2025,mid,0,0.27478575706481934,mlp,test
-324,Computer Organization and Assembly Language,8,2025,mid,1,0.6726711988449097,mlp,test
-325,Computer Organization and Assembly Language,9,2025,mid,0,0.4486847221851349,mlp,test
-326,DLD,0,2024,mid,0,0.21025319397449493,mlp,test
-327,DLD,1,2024,mid,1,0.6680078506469727,mlp,test
-328,DLD,2,2024,mid,1,0.6598885655403137,mlp,test
-329,DLD,3,2024,mid,1,0.4849904477596283,mlp,test
-330,DLD,4,2024,mid,1,0.777627170085907,mlp,test
-331,DLD,5,2024,mid,0,0.22719809412956238,mlp,test
-332,DLD,6,2024,mid,0,0.37018880248069763,mlp,test
-333,DLD,7,2024,mid,1,0.5984819531440735,mlp,test
-334,DLD,8,2024,mid,0,0.22719809412956238,mlp,test
-335,DLD,0,2024,quiz,0,0.26155737042427063,mlp,test
-336,DLD,1,2024,quiz,0,0.6258499622344971,mlp,test
-337,DLD,2,2024,quiz,1,0.6379706263542175,mlp,test
-338,DLD,3,2024,quiz,0,0.5103451609611511,mlp,test
-339,DLD,4,2024,quiz,1,0.6774387955665588,mlp,test
-340,DLD,5,2024,quiz,0,0.34566420316696167,mlp,test
-341,DLD,6,2024,quiz,0,0.4865689277648926,mlp,test
-342,DLD,7,2024,quiz,0,0.4480668008327484,mlp,test
-343,DLD,8,2024,quiz,0,0.34566420316696167,mlp,test
-344,DLD,0,2025,final,0,0.28848645091056824,mlp,test
-345,DLD,1,2025,final,0,0.684363067150116,mlp,test
-346,DLD,2,2025,final,0,0.6626360416412354,mlp,test
-347,DLD,3,2025,final,1,0.6338284611701965,mlp,test
-348,DLD,4,2025,final,1,0.809817373752594,mlp,test
-349,DLD,5,2025,final,0,0.24024781584739685,mlp,test
-350,DLD,6,2025,final,0,0.4993880093097687,mlp,test
-351,DLD,7,2025,final,0,0.4341740310192108,mlp,test
-352,DLD,8,2025,final,0,0.24024781584739685,mlp,test
-353,DLD,0,2025,mid,0,0.20118650794029236,mlp,test
-354,DLD,1,2025,mid,0,0.6543272137641907,mlp,test
-355,DLD,2,2025,mid,1,0.6794539093971252,mlp,test
-356,DLD,3,2025,mid,0,0.5121990442276001,mlp,test
-357,DLD,4,2025,mid,1,0.7805903553962708,mlp,test
-358,DLD,5,2025,mid,0,0.21348996460437775,mlp,test
-359,DLD,6,2025,mid,0,0.244071364402771,mlp,test
-360,DLD,7,2025,mid,1,0.6454422473907471,mlp,test
-361,DLD,8,2025,mid,0,0.21348996460437775,mlp,test
-362,DLD,0,2026,final,0,0.27994784712791443,mlp,test
-363,DLD,1,2026,final,1,0.5582051277160645,mlp,test
-364,DLD,2,2026,final,0,0.6334081888198853,mlp,test
-365,DLD,3,2026,final,0,0.645924985408783,mlp,test
-366,DLD,4,2026,final,1,0.822531521320343,mlp,test
-367,DLD,5,2026,final,0,0.23573438823223114,mlp,test
-368,DLD,6,2026,final,0,0.4289148151874542,mlp,test
-369,DLD,7,2026,final,0,0.42327192425727844,mlp,test
-370,DLD,8,2026,final,0,0.23573438823223114,mlp,test
-371,DLD,0,2026,mid,0,0.19444023072719574,mlp,test
-372,DLD,1,2026,mid,1,0.44927963614463806,mlp,test
-373,DLD,2,2026,mid,0,0.6719264388084412,mlp,test
-374,DLD,3,2026,mid,0,0.46025794744491577,mlp,test
-375,DLD,4,2026,mid,1,0.7864635586738586,mlp,test
-376,DLD,5,2026,mid,0,0.20445960760116577,mlp,test
-377,DLD,6,2026,mid,0,0.22608156502246857,mlp,test
-378,DLD,7,2026,mid,0,0.6283298134803772,mlp,test
-379,DLD,8,2026,mid,0,0.20445960760116577,mlp,test
-380,DW,0,2024,final,1,0.6245566606521606,mlp,test
-381,DW,1,2024,final,0,0.5082052946090698,mlp,test
-382,DW,2,2024,final,1,0.7527973651885986,mlp,test
-383,DW,3,2024,final,1,0.532615065574646,mlp,test
-384,DW,0,2024,mid,1,0.6212357878684998,mlp,test
-385,DW,1,2024,mid,0,0.3342239260673523,mlp,test
-386,DW,2,2024,mid,1,0.7469851970672607,mlp,test
-387,DW,3,2024,mid,0,0.6007373332977295,mlp,test
-388,Data Science,0,2024,mid,0,0.35451242327690125,mlp,test
-389,Data Science,1,2024,mid,0,0.35451242327690125,mlp,test
-390,Data Science,2,2024,mid,0,0.5975391268730164,mlp,test
-391,Data Science,3,2024,mid,0,0.5516384243965149,mlp,test
-392,Data Science,4,2024,mid,1,0.8640328645706177,mlp,test
-393,Data Science,5,2024,mid,0,0.2853163480758667,mlp,test
-394,Data Science,6,2024,mid,0,0.2740320563316345,mlp,test
-395,Data Science,7,2024,mid,0,0.2650814950466156,mlp,test
-396,Data Science,8,2024,mid,0,0.49878451228141785,mlp,test
-397,Data Science,0,2024,quiz,0,0.46095284819602966,mlp,test
-398,Data Science,1,2024,quiz,0,0.46095284819602966,mlp,test
-399,Data Science,2,2024,quiz,0,0.6160284876823425,mlp,test
-400,Data Science,3,2024,quiz,0,0.6112155914306641,mlp,test
-401,Data Science,4,2024,quiz,1,0.8603869080543518,mlp,test
-402,Data Science,5,2024,quiz,0,0.36027905344963074,mlp,test
-403,Data Science,6,2024,quiz,0,0.3468479812145233,mlp,test
-404,Data Science,7,2024,quiz,0,0.36027905344963074,mlp,test
-405,Data Science,8,2024,quiz,0,0.536925196647644,mlp,test
-406,Data Science,0,2025,mid,0,0.3202993869781494,mlp,test
-407,Data Science,1,2025,mid,0,0.3202993869781494,mlp,test
-408,Data Science,2,2025,mid,0,0.4254876375198364,mlp,test
-409,Data Science,3,2025,mid,0,0.39557820558547974,mlp,test
-410,Data Science,4,2025,mid,1,0.8812074661254883,mlp,test
-411,Data Science,5,2025,mid,0,0.26526299118995667,mlp,test
-412,Data Science,6,2025,mid,0,0.25406789779663086,mlp,test
-413,Data Science,7,2025,mid,0,0.24886676669120789,mlp,test
-414,Data Science,8,2025,mid,0,0.32005175948143005,mlp,test
-415,Data Science,0,2026,final,0,0.45364058017730713,mlp,test
-416,Data Science,1,2026,final,0,0.45364058017730713,mlp,test
-417,Data Science,2,2026,final,0,0.48685741424560547,mlp,test
-418,Data Science,3,2026,final,0,0.575223445892334,mlp,test
-419,Data Science,4,2026,final,1,0.877487063407898,mlp,test
-420,Data Science,5,2026,final,0,0.34627434611320496,mlp,test
-421,Data Science,6,2026,final,0,0.32721611857414246,mlp,test
-422,Data Science,7,2026,final,0,0.4136244058609009,mlp,test
-423,Data Science,8,2026,final,0,0.3213764727115631,mlp,test
-424,Data Science,0,2026,mid,0,0.3016933500766754,mlp,test
-425,Data Science,1,2026,mid,0,0.3016933500766754,mlp,test
-426,Data Science,2,2026,mid,0,0.3773474097251892,mlp,test
-427,Data Science,3,2026,mid,0,0.35093364119529724,mlp,test
-428,Data Science,4,2026,mid,1,0.8920468688011169,mlp,test
-429,Data Science,5,2026,mid,0,0.25530195236206055,mlp,test
-430,Data Science,6,2026,mid,0,0.24023433029651642,mlp,test
-431,Data Science,7,2026,mid,0,0.23898617923259735,mlp,test
-432,Data Science,8,2026,mid,0,0.2847186028957367,mlp,test
-433,Data Structures,0,2024,final,1,0.5883775949478149,mlp,test
-434,Data Structures,1,2024,final,1,0.42390668392181396,mlp,test
-435,Data Structures,2,2024,final,0,0.3697296977043152,mlp,test
-436,Data Structures,3,2024,final,1,0.6731708645820618,mlp,test
-437,Data Structures,4,2024,final,0,0.2726474106311798,mlp,test
-438,Data Structures,5,2024,final,0,0.22273121774196625,mlp,test
-439,Data Structures,6,2024,final,0,0.20604467391967773,mlp,test
-440,Data Structures,7,2024,final,1,0.5460231304168701,mlp,test
-441,Data Structures,0,2024,mid,0,0.6231684684753418,mlp,test
-442,Data Structures,1,2024,mid,0,0.23919273912906647,mlp,test
-443,Data Structures,2,2024,mid,0,0.5823071002960205,mlp,test
-444,Data Structures,3,2024,mid,1,0.7523849606513977,mlp,test
-445,Data Structures,4,2024,mid,0,0.20858940482139587,mlp,test
-446,Data Structures,5,2024,mid,0,0.1920665204524994,mlp,test
-447,Data Structures,6,2024,mid,0,0.20041963458061218,mlp,test
-448,Data Structures,7,2024,mid,1,0.5209583044052124,mlp,test
-449,Data Structures,0,2024,quiz,1,0.5046388506889343,mlp,test
-450,Data Structures,1,2024,quiz,0,0.42640239000320435,mlp,test
-451,Data Structures,2,2024,quiz,0,0.4859921932220459,mlp,test
-452,Data Structures,3,2024,quiz,1,0.6853846907615662,mlp,test
-453,Data Structures,4,2024,quiz,0,0.22587181627750397,mlp,test
-454,Data Structures,5,2024,quiz,0,0.30835241079330444,mlp,test
-455,Data Structures,6,2024,quiz,0,0.23168140649795532,mlp,test
-456,Data Structures,7,2024,quiz,0,0.5876250863075256,mlp,test
-457,Data Structures,0,2025,final,0,0.6513853073120117,mlp,test
-458,Data Structures,1,2025,final,0,0.4880206286907196,mlp,test
-459,Data Structures,2,2025,final,0,0.2329799234867096,mlp,test
-460,Data Structures,3,2025,final,1,0.711318850517273,mlp,test
-461,Data Structures,4,2025,final,0,0.23866711556911469,mlp,test
-462,Data Structures,5,2025,final,0,0.21641336381435394,mlp,test
-463,Data Structures,6,2025,final,0,0.1798602193593979,mlp,test
-464,Data Structures,7,2025,final,1,0.6769631505012512,mlp,test
-465,Data Structures,0,2025,mid,1,0.6084156036376953,mlp,test
-466,Data Structures,1,2025,mid,0,0.293146014213562,mlp,test
-467,Data Structures,2,2025,mid,0,0.3389360010623932,mlp,test
-468,Data Structures,3,2025,mid,1,0.7733197808265686,mlp,test
-469,Data Structures,4,2025,mid,0,0.18463224172592163,mlp,test
-470,Data Structures,5,2025,mid,0,0.18101215362548828,mlp,test
-471,Data Structures,6,2025,mid,0,0.17355838418006897,mlp,test
-472,Data Structures,7,2025,mid,1,0.6492769122123718,mlp,test
-473,Data Structures,0,2025,quiz,1,0.5481744408607483,mlp,test
-474,Data Structures,1,2025,quiz,0,0.46995624899864197,mlp,test
-475,Data Structures,2,2025,quiz,0,0.3272591531276703,mlp,test
-476,Data Structures,3,2025,quiz,0,0.7503031492233276,mlp,test
-477,Data Structures,4,2025,quiz,0,0.20799259841442108,mlp,test
-478,Data Structures,5,2025,quiz,0,0.2809686064720154,mlp,test
-479,Data Structures,6,2025,quiz,0,0.208629310131073,mlp,test
-480,Data Structures,7,2025,quiz,0,0.6473394632339478,mlp,test
-481,Database Systems,0,2024,final,0,0.22433267533779144,mlp,test
-482,Database Systems,1,2024,final,1,0.6029794812202454,mlp,test
-483,Database Systems,2,2024,final,1,0.7525029182434082,mlp,test
-484,Database Systems,3,2024,final,1,0.5713537931442261,mlp,test
-485,Database Systems,4,2024,final,1,0.5174684524536133,mlp,test
-486,Database Systems,5,2024,final,1,0.7256901264190674,mlp,test
-487,Database Systems,6,2024,final,0,0.30821701884269714,mlp,test
-488,Database Systems,7,2024,final,0,0.595469057559967,mlp,test
-489,Database Systems,8,2024,final,1,0.7850648760795593,mlp,test
-490,Database Systems,9,2024,final,0,0.6807855367660522,mlp,test
-491,Database Systems,0,2024,mid,0,0.16843844950199127,mlp,test
-492,Database Systems,1,2024,mid,0,0.32336148619651794,mlp,test
-493,Database Systems,2,2024,mid,0,0.6813387274742126,mlp,test
-494,Database Systems,3,2024,mid,1,0.42877697944641113,mlp,test
-495,Database Systems,4,2024,mid,0,0.6531534790992737,mlp,test
-496,Database Systems,5,2024,mid,1,0.6068037152290344,mlp,test
-497,Database Systems,6,2024,mid,0,0.16194750368595123,mlp,test
-498,Database Systems,7,2024,mid,0,0.3726677894592285,mlp,test
-499,Database Systems,8,2024,mid,1,0.6732913255691528,mlp,test
-500,Database Systems,9,2024,mid,0,0.49203360080718994,mlp,test
-501,Database Systems,0,2024,quiz,0,0.19571027159690857,mlp,test
-502,Database Systems,1,2024,quiz,0,0.35199710726737976,mlp,test
-503,Database Systems,2,2024,quiz,1,0.7474608421325684,mlp,test
-504,Database Systems,3,2024,quiz,0,0.3751427233219147,mlp,test
-505,Database Systems,4,2024,quiz,0,0.509501039981842,mlp,test
-506,Database Systems,5,2024,quiz,0,0.5620521903038025,mlp,test
-507,Database Systems,6,2024,quiz,0,0.20909038186073303,mlp,test
-508,Database Systems,7,2024,quiz,0,0.4288189709186554,mlp,test
-509,Database Systems,8,2024,quiz,1,0.6637191772460938,mlp,test
-510,Database Systems,9,2024,quiz,0,0.4255059063434601,mlp,test
-511,Database Systems,0,2025,final,0,0.2050132155418396,mlp,test
-512,Database Systems,1,2025,final,1,0.5779168605804443,mlp,test
-513,Database Systems,2,2025,final,1,0.747548520565033,mlp,test
-514,Database Systems,3,2025,final,1,0.5814694762229919,mlp,test
-515,Database Systems,4,2025,final,0,0.5110679864883423,mlp,test
-516,Database Systems,5,2025,final,1,0.7280267477035522,mlp,test
-517,Database Systems,6,2025,final,0,0.2639899253845215,mlp,test
-518,Database Systems,7,2025,final,1,0.4283287227153778,mlp,test
-519,Database Systems,8,2025,final,1,0.8278701901435852,mlp,test
-520,Database Systems,9,2025,final,1,0.5148207545280457,mlp,test
-521,Database Systems,0,2025,mid,0,0.15666130185127258,mlp,test
-522,Database Systems,1,2025,mid,0,0.3111184239387512,mlp,test
-523,Database Systems,2,2025,mid,0,0.6671819686889648,mlp,test
-524,Database Systems,3,2025,mid,1,0.46691349148750305,mlp,test
-525,Database Systems,4,2025,mid,1,0.6184276342391968,mlp,test
-526,Database Systems,5,2025,mid,1,0.6301636099815369,mlp,test
-527,Database Systems,6,2025,mid,0,0.15094338357448578,mlp,test
-528,Database Systems,7,2025,mid,0,0.2570015490055084,mlp,test
-529,Database Systems,8,2025,mid,1,0.7366960048675537,mlp,test
-530,Database Systems,9,2025,mid,0,0.34429824352264404,mlp,test
-531,Database Systems,0,2026,final,0,0.19462302327156067,mlp,test
-532,Database Systems,1,2026,final,0,0.5810885429382324,mlp,test
-533,Database Systems,2,2026,final,1,0.7449762225151062,mlp,test
-534,Database Systems,3,2026,final,0,0.6158000230789185,mlp,test
-535,Database Systems,4,2026,final,0,0.4917610287666321,mlp,test
-536,Database Systems,5,2026,final,1,0.7507917284965515,mlp,test
-537,Database Systems,6,2026,final,0,0.24385669827461243,mlp,test
-538,Database Systems,7,2026,final,0,0.5215281844139099,mlp,test
-539,Database Systems,8,2026,final,1,0.8433502912521362,mlp,test
-540,Database Systems,9,2026,final,0,0.5942178964614868,mlp,test
-541,Database Systems,0,2026,mid,0,0.14774581789970398,mlp,test
-542,Database Systems,1,2026,mid,0,0.3060644865036011,mlp,test
-543,Database Systems,2,2026,mid,0,0.6303558349609375,mlp,test
-544,Database Systems,3,2026,mid,1,0.5000267028808594,mlp,test
-545,Database Systems,4,2026,mid,0,0.6014240384101868,mlp,test
-546,Database Systems,5,2026,mid,1,0.6553553938865662,mlp,test
-547,Database Systems,6,2026,mid,0,0.14260345697402954,mlp,test
-548,Database Systems,7,2026,mid,0,0.3146249055862427,mlp,test
-549,Database Systems,8,2026,mid,1,0.7519727945327759,mlp,test
-550,Database Systems,9,2026,mid,1,0.4001552164554596,mlp,test
-551,Database Systems,0,2026,quiz,0,0.1753140240907669,mlp,test
-552,Database Systems,1,2026,quiz,0,0.33219653367996216,mlp,test
-553,Database Systems,2,2026,quiz,1,0.7569088935852051,mlp,test
-554,Database Systems,3,2026,quiz,0,0.402313232421875,mlp,test
-555,Database Systems,4,2026,quiz,1,0.4744843542575836,mlp,test
-556,Database Systems,5,2026,quiz,0,0.5785827040672302,mlp,test
-557,Database Systems,6,2026,quiz,0,0.18437707424163818,mlp,test
-558,Database Systems,7,2026,quiz,0,0.37450069189071655,mlp,test
-559,Database Systems,8,2026,quiz,1,0.751101016998291,mlp,test
-560,Database Systems,9,2026,quiz,0,0.37605103850364685,mlp,test
-561,Design and Analysis of Algorithms,0,2024,final,1,0.5870082378387451,mlp,test
-562,Design and Analysis of Algorithms,1,2024,final,1,0.9012176990509033,mlp,test
-563,Design and Analysis of Algorithms,2,2024,final,0,0.16661436855793,mlp,test
-564,Design and Analysis of Algorithms,3,2024,final,0,0.20265153050422668,mlp,test
-565,Design and Analysis of Algorithms,4,2024,final,0,0.2679213881492615,mlp,test
-566,Design and Analysis of Algorithms,5,2024,final,1,0.7876431345939636,mlp,test
-567,Design and Analysis of Algorithms,6,2024,final,1,0.18647809326648712,mlp,test
-568,Design and Analysis of Algorithms,7,2024,final,0,0.16698667407035828,mlp,test
-569,Design and Analysis of Algorithms,8,2024,final,1,0.8683213591575623,mlp,test
-570,Design and Analysis of Algorithms,0,2024,mid,1,0.3866693079471588,mlp,test
-571,Design and Analysis of Algorithms,1,2024,mid,1,0.8474403023719788,mlp,test
-572,Design and Analysis of Algorithms,2,2024,mid,0,0.1469697803258896,mlp,test
-573,Design and Analysis of Algorithms,3,2024,mid,0,0.1977919489145279,mlp,test
-574,Design and Analysis of Algorithms,4,2024,mid,0,0.20434406399726868,mlp,test
-575,Design and Analysis of Algorithms,5,2024,mid,1,0.8223403096199036,mlp,test
-576,Design and Analysis of Algorithms,6,2024,mid,1,0.1830490231513977,mlp,test
-577,Design and Analysis of Algorithms,7,2024,mid,0,0.14637607336044312,mlp,test
-578,Design and Analysis of Algorithms,8,2024,mid,0,0.8503331542015076,mlp,test
-579,Design and Analysis of Algorithms,0,2025,final,0,0.5638980865478516,mlp,test
-580,Design and Analysis of Algorithms,1,2025,final,0,0.9149351119995117,mlp,test
-581,Design and Analysis of Algorithms,2,2025,final,0,0.15258526802062988,mlp,test
-582,Design and Analysis of Algorithms,3,2025,final,0,0.18591026961803436,mlp,test
-583,Design and Analysis of Algorithms,4,2025,final,0,0.23749703168869019,mlp,test
-584,Design and Analysis of Algorithms,5,2025,final,1,0.8350249528884888,mlp,test
-585,Design and Analysis of Algorithms,6,2025,final,0,0.22969511151313782,mlp,test
-586,Design and Analysis of Algorithms,7,2025,final,0,0.15379272401332855,mlp,test
-587,Design and Analysis of Algorithms,8,2025,final,1,0.8550271391868591,mlp,test
-588,Design and Analysis of Algorithms,0,2025,mid,1,0.3744737505912781,mlp,test
-589,Design and Analysis of Algorithms,1,2025,mid,1,0.8660249710083008,mlp,test
-590,Design and Analysis of Algorithms,2,2025,mid,0,0.13498835265636444,mlp,test
-591,Design and Analysis of Algorithms,3,2025,mid,0,0.1774219572544098,mlp,test
-592,Design and Analysis of Algorithms,4,2025,mid,0,0.18314768373966217,mlp,test
-593,Design and Analysis of Algorithms,5,2025,mid,1,0.8552481532096863,mlp,test
-594,Design and Analysis of Algorithms,6,2025,mid,0,0.24077321588993073,mlp,test
-595,Design and Analysis of Algorithms,7,2025,mid,0,0.13449692726135254,mlp,test
-596,Design and Analysis of Algorithms,8,2025,mid,1,0.8163225650787354,mlp,test
-597,Design and Analysis of Algorithms,0,2025,quiz,0,0.35059937834739685,mlp,test
-598,Design and Analysis of Algorithms,1,2025,quiz,1,0.8734562397003174,mlp,test
-599,Design and Analysis of Algorithms,2,2025,quiz,0,0.18223322927951813,mlp,test
-600,Design and Analysis of Algorithms,3,2025,quiz,0,0.1987849920988083,mlp,test
-601,Design and Analysis of Algorithms,4,2025,quiz,0,0.20692555606365204,mlp,test
-602,Design and Analysis of Algorithms,5,2025,quiz,1,0.8166244626045227,mlp,test
-603,Design and Analysis of Algorithms,6,2025,quiz,0,0.2519814670085907,mlp,test
-604,Design and Analysis of Algorithms,7,2025,quiz,0,0.17360925674438477,mlp,test
-605,Design and Analysis of Algorithms,8,2025,quiz,1,0.7604346871376038,mlp,test
-606,Discrete Structures,0,2024,final,0,0.5641056299209595,mlp,test
-607,Discrete Structures,1,2024,final,1,0.708812952041626,mlp,test
-608,Discrete Structures,2,2024,final,0,0.4300076365470886,mlp,test
-609,Discrete Structures,3,2024,final,1,0.4503042995929718,mlp,test
-610,Discrete Structures,4,2024,final,1,0.7231197953224182,mlp,test
-611,Discrete Structures,0,2024,mid,0,0.3497007191181183,mlp,test
-612,Discrete Structures,1,2024,mid,1,0.6576015949249268,mlp,test
-613,Discrete Structures,2,2024,mid,0,0.38708093762397766,mlp,test
-614,Discrete Structures,3,2024,mid,0,0.5925694704055786,mlp,test
-615,Discrete Structures,4,2024,mid,1,0.7331746816635132,mlp,test
-616,Discrete Structures,0,2024,quiz,0,0.38839083909988403,mlp,test
-617,Discrete Structures,1,2024,quiz,0,0.4623675048351288,mlp,test
-618,Discrete Structures,2,2024,quiz,0,0.34976381063461304,mlp,test
-619,Discrete Structures,3,2024,quiz,0,0.7308565974235535,mlp,test
-620,Discrete Structures,4,2024,quiz,1,0.4871740937232971,mlp,test
-621,Discrete Structures,0,2025,final,0,0.4385465979576111,mlp,test
-622,Discrete Structures,1,2025,final,1,0.6973702907562256,mlp,test
-623,Discrete Structures,2,2025,final,0,0.3597950339317322,mlp,test
-624,Discrete Structures,3,2025,final,0,0.5927989482879639,mlp,test
-625,Discrete Structures,4,2025,final,1,0.7938449382781982,mlp,test
-626,Discrete Structures,0,2025,mid,1,0.30225226283073425,mlp,test
-627,Discrete Structures,1,2025,mid,0,0.749525785446167,mlp,test
-628,Discrete Structures,2,2025,mid,0,0.32274362444877625,mlp,test
-629,Discrete Structures,3,2025,mid,0,0.6209297180175781,mlp,test
-630,Discrete Structures,4,2025,mid,1,0.8137152194976807,mlp,test
-631,Discrete Structures,0,2025,quiz,0,0.3600669503211975,mlp,test
-632,Discrete Structures,1,2025,quiz,1,0.5891520977020264,mlp,test
-633,Discrete Structures,2,2025,quiz,0,0.32102879881858826,mlp,test
-634,Discrete Structures,3,2025,quiz,0,0.7368549108505249,mlp,test
-635,Discrete Structures,4,2025,quiz,1,0.6662347316741943,mlp,test
-636,HCI,0,2024,final,0,0.5630307197570801,mlp,test
-637,HCI,1,2024,final,1,0.5580230951309204,mlp,test
-638,HCI,2,2024,final,0,0.26708394289016724,mlp,test
-639,HCI,3,2024,final,0,0.34639883041381836,mlp,test
-640,HCI,4,2024,final,0,0.3640998303890228,mlp,test
-641,HCI,5,2024,final,0,0.7683382630348206,mlp,test
-642,HCI,6,2024,final,0,0.7011082172393799,mlp,test
-643,HCI,7,2024,final,1,0.7776464819908142,mlp,test
-644,HCI,8,2024,final,0,0.25892725586891174,mlp,test
-645,HCI,9,2024,final,0,0.42756202816963196,mlp,test
-646,HCI,0,2024,mid,0,0.37898963689804077,mlp,test
-647,HCI,1,2024,mid,1,0.6700602769851685,mlp,test
-648,HCI,2,2024,mid,0,0.22966352105140686,mlp,test
-649,HCI,3,2024,mid,0,0.2358860820531845,mlp,test
-650,HCI,4,2024,mid,0,0.32653290033340454,mlp,test
-651,HCI,5,2024,mid,1,0.7318550944328308,mlp,test
-652,HCI,6,2024,mid,1,0.7359346151351929,mlp,test
-653,HCI,7,2024,mid,1,0.6282173991203308,mlp,test
-654,HCI,8,2024,mid,0,0.2235562652349472,mlp,test
-655,HCI,9,2024,mid,0,0.2489272952079773,mlp,test
-656,IOT,0,2024,quiz,1,0.5012944340705872,mlp,test
-657,IOT,1,2024,quiz,1,0.6958510875701904,mlp,test
-658,IOT,2,2024,quiz,1,0.6233951449394226,mlp,test
-659,IOT,3,2024,quiz,1,0.6860857605934143,mlp,test
-660,IOT,0,2025,mid,0,0.6498836874961853,mlp,test
-661,IOT,1,2025,mid,1,0.8600945472717285,mlp,test
-662,IOT,2,2025,mid,0,0.6912891268730164,mlp,test
-663,IOT,3,2025,mid,1,0.6995338201522827,mlp,test
-664,Islamic Studies,0,2024,final,0,0.3676998019218445,mlp,test
-665,Islamic Studies,1,2024,final,0,0.3328390419483185,mlp,test
-666,Islamic Studies,2,2024,final,0,0.4137624204158783,mlp,test
-667,Islamic Studies,3,2024,final,1,0.8066109418869019,mlp,test
-668,Islamic Studies,0,2024,mid,1,0.5184330344200134,mlp,test
-669,Islamic Studies,1,2024,mid,0,0.2600184679031372,mlp,test
-670,Islamic Studies,2,2024,mid,0,0.29636043310165405,mlp,test
-671,Islamic Studies,3,2024,mid,1,0.8260533213615417,mlp,test
-672,Islamic Studies,0,2025,final,0,0.41787540912628174,mlp,test
-673,Islamic Studies,1,2025,final,0,0.28365370631217957,mlp,test
-674,Islamic Studies,2,2025,final,0,0.40193647146224976,mlp,test
-675,Islamic Studies,3,2025,final,1,0.8413828611373901,mlp,test
-676,Islamic Studies,0,2026,final,0,0.3003164827823639,mlp,test
-677,Islamic Studies,1,2026,final,0,0.2612261176109314,mlp,test
-678,Islamic Studies,2,2026,final,0,0.39336398243904114,mlp,test
-679,Islamic Studies,3,2026,final,1,0.853455126285553,mlp,test
-680,Islamic Studies,0,2026,mid,0,0.3562316298484802,mlp,test
-681,Islamic Studies,1,2026,mid,0,0.20898498594760895,mlp,test
-682,Islamic Studies,2,2026,mid,0,0.278075248003006,mlp,test
-683,Islamic Studies,3,2026,mid,1,0.871806800365448,mlp,test
-684,NLP,0,2024,quiz,0,0.31143414974212646,mlp,test
-685,NLP,1,2024,quiz,1,0.8489548563957214,mlp,test
-686,NLP,2,2024,quiz,1,0.5873202681541443,mlp,test
-687,NLP,3,2024,quiz,0,0.35732653737068176,mlp,test
-688,NLP,4,2024,quiz,0,0.30278638005256653,mlp,test
-689,NLP,5,2024,quiz,0,0.31040215492248535,mlp,test
-690,NLP,6,2024,quiz,0,0.2929023802280426,mlp,test
-691,NLP,7,2024,quiz,0,0.31040215492248535,mlp,test
-692,NLP,8,2024,quiz,0,0.2929023802280426,mlp,test
-693,NLP,9,2024,quiz,0,0.2929023802280426,mlp,test
-694,OOP Lab,0,2024,final,0,0.3361039161682129,mlp,test
-695,OOP Lab,1,2024,final,1,0.4630994200706482,mlp,test
-696,OOP Lab,2,2024,final,0,0.263082891702652,mlp,test
-697,OOP Lab,3,2024,final,0,0.4441925287246704,mlp,test
-698,OOP Lab,4,2024,final,0,0.5627735257148743,mlp,test
-699,OOP Lab,5,2024,final,0,0.3361039161682129,mlp,test
-700,OOP Lab,6,2024,final,0,0.3182366192340851,mlp,test
-701,OOP Lab,0,2024,mid,0,0.26630231738090515,mlp,test
-702,OOP Lab,1,2024,mid,0,0.3732447624206543,mlp,test
-703,OOP Lab,2,2024,mid,0,0.20582175254821777,mlp,test
-704,OOP Lab,3,2024,mid,0,0.5391623377799988,mlp,test
-705,OOP Lab,4,2024,mid,1,0.7417840361595154,mlp,test
-706,OOP Lab,5,2024,mid,0,0.30086618661880493,mlp,test
-707,OOP Lab,6,2024,mid,0,0.2238105684518814,mlp,test
-708,OOP Lab,0,2025,final,0,0.3159078061580658,mlp,test
-709,OOP Lab,1,2025,final,0,0.5606722831726074,mlp,test
-710,OOP Lab,2,2025,final,0,0.25600653886795044,mlp,test
-711,OOP Lab,3,2025,final,0,0.3727192282676697,mlp,test
-712,OOP Lab,4,2025,final,1,0.5677329301834106,mlp,test
-713,OOP Lab,5,2025,final,0,0.3159078061580658,mlp,test
-714,OOP Lab,6,2025,final,0,0.29852214455604553,mlp,test
-715,OOP Lab,0,2025,mid,1,0.24986179172992706,mlp,test
-716,OOP Lab,1,2025,mid,1,0.4670778512954712,mlp,test
-717,OOP Lab,2,2025,mid,0,0.19247454404830933,mlp,test
-718,OOP Lab,3,2025,mid,1,0.4448857307434082,mlp,test
-719,OOP Lab,4,2025,mid,1,0.7622506618499756,mlp,test
-720,OOP Lab,5,2025,mid,0,0.27754294872283936,mlp,test
-721,OOP Lab,6,2025,mid,0,0.21207933127880096,mlp,test
-722,OOP Lab,0,2026,final,0,0.3726559281349182,mlp,test
-723,OOP Lab,1,2026,final,1,0.5496202707290649,mlp,test
-724,OOP Lab,2,2026,final,0,0.25096434354782104,mlp,test
-725,OOP Lab,3,2026,final,0,0.4497203230857849,mlp,test
-726,OOP Lab,4,2026,final,0,0.6423313021659851,mlp,test
-727,OOP Lab,5,2026,final,0,0.30469784140586853,mlp,test
-728,OOP Lab,6,2026,final,0,0.28886404633522034,mlp,test
-729,OS,0,2024,final,0,0.39970922470092773,mlp,test
-730,OS,1,2024,final,0,0.46570420265197754,mlp,test
-731,OS,2,2024,final,1,0.6746886968612671,mlp,test
-732,OS,3,2024,final,0,0.5679793953895569,mlp,test
-733,OS,4,2024,final,1,0.5580947995185852,mlp,test
-734,OS,5,2024,final,0,0.37560105323791504,mlp,test
-735,OS,6,2024,final,1,0.659259557723999,mlp,test
-736,OS,7,2024,final,1,0.6420214176177979,mlp,test
-737,OS,8,2024,final,1,0.5806047320365906,mlp,test
-738,OS,9,2024,final,1,0.8281404376029968,mlp,test
-739,OS,0,2024,mid,1,0.36018455028533936,mlp,test
-740,OS,1,2024,mid,0,0.2769940197467804,mlp,test
-741,OS,2,2024,mid,1,0.6839287877082825,mlp,test
-742,OS,3,2024,mid,0,0.5072634220123291,mlp,test
-743,OS,4,2024,mid,0,0.5416752696037292,mlp,test
-744,OS,5,2024,mid,0,0.3074969947338104,mlp,test
-745,OS,6,2024,mid,0,0.4578615128993988,mlp,test
-746,OS,7,2024,mid,0,0.39316463470458984,mlp,test
-747,OS,8,2024,mid,1,0.4736849367618561,mlp,test
-748,OS,9,2024,mid,1,0.861566424369812,mlp,test
-749,OS,0,2024,quiz,0,0.3521485924720764,mlp,test
-750,OS,1,2024,quiz,0,0.3026624917984009,mlp,test
-751,OS,2,2024,quiz,1,0.4892478883266449,mlp,test
-752,OS,3,2024,quiz,0,0.4669646918773651,mlp,test
-753,OS,4,2024,quiz,1,0.604066789150238,mlp,test
-754,OS,5,2024,quiz,0,0.30628782510757446,mlp,test
-755,OS,6,2024,quiz,0,0.5532936453819275,mlp,test
-756,OS,7,2024,quiz,0,0.5259642601013184,mlp,test
-757,OS,8,2024,quiz,1,0.5283243060112,mlp,test
-758,OS,9,2024,quiz,1,0.7504491209983826,mlp,test
-759,OS,0,2025,quiz,1,0.36726489663124084,mlp,test
-760,OS,1,2025,quiz,0,0.26546162366867065,mlp,test
-761,OS,2,2025,quiz,0,0.6040520071983337,mlp,test
-762,OS,3,2025,quiz,0,0.2865735590457916,mlp,test
-763,OS,4,2025,quiz,1,0.5093860626220703,mlp,test
-764,OS,5,2025,quiz,0,0.2714032828807831,mlp,test
-765,OS,6,2025,quiz,0,0.4454149603843689,mlp,test
-766,OS,7,2025,quiz,1,0.4184839129447937,mlp,test
-767,OS,8,2025,quiz,0,0.47887933254241943,mlp,test
-768,OS,9,2025,quiz,1,0.8796156048774719,mlp,test
-769,Object Oriented Programming,0,2024,final,0,0.1718105673789978,mlp,test
-770,Object Oriented Programming,1,2024,final,1,0.9042239785194397,mlp,test
-771,Object Oriented Programming,2,2024,final,0,0.17397551238536835,mlp,test
-772,Object Oriented Programming,3,2024,final,0,0.7592511177062988,mlp,test
-773,Object Oriented Programming,4,2024,final,1,0.5222439765930176,mlp,test
-774,Object Oriented Programming,5,2024,final,0,0.15528306365013123,mlp,test
-775,Object Oriented Programming,6,2024,final,0,0.13478249311447144,mlp,test
-776,Object Oriented Programming,7,2024,final,0,0.3187577724456787,mlp,test
-777,Object Oriented Programming,0,2024,mid,0,0.16057755053043365,mlp,test
-778,Object Oriented Programming,1,2024,mid,1,0.9114094376564026,mlp,test
-779,Object Oriented Programming,2,2024,mid,0,0.1703089028596878,mlp,test
-780,Object Oriented Programming,3,2024,mid,1,0.7379119992256165,mlp,test
-781,Object Oriented Programming,4,2024,mid,1,0.4679238796234131,mlp,test
-782,Object Oriented Programming,5,2024,mid,0,0.13480983674526215,mlp,test
-783,Object Oriented Programming,6,2024,mid,0,0.10945915430784225,mlp,test
-784,Object Oriented Programming,7,2024,mid,1,0.378592848777771,mlp,test
-785,Object Oriented Programming,0,2024,quiz,0,0.1835099756717682,mlp,test
-786,Object Oriented Programming,1,2024,quiz,1,0.8437948226928711,mlp,test
-787,Object Oriented Programming,2,2024,quiz,0,0.1810155063867569,mlp,test
-788,Object Oriented Programming,3,2024,quiz,0,0.5794732570648193,mlp,test
-789,Object Oriented Programming,4,2024,quiz,0,0.5190789103507996,mlp,test
-790,Object Oriented Programming,5,2024,quiz,0,0.1550353318452835,mlp,test
-791,Object Oriented Programming,6,2024,quiz,0,0.14231668412685394,mlp,test
-792,Object Oriented Programming,7,2024,quiz,0,0.4548221230506897,mlp,test
-793,Object Oriented Programming,0,2025,final,0,0.15838176012039185,mlp,test
-794,Object Oriented Programming,1,2025,final,1,0.9153328537940979,mlp,test
-795,Object Oriented Programming,2,2025,final,0,0.15382330119609833,mlp,test
-796,Object Oriented Programming,3,2025,final,1,0.7274171710014343,mlp,test
-797,Object Oriented Programming,4,2025,final,0,0.5352429747581482,mlp,test
-798,Object Oriented Programming,5,2025,final,0,0.13759371638298035,mlp,test
-799,Object Oriented Programming,6,2025,final,0,0.12450969964265823,mlp,test
-800,Object Oriented Programming,7,2025,final,0,0.29865962266921997,mlp,test
-801,Object Oriented Programming,0,2026,final,0,0.15133823454380035,mlp,test
-802,Object Oriented Programming,1,2026,final,1,0.9189328551292419,mlp,test
-803,Object Oriented Programming,2,2026,final,0,0.14620335400104523,mlp,test
-804,Object Oriented Programming,3,2026,final,0,0.7319232821464539,mlp,test
-805,Object Oriented Programming,4,2026,final,0,0.4347095787525177,mlp,test
-806,Object Oriented Programming,5,2026,final,0,0.1301000714302063,mlp,test
-807,Object Oriented Programming,6,2026,final,0,0.11868400126695633,mlp,test
-808,Object Oriented Programming,7,2026,final,0,0.2293645590543747,mlp,test
-809,Object Oriented Programming,0,2026,mid,0,0.14072878658771515,mlp,test
-810,Object Oriented Programming,1,2026,mid,0,0.9206004738807678,mlp,test
-811,Object Oriented Programming,2,2026,mid,0,0.1422187238931656,mlp,test
-812,Object Oriented Programming,3,2026,mid,1,0.7075212597846985,mlp,test
-813,Object Oriented Programming,4,2026,mid,1,0.36495527625083923,mlp,test
-814,Object Oriented Programming,5,2026,mid,1,0.1130872294306755,mlp,test
-815,Object Oriented Programming,6,2026,mid,0,0.09659424424171448,mlp,test
-816,Object Oriented Programming,7,2026,mid,0,0.27316799759864807,mlp,test
-817,Object Oriented Programming,0,2026,quiz,0,0.16189955174922943,mlp,test
-818,Object Oriented Programming,1,2026,quiz,1,0.8645403981208801,mlp,test
-819,Object Oriented Programming,2,2026,quiz,0,0.1537632942199707,mlp,test
-820,Object Oriented Programming,3,2026,quiz,1,0.5572616457939148,mlp,test
-821,Object Oriented Programming,4,2026,quiz,0,0.4202548563480377,mlp,test
-822,Object Oriented Programming,5,2026,quiz,0,0.1315091997385025,mlp,test
-823,Object Oriented Programming,6,2026,quiz,0,0.1248580664396286,mlp,test
-824,Object Oriented Programming,7,2026,quiz,1,0.34148919582366943,mlp,test
-825,PF Lab,0,2025,final,0,0.42238155007362366,mlp,test
-826,PF Lab,1,2025,final,0,0.3234248459339142,mlp,test
-827,PF Lab,2,2025,final,1,0.4227893650531769,mlp,test
-828,PF Lab,3,2025,final,0,0.35760873556137085,mlp,test
-829,PF Lab,4,2025,final,0,0.31933140754699707,mlp,test
-830,PF Lab,5,2025,final,0,0.40115445852279663,mlp,test
-831,PF Lab,6,2025,final,0,0.4688996970653534,mlp,test
-832,PF Lab,7,2025,final,0,0.31908342242240906,mlp,test
-833,PF Lab,8,2025,final,0,0.3246447741985321,mlp,test
-834,PF Lab,9,2025,final,1,0.42685893177986145,mlp,test
-835,PP,0,2024,final,0,0.5883153080940247,mlp,test
-836,PP,1,2024,final,0,0.7489608526229858,mlp,test
-837,PP,2,2024,final,0,0.3827117383480072,mlp,test
-838,PP,3,2024,final,0,0.5170496702194214,mlp,test
-839,PP,4,2024,final,0,0.30566078424453735,mlp,test
-840,PP,5,2024,final,0,0.6576347351074219,mlp,test
-841,PP,6,2024,final,0,0.2945474684238434,mlp,test
-842,PP,7,2024,final,0,0.5088427662849426,mlp,test
-843,PP,8,2024,final,0,0.6010609865188599,mlp,test
-844,PP,9,2024,final,1,0.8976229429244995,mlp,test
-845,PP,0,2024,mid,0,0.4274260103702545,mlp,test
-846,PP,1,2024,mid,1,0.6602612137794495,mlp,test
-847,PP,2,2024,mid,0,0.22263355553150177,mlp,test
-848,PP,3,2024,mid,1,0.5064066052436829,mlp,test
-849,PP,4,2024,mid,0,0.2352694571018219,mlp,test
-850,PP,5,2024,mid,0,0.6917184591293335,mlp,test
-851,PP,6,2024,mid,0,0.25265583395957947,mlp,test
-852,PP,7,2024,mid,0,0.4495588541030884,mlp,test
-853,PP,8,2024,mid,1,0.612230122089386,mlp,test
-854,PP,9,2024,mid,1,0.9038665294647217,mlp,test
-855,PP,0,2024,quiz,0,0.39212766289711,mlp,test
-856,PP,1,2024,quiz,1,0.6320018768310547,mlp,test
-857,PP,2,2024,quiz,0,0.33265629410743713,mlp,test
-858,PP,3,2024,quiz,0,0.6866136789321899,mlp,test
-859,PP,4,2024,quiz,0,0.28326135873794556,mlp,test
-860,PP,5,2024,quiz,0,0.7018167972564697,mlp,test
-861,PP,6,2024,quiz,0,0.2636825442314148,mlp,test
-862,PP,7,2024,quiz,0,0.364261656999588,mlp,test
-863,PP,8,2024,quiz,0,0.46656855940818787,mlp,test
-864,PP,9,2024,quiz,1,0.9070174694061279,mlp,test
-865,PP,0,2025,final,0,0.4221663773059845,mlp,test
-866,PP,1,2025,final,1,0.7575230598449707,mlp,test
-867,PP,2,2025,final,0,0.323600172996521,mlp,test
-868,PP,3,2025,final,0,0.5442492365837097,mlp,test
-869,PP,4,2025,final,0,0.29233428835868835,mlp,test
-870,PP,5,2025,final,0,0.5427679419517517,mlp,test
-871,PP,6,2025,final,0,0.26669761538505554,mlp,test
-872,PP,7,2025,final,0,0.43015527725219727,mlp,test
-873,PP,8,2025,final,0,0.571020245552063,mlp,test
-874,PP,9,2025,final,1,0.9160196781158447,mlp,test
-875,PP,0,2025,mid,0,0.2666960656642914,mlp,test
-876,PP,1,2025,mid,0,0.7110512852668762,mlp,test
-877,PP,2,2025,mid,0,0.19950303435325623,mlp,test
-878,PP,3,2025,mid,0,0.5864077210426331,mlp,test
-879,PP,4,2025,mid,0,0.2267961949110031,mlp,test
-880,PP,5,2025,mid,0,0.5343911051750183,mlp,test
-881,PP,6,2025,mid,0,0.22884322702884674,mlp,test
-882,PP,7,2025,mid,0,0.36823007464408875,mlp,test
-883,PP,8,2025,mid,0,0.5990955829620361,mlp,test
-884,PP,9,2025,mid,1,0.9212732315063477,mlp,test
-885,PP,0,2026,mid,0,0.24117431044578552,mlp,test
-886,PP,1,2026,mid,0,0.6897280216217041,mlp,test
-887,PP,2,2026,mid,0,0.18962323665618896,mlp,test
-888,PP,3,2026,mid,1,0.42352887988090515,mlp,test
-889,PP,4,2026,mid,0,0.22153006494045258,mlp,test
-890,PP,5,2026,mid,0,0.4678651690483093,mlp,test
-891,PP,6,2026,mid,0,0.21496616303920746,mlp,test
-892,PP,7,2026,mid,0,0.33186665177345276,mlp,test
-893,PP,8,2026,mid,1,0.4179431200027466,mlp,test
-894,PP,9,2026,mid,1,0.9314534068107605,mlp,test
-895,PP,0,2026,quiz,0,0.27037402987480164,mlp,test
-896,PP,1,2026,quiz,1,0.6866675615310669,mlp,test
-897,PP,2,2026,quiz,0,0.27355900406837463,mlp,test
-898,PP,3,2026,quiz,0,0.5554648041725159,mlp,test
-899,PP,4,2026,quiz,0,0.26347190141677856,mlp,test
-900,PP,5,2026,quiz,0,0.5233595967292786,mlp,test
-901,PP,6,2026,quiz,0,0.23618577420711517,mlp,test
-902,PP,7,2026,quiz,0,0.3137149214744568,mlp,test
-903,PP,8,2026,quiz,1,0.34026774764060974,mlp,test
-904,PP,9,2026,quiz,1,0.9335922002792358,mlp,test
-905,Pakistan Studies,0,2026,final,1,0.7114419937133789,mlp,test
-906,Pakistan Studies,1,2026,final,1,0.7710852026939392,mlp,test
-907,Pakistan Studies,2,2026,final,0,0.3857816755771637,mlp,test
-908,Pakistan Studies,3,2026,final,0,0.5084697604179382,mlp,test
-909,Pakistan Studies,0,2026,mid,1,0.49326276779174805,mlp,test
-910,Pakistan Studies,1,2026,mid,1,0.7331374287605286,mlp,test
-911,Pakistan Studies,2,2026,mid,0,0.42262205481529236,mlp,test
-912,Pakistan Studies,3,2026,mid,0,0.5677354335784912,mlp,test
-913,SMD,0,2024,final,1,0.666416585445404,mlp,test
-914,SMD,1,2024,final,0,0.3366991877555847,mlp,test
-915,SMD,2,2024,final,0,0.4770301282405853,mlp,test
-916,SMD,3,2024,final,0,0.31614384055137634,mlp,test
-917,SMD,4,2024,final,0,0.3533810079097748,mlp,test
-918,SMD,5,2024,final,1,0.5443824529647827,mlp,test
-919,SMD,6,2024,final,0,0.26399582624435425,mlp,test
-920,SMD,7,2024,final,0,0.3436878025531769,mlp,test
-921,SMD,0,2024,mid,0,0.5965743064880371,mlp,test
-922,SMD,1,2024,mid,0,0.3838100731372833,mlp,test
-923,SMD,2,2024,mid,0,0.4106372594833374,mlp,test
-924,SMD,3,2024,mid,0,0.3007669746875763,mlp,test
-925,SMD,4,2024,mid,0,0.23583519458770752,mlp,test
-926,SMD,5,2024,mid,1,0.43435099720954895,mlp,test
-927,SMD,6,2024,mid,0,0.2289857268333435,mlp,test
-928,SMD,7,2024,mid,0,0.33252209424972534,mlp,test
-929,SMD,0,2024,quiz,1,0.5369908213615417,mlp,test
-930,SMD,1,2024,quiz,0,0.4644358158111572,mlp,test
-931,SMD,2,2024,quiz,0,0.3786289393901825,mlp,test
-932,SMD,3,2024,quiz,0,0.4738997220993042,mlp,test
-933,SMD,4,2024,quiz,0,0.2897932827472687,mlp,test
-934,SMD,5,2024,quiz,1,0.4462585747241974,mlp,test
-935,SMD,6,2024,quiz,0,0.3211407959461212,mlp,test
-936,SMD,7,2024,quiz,0,0.5586445331573486,mlp,test
-937,SMD,0,2026,final,0,0.6886196732521057,mlp,test
-938,SMD,1,2026,final,0,0.32191741466522217,mlp,test
-939,SMD,2,2026,final,0,0.4492717385292053,mlp,test
-940,SMD,3,2026,final,0,0.30954039096832275,mlp,test
-941,SMD,4,2026,final,0,0.3408716022968292,mlp,test
-942,SMD,5,2026,final,1,0.6249604821205139,mlp,test
-943,SMD,6,2026,final,0,0.2585316002368927,mlp,test
-944,SMD,7,2026,final,0,0.3324786424636841,mlp,test
-945,SMD,0,2026,mid,1,0.5956997275352478,mlp,test
-946,SMD,1,2026,mid,0,0.3579731583595276,mlp,test
-947,SMD,2,2026,mid,1,0.38172248005867004,mlp,test
-948,SMD,3,2026,mid,0,0.2939404547214508,mlp,test
-949,SMD,4,2026,mid,0,0.23049139976501465,mlp,test
-950,SMD,5,2026,mid,1,0.5323705077171326,mlp,test
-951,SMD,6,2026,mid,0,0.22372384369373322,mlp,test
-952,SMD,7,2026,mid,0,0.31596872210502625,mlp,test
-953,Software Design and Analysis,0,2024,mid,0,0.37114638090133667,mlp,test
-954,Software Design and Analysis,1,2024,mid,1,0.21864528954029083,mlp,test
-955,Software Design and Analysis,2,2024,mid,1,0.6170380711555481,mlp,test
-956,Software Design and Analysis,3,2024,mid,0,0.18292935192584991,mlp,test
-957,Software Design and Analysis,4,2024,mid,0,0.1851932555437088,mlp,test
-958,Software Design and Analysis,5,2024,mid,0,0.2747122645378113,mlp,test
-959,Software Design and Analysis,6,2024,mid,0,0.5985187888145447,mlp,test
-960,Software Design and Analysis,7,2024,mid,0,0.27318817377090454,mlp,test
-961,Software Design and Analysis,8,2024,mid,0,0.21808086335659027,mlp,test
-962,Software Design and Analysis,0,2026,mid,0,0.24334584176540375,mlp,test
-963,Software Design and Analysis,1,2026,mid,0,0.2812369763851166,mlp,test
-964,Software Design and Analysis,2,2026,mid,1,0.6106630563735962,mlp,test
-965,Software Design and Analysis,3,2026,mid,0,0.17716538906097412,mlp,test
-966,Software Design and Analysis,4,2026,mid,0,0.17733485996723175,mlp,test
-967,Software Design and Analysis,5,2026,mid,0,0.2524954676628113,mlp,test
-968,Software Design and Analysis,6,2026,mid,0,0.4475441873073578,mlp,test
-969,Software Design and Analysis,7,2026,mid,0,0.2539425492286682,mlp,test
-970,Software Design and Analysis,8,2026,mid,0,0.21001005172729492,mlp,test
-971,Software Design and Analysis,0,2026,quiz,1,0.4993973970413208,mlp,test
-972,Software Design and Analysis,1,2026,quiz,1,0.3041497468948364,mlp,test
-973,Software Design and Analysis,2,2026,quiz,1,0.5727296471595764,mlp,test
-974,Software Design and Analysis,3,2026,quiz,0,0.21486249566078186,mlp,test
-975,Software Design and Analysis,4,2026,quiz,1,0.23697982728481293,mlp,test
-976,Software Design and Analysis,5,2026,quiz,0,0.37483566999435425,mlp,test
-977,Software Design and Analysis,6,2026,quiz,1,0.5470834374427795,mlp,test
-978,Software Design and Analysis,7,2026,quiz,0,0.29575157165527344,mlp,test
-979,Software Design and Analysis,8,2026,quiz,1,0.25512173771858215,mlp,test
-980,Software Engineering,0,2024,final,0,0.46079787611961365,mlp,test
-981,Software Engineering,1,2024,final,0,0.4223465323448181,mlp,test
-982,Software Engineering,2,2024,final,1,0.6225590109825134,mlp,test
-983,Software Engineering,3,2024,final,0,0.2796357274055481,mlp,test
-984,Software Engineering,4,2024,final,1,0.8491905927658081,mlp,test
-985,Software Engineering,5,2024,final,1,0.7207983732223511,mlp,test
-986,Software Engineering,0,2024,mid,1,0.6681808233261108,mlp,test
-987,Software Engineering,1,2024,mid,0,0.43034684658050537,mlp,test
-988,Software Engineering,2,2024,mid,0,0.42405951023101807,mlp,test
-989,Software Engineering,3,2024,mid,0,0.2312009334564209,mlp,test
-990,Software Engineering,4,2024,mid,1,0.8545400500297546,mlp,test
-991,Software Engineering,5,2024,mid,1,0.5653324723243713,mlp,test
-992,Software Engineering,0,2024,quiz,1,0.607873260974884,mlp,test
-993,Software Engineering,1,2024,quiz,1,0.3787710666656494,mlp,test
-994,Software Engineering,2,2024,quiz,1,0.5176941156387329,mlp,test
-995,Software Engineering,3,2024,quiz,0,0.30924928188323975,mlp,test
-996,Software Engineering,4,2024,quiz,1,0.8318024277687073,mlp,test
-997,Software Engineering,5,2024,quiz,1,0.5809633731842041,mlp,test
-998,Software Engineering,0,2025,final,1,0.4053879678249359,mlp,test
-999,Software Engineering,1,2025,final,0,0.3504680395126343,mlp,test
-1000,Software Engineering,2,2025,final,1,0.6329354643821716,mlp,test
-1001,Software Engineering,3,2025,final,0,0.24945057928562164,mlp,test
-1002,Software Engineering,4,2025,final,1,0.9115670919418335,mlp,test
-1003,Software Engineering,5,2025,final,1,0.7430118322372437,mlp,test
-1004,Software Engineering,0,2025,mid,1,0.6074394583702087,mlp,test
-1005,Software Engineering,1,2025,mid,1,0.3500921428203583,mlp,test
-1006,Software Engineering,2,2025,mid,0,0.37570974230766296,mlp,test
-1007,Software Engineering,3,2025,mid,0,0.2097424417734146,mlp,test
-1008,Software Engineering,4,2025,mid,0,0.9146376848220825,mlp,test
-1009,Software Engineering,5,2025,mid,1,0.5642251968383789,mlp,test
-1010,Software Requirements Engineering,0,2024,final,1,0.7981799840927124,mlp,test
-1011,Software Requirements Engineering,1,2024,final,1,0.4752390384674072,mlp,test
-1012,Software Requirements Engineering,2,2024,final,0,0.4894777536392212,mlp,test
-1013,Software Requirements Engineering,3,2024,final,0,0.319057822227478,mlp,test
-1014,Software Requirements Engineering,4,2024,final,0,0.6361016035079956,mlp,test
-1015,Theory of Automata,0,2024,final,0,0.5282741189002991,mlp,test
-1016,Theory of Automata,1,2024,final,1,0.8428476452827454,mlp,test
-1017,Theory of Automata,2,2024,final,1,0.6036754250526428,mlp,test
-1018,Theory of Automata,3,2024,final,0,0.4665968120098114,mlp,test
-1019,Theory of Automata,4,2024,final,1,0.5548434853553772,mlp,test
-1020,Theory of Automata,5,2024,final,0,0.2822312116622925,mlp,test
-1021,Theory of Automata,6,2024,final,1,0.5548559427261353,mlp,test
-1022,Theory of Automata,7,2024,final,0,0.5161493420600891,mlp,test
-1023,Theory of Automata,8,2024,final,0,0.3137548863887787,mlp,test
-1024,Theory of Automata,9,2024,final,0,0.30168458819389343,mlp,test
-1025,Theory of Automata,0,2024,mid,1,0.48580753803253174,mlp,test
-1026,Theory of Automata,1,2024,mid,1,0.8653603196144104,mlp,test
-1027,Theory of Automata,2,2024,mid,1,0.6368674635887146,mlp,test
-1028,Theory of Automata,3,2024,mid,0,0.5391110777854919,mlp,test
-1029,Theory of Automata,4,2024,mid,0,0.5286118984222412,mlp,test
-1030,Theory of Automata,5,2024,mid,0,0.21558377146720886,mlp,test
-1031,Theory of Automata,6,2024,mid,0,0.3006834387779236,mlp,test
-1032,Theory of Automata,7,2024,mid,1,0.544370174407959,mlp,test
-1033,Theory of Automata,8,2024,mid,0,0.3036953806877136,mlp,test
-1034,Theory of Automata,9,2024,mid,0,0.22937342524528503,mlp,test
-1035,Theory of Automata,0,2024,quiz,0,0.36309364438056946,mlp,test
-1036,Theory of Automata,1,2024,quiz,1,0.8354532122612,mlp,test
-1037,Theory of Automata,2,2024,quiz,0,0.6060912013053894,mlp,test
-1038,Theory of Automata,3,2024,quiz,0,0.4299236834049225,mlp,test
-1039,Theory of Automata,4,2024,quiz,0,0.5571352243423462,mlp,test
-1040,Theory of Automata,5,2024,quiz,0,0.2535017430782318,mlp,test
-1041,Theory of Automata,6,2024,quiz,1,0.34298402070999146,mlp,test
-1042,Theory of Automata,7,2024,quiz,0,0.40859562158584595,mlp,test
-1043,Theory of Automata,8,2024,quiz,0,0.36425891518592834,mlp,test
-1044,Theory of Automata,9,2024,quiz,0,0.2670772075653076,mlp,test
-1045,Theory of Automata,0,2025,final,0,0.4447219967842102,mlp,test
-1046,Theory of Automata,1,2025,final,1,0.8708572387695312,mlp,test
-1047,Theory of Automata,2,2025,final,1,0.643913209438324,mlp,test
-1048,Theory of Automata,3,2025,final,0,0.2969053089618683,mlp,test
-1049,Theory of Automata,4,2025,final,0,0.515567421913147,mlp,test
-1050,Theory of Automata,5,2025,final,0,0.246319979429245,mlp,test
-1051,Theory of Automata,6,2025,final,1,0.5859634876251221,mlp,test
-1052,Theory of Automata,7,2025,final,0,0.46151360869407654,mlp,test
-1053,Theory of Automata,8,2025,final,0,0.19822049140930176,mlp,test
-1054,Theory of Automata,9,2025,final,0,0.20415495336055756,mlp,test
-1055,Theory of Automata,0,2025,mid,1,0.42202645540237427,mlp,test
-1056,Theory of Automata,1,2025,mid,1,0.891322910785675,mlp,test
-1057,Theory of Automata,2,2025,mid,0,0.6206230521202087,mlp,test
-1058,Theory of Automata,3,2025,mid,0,0.3092104196548462,mlp,test
-1059,Theory of Automata,4,2025,mid,0,0.44652917981147766,mlp,test
-1060,Theory of Automata,5,2025,mid,0,0.19026727974414825,mlp,test
-1061,Theory of Automata,6,2025,mid,0,0.30763816833496094,mlp,test
-1062,Theory of Automata,7,2025,mid,1,0.5207535028457642,mlp,test
-1063,Theory of Automata,8,2025,mid,0,0.18085657060146332,mlp,test
-1064,Theory of Automata,9,2025,mid,0,0.14869573712348938,mlp,test
-1065,Theory of Automata,0,2025,quiz,1,0.32845866680145264,mlp,test
-1066,Theory of Automata,1,2025,quiz,1,0.8680925369262695,mlp,test
-1067,Theory of Automata,2,2025,quiz,0,0.590231716632843,mlp,test
-1068,Theory of Automata,3,2025,quiz,0,0.28771865367889404,mlp,test
-1069,Theory of Automata,4,2025,quiz,1,0.48949769139289856,mlp,test
-1070,Theory of Automata,5,2025,quiz,0,0.22729390859603882,mlp,test
-1071,Theory of Automata,6,2025,quiz,0,0.3623068034648895,mlp,test
-1072,Theory of Automata,7,2025,quiz,1,0.3892585039138794,mlp,test
-1073,Theory of Automata,8,2025,quiz,0,0.24102209508419037,mlp,test
-1074,Theory of Automata,9,2025,quiz,1,0.17887139320373535,mlp,test
-1075,Web Programming,0,2025,final,0,0.25179845094680786,mlp,test
-1076,Web Programming,1,2025,final,0,0.5496823787689209,mlp,test
-1077,Web Programming,2,2025,final,0,0.27128395438194275,mlp,test
-1078,Web Programming,3,2025,final,0,0.45180878043174744,mlp,test
-1079,Web Programming,4,2025,final,0,0.2841567397117615,mlp,test
-1080,Web Programming,5,2025,final,1,0.6936174631118774,mlp,test
-1081,Web Programming,6,2025,final,0,0.5408291816711426,mlp,test
-1082,Web Programming,7,2025,final,0,0.28175902366638184,mlp,test
-1083,Web Programming,8,2025,final,0,0.7557865381240845,mlp,test
-1084,Web Programming,9,2025,final,0,0.25186339020729065,mlp,test
-1085,Web Programming,0,2025,mid,0,0.2205067127943039,mlp,test
-1086,Web Programming,1,2025,mid,0,0.3495467007160187,mlp,test
-1087,Web Programming,2,2025,mid,0,0.26687130331993103,mlp,test
-1088,Web Programming,3,2025,mid,0,0.4594798684120178,mlp,test
-1089,Web Programming,4,2025,mid,0,0.23291349411010742,mlp,test
-1090,Web Programming,5,2025,mid,1,0.8427062630653381,mlp,test
-1091,Web Programming,6,2025,mid,0,0.44087883830070496,mlp,test
-1092,Web Programming,7,2025,mid,0,0.3038617670536041,mlp,test
-1093,Web Programming,8,2025,mid,1,0.8353503942489624,mlp,test
-1094,Web Programming,9,2025,mid,0,0.22515326738357544,mlp,test
-1095,Web Programming,0,2025,quiz,0,0.3345768451690674,mlp,test
-1096,Web Programming,1,2025,quiz,0,0.4902970492839813,mlp,test
-1097,Web Programming,2,2025,quiz,0,0.3615490198135376,mlp,test
-1098,Web Programming,3,2025,quiz,1,0.5404895544052124,mlp,test
-1099,Web Programming,4,2025,quiz,0,0.2695368826389313,mlp,test
-1100,Web Programming,5,2025,quiz,1,0.8546664118766785,mlp,test
-1101,Web Programming,6,2025,quiz,0,0.5634530782699585,mlp,test
-1102,Web Programming,7,2025,quiz,0,0.3784242570400238,mlp,test
-1103,Web Programming,8,2025,quiz,1,0.8306356072425842,mlp,test
-1104,Web Programming,9,2025,quiz,0,0.3620734214782715,mlp,test
-1105,Web Programming,0,2026,mid,0,0.206611767411232,mlp,test
-1106,Web Programming,1,2026,mid,0,0.30795687437057495,mlp,test
-1107,Web Programming,2,2026,mid,0,0.24069997668266296,mlp,test
-1108,Web Programming,3,2026,mid,0,0.5945430994033813,mlp,test
-1109,Web Programming,4,2026,mid,0,0.215739905834198,mlp,test
-1110,Web Programming,5,2026,mid,1,0.892485499382019,mlp,test
-1111,Web Programming,6,2026,mid,0,0.3861675560474396,mlp,test
-1112,Web Programming,7,2026,mid,0,0.2710682451725006,mlp,test
-1113,Web Programming,8,2026,mid,1,0.8638825416564941,mlp,test
-1114,Web Programming,9,2026,mid,0,0.20942795276641846,mlp,test
+0,Advanced Database Concepts,0,2024,final,1,0.4117855131626129,mlp,test
+1,Advanced Database Concepts,1,2024,final,0,0.32548338174819946,mlp,test
+2,Advanced Database Concepts,2,2024,final,0,0.7165759801864624,mlp,test
+3,Advanced Database Concepts,3,2024,final,1,0.7390119433403015,mlp,test
+4,Advanced Database Concepts,4,2024,final,0,0.25526008009910583,mlp,test
+5,Advanced Database Concepts,5,2024,final,1,0.7039581537246704,mlp,test
+6,Advanced Database Concepts,6,2024,final,1,0.7530255913734436,mlp,test
+7,Advanced Database Concepts,0,2024,mid,1,0.3533850610256195,mlp,test
+8,Advanced Database Concepts,1,2024,mid,0,0.2428310364484787,mlp,test
+9,Advanced Database Concepts,2,2024,mid,1,0.6700339317321777,mlp,test
+10,Advanced Database Concepts,3,2024,mid,0,0.4880581498146057,mlp,test
+11,Advanced Database Concepts,4,2024,mid,0,0.3181759715080261,mlp,test
+12,Advanced Database Concepts,5,2024,mid,0,0.39118966460227966,mlp,test
+13,Advanced Database Concepts,6,2024,mid,1,0.6877509951591492,mlp,test
+14,Advanced Database Concepts,0,2025,final,1,0.6694432497024536,mlp,test
+15,Advanced Database Concepts,1,2025,final,0,0.2856685221195221,mlp,test
+16,Advanced Database Concepts,2,2025,final,1,0.683756947517395,mlp,test
+17,Advanced Database Concepts,3,2025,final,1,0.7485188841819763,mlp,test
+18,Advanced Database Concepts,4,2025,final,1,0.23170185089111328,mlp,test
+19,Advanced Database Concepts,5,2025,final,1,0.7163650989532471,mlp,test
+20,Advanced Database Concepts,6,2025,final,0,0.766791582107544,mlp,test
+21,Advanced Database Concepts,0,2025,mid,1,0.5927920937538147,mlp,test
+22,Advanced Database Concepts,1,2025,mid,0,0.21211470663547516,mlp,test
+23,Advanced Database Concepts,2,2025,mid,1,0.6872847080230713,mlp,test
+24,Advanced Database Concepts,3,2025,mid,0,0.4822402596473694,mlp,test
+25,Advanced Database Concepts,4,2025,mid,0,0.2750720679759979,mlp,test
+26,Advanced Database Concepts,5,2025,mid,1,0.37385761737823486,mlp,test
+27,Advanced Database Concepts,6,2025,mid,0,0.7048552632331848,mlp,test
+28,Advanced Database Concepts,0,2025,quiz,1,0.46390271186828613,mlp,test
+29,Advanced Database Concepts,1,2025,quiz,0,0.3664860725402832,mlp,test
+30,Advanced Database Concepts,2,2025,quiz,1,0.43119531869888306,mlp,test
+31,Advanced Database Concepts,3,2025,quiz,1,0.5578879714012146,mlp,test
+32,Advanced Database Concepts,4,2025,quiz,1,0.37197065353393555,mlp,test
+33,Advanced Database Concepts,5,2025,quiz,1,0.4105643332004547,mlp,test
+34,Advanced Database Concepts,6,2025,quiz,0,0.45372217893600464,mlp,test
+35,Artificial Intelligence,0,2024,final,0,0.2080175280570984,mlp,test
+36,Artificial Intelligence,1,2024,final,1,0.7950370907783508,mlp,test
+37,Artificial Intelligence,2,2024,final,1,0.8284154534339905,mlp,test
+38,Artificial Intelligence,3,2024,final,0,0.08192382007837296,mlp,test
+39,Artificial Intelligence,4,2024,final,1,0.7458095550537109,mlp,test
+40,Artificial Intelligence,5,2024,final,0,0.326810747385025,mlp,test
+41,Artificial Intelligence,6,2024,final,1,0.7458095550537109,mlp,test
+42,Artificial Intelligence,7,2024,final,0,0.12339074164628983,mlp,test
+43,Artificial Intelligence,8,2024,final,0,0.279594361782074,mlp,test
+44,Artificial Intelligence,9,2024,final,0,0.19148144125938416,mlp,test
+45,Artificial Intelligence,0,2024,mid,0,0.18718788027763367,mlp,test
+46,Artificial Intelligence,1,2024,mid,1,0.6801767349243164,mlp,test
+47,Artificial Intelligence,2,2024,mid,1,0.784552812576294,mlp,test
+48,Artificial Intelligence,3,2024,mid,0,0.05393698066473007,mlp,test
+49,Artificial Intelligence,4,2024,mid,0,0.6452252268791199,mlp,test
+50,Artificial Intelligence,5,2024,mid,0,0.13177984952926636,mlp,test
+51,Artificial Intelligence,6,2024,mid,1,0.7383477091789246,mlp,test
+52,Artificial Intelligence,7,2024,mid,0,0.20191802084445953,mlp,test
+53,Artificial Intelligence,8,2024,mid,1,0.1394369751214981,mlp,test
+54,Artificial Intelligence,9,2024,mid,0,0.26132747530937195,mlp,test
+55,Artificial Intelligence,0,2024,quiz,0,0.21777023375034332,mlp,test
+56,Artificial Intelligence,1,2024,quiz,0,0.6480873227119446,mlp,test
+57,Artificial Intelligence,2,2024,quiz,1,0.7807668447494507,mlp,test
+58,Artificial Intelligence,3,2024,quiz,0,0.09956328570842743,mlp,test
+59,Artificial Intelligence,4,2024,quiz,0,0.6992982029914856,mlp,test
+60,Artificial Intelligence,5,2024,quiz,0,0.22134320437908173,mlp,test
+61,Artificial Intelligence,6,2024,quiz,0,0.6310951113700867,mlp,test
+62,Artificial Intelligence,7,2024,quiz,0,0.30389535427093506,mlp,test
+63,Artificial Intelligence,8,2024,quiz,0,0.1870916336774826,mlp,test
+64,Artificial Intelligence,9,2024,quiz,1,0.216114342212677,mlp,test
+65,Artificial Intelligence,0,2025,final,0,0.17086441814899445,mlp,test
+66,Artificial Intelligence,1,2025,final,1,0.7939002513885498,mlp,test
+67,Artificial Intelligence,2,2025,final,1,0.843634307384491,mlp,test
+68,Artificial Intelligence,3,2025,final,0,0.06786704808473587,mlp,test
+69,Artificial Intelligence,4,2025,final,0,0.735037088394165,mlp,test
+70,Artificial Intelligence,5,2025,final,0,0.2561632990837097,mlp,test
+71,Artificial Intelligence,6,2025,final,1,0.7663333415985107,mlp,test
+72,Artificial Intelligence,7,2025,final,0,0.0997096598148346,mlp,test
+73,Artificial Intelligence,8,2025,final,0,0.3208957612514496,mlp,test
+74,Artificial Intelligence,9,2025,final,0,0.17033575475215912,mlp,test
+75,Artificial Intelligence,0,2025,mid,0,0.14819251000881195,mlp,test
+76,Artificial Intelligence,1,2025,mid,1,0.6691010594367981,mlp,test
+77,Artificial Intelligence,2,2025,mid,1,0.8152462244033813,mlp,test
+78,Artificial Intelligence,3,2025,mid,0,0.044542863965034485,mlp,test
+79,Artificial Intelligence,4,2025,mid,1,0.6064895391464233,mlp,test
+80,Artificial Intelligence,5,2025,mid,0,0.10976386815309525,mlp,test
+81,Artificial Intelligence,6,2025,mid,1,0.7601696848869324,mlp,test
+82,Artificial Intelligence,7,2025,mid,0,0.14626376330852509,mlp,test
+83,Artificial Intelligence,8,2025,mid,0,0.1861184984445572,mlp,test
+84,Artificial Intelligence,9,2025,mid,0,0.2143111526966095,mlp,test
+85,Artificial Intelligence,0,2026,mid,0,0.12400214374065399,mlp,test
+86,Artificial Intelligence,1,2026,mid,0,0.6754879355430603,mlp,test
+87,Artificial Intelligence,2,2026,mid,1,0.8185921311378479,mlp,test
+88,Artificial Intelligence,3,2026,mid,0,0.03899012878537178,mlp,test
+89,Artificial Intelligence,4,2026,mid,1,0.5987913608551025,mlp,test
+90,Artificial Intelligence,5,2026,mid,0,0.09413933008909225,mlp,test
+91,Artificial Intelligence,6,2026,mid,1,0.7661141753196716,mlp,test
+92,Artificial Intelligence,7,2026,mid,0,0.12234307825565338,mlp,test
+93,Artificial Intelligence,8,2026,mid,0,0.1247803270816803,mlp,test
+94,Artificial Intelligence,9,2026,mid,0,0.12150153517723083,mlp,test
+95,Artificial Intelligence,0,2026,quiz,0,0.17192725837230682,mlp,test
+96,Artificial Intelligence,1,2026,quiz,1,0.6599345803260803,mlp,test
+97,Artificial Intelligence,2,2026,quiz,1,0.814729630947113,mlp,test
+98,Artificial Intelligence,3,2026,quiz,0,0.0744992271065712,mlp,test
+99,Artificial Intelligence,4,2026,quiz,1,0.6711223721504211,mlp,test
+100,Artificial Intelligence,5,2026,quiz,0,0.17510737478733063,mlp,test
+101,Artificial Intelligence,6,2026,quiz,0,0.6565523743629456,mlp,test
+102,Artificial Intelligence,7,2026,quiz,1,0.22011291980743408,mlp,test
+103,Artificial Intelligence,8,2026,quiz,0,0.1633760929107666,mlp,test
+104,Artificial Intelligence,9,2026,quiz,0,0.1610749065876007,mlp,test
+105,Cloud Computing,0,2025,final,1,0.2991791069507599,mlp,test
+106,Cloud Computing,1,2025,final,1,0.7758709192276001,mlp,test
+107,Cloud Computing,2,2025,final,0,0.2563706040382385,mlp,test
+108,Cloud Computing,3,2025,final,0,0.40488824248313904,mlp,test
+109,Cloud Computing,4,2025,final,0,0.20739001035690308,mlp,test
+110,Cloud Computing,5,2025,final,1,0.8669517636299133,mlp,test
+111,Cloud Computing,6,2025,final,1,0.4290192425251007,mlp,test
+112,Cloud Computing,7,2025,final,0,0.40488824248313904,mlp,test
+113,Cloud Computing,8,2025,final,0,0.2563706040382385,mlp,test
+114,Cloud Computing,9,2025,final,0,0.2151186317205429,mlp,test
+115,Cloud Computing,0,2025,mid,0,0.42746007442474365,mlp,test
+116,Cloud Computing,1,2025,mid,1,0.7685191631317139,mlp,test
+117,Cloud Computing,2,2025,mid,0,0.14051374793052673,mlp,test
+118,Cloud Computing,3,2025,mid,0,0.3243200480937958,mlp,test
+119,Cloud Computing,4,2025,mid,0,0.23435182869434357,mlp,test
+120,Cloud Computing,5,2025,mid,1,0.8836302757263184,mlp,test
+121,Cloud Computing,6,2025,mid,0,0.6574925184249878,mlp,test
+122,Cloud Computing,7,2025,mid,0,0.3243200480937958,mlp,test
+123,Cloud Computing,8,2025,mid,0,0.14051374793052673,mlp,test
+124,Cloud Computing,9,2025,mid,0,0.17248333990573883,mlp,test
+125,Compiler Construction,0,2024,final,0,0.7397133708000183,mlp,test
+126,Compiler Construction,1,2024,final,1,0.5529459714889526,mlp,test
+127,Compiler Construction,2,2024,final,0,0.7175183892250061,mlp,test
+128,Compiler Construction,3,2024,final,0,0.19047413766384125,mlp,test
+129,Compiler Construction,4,2024,final,0,0.7992032170295715,mlp,test
+130,Compiler Construction,0,2024,mid,1,0.5231708288192749,mlp,test
+131,Compiler Construction,1,2024,mid,0,0.6569949984550476,mlp,test
+132,Compiler Construction,2,2024,mid,0,0.6646148562431335,mlp,test
+133,Compiler Construction,3,2024,mid,0,0.325113445520401,mlp,test
+134,Compiler Construction,4,2024,mid,1,0.7058036923408508,mlp,test
+135,Compiler Construction,0,2024,quiz,1,0.6454107761383057,mlp,test
+136,Compiler Construction,1,2024,quiz,1,0.6454107761383057,mlp,test
+137,Compiler Construction,2,2024,quiz,1,0.7024016976356506,mlp,test
+138,Compiler Construction,3,2024,quiz,0,0.3989090919494629,mlp,test
+139,Compiler Construction,4,2024,quiz,1,0.7523917555809021,mlp,test
+140,Compiler Construction,0,2025,mid,1,0.524262547492981,mlp,test
+141,Compiler Construction,1,2025,mid,0,0.6444200873374939,mlp,test
+142,Compiler Construction,2,2025,mid,1,0.6337084174156189,mlp,test
+143,Compiler Construction,3,2025,mid,0,0.23828783631324768,mlp,test
+144,Compiler Construction,4,2025,mid,1,0.7562296986579895,mlp,test
+145,Compiler Construction,0,2026,mid,1,0.5410095453262329,mlp,test
+146,Compiler Construction,1,2026,mid,0,0.5651888847351074,mlp,test
+147,Compiler Construction,2,2026,mid,0,0.6408030390739441,mlp,test
+148,Compiler Construction,3,2026,mid,0,0.1968029886484146,mlp,test
+149,Compiler Construction,4,2026,mid,1,0.7608448266983032,mlp,test
+150,Computer Networks,0,2024,final,1,0.4350399374961853,mlp,test
+151,Computer Networks,1,2024,final,1,0.4880629777908325,mlp,test
+152,Computer Networks,2,2024,final,1,0.5811761617660522,mlp,test
+153,Computer Networks,3,2024,final,0,0.04096145182847977,mlp,test
+154,Computer Networks,4,2024,final,0,0.13352298736572266,mlp,test
+155,Computer Networks,5,2024,final,1,0.8233616948127747,mlp,test
+156,Computer Networks,6,2024,final,0,0.4691615104675293,mlp,test
+157,Computer Networks,7,2024,final,1,0.5537059307098389,mlp,test
+158,Computer Networks,8,2024,final,0,0.19920404255390167,mlp,test
+159,Computer Networks,0,2024,mid,0,0.1476934552192688,mlp,test
+160,Computer Networks,1,2024,mid,1,0.5769030451774597,mlp,test
+161,Computer Networks,2,2024,mid,1,0.5532800555229187,mlp,test
+162,Computer Networks,3,2024,mid,0,0.034156084060668945,mlp,test
+163,Computer Networks,4,2024,mid,0,0.1521296352148056,mlp,test
+164,Computer Networks,5,2024,mid,1,0.8205451369285583,mlp,test
+165,Computer Networks,6,2024,mid,1,0.5975310206413269,mlp,test
+166,Computer Networks,7,2024,mid,0,0.5334205627441406,mlp,test
+167,Computer Networks,8,2024,mid,1,0.3643035888671875,mlp,test
+168,Computer Networks,0,2024,quiz,1,0.352245569229126,mlp,test
+169,Computer Networks,1,2024,quiz,1,0.4913245439529419,mlp,test
+170,Computer Networks,2,2024,quiz,1,0.5040563941001892,mlp,test
+171,Computer Networks,3,2024,quiz,0,0.06004796177148819,mlp,test
+172,Computer Networks,4,2024,quiz,0,0.15435248613357544,mlp,test
+173,Computer Networks,5,2024,quiz,1,0.7792688012123108,mlp,test
+174,Computer Networks,6,2024,quiz,1,0.551936149597168,mlp,test
+175,Computer Networks,7,2024,quiz,1,0.5528702735900879,mlp,test
+176,Computer Networks,8,2024,quiz,0,0.2316846251487732,mlp,test
+177,Computer Networks,0,2025,final,1,0.4680938124656677,mlp,test
+178,Computer Networks,1,2025,final,1,0.5082145929336548,mlp,test
+179,Computer Networks,2,2025,final,1,0.5537662506103516,mlp,test
+180,Computer Networks,3,2025,final,0,0.023501046001911163,mlp,test
+181,Computer Networks,4,2025,final,0,0.04827931523323059,mlp,test
+182,Computer Networks,5,2025,final,1,0.8592390418052673,mlp,test
+183,Computer Networks,6,2025,final,1,0.40124985575675964,mlp,test
+184,Computer Networks,7,2025,final,0,0.47522687911987305,mlp,test
+185,Computer Networks,8,2025,final,0,0.13244503736495972,mlp,test
+186,Computer Networks,0,2025,mid,0,0.13878074288368225,mlp,test
+187,Computer Networks,1,2025,mid,1,0.5391277074813843,mlp,test
+188,Computer Networks,2,2025,mid,1,0.550662100315094,mlp,test
+189,Computer Networks,3,2025,mid,0,0.020762808620929718,mlp,test
+190,Computer Networks,4,2025,mid,0,0.05523045361042023,mlp,test
+191,Computer Networks,5,2025,mid,1,0.8628026843070984,mlp,test
+192,Computer Networks,6,2025,mid,1,0.5579898953437805,mlp,test
+193,Computer Networks,7,2025,mid,1,0.41275137662887573,mlp,test
+194,Computer Networks,8,2025,mid,1,0.26444920897483826,mlp,test
+195,Computer Networks,0,2025,quiz,1,0.31388527154922485,mlp,test
+196,Computer Networks,1,2025,quiz,1,0.4637642800807953,mlp,test
+197,Computer Networks,2,2025,quiz,1,0.4776272773742676,mlp,test
+198,Computer Networks,3,2025,quiz,0,0.03660113736987114,mlp,test
+199,Computer Networks,4,2025,quiz,1,0.06768617779016495,mlp,test
+200,Computer Networks,5,2025,quiz,1,0.8377423882484436,mlp,test
+201,Computer Networks,6,2025,quiz,1,0.47439685463905334,mlp,test
+202,Computer Networks,7,2025,quiz,1,0.43537378311157227,mlp,test
+203,Computer Networks,8,2025,quiz,1,0.14689673483371735,mlp,test
+204,Computer Networks,0,2026,final,1,0.37295037508010864,mlp,test
+205,Computer Networks,1,2026,final,0,0.5781940221786499,mlp,test
+206,Computer Networks,2,2026,final,1,0.49454569816589355,mlp,test
+207,Computer Networks,3,2026,final,0,0.012484507635235786,mlp,test
+208,Computer Networks,4,2026,final,0,0.06580985337495804,mlp,test
+209,Computer Networks,5,2026,final,1,0.9174672961235046,mlp,test
+210,Computer Networks,6,2026,final,1,0.35122084617614746,mlp,test
+211,Computer Networks,7,2026,final,1,0.36404022574424744,mlp,test
+212,Computer Networks,8,2026,final,1,0.09305378049612045,mlp,test
+213,Computer Networks,0,2026,mid,0,0.13034524023532867,mlp,test
+214,Computer Networks,1,2026,mid,1,0.632583498954773,mlp,test
+215,Computer Networks,2,2026,mid,1,0.4899740219116211,mlp,test
+216,Computer Networks,3,2026,mid,0,0.012495999224483967,mlp,test
+217,Computer Networks,4,2026,mid,0,0.06991509348154068,mlp,test
+218,Computer Networks,5,2026,mid,1,0.9223835468292236,mlp,test
+219,Computer Networks,6,2026,mid,1,0.4922909438610077,mlp,test
+220,Computer Networks,7,2026,mid,1,0.3876766562461853,mlp,test
+221,Computer Networks,8,2026,mid,0,0.1719723343849182,mlp,test
+222,Computer Networks,0,2026,quiz,1,0.2640940845012665,mlp,test
+223,Computer Networks,1,2026,quiz,1,0.5129554271697998,mlp,test
+224,Computer Networks,2,2026,quiz,1,0.4092075824737549,mlp,test
+225,Computer Networks,3,2026,quiz,1,0.020221134647727013,mlp,test
+226,Computer Networks,4,2026,quiz,1,0.09049636870622635,mlp,test
+227,Computer Networks,5,2026,quiz,1,0.903926432132721,mlp,test
+228,Computer Networks,6,2026,quiz,1,0.4062282145023346,mlp,test
+229,Computer Networks,7,2026,quiz,1,0.3560325503349304,mlp,test
+230,Computer Networks,8,2026,quiz,0,0.11845190078020096,mlp,test
+231,Computer Networks Lab,0,2024,final,1,0.46824222803115845,mlp,test
+232,Computer Networks Lab,1,2024,final,0,0.2078486829996109,mlp,test
+233,Computer Networks Lab,2,2024,final,0,0.24505625665187836,mlp,test
+234,Computer Networks Lab,3,2024,final,0,0.5292389392852783,mlp,test
+235,Computer Networks Lab,4,2024,final,1,0.23571480810642242,mlp,test
+236,Computer Networks Lab,5,2024,final,0,0.27599403262138367,mlp,test
+237,Computer Networks Lab,6,2024,final,0,0.2728966772556305,mlp,test
+238,Computer Networks Lab,7,2024,final,0,0.21265563368797302,mlp,test
+239,Computer Networks Lab,8,2024,final,0,0.1885204166173935,mlp,test
+240,Computer Networks Lab,9,2024,final,0,0.2767072319984436,mlp,test
+241,Computer Networks Lab,0,2024,mid,1,0.5228877663612366,mlp,test
+242,Computer Networks Lab,1,2024,mid,0,0.1668444275856018,mlp,test
+243,Computer Networks Lab,2,2024,mid,1,0.3933359384536743,mlp,test
+244,Computer Networks Lab,3,2024,mid,1,0.44949549436569214,mlp,test
+245,Computer Networks Lab,4,2024,mid,0,0.13499347865581512,mlp,test
+246,Computer Networks Lab,5,2024,mid,0,0.2590368390083313,mlp,test
+247,Computer Networks Lab,6,2024,mid,0,0.34372010827064514,mlp,test
+248,Computer Networks Lab,7,2024,mid,0,0.12095379084348679,mlp,test
+249,Computer Networks Lab,8,2024,mid,0,0.1502363532781601,mlp,test
+250,Computer Networks Lab,9,2024,mid,0,0.1668444275856018,mlp,test
+251,Computer Networks Lab,0,2024,quiz,1,0.4659895598888397,mlp,test
+252,Computer Networks Lab,1,2024,quiz,0,0.38731807470321655,mlp,test
+253,Computer Networks Lab,2,2024,quiz,1,0.433674693107605,mlp,test
+254,Computer Networks Lab,3,2024,quiz,1,0.700054943561554,mlp,test
+255,Computer Networks Lab,4,2024,quiz,1,0.3314245939254761,mlp,test
+256,Computer Networks Lab,5,2024,quiz,0,0.4551003873348236,mlp,test
+257,Computer Networks Lab,6,2024,quiz,1,0.47700998187065125,mlp,test
+258,Computer Networks Lab,7,2024,quiz,0,0.2508063316345215,mlp,test
+259,Computer Networks Lab,8,2024,quiz,0,0.36210933327674866,mlp,test
+260,Computer Networks Lab,9,2024,quiz,0,0.37555989623069763,mlp,test
+261,Computer Networks Lab,0,2025,final,1,0.5873116850852966,mlp,test
+262,Computer Networks Lab,1,2025,final,0,0.16682898998260498,mlp,test
+263,Computer Networks Lab,2,2025,final,0,0.30880266427993774,mlp,test
+264,Computer Networks Lab,3,2025,final,1,0.5685243606567383,mlp,test
+265,Computer Networks Lab,4,2025,final,1,0.34389662742614746,mlp,test
+266,Computer Networks Lab,5,2025,final,0,0.23343037068843842,mlp,test
+267,Computer Networks Lab,6,2025,final,0,0.30522421002388,mlp,test
+268,Computer Networks Lab,7,2025,final,0,0.16622889041900635,mlp,test
+269,Computer Networks Lab,8,2025,final,0,0.1502479761838913,mlp,test
+270,Computer Networks Lab,9,2025,final,0,0.2244788557291031,mlp,test
+271,Computer Networks Lab,0,2025,mid,1,0.6262876987457275,mlp,test
+272,Computer Networks Lab,1,2025,mid,0,0.12799042463302612,mlp,test
+273,Computer Networks Lab,2,2025,mid,0,0.5964133143424988,mlp,test
+274,Computer Networks Lab,3,2025,mid,0,0.612881064414978,mlp,test
+275,Computer Networks Lab,4,2025,mid,0,0.1855340301990509,mlp,test
+276,Computer Networks Lab,5,2025,mid,1,0.2020052820444107,mlp,test
+277,Computer Networks Lab,6,2025,mid,0,0.37909576296806335,mlp,test
+278,Computer Networks Lab,7,2025,mid,0,0.0935722291469574,mlp,test
+279,Computer Networks Lab,8,2025,mid,0,0.11540155112743378,mlp,test
+280,Computer Networks Lab,9,2025,mid,0,0.12799042463302612,mlp,test
+281,Computer Networks Lab,0,2026,final,1,0.6389428377151489,mlp,test
+282,Computer Networks Lab,1,2026,final,1,0.14692610502243042,mlp,test
+283,Computer Networks Lab,2,2026,final,1,0.24090225994586945,mlp,test
+284,Computer Networks Lab,3,2026,final,1,0.6334773898124695,mlp,test
+285,Computer Networks Lab,4,2026,final,1,0.40505045652389526,mlp,test
+286,Computer Networks Lab,5,2026,final,1,0.26897677779197693,mlp,test
+287,Computer Networks Lab,6,2026,final,0,0.23625388741493225,mlp,test
+288,Computer Networks Lab,7,2026,final,0,0.14377188682556152,mlp,test
+289,Computer Networks Lab,8,2026,final,0,0.13249289989471436,mlp,test
+290,Computer Networks Lab,9,2026,final,0,0.19404540956020355,mlp,test
+291,Computer Organization and Assembly Language,0,2024,final,0,0.3080945611000061,mlp,test
+292,Computer Organization and Assembly Language,1,2024,final,0,0.3132971525192261,mlp,test
+293,Computer Organization and Assembly Language,2,2024,final,1,0.4697428047657013,mlp,test
+294,Computer Organization and Assembly Language,3,2024,final,0,0.38340631127357483,mlp,test
+295,Computer Organization and Assembly Language,4,2024,final,0,0.07669884711503983,mlp,test
+296,Computer Organization and Assembly Language,5,2024,final,1,0.6965848207473755,mlp,test
+297,Computer Organization and Assembly Language,6,2024,final,0,0.31018394231796265,mlp,test
+298,Computer Organization and Assembly Language,7,2024,final,1,0.7340205907821655,mlp,test
+299,Computer Organization and Assembly Language,8,2024,final,0,0.08659860491752625,mlp,test
+300,Computer Organization and Assembly Language,9,2024,final,0,0.6835559606552124,mlp,test
+301,Computer Organization and Assembly Language,0,2024,mid,0,0.16522572934627533,mlp,test
+302,Computer Organization and Assembly Language,1,2024,mid,0,0.23884230852127075,mlp,test
+303,Computer Organization and Assembly Language,2,2024,mid,1,0.21645256876945496,mlp,test
+304,Computer Organization and Assembly Language,3,2024,mid,1,0.30038318037986755,mlp,test
+305,Computer Organization and Assembly Language,4,2024,mid,0,0.06358318775892258,mlp,test
+306,Computer Organization and Assembly Language,5,2024,mid,0,0.4852469563484192,mlp,test
+307,Computer Organization and Assembly Language,6,2024,mid,1,0.44430118799209595,mlp,test
+308,Computer Organization and Assembly Language,7,2024,mid,1,0.5842002034187317,mlp,test
+309,Computer Organization and Assembly Language,8,2024,mid,0,0.06368567049503326,mlp,test
+310,Computer Organization and Assembly Language,9,2024,mid,1,0.6236743927001953,mlp,test
+311,Computer Organization and Assembly Language,0,2025,final,0,0.2267794907093048,mlp,test
+312,Computer Organization and Assembly Language,1,2025,final,0,0.24414564669132233,mlp,test
+313,Computer Organization and Assembly Language,2,2025,final,0,0.6025183796882629,mlp,test
+314,Computer Organization and Assembly Language,3,2025,final,0,0.37516897916793823,mlp,test
+315,Computer Organization and Assembly Language,4,2025,final,0,0.06508253514766693,mlp,test
+316,Computer Organization and Assembly Language,5,2025,final,1,0.6782636046409607,mlp,test
+317,Computer Organization and Assembly Language,6,2025,final,0,0.31119266152381897,mlp,test
+318,Computer Organization and Assembly Language,7,2025,final,1,0.7603852152824402,mlp,test
+319,Computer Organization and Assembly Language,8,2025,final,0,0.07249311357736588,mlp,test
+320,Computer Organization and Assembly Language,9,2025,final,1,0.6873605251312256,mlp,test
+321,Computer Organization and Assembly Language,0,2025,mid,0,0.11988458037376404,mlp,test
+322,Computer Organization and Assembly Language,1,2025,mid,0,0.18634569644927979,mlp,test
+323,Computer Organization and Assembly Language,2,2025,mid,1,0.4050385355949402,mlp,test
+324,Computer Organization and Assembly Language,3,2025,mid,0,0.3203987181186676,mlp,test
+325,Computer Organization and Assembly Language,4,2025,mid,0,0.054404787719249725,mlp,test
+326,Computer Organization and Assembly Language,5,2025,mid,1,0.4479285180568695,mlp,test
+327,Computer Organization and Assembly Language,6,2025,mid,1,0.4603579640388489,mlp,test
+328,Computer Organization and Assembly Language,7,2025,mid,1,0.633520781993866,mlp,test
+329,Computer Organization and Assembly Language,8,2025,mid,0,0.054493363946676254,mlp,test
+330,Computer Organization and Assembly Language,9,2025,mid,0,0.6575644016265869,mlp,test
+331,DLD,0,2024,mid,1,0.6709420084953308,mlp,test
+332,DLD,1,2024,mid,0,0.4497138261795044,mlp,test
+333,DLD,2,2024,mid,1,0.2228376418352127,mlp,test
+334,DLD,3,2024,mid,0,0.19817298650741577,mlp,test
+335,DLD,4,2024,mid,1,0.7281934022903442,mlp,test
+336,DLD,5,2024,mid,0,0.1740371435880661,mlp,test
+337,DLD,6,2024,mid,1,0.6734840273857117,mlp,test
+338,DLD,7,2024,mid,0,0.09781293570995331,mlp,test
+339,DLD,8,2024,mid,0,0.1128218024969101,mlp,test
+340,DLD,0,2024,quiz,0,0.5431605577468872,mlp,test
+341,DLD,1,2024,quiz,1,0.4112238883972168,mlp,test
+342,DLD,2,2024,quiz,0,0.4503386616706848,mlp,test
+343,DLD,3,2024,quiz,0,0.42608124017715454,mlp,test
+344,DLD,4,2024,quiz,1,0.6372879147529602,mlp,test
+345,DLD,5,2024,quiz,0,0.4493156373500824,mlp,test
+346,DLD,6,2024,quiz,1,0.6378544569015503,mlp,test
+347,DLD,7,2024,quiz,0,0.2344241887331009,mlp,test
+348,DLD,8,2024,quiz,0,0.34349164366722107,mlp,test
+349,DLD,0,2025,final,0,0.39092084765434265,mlp,test
+350,DLD,1,2025,final,0,0.7236440777778625,mlp,test
+351,DLD,2,2025,final,1,0.6494215726852417,mlp,test
+352,DLD,3,2025,final,0,0.36577939987182617,mlp,test
+353,DLD,4,2025,final,1,0.7551265358924866,mlp,test
+354,DLD,5,2025,final,0,0.21743053197860718,mlp,test
+355,DLD,6,2025,final,0,0.7838733196258545,mlp,test
+356,DLD,7,2025,final,0,0.1314791887998581,mlp,test
+357,DLD,8,2025,final,0,0.11514376103878021,mlp,test
+358,DLD,0,2025,mid,1,0.6327655911445618,mlp,test
+359,DLD,1,2025,mid,1,0.3314347267150879,mlp,test
+360,DLD,2,2025,mid,0,0.3023392856121063,mlp,test
+361,DLD,3,2025,mid,0,0.1290513575077057,mlp,test
+362,DLD,4,2025,mid,1,0.7408720254898071,mlp,test
+363,DLD,5,2025,mid,0,0.1366138458251953,mlp,test
+364,DLD,6,2025,mid,0,0.6816810965538025,mlp,test
+365,DLD,7,2025,mid,0,0.07584885507822037,mlp,test
+366,DLD,8,2025,mid,0,0.08871329575777054,mlp,test
+367,DLD,0,2026,final,0,0.38416898250579834,mlp,test
+368,DLD,1,2026,final,0,0.6888085603713989,mlp,test
+369,DLD,2,2026,final,0,0.6557243466377258,mlp,test
+370,DLD,3,2026,final,0,0.26672494411468506,mlp,test
+371,DLD,4,2026,final,0,0.7731247544288635,mlp,test
+372,DLD,5,2026,final,0,0.1792520135641098,mlp,test
+373,DLD,6,2026,final,1,0.7306713461875916,mlp,test
+374,DLD,7,2026,final,0,0.10863718390464783,mlp,test
+375,DLD,8,2026,final,0,0.09739981591701508,mlp,test
+376,DLD,0,2026,mid,0,0.6206031441688538,mlp,test
+377,DLD,1,2026,mid,0,0.3269316554069519,mlp,test
+378,DLD,2,2026,mid,0,0.2579498291015625,mlp,test
+379,DLD,3,2026,mid,0,0.10040442645549774,mlp,test
+380,DLD,4,2026,mid,0,0.7382208108901978,mlp,test
+381,DLD,5,2026,mid,0,0.11605723947286606,mlp,test
+382,DLD,6,2026,mid,1,0.5891124606132507,mlp,test
+383,DLD,7,2026,mid,0,0.0639755129814148,mlp,test
+384,DLD,8,2026,mid,0,0.07605302333831787,mlp,test
+385,Data Science,0,2024,mid,0,0.30735546350479126,mlp,test
+386,Data Science,1,2024,mid,0,0.30735546350479126,mlp,test
+387,Data Science,2,2024,mid,0,0.5619804263114929,mlp,test
+388,Data Science,3,2024,mid,0,0.4869018495082855,mlp,test
+389,Data Science,4,2024,mid,1,0.8339434266090393,mlp,test
+390,Data Science,5,2024,mid,0,0.2133641391992569,mlp,test
+391,Data Science,6,2024,mid,0,0.21408529579639435,mlp,test
+392,Data Science,7,2024,mid,0,0.18708568811416626,mlp,test
+393,Data Science,8,2024,mid,0,0.4597145915031433,mlp,test
+394,Data Science,0,2024,quiz,0,0.4246728718280792,mlp,test
+395,Data Science,1,2024,quiz,0,0.4246728718280792,mlp,test
+396,Data Science,2,2024,quiz,0,0.6016106605529785,mlp,test
+397,Data Science,3,2024,quiz,0,0.6085845232009888,mlp,test
+398,Data Science,4,2024,quiz,1,0.8256701231002808,mlp,test
+399,Data Science,5,2024,quiz,0,0.36921992897987366,mlp,test
+400,Data Science,6,2024,quiz,0,0.36887457966804504,mlp,test
+401,Data Science,7,2024,quiz,0,0.36921992897987366,mlp,test
+402,Data Science,8,2024,quiz,0,0.48723167181015015,mlp,test
+403,Data Science,0,2025,mid,0,0.24681128561496735,mlp,test
+404,Data Science,1,2025,mid,0,0.24681128561496735,mlp,test
+405,Data Science,2,2025,mid,0,0.40536871552467346,mlp,test
+406,Data Science,3,2025,mid,0,0.37504294514656067,mlp,test
+407,Data Science,4,2025,mid,1,0.8438075184822083,mlp,test
+408,Data Science,5,2025,mid,0,0.1690572053194046,mlp,test
+409,Data Science,6,2025,mid,0,0.16509370505809784,mlp,test
+410,Data Science,7,2025,mid,0,0.15031880140304565,mlp,test
+411,Data Science,8,2025,mid,0,0.31713300943374634,mlp,test
+412,Data Science,0,2026,final,0,0.31793439388275146,mlp,test
+413,Data Science,1,2026,final,0,0.31793439388275146,mlp,test
+414,Data Science,2,2026,final,0,0.4506758451461792,mlp,test
+415,Data Science,3,2026,final,0,0.5092716217041016,mlp,test
+416,Data Science,4,2026,final,1,0.8454593420028687,mlp,test
+417,Data Science,5,2026,final,0,0.21853452920913696,mlp,test
+418,Data Science,6,2026,final,0,0.21447491645812988,mlp,test
+419,Data Science,7,2026,final,0,0.24891285598278046,mlp,test
+420,Data Science,8,2026,final,0,0.2677971422672272,mlp,test
+421,Data Science,0,2026,mid,0,0.21098902821540833,mlp,test
+422,Data Science,1,2026,mid,0,0.21098902821540833,mlp,test
+423,Data Science,2,2026,mid,0,0.32877564430236816,mlp,test
+424,Data Science,3,2026,mid,0,0.3024270534515381,mlp,test
+425,Data Science,4,2026,mid,1,0.8497792482376099,mlp,test
+426,Data Science,5,2026,mid,0,0.14371554553508759,mlp,test
+427,Data Science,6,2026,mid,0,0.14024589955806732,mlp,test
+428,Data Science,7,2026,mid,0,0.1294507086277008,mlp,test
+429,Data Science,8,2026,mid,0,0.24186573922634125,mlp,test
+430,Data Structures,0,2024,final,0,0.179764986038208,mlp,test
+431,Data Structures,1,2024,final,0,0.41837093234062195,mlp,test
+432,Data Structures,2,2024,final,1,0.39677825570106506,mlp,test
+433,Data Structures,3,2024,final,1,0.7539879679679871,mlp,test
+434,Data Structures,4,2024,final,0,0.1633787900209427,mlp,test
+435,Data Structures,5,2024,final,1,0.5313878655433655,mlp,test
+436,Data Structures,6,2024,final,0,0.1689070761203766,mlp,test
+437,Data Structures,7,2024,final,0,0.10454802960157394,mlp,test
+438,Data Structures,0,2024,mid,0,0.40447336435317993,mlp,test
+439,Data Structures,1,2024,mid,0,0.6732871532440186,mlp,test
+440,Data Structures,2,2024,mid,1,0.3069528341293335,mlp,test
+441,Data Structures,3,2024,mid,1,0.7676798105239868,mlp,test
+442,Data Structures,4,2024,mid,0,0.07877767831087112,mlp,test
+443,Data Structures,5,2024,mid,1,0.5330141186714172,mlp,test
+444,Data Structures,6,2024,mid,0,0.14478440582752228,mlp,test
+445,Data Structures,7,2024,mid,0,0.07877767831087112,mlp,test
+446,Data Structures,0,2024,quiz,0,0.32705065608024597,mlp,test
+447,Data Structures,1,2024,quiz,1,0.5783365368843079,mlp,test
+448,Data Structures,2,2024,quiz,0,0.41333913803100586,mlp,test
+449,Data Structures,3,2024,quiz,1,0.7852428555488586,mlp,test
+450,Data Structures,4,2024,quiz,0,0.17963889241218567,mlp,test
+451,Data Structures,5,2024,quiz,1,0.4979764223098755,mlp,test
+452,Data Structures,6,2024,quiz,0,0.2916179597377777,mlp,test
+453,Data Structures,7,2024,quiz,0,0.23299457132816315,mlp,test
+454,Data Structures,0,2025,final,0,0.09975718706846237,mlp,test
+455,Data Structures,1,2025,final,0,0.37452828884124756,mlp,test
+456,Data Structures,2,2025,final,1,0.47750401496887207,mlp,test
+457,Data Structures,3,2025,final,1,0.8025067448616028,mlp,test
+458,Data Structures,4,2025,final,0,0.1141834408044815,mlp,test
+459,Data Structures,5,2025,final,0,0.590146541595459,mlp,test
+460,Data Structures,6,2025,final,0,0.11583050340414047,mlp,test
+461,Data Structures,7,2025,final,0,0.07952937483787537,mlp,test
+462,Data Structures,0,2025,mid,0,0.1630556732416153,mlp,test
+463,Data Structures,1,2025,mid,0,0.5854259729385376,mlp,test
+464,Data Structures,2,2025,mid,0,0.3771308958530426,mlp,test
+465,Data Structures,3,2025,mid,1,0.78452068567276,mlp,test
+466,Data Structures,4,2025,mid,0,0.0595160536468029,mlp,test
+467,Data Structures,5,2025,mid,1,0.577507495880127,mlp,test
+468,Data Structures,6,2025,mid,0,0.09758288413286209,mlp,test
+469,Data Structures,7,2025,mid,0,0.0595160536468029,mlp,test
+470,Data Structures,0,2025,quiz,0,0.19500812888145447,mlp,test
+471,Data Structures,1,2025,quiz,1,0.5887056589126587,mlp,test
+472,Data Structures,2,2025,quiz,0,0.44960182905197144,mlp,test
+473,Data Structures,3,2025,quiz,1,0.8090388178825378,mlp,test
+474,Data Structures,4,2025,quiz,0,0.13944916427135468,mlp,test
+475,Data Structures,5,2025,quiz,0,0.5582464337348938,mlp,test
+476,Data Structures,6,2025,quiz,0,0.21143761277198792,mlp,test
+477,Data Structures,7,2025,quiz,0,0.176104336977005,mlp,test
+478,Data Warehousing and Data Mining,0,2024,final,1,0.6756023168563843,mlp,test
+479,Data Warehousing and Data Mining,1,2024,final,0,0.38737931847572327,mlp,test
+480,Data Warehousing and Data Mining,2,2024,final,1,0.7992737293243408,mlp,test
+481,Data Warehousing and Data Mining,3,2024,final,1,0.45488178730010986,mlp,test
+482,Data Warehousing and Data Mining,0,2024,mid,1,0.6141137480735779,mlp,test
+483,Data Warehousing and Data Mining,1,2024,mid,0,0.270081102848053,mlp,test
+484,Data Warehousing and Data Mining,2,2024,mid,1,0.7902007102966309,mlp,test
+485,Data Warehousing and Data Mining,3,2024,mid,0,0.5860434770584106,mlp,test
+486,Data Warehousing and Data Mining,0,2026,mid,0,0.6923772096633911,mlp,test
+487,Data Warehousing and Data Mining,1,2026,mid,0,0.2064504325389862,mlp,test
+488,Data Warehousing and Data Mining,2,2026,mid,1,0.8399999141693115,mlp,test
+489,Data Warehousing and Data Mining,3,2026,mid,0,0.5388704538345337,mlp,test
+490,Data Warehousing and Data Mining,0,2026,quiz,0,0.727597713470459,mlp,test
+491,Data Warehousing and Data Mining,1,2026,quiz,0,0.36232975125312805,mlp,test
+492,Data Warehousing and Data Mining,2,2026,quiz,1,0.8370293974876404,mlp,test
+493,Data Warehousing and Data Mining,3,2026,quiz,0,0.6270085573196411,mlp,test
+494,Database Systems,0,2024,final,0,0.12920834124088287,mlp,test
+495,Database Systems,1,2024,final,1,0.6021762490272522,mlp,test
+496,Database Systems,2,2024,final,1,0.7383179664611816,mlp,test
+497,Database Systems,3,2024,final,1,0.5622140765190125,mlp,test
+498,Database Systems,4,2024,final,1,0.514504611492157,mlp,test
+499,Database Systems,5,2024,final,1,0.6991161704063416,mlp,test
+500,Database Systems,6,2024,final,0,0.2262580841779709,mlp,test
+501,Database Systems,7,2024,final,0,0.5891045331954956,mlp,test
+502,Database Systems,8,2024,final,1,0.7603451013565063,mlp,test
+503,Database Systems,9,2024,final,0,0.6587435007095337,mlp,test
+504,Database Systems,0,2024,mid,0,0.0813181921839714,mlp,test
+505,Database Systems,1,2024,mid,0,0.21271270513534546,mlp,test
+506,Database Systems,2,2024,mid,0,0.6447433233261108,mlp,test
+507,Database Systems,3,2024,mid,1,0.3442593216896057,mlp,test
+508,Database Systems,4,2024,mid,0,0.6268337965011597,mlp,test
+509,Database Systems,5,2024,mid,1,0.5847917795181274,mlp,test
+510,Database Systems,6,2024,mid,0,0.0740341767668724,mlp,test
+511,Database Systems,7,2024,mid,0,0.2619250416755676,mlp,test
+512,Database Systems,8,2024,mid,1,0.6396737098693848,mlp,test
+513,Database Systems,9,2024,mid,0,0.4506984055042267,mlp,test
+514,Database Systems,0,2024,quiz,0,0.133408322930336,mlp,test
+515,Database Systems,1,2024,quiz,0,0.32162341475486755,mlp,test
+516,Database Systems,2,2024,quiz,1,0.7173014283180237,mlp,test
+517,Database Systems,3,2024,quiz,0,0.37516412138938904,mlp,test
+518,Database Systems,4,2024,quiz,0,0.5224052667617798,mlp,test
+519,Database Systems,5,2024,quiz,0,0.5545957088470459,mlp,test
+520,Database Systems,6,2024,quiz,0,0.1519903838634491,mlp,test
+521,Database Systems,7,2024,quiz,0,0.42646029591560364,mlp,test
+522,Database Systems,8,2024,quiz,1,0.6461490392684937,mlp,test
+523,Database Systems,9,2024,quiz,0,0.46804162859916687,mlp,test
+524,Database Systems,0,2025,final,0,0.10361462086439133,mlp,test
+525,Database Systems,1,2025,final,1,0.575667679309845,mlp,test
+526,Database Systems,2,2025,final,1,0.7269283533096313,mlp,test
+527,Database Systems,3,2025,final,1,0.5697512626647949,mlp,test
+528,Database Systems,4,2025,final,0,0.5085368156433105,mlp,test
+529,Database Systems,5,2025,final,1,0.7032638192176819,mlp,test
+530,Database Systems,6,2025,final,0,0.1735209971666336,mlp,test
+531,Database Systems,7,2025,final,1,0.44993510842323303,mlp,test
+532,Database Systems,8,2025,final,1,0.7952534556388855,mlp,test
+533,Database Systems,9,2025,final,1,0.577090322971344,mlp,test
+534,Database Systems,0,2025,mid,0,0.06848715990781784,mlp,test
+535,Database Systems,1,2025,mid,0,0.2080785036087036,mlp,test
+536,Database Systems,2,2025,mid,1,0.628373920917511,mlp,test
+537,Database Systems,3,2025,mid,1,0.42614126205444336,mlp,test
+538,Database Systems,4,2025,mid,1,0.5902970433235168,mlp,test
+539,Database Systems,5,2025,mid,1,0.599303662776947,mlp,test
+540,Database Systems,6,2025,mid,0,0.06278549134731293,mlp,test
+541,Database Systems,7,2025,mid,0,0.1941996067762375,mlp,test
+542,Database Systems,8,2025,mid,1,0.6863928437232971,mlp,test
+543,Database Systems,9,2025,mid,0,0.32885420322418213,mlp,test
+544,Database Systems,0,2026,final,0,0.08889850229024887,mlp,test
+545,Database Systems,1,2026,final,0,0.5721449255943298,mlp,test
+546,Database Systems,2,2026,final,1,0.7370315194129944,mlp,test
+547,Database Systems,3,2026,final,0,0.5979582667350769,mlp,test
+548,Database Systems,4,2026,final,0,0.488020122051239,mlp,test
+549,Database Systems,5,2026,final,1,0.7234548330307007,mlp,test
+550,Database Systems,6,2026,final,0,0.14624404907226562,mlp,test
+551,Database Systems,7,2026,final,0,0.5171260833740234,mlp,test
+552,Database Systems,8,2026,final,1,0.8035098910331726,mlp,test
+553,Database Systems,9,2026,final,0,0.5766457915306091,mlp,test
+554,Database Systems,0,2026,mid,0,0.05899153649806976,mlp,test
+555,Database Systems,1,2026,mid,0,0.2157987356185913,mlp,test
+556,Database Systems,2,2026,mid,0,0.6353604197502136,mlp,test
+557,Database Systems,3,2026,mid,1,0.4841037690639496,mlp,test
+558,Database Systems,4,2026,mid,0,0.5742703676223755,mlp,test
+559,Database Systems,5,2026,mid,1,0.6147690415382385,mlp,test
+560,Database Systems,6,2026,mid,0,0.05507189780473709,mlp,test
+561,Database Systems,7,2026,mid,0,0.21156126260757446,mlp,test
+562,Database Systems,8,2026,mid,1,0.6971039175987244,mlp,test
+563,Database Systems,9,2026,mid,1,0.32340487837791443,mlp,test
+564,Database Systems,0,2026,quiz,0,0.10202871263027191,mlp,test
+565,Database Systems,1,2026,quiz,0,0.3301878273487091,mlp,test
+566,Database Systems,2,2026,quiz,1,0.7309338450431824,mlp,test
+567,Database Systems,3,2026,quiz,0,0.4508296847343445,mlp,test
+568,Database Systems,4,2026,quiz,1,0.47602787613868713,mlp,test
+569,Database Systems,5,2026,quiz,0,0.569993257522583,mlp,test
+570,Database Systems,6,2026,quiz,0,0.11524545401334763,mlp,test
+571,Database Systems,7,2026,quiz,0,0.3641194999217987,mlp,test
+572,Database Systems,8,2026,quiz,1,0.7032240629196167,mlp,test
+573,Database Systems,9,2026,quiz,0,0.36577144265174866,mlp,test
+574,Design and Analysis of Algorithms,0,2024,final,0,0.027141492813825607,mlp,test
+575,Design and Analysis of Algorithms,1,2024,final,1,0.9356276392936707,mlp,test
+576,Design and Analysis of Algorithms,2,2024,final,0,0.06716286391019821,mlp,test
+577,Design and Analysis of Algorithms,3,2024,final,0,0.03489993140101433,mlp,test
+578,Design and Analysis of Algorithms,4,2024,final,0,0.038958389312028885,mlp,test
+579,Design and Analysis of Algorithms,5,2024,final,0,0.028374340385198593,mlp,test
+580,Design and Analysis of Algorithms,6,2024,final,0,0.028374340385198593,mlp,test
+581,Design and Analysis of Algorithms,7,2024,final,0,0.03757532313466072,mlp,test
+582,Design and Analysis of Algorithms,8,2024,final,0,0.06716286391019821,mlp,test
+583,Design and Analysis of Algorithms,0,2024,mid,0,0.022180991247296333,mlp,test
+584,Design and Analysis of Algorithms,1,2024,mid,1,0.9409810304641724,mlp,test
+585,Design and Analysis of Algorithms,2,2024,mid,0,0.030828146263957024,mlp,test
+586,Design and Analysis of Algorithms,3,2024,mid,0,0.028487984091043472,mlp,test
+587,Design and Analysis of Algorithms,4,2024,mid,0,0.04664313793182373,mlp,test
+588,Design and Analysis of Algorithms,5,2024,mid,0,0.022427907213568687,mlp,test
+589,Design and Analysis of Algorithms,6,2024,mid,0,0.022427907213568687,mlp,test
+590,Design and Analysis of Algorithms,7,2024,mid,0,0.022180991247296333,mlp,test
+591,Design and Analysis of Algorithms,8,2024,mid,0,0.030828146263957024,mlp,test
+592,Design and Analysis of Algorithms,0,2025,final,0,0.022945480421185493,mlp,test
+593,Design and Analysis of Algorithms,1,2025,final,1,0.9439471364021301,mlp,test
+594,Design and Analysis of Algorithms,2,2025,final,0,0.05172876641154289,mlp,test
+595,Design and Analysis of Algorithms,3,2025,final,0,0.02938796579837799,mlp,test
+596,Design and Analysis of Algorithms,4,2025,final,0,0.03282728046178818,mlp,test
+597,Design and Analysis of Algorithms,5,2025,final,0,0.02399243228137493,mlp,test
+598,Design and Analysis of Algorithms,6,2025,final,0,0.02399243228137493,mlp,test
+599,Design and Analysis of Algorithms,7,2025,final,0,0.030547434464097023,mlp,test
+600,Design and Analysis of Algorithms,8,2025,final,0,0.05172876641154289,mlp,test
+601,Design and Analysis of Algorithms,0,2025,mid,0,0.018418937921524048,mlp,test
+602,Design and Analysis of Algorithms,1,2025,mid,1,0.9486467242240906,mlp,test
+603,Design and Analysis of Algorithms,2,2025,mid,0,0.0259357001632452,mlp,test
+604,Design and Analysis of Algorithms,3,2025,mid,0,0.023569030687212944,mlp,test
+605,Design and Analysis of Algorithms,4,2025,mid,0,0.03646865859627724,mlp,test
+606,Design and Analysis of Algorithms,5,2025,mid,0,0.01877870038151741,mlp,test
+607,Design and Analysis of Algorithms,6,2025,mid,0,0.01877870038151741,mlp,test
+608,Design and Analysis of Algorithms,7,2025,mid,0,0.018418937921524048,mlp,test
+609,Design and Analysis of Algorithms,8,2025,mid,0,0.0259357001632452,mlp,test
+610,Design and Analysis of Algorithms,0,2025,quiz,0,0.04730506241321564,mlp,test
+611,Design and Analysis of Algorithms,1,2025,quiz,1,0.9364476203918457,mlp,test
+612,Design and Analysis of Algorithms,2,2025,quiz,0,0.057937316596508026,mlp,test
+613,Design and Analysis of Algorithms,3,2025,quiz,0,0.06933767348527908,mlp,test
+614,Design and Analysis of Algorithms,4,2025,quiz,0,0.057937316596508026,mlp,test
+615,Design and Analysis of Algorithms,5,2025,quiz,0,0.04940728098154068,mlp,test
+616,Design and Analysis of Algorithms,6,2025,quiz,0,0.04940728098154068,mlp,test
+617,Design and Analysis of Algorithms,7,2025,quiz,0,0.04091959074139595,mlp,test
+618,Design and Analysis of Algorithms,8,2025,quiz,0,0.057937316596508026,mlp,test
+619,Discrete Structures,0,2024,final,1,0.7229267954826355,mlp,test
+620,Discrete Structures,1,2024,final,0,0.4153667688369751,mlp,test
+621,Discrete Structures,2,2024,final,1,0.41153785586357117,mlp,test
+622,Discrete Structures,3,2024,final,1,0.7517107725143433,mlp,test
+623,Discrete Structures,4,2024,final,0,0.6001586318016052,mlp,test
+624,Discrete Structures,5,2024,final,1,0.6800599098205566,mlp,test
+625,Discrete Structures,0,2024,mid,1,0.6978253126144409,mlp,test
+626,Discrete Structures,1,2024,mid,0,0.46588584780693054,mlp,test
+627,Discrete Structures,2,2024,mid,0,0.503046989440918,mlp,test
+628,Discrete Structures,3,2024,mid,1,0.7443702816963196,mlp,test
+629,Discrete Structures,4,2024,mid,0,0.28849029541015625,mlp,test
+630,Discrete Structures,5,2024,mid,1,0.4877186715602875,mlp,test
+631,Discrete Structures,0,2024,quiz,1,0.42651239037513733,mlp,test
+632,Discrete Structures,1,2024,quiz,0,0.35792866349220276,mlp,test
+633,Discrete Structures,2,2024,quiz,0,0.741952121257782,mlp,test
+634,Discrete Structures,3,2024,quiz,1,0.461052805185318,mlp,test
+635,Discrete Structures,4,2024,quiz,0,0.3739042580127716,mlp,test
+636,Discrete Structures,5,2024,quiz,0,0.43341362476348877,mlp,test
+637,Discrete Structures,0,2025,final,1,0.742918848991394,mlp,test
+638,Discrete Structures,1,2025,final,1,0.2716943025588989,mlp,test
+639,Discrete Structures,2,2025,final,0,0.5586528182029724,mlp,test
+640,Discrete Structures,3,2025,final,1,0.7787150740623474,mlp,test
+641,Discrete Structures,4,2025,final,0,0.36767932772636414,mlp,test
+642,Discrete Structures,5,2025,final,0,0.7093594074249268,mlp,test
+643,Discrete Structures,0,2025,mid,0,0.7253366708755493,mlp,test
+644,Discrete Structures,1,2025,mid,0,0.3160107731819153,mlp,test
+645,Discrete Structures,2,2025,mid,0,0.5068610310554504,mlp,test
+646,Discrete Structures,3,2025,mid,1,0.776901364326477,mlp,test
+647,Discrete Structures,4,2025,mid,1,0.1973201185464859,mlp,test
+648,Discrete Structures,5,2025,mid,1,0.6415659189224243,mlp,test
+649,Discrete Structures,0,2025,quiz,1,0.4634588658809662,mlp,test
+650,Discrete Structures,1,2025,quiz,0,0.30843454599380493,mlp,test
+651,Discrete Structures,2,2025,quiz,0,0.7448018789291382,mlp,test
+652,Discrete Structures,3,2025,quiz,1,0.6115402579307556,mlp,test
+653,Discrete Structures,4,2025,quiz,0,0.34667524695396423,mlp,test
+654,Discrete Structures,5,2025,quiz,1,0.4302113652229309,mlp,test
+655,HCI,0,2024,final,0,0.6966364979743958,mlp,test
+656,HCI,1,2024,final,0,0.7011489868164062,mlp,test
+657,HCI,2,2024,final,1,0.7805395722389221,mlp,test
+658,HCI,3,2024,final,0,0.3605837821960449,mlp,test
+659,HCI,4,2024,final,0,0.1435774266719818,mlp,test
+660,HCI,5,2024,final,0,0.7611061334609985,mlp,test
+661,HCI,6,2024,final,0,0.18511982262134552,mlp,test
+662,HCI,7,2024,final,0,0.1435774266719818,mlp,test
+663,HCI,8,2024,final,0,0.2255130410194397,mlp,test
+664,HCI,9,2024,final,0,0.38869476318359375,mlp,test
+665,HCI,0,2024,mid,1,0.2717401385307312,mlp,test
+666,HCI,1,2024,mid,1,0.32953181862831116,mlp,test
+667,HCI,2,2024,mid,1,0.7480239868164062,mlp,test
+668,HCI,3,2024,mid,1,0.43875208497047424,mlp,test
+669,HCI,4,2024,mid,0,0.11440901458263397,mlp,test
+670,HCI,5,2024,mid,1,0.71042799949646,mlp,test
+671,HCI,6,2024,mid,0,0.18485566973686218,mlp,test
+672,HCI,7,2024,mid,0,0.11440901458263397,mlp,test
+673,HCI,8,2024,mid,0,0.31934991478919983,mlp,test
+674,HCI,9,2024,mid,0,0.30020761489868164,mlp,test
+675,IOT,0,2024,quiz,1,0.4479302763938904,mlp,test
+676,IOT,1,2024,quiz,1,0.6978470683097839,mlp,test
+677,IOT,2,2024,quiz,1,0.55670166015625,mlp,test
+678,IOT,3,2024,quiz,1,0.6960865259170532,mlp,test
+679,IOT,0,2025,mid,0,0.6180413961410522,mlp,test
+680,IOT,1,2025,mid,1,0.8309665322303772,mlp,test
+681,IOT,2,2025,mid,0,0.6889330744743347,mlp,test
+682,IOT,3,2025,mid,1,0.6653361916542053,mlp,test
+683,Islamic Studies,0,2024,final,0,0.37702858448028564,mlp,test
+684,Islamic Studies,1,2024,final,0,0.2775381803512573,mlp,test
+685,Islamic Studies,2,2024,final,0,0.3259071409702301,mlp,test
+686,Islamic Studies,3,2024,final,1,0.8294395208358765,mlp,test
+687,Islamic Studies,0,2024,mid,1,0.5936671495437622,mlp,test
+688,Islamic Studies,1,2024,mid,0,0.2102029174566269,mlp,test
+689,Islamic Studies,2,2024,mid,0,0.21548524498939514,mlp,test
+690,Islamic Studies,3,2024,mid,1,0.8319907784461975,mlp,test
+691,Islamic Studies,0,2025,final,0,0.3106747269630432,mlp,test
+692,Islamic Studies,1,2025,final,0,0.18353427946567535,mlp,test
+693,Islamic Studies,2,2025,final,0,0.26709842681884766,mlp,test
+694,Islamic Studies,3,2025,final,1,0.8323220014572144,mlp,test
+695,Islamic Studies,0,2026,final,0,0.25797563791275024,mlp,test
+696,Islamic Studies,1,2026,final,0,0.16726316511631012,mlp,test
+697,Islamic Studies,2,2026,final,0,0.23272399604320526,mlp,test
+698,Islamic Studies,3,2026,final,1,0.8369717597961426,mlp,test
+699,Islamic Studies,0,2026,mid,0,0.35845258831977844,mlp,test
+700,Islamic Studies,1,2026,mid,0,0.11109945923089981,mlp,test
+701,Islamic Studies,2,2026,mid,0,0.14952343702316284,mlp,test
+702,Islamic Studies,3,2026,mid,1,0.8422478437423706,mlp,test
+703,NLP,0,2024,quiz,0,0.3213746249675751,mlp,test
+704,NLP,1,2024,quiz,1,0.8220517039299011,mlp,test
+705,NLP,2,2024,quiz,1,0.5142834782600403,mlp,test
+706,NLP,3,2024,quiz,0,0.37222108244895935,mlp,test
+707,NLP,4,2024,quiz,0,0.3161775469779968,mlp,test
+708,NLP,5,2024,quiz,0,0.3498079180717468,mlp,test
+709,NLP,6,2024,quiz,0,0.31259584426879883,mlp,test
+710,NLP,7,2024,quiz,0,0.3498079180717468,mlp,test
+711,NLP,8,2024,quiz,0,0.31259584426879883,mlp,test
+712,NLP,9,2024,quiz,0,0.31259584426879883,mlp,test
+713,OOP Lab,0,2024,final,0,0.21596652269363403,mlp,test
+714,OOP Lab,1,2024,final,0,0.16544394195079803,mlp,test
+715,OOP Lab,2,2024,final,0,0.5863648653030396,mlp,test
+716,OOP Lab,3,2024,final,0,0.4133542478084564,mlp,test
+717,OOP Lab,4,2024,final,0,0.16216591000556946,mlp,test
+718,OOP Lab,5,2024,final,1,0.7258666157722473,mlp,test
+719,OOP Lab,6,2024,final,0,0.2980678379535675,mlp,test
+720,OOP Lab,0,2024,mid,0,0.11481449753046036,mlp,test
+721,OOP Lab,1,2024,mid,0,0.10561025142669678,mlp,test
+722,OOP Lab,2,2024,mid,0,0.5479027032852173,mlp,test
+723,OOP Lab,3,2024,mid,0,0.5937402248382568,mlp,test
+724,OOP Lab,4,2024,mid,0,0.10269519686698914,mlp,test
+725,OOP Lab,5,2024,mid,1,0.734615683555603,mlp,test
+726,OOP Lab,6,2024,mid,0,0.33733105659484863,mlp,test
+727,OOP Lab,0,2025,final,0,0.18310482800006866,mlp,test
+728,OOP Lab,1,2025,final,0,0.14390617609024048,mlp,test
+729,OOP Lab,2,2025,final,0,0.4727308452129364,mlp,test
+730,OOP Lab,3,2025,final,0,0.30715158581733704,mlp,test
+731,OOP Lab,4,2025,final,0,0.14098277688026428,mlp,test
+732,OOP Lab,5,2025,final,1,0.7496815323829651,mlp,test
+733,OOP Lab,6,2025,final,0,0.25593140721321106,mlp,test
+734,OOP Lab,0,2025,mid,0,0.09913290292024612,mlp,test
+735,OOP Lab,1,2025,mid,0,0.09161001443862915,mlp,test
+736,OOP Lab,2,2025,mid,1,0.40367695689201355,mlp,test
+737,OOP Lab,3,2025,mid,1,0.441445916891098,mlp,test
+738,OOP Lab,4,2025,mid,0,0.08959677815437317,mlp,test
+739,OOP Lab,5,2025,mid,1,0.7553486227989197,mlp,test
+740,OOP Lab,6,2025,mid,1,0.27918604016304016,mlp,test
+741,OOP Lab,0,2026,final,0,0.15157249569892883,mlp,test
+742,OOP Lab,1,2026,final,0,0.12124230712652206,mlp,test
+743,OOP Lab,2,2026,final,0,0.47418972849845886,mlp,test
+744,OOP Lab,3,2026,final,0,0.3649387061595917,mlp,test
+745,OOP Lab,4,2026,final,0,0.11871547251939774,mlp,test
+746,OOP Lab,5,2026,final,1,0.7753507494926453,mlp,test
+747,OOP Lab,6,2026,final,0,0.29126954078674316,mlp,test
+748,OS,0,2024,final,0,0.35421377420425415,mlp,test
+749,OS,1,2024,final,0,0.3766653835773468,mlp,test
+750,OS,2,2024,final,1,0.6718878149986267,mlp,test
+751,OS,3,2024,final,0,0.5395869016647339,mlp,test
+752,OS,4,2024,final,1,0.5159388780593872,mlp,test
+753,OS,5,2024,final,0,0.2591519057750702,mlp,test
+754,OS,6,2024,final,1,0.6740815043449402,mlp,test
+755,OS,7,2024,final,1,0.6622632145881653,mlp,test
+756,OS,8,2024,final,1,0.561404824256897,mlp,test
+757,OS,9,2024,final,1,0.7981181740760803,mlp,test
+758,OS,0,2024,mid,1,0.3192770183086395,mlp,test
+759,OS,1,2024,mid,0,0.19405995309352875,mlp,test
+760,OS,2,2024,mid,1,0.6640897989273071,mlp,test
+761,OS,3,2024,mid,0,0.44587764143943787,mlp,test
+762,OS,4,2024,mid,0,0.5269825458526611,mlp,test
+763,OS,5,2024,mid,0,0.19700175523757935,mlp,test
+764,OS,6,2024,mid,0,0.3778509199619293,mlp,test
+765,OS,7,2024,mid,0,0.3015512526035309,mlp,test
+766,OS,8,2024,mid,1,0.4445422291755676,mlp,test
+767,OS,9,2024,mid,1,0.8093017935752869,mlp,test
+768,OS,0,2024,quiz,0,0.3958650529384613,mlp,test
+769,OS,1,2024,quiz,0,0.26627328991889954,mlp,test
+770,OS,2,2024,quiz,1,0.5164210200309753,mlp,test
+771,OS,3,2024,quiz,0,0.4949117600917816,mlp,test
+772,OS,4,2024,quiz,1,0.5995261073112488,mlp,test
+773,OS,5,2024,quiz,0,0.2451220005750656,mlp,test
+774,OS,6,2024,quiz,0,0.5665127038955688,mlp,test
+775,OS,7,2024,quiz,0,0.5346940755844116,mlp,test
+776,OS,8,2024,quiz,1,0.5483018755912781,mlp,test
+777,OS,9,2024,quiz,1,0.6855688691139221,mlp,test
+778,OS,0,2025,quiz,1,0.2807546854019165,mlp,test
+779,OS,1,2025,quiz,0,0.1681315004825592,mlp,test
+780,OS,2,2025,quiz,0,0.5921512842178345,mlp,test
+781,OS,3,2025,quiz,0,0.2511070668697357,mlp,test
+782,OS,4,2025,quiz,1,0.5360022187232971,mlp,test
+783,OS,5,2025,quiz,0,0.15118616819381714,mlp,test
+784,OS,6,2025,quiz,0,0.3925468325614929,mlp,test
+785,OS,7,2025,quiz,1,0.4035404324531555,mlp,test
+786,OS,8,2025,quiz,0,0.5117563605308533,mlp,test
+787,OS,9,2025,quiz,1,0.8331283926963806,mlp,test
+788,Object Oriented Programming,0,2024,final,0,0.7048274278640747,mlp,test
+789,Object Oriented Programming,1,2024,final,1,0.5778557062149048,mlp,test
+790,Object Oriented Programming,2,2024,final,0,0.02477167546749115,mlp,test
+791,Object Oriented Programming,3,2024,final,0,0.5787383317947388,mlp,test
+792,Object Oriented Programming,4,2024,final,1,0.5971552729606628,mlp,test
+793,Object Oriented Programming,5,2024,final,0,0.39265960454940796,mlp,test
+794,Object Oriented Programming,6,2024,final,0,0.07399214804172516,mlp,test
+795,Object Oriented Programming,7,2024,final,0,0.0214582160115242,mlp,test
+796,Object Oriented Programming,8,2024,final,0,0.037457361817359924,mlp,test
+797,Object Oriented Programming,9,2024,final,0,0.08076176792383194,mlp,test
+798,Object Oriented Programming,0,2024,mid,1,0.5745418071746826,mlp,test
+799,Object Oriented Programming,1,2024,mid,0,0.6329107284545898,mlp,test
+800,Object Oriented Programming,2,2024,mid,0,0.018197810277342796,mlp,test
+801,Object Oriented Programming,3,2024,mid,0,0.49827060103416443,mlp,test
+802,Object Oriented Programming,4,2024,mid,1,0.46590539813041687,mlp,test
+803,Object Oriented Programming,5,2024,mid,1,0.4044056534767151,mlp,test
+804,Object Oriented Programming,6,2024,mid,0,0.06118885427713394,mlp,test
+805,Object Oriented Programming,7,2024,mid,0,0.0212104469537735,mlp,test
+806,Object Oriented Programming,8,2024,mid,0,0.03940047696232796,mlp,test
+807,Object Oriented Programming,9,2024,mid,1,0.0808519572019577,mlp,test
+808,Object Oriented Programming,0,2024,quiz,0,0.520594596862793,mlp,test
+809,Object Oriented Programming,1,2024,quiz,1,0.4526391923427582,mlp,test
+810,Object Oriented Programming,2,2024,quiz,0,0.040678419172763824,mlp,test
+811,Object Oriented Programming,3,2024,quiz,0,0.5625733733177185,mlp,test
+812,Object Oriented Programming,4,2024,quiz,1,0.4697149991989136,mlp,test
+813,Object Oriented Programming,5,2024,quiz,0,0.39676740765571594,mlp,test
+814,Object Oriented Programming,6,2024,quiz,0,0.22024285793304443,mlp,test
+815,Object Oriented Programming,7,2024,quiz,0,0.040678419172763824,mlp,test
+816,Object Oriented Programming,8,2024,quiz,0,0.06123378500342369,mlp,test
+817,Object Oriented Programming,9,2024,quiz,0,0.10903614014387131,mlp,test
+818,Object Oriented Programming,0,2025,final,1,0.6596100330352783,mlp,test
+819,Object Oriented Programming,1,2025,final,1,0.5810697078704834,mlp,test
+820,Object Oriented Programming,2,2025,final,0,0.021690456196665764,mlp,test
+821,Object Oriented Programming,3,2025,final,0,0.5222830176353455,mlp,test
+822,Object Oriented Programming,4,2025,final,1,0.6122285723686218,mlp,test
+823,Object Oriented Programming,5,2025,final,1,0.34803295135498047,mlp,test
+824,Object Oriented Programming,6,2025,final,0,0.06477786600589752,mlp,test
+825,Object Oriented Programming,7,2025,final,0,0.018942221999168396,mlp,test
+826,Object Oriented Programming,8,2025,final,0,0.032708991318941116,mlp,test
+827,Object Oriented Programming,9,2025,final,0,0.09639164060354233,mlp,test
+828,Object Oriented Programming,0,2026,final,0,0.6546648144721985,mlp,test
+829,Object Oriented Programming,1,2026,final,1,0.59627765417099,mlp,test
+830,Object Oriented Programming,2,2026,final,0,0.020293429493904114,mlp,test
+831,Object Oriented Programming,3,2026,final,0,0.46637287735939026,mlp,test
+832,Object Oriented Programming,4,2026,final,0,0.6137744784355164,mlp,test
+833,Object Oriented Programming,5,2026,final,0,0.38845017552375793,mlp,test
+834,Object Oriented Programming,6,2026,final,0,0.060405183583498,mlp,test
+835,Object Oriented Programming,7,2026,final,0,0.01785046048462391,mlp,test
+836,Object Oriented Programming,8,2026,final,0,0.03058641590178013,mlp,test
+837,Object Oriented Programming,9,2026,final,0,0.07154759764671326,mlp,test
+838,Object Oriented Programming,0,2026,mid,0,0.5240526795387268,mlp,test
+839,Object Oriented Programming,1,2026,mid,0,0.5958961248397827,mlp,test
+840,Object Oriented Programming,2,2026,mid,0,0.01465518306940794,mlp,test
+841,Object Oriented Programming,3,2026,mid,1,0.367667555809021,mlp,test
+842,Object Oriented Programming,4,2026,mid,0,0.46614426374435425,mlp,test
+843,Object Oriented Programming,5,2026,mid,1,0.3812448978424072,mlp,test
+844,Object Oriented Programming,6,2026,mid,0,0.04820976406335831,mlp,test
+845,Object Oriented Programming,7,2026,mid,0,0.016586339101195335,mlp,test
+846,Object Oriented Programming,8,2026,mid,0,0.02972736954689026,mlp,test
+847,Object Oriented Programming,9,2026,mid,1,0.0772022232413292,mlp,test
+848,Object Oriented Programming,0,2026,quiz,0,0.47753825783729553,mlp,test
+849,Object Oriented Programming,1,2026,quiz,0,0.46013039350509644,mlp,test
+850,Object Oriented Programming,2,2026,quiz,0,0.03378807380795479,mlp,test
+851,Object Oriented Programming,3,2026,quiz,0,0.46745654940605164,mlp,test
+852,Object Oriented Programming,4,2026,quiz,1,0.4840712547302246,mlp,test
+853,Object Oriented Programming,5,2026,quiz,1,0.3715750277042389,mlp,test
+854,Object Oriented Programming,6,2026,quiz,0,0.1704605221748352,mlp,test
+855,Object Oriented Programming,7,2026,quiz,0,0.03378807380795479,mlp,test
+856,Object Oriented Programming,8,2026,quiz,0,0.05028235539793968,mlp,test
+857,Object Oriented Programming,9,2026,quiz,0,0.10052068531513214,mlp,test
+858,PF Lab,0,2025,final,0,0.29835045337677,mlp,test
+859,PF Lab,1,2025,final,0,0.21016427874565125,mlp,test
+860,PF Lab,2,2025,final,1,0.5912817716598511,mlp,test
+861,PF Lab,3,2025,final,0,0.12865909934043884,mlp,test
+862,PF Lab,4,2025,final,1,0.5286148190498352,mlp,test
+863,PF Lab,5,2025,final,0,0.18471641838550568,mlp,test
+864,PF Lab,6,2025,final,0,0.45263946056365967,mlp,test
+865,PF Lab,7,2025,final,0,0.20910660922527313,mlp,test
+866,PF Lab,8,2025,final,0,0.20910660922527313,mlp,test
+867,PF Lab,9,2025,final,1,0.30863067507743835,mlp,test
+868,PP,0,2024,final,0,0.49168485403060913,mlp,test
+869,PP,1,2024,final,1,0.8423280715942383,mlp,test
+870,PP,2,2024,final,0,0.7074637413024902,mlp,test
+871,PP,3,2024,final,0,0.5131233930587769,mlp,test
+872,PP,4,2024,final,0,0.257744699716568,mlp,test
+873,PP,5,2024,final,0,0.18544110655784607,mlp,test
+874,PP,6,2024,final,0,0.1323026865720749,mlp,test
+875,PP,7,2024,final,1,0.8238564729690552,mlp,test
+876,PP,8,2024,final,0,0.2932380735874176,mlp,test
+877,PP,9,2024,final,0,0.410897821187973,mlp,test
+878,PP,0,2024,mid,0,0.31104516983032227,mlp,test
+879,PP,1,2024,mid,1,0.8519928455352783,mlp,test
+880,PP,2,2024,mid,1,0.31988683342933655,mlp,test
+881,PP,3,2024,mid,1,0.36752015352249146,mlp,test
+882,PP,4,2024,mid,0,0.5206431150436401,mlp,test
+883,PP,5,2024,mid,0,0.24715258181095123,mlp,test
+884,PP,6,2024,mid,0,0.17463429272174835,mlp,test
+885,PP,7,2024,mid,1,0.8027399778366089,mlp,test
+886,PP,8,2024,mid,1,0.24635836482048035,mlp,test
+887,PP,9,2024,mid,1,0.36921456456184387,mlp,test
+888,PP,0,2024,quiz,0,0.3547459542751312,mlp,test
+889,PP,1,2024,quiz,1,0.802659273147583,mlp,test
+890,PP,2,2024,quiz,0,0.5338226556777954,mlp,test
+891,PP,3,2024,quiz,0,0.5986028909683228,mlp,test
+892,PP,4,2024,quiz,0,0.4898795783519745,mlp,test
+893,PP,5,2024,quiz,0,0.24599193036556244,mlp,test
+894,PP,6,2024,quiz,0,0.32149776816368103,mlp,test
+895,PP,7,2024,quiz,1,0.7034254670143127,mlp,test
+896,PP,8,2024,quiz,0,0.5488507747650146,mlp,test
+897,PP,9,2024,quiz,0,0.34715476632118225,mlp,test
+898,PP,0,2025,final,0,0.29123806953430176,mlp,test
+899,PP,1,2025,final,1,0.8616966009140015,mlp,test
+900,PP,2,2025,final,0,0.6629642248153687,mlp,test
+901,PP,3,2025,final,0,0.49523210525512695,mlp,test
+902,PP,4,2025,final,0,0.17612452805042267,mlp,test
+903,PP,5,2025,final,0,0.12901261448860168,mlp,test
+904,PP,6,2025,final,0,0.10331033915281296,mlp,test
+905,PP,7,2025,final,1,0.8370750546455383,mlp,test
+906,PP,8,2025,final,0,0.302059143781662,mlp,test
+907,PP,9,2025,final,0,0.37220028042793274,mlp,test
+908,PP,0,2025,mid,0,0.16365686058998108,mlp,test
+909,PP,1,2025,mid,1,0.8713023662567139,mlp,test
+910,PP,2,2025,mid,0,0.27476686239242554,mlp,test
+911,PP,3,2025,mid,0,0.3798123598098755,mlp,test
+912,PP,4,2025,mid,0,0.34941694140434265,mlp,test
+913,PP,5,2025,mid,0,0.1405569463968277,mlp,test
+914,PP,6,2025,mid,0,0.13400809466838837,mlp,test
+915,PP,7,2025,mid,1,0.8174120187759399,mlp,test
+916,PP,8,2025,mid,0,0.27235209941864014,mlp,test
+917,PP,9,2025,mid,0,0.3637731671333313,mlp,test
+918,PP,0,2026,mid,0,0.12914568185806274,mlp,test
+919,PP,1,2026,mid,1,0.8812828660011292,mlp,test
+920,PP,2,2026,mid,0,0.1841459572315216,mlp,test
+921,PP,3,2026,mid,0,0.27880221605300903,mlp,test
+922,PP,4,2026,mid,0,0.2628617584705353,mlp,test
+923,PP,5,2026,mid,0,0.11063307523727417,mlp,test
+924,PP,6,2026,mid,0,0.11055983603000641,mlp,test
+925,PP,7,2026,mid,1,0.8402188420295715,mlp,test
+926,PP,8,2026,mid,1,0.196034774184227,mlp,test
+927,PP,9,2026,mid,1,0.23259557783603668,mlp,test
+928,PP,0,2026,quiz,0,0.19035060703754425,mlp,test
+929,PP,1,2026,quiz,1,0.851046621799469,mlp,test
+930,PP,2,2026,quiz,0,0.362699419260025,mlp,test
+931,PP,3,2026,quiz,0,0.4852050840854645,mlp,test
+932,PP,4,2026,quiz,0,0.3137349784374237,mlp,test
+933,PP,5,2026,quiz,0,0.14978022873401642,mlp,test
+934,PP,6,2026,quiz,0,0.20518814027309418,mlp,test
+935,PP,7,2026,quiz,0,0.7783342003822327,mlp,test
+936,PP,8,2026,quiz,0,0.49297472834587097,mlp,test
+937,PP,9,2026,quiz,0,0.25109145045280457,mlp,test
+938,Pakistan Studies,0,2026,final,1,0.667297899723053,mlp,test
+939,Pakistan Studies,1,2026,final,0,0.3268676698207855,mlp,test
+940,Pakistan Studies,2,2026,final,0,0.3777123689651489,mlp,test
+941,Pakistan Studies,3,2026,final,1,0.806572437286377,mlp,test
+942,Pakistan Studies,0,2026,mid,1,0.624137818813324,mlp,test
+943,Pakistan Studies,1,2026,mid,0,0.34449148178100586,mlp,test
+944,Pakistan Studies,2,2026,mid,0,0.5698556303977966,mlp,test
+945,Pakistan Studies,3,2026,mid,1,0.8156830668449402,mlp,test
+946,SMD,0,2024,final,1,0.5208829641342163,mlp,test
+947,SMD,1,2024,final,1,0.8073716163635254,mlp,test
+948,SMD,2,2024,final,0,0.14004547894001007,mlp,test
+949,SMD,3,2024,final,0,0.15907680988311768,mlp,test
+950,SMD,4,2024,final,0,0.11769633740186691,mlp,test
+951,SMD,5,2024,final,0,0.6634504795074463,mlp,test
+952,SMD,6,2024,final,0,0.12845705449581146,mlp,test
+953,SMD,7,2024,final,0,0.18780724704265594,mlp,test
+954,SMD,0,2024,mid,1,0.44745364785194397,mlp,test
+955,SMD,1,2024,mid,1,0.737419068813324,mlp,test
+956,SMD,2,2024,mid,0,0.11136714369058609,mlp,test
+957,SMD,3,2024,mid,0,0.2414611130952835,mlp,test
+958,SMD,4,2024,mid,0,0.10388577729463577,mlp,test
+959,SMD,5,2024,mid,0,0.35357576608657837,mlp,test
+960,SMD,6,2024,mid,0,0.10174714028835297,mlp,test
+961,SMD,7,2024,mid,0,0.08808300644159317,mlp,test
+962,SMD,0,2024,quiz,1,0.3833363950252533,mlp,test
+963,SMD,1,2024,quiz,1,0.7226131558418274,mlp,test
+964,SMD,2,2024,quiz,0,0.37475696206092834,mlp,test
+965,SMD,3,2024,quiz,0,0.34707963466644287,mlp,test
+966,SMD,4,2024,quiz,0,0.25154224038124084,mlp,test
+967,SMD,5,2024,quiz,0,0.5596200823783875,mlp,test
+968,SMD,6,2024,quiz,0,0.336534321308136,mlp,test
+969,SMD,7,2024,quiz,0,0.18750296533107758,mlp,test
+970,SMD,0,2026,final,1,0.6517610549926758,mlp,test
+971,SMD,1,2026,final,1,0.8187801241874695,mlp,test
+972,SMD,2,2026,final,0,0.11723920702934265,mlp,test
+973,SMD,3,2026,final,0,0.13431450724601746,mlp,test
+974,SMD,4,2026,final,0,0.09826059639453888,mlp,test
+975,SMD,5,2026,final,0,0.4941067397594452,mlp,test
+976,SMD,6,2026,final,0,0.10738161206245422,mlp,test
+977,SMD,7,2026,final,0,0.14673419296741486,mlp,test
+978,SMD,0,2026,mid,1,0.5723581910133362,mlp,test
+979,SMD,1,2026,mid,0,0.7559598088264465,mlp,test
+980,SMD,2,2026,mid,0,0.08906662464141846,mlp,test
+981,SMD,3,2026,mid,0,0.18823929131031036,mlp,test
+982,SMD,4,2026,mid,0,0.08044547587633133,mlp,test
+983,SMD,5,2026,mid,1,0.25706231594085693,mlp,test
+984,SMD,6,2026,mid,0,0.08108296990394592,mlp,test
+985,SMD,7,2026,mid,0,0.07015135139226913,mlp,test
+986,Software Design and Analysis,0,2024,mid,1,0.20987455546855927,mlp,test
+987,Software Design and Analysis,1,2024,mid,0,0.11474815756082535,mlp,test
+988,Software Design and Analysis,2,2024,mid,1,0.6388244032859802,mlp,test
+989,Software Design and Analysis,3,2024,mid,1,0.42211997509002686,mlp,test
+990,Software Design and Analysis,4,2024,mid,0,0.09095098823308945,mlp,test
+991,Software Design and Analysis,5,2024,mid,1,0.537330687046051,mlp,test
+992,Software Design and Analysis,6,2024,mid,0,0.2859329581260681,mlp,test
+993,Software Design and Analysis,0,2026,mid,0,0.36218369007110596,mlp,test
+994,Software Design and Analysis,1,2026,mid,0,0.09848716109991074,mlp,test
+995,Software Design and Analysis,2,2026,mid,0,0.6768069267272949,mlp,test
+996,Software Design and Analysis,3,2026,mid,0,0.5288907885551453,mlp,test
+997,Software Design and Analysis,4,2026,mid,0,0.07083703577518463,mlp,test
+998,Software Design and Analysis,5,2026,mid,1,0.6333473324775696,mlp,test
+999,Software Design and Analysis,6,2026,mid,0,0.20568254590034485,mlp,test
+1000,Software Design and Analysis,0,2026,quiz,1,0.6324931979179382,mlp,test
+1001,Software Design and Analysis,1,2026,quiz,0,0.17246483266353607,mlp,test
+1002,Software Design and Analysis,2,2026,quiz,1,0.5766149163246155,mlp,test
+1003,Software Design and Analysis,3,2026,quiz,1,0.5979357957839966,mlp,test
+1004,Software Design and Analysis,4,2026,quiz,1,0.3196167051792145,mlp,test
+1005,Software Design and Analysis,5,2026,quiz,1,0.6030390858650208,mlp,test
+1006,Software Design and Analysis,6,2026,quiz,0,0.38357630372047424,mlp,test
+1007,Software Engineering,0,2024,final,0,0.3879651725292206,mlp,test
+1008,Software Engineering,1,2024,final,0,0.3164743483066559,mlp,test
+1009,Software Engineering,2,2024,final,1,0.7140445113182068,mlp,test
+1010,Software Engineering,3,2024,final,0,0.13028915226459503,mlp,test
+1011,Software Engineering,4,2024,final,1,0.8352510929107666,mlp,test
+1012,Software Engineering,5,2024,final,1,0.7547433972358704,mlp,test
+1013,Software Engineering,0,2024,mid,1,0.5379762649536133,mlp,test
+1014,Software Engineering,1,2024,mid,0,0.29826071858406067,mlp,test
+1015,Software Engineering,2,2024,mid,0,0.40988510847091675,mlp,test
+1016,Software Engineering,3,2024,mid,0,0.10066681355237961,mlp,test
+1017,Software Engineering,4,2024,mid,1,0.8375513553619385,mlp,test
+1018,Software Engineering,5,2024,mid,0,0.5136374831199646,mlp,test
+1019,Software Engineering,0,2024,quiz,1,0.4147213101387024,mlp,test
+1020,Software Engineering,1,2024,quiz,1,0.3912496864795685,mlp,test
+1021,Software Engineering,2,2024,quiz,1,0.5275757908821106,mlp,test
+1022,Software Engineering,3,2024,quiz,0,0.2425214946269989,mlp,test
+1023,Software Engineering,4,2024,quiz,1,0.815428614616394,mlp,test
+1024,Software Engineering,5,2024,quiz,1,0.5819657444953918,mlp,test
+1025,Software Engineering,0,2025,final,0,0.43105581402778625,mlp,test
+1026,Software Engineering,1,2025,final,1,0.21416711807250977,mlp,test
+1027,Software Engineering,2,2025,final,1,0.7041350603103638,mlp,test
+1028,Software Engineering,3,2025,final,0,0.07609347999095917,mlp,test
+1029,Software Engineering,4,2025,final,1,0.8801960349082947,mlp,test
+1030,Software Engineering,5,2025,final,1,0.7397226095199585,mlp,test
+1031,Software Engineering,0,2025,mid,1,0.5984753370285034,mlp,test
+1032,Software Engineering,1,2025,mid,0,0.19159862399101257,mlp,test
+1033,Software Engineering,2,2025,mid,0,0.2939346134662628,mlp,test
+1034,Software Engineering,3,2025,mid,0,0.05660797283053398,mlp,test
+1035,Software Engineering,4,2025,mid,1,0.8856288194656372,mlp,test
+1036,Software Engineering,5,2025,mid,0,0.3994307816028595,mlp,test
+1037,Software Requirements Engineering,0,2024,final,1,0.8182759881019592,mlp,test
+1038,Software Requirements Engineering,1,2024,final,1,0.34367454051971436,mlp,test
+1039,Software Requirements Engineering,2,2024,final,0,0.3743461072444916,mlp,test
+1040,Software Requirements Engineering,3,2024,final,0,0.20374543964862823,mlp,test
+1041,Software Requirements Engineering,4,2024,final,0,0.6958456635475159,mlp,test
+1042,Theory of Automata,0,2024,final,0,0.06879804283380508,mlp,test
+1043,Theory of Automata,1,2024,final,1,0.6920253038406372,mlp,test
+1044,Theory of Automata,2,2024,final,1,0.7725958824157715,mlp,test
+1045,Theory of Automata,3,2024,final,0,0.08572187274694443,mlp,test
+1046,Theory of Automata,4,2024,final,1,0.7026324272155762,mlp,test
+1047,Theory of Automata,5,2024,final,1,0.6257839798927307,mlp,test
+1048,Theory of Automata,6,2024,final,1,0.6345022320747375,mlp,test
+1049,Theory of Automata,7,2024,final,0,0.6257839798927307,mlp,test
+1050,Theory of Automata,8,2024,final,0,0.32183122634887695,mlp,test
+1051,Theory of Automata,9,2024,final,0,0.13363809883594513,mlp,test
+1052,Theory of Automata,0,2024,mid,0,0.05393865704536438,mlp,test
+1053,Theory of Automata,1,2024,mid,0,0.6739010214805603,mlp,test
+1054,Theory of Automata,2,2024,mid,1,0.7102771997451782,mlp,test
+1055,Theory of Automata,3,2024,mid,0,0.10980316996574402,mlp,test
+1056,Theory of Automata,4,2024,mid,1,0.6399238109588623,mlp,test
+1057,Theory of Automata,5,2024,mid,1,0.5959970355033875,mlp,test
+1058,Theory of Automata,6,2024,mid,0,0.2329069823026657,mlp,test
+1059,Theory of Automata,7,2024,mid,1,0.5959970355033875,mlp,test
+1060,Theory of Automata,8,2024,mid,0,0.34852972626686096,mlp,test
+1061,Theory of Automata,9,2024,mid,0,0.09232266992330551,mlp,test
+1062,Theory of Automata,0,2024,quiz,0,0.10087362676858902,mlp,test
+1063,Theory of Automata,1,2024,quiz,0,0.6717829704284668,mlp,test
+1064,Theory of Automata,2,2024,quiz,0,0.6411741971969604,mlp,test
+1065,Theory of Automata,3,2024,quiz,0,0.1873112916946411,mlp,test
+1066,Theory of Automata,4,2024,quiz,0,0.6393271684646606,mlp,test
+1067,Theory of Automata,5,2024,quiz,1,0.5622085928916931,mlp,test
+1068,Theory of Automata,6,2024,quiz,1,0.4017879068851471,mlp,test
+1069,Theory of Automata,7,2024,quiz,0,0.5622085928916931,mlp,test
+1070,Theory of Automata,8,2024,quiz,0,0.5056725144386292,mlp,test
+1071,Theory of Automata,9,2024,quiz,0,0.16625426709651947,mlp,test
+1072,Theory of Automata,0,2025,final,0,0.04710080474615097,mlp,test
+1073,Theory of Automata,1,2025,final,1,0.6421225666999817,mlp,test
+1074,Theory of Automata,2,2025,final,1,0.7717950940132141,mlp,test
+1075,Theory of Automata,3,2025,final,0,0.05250998213887215,mlp,test
+1076,Theory of Automata,4,2025,final,0,0.6706567406654358,mlp,test
+1077,Theory of Automata,5,2025,final,0,0.6377807855606079,mlp,test
+1078,Theory of Automata,6,2025,final,1,0.6459138989448547,mlp,test
+1079,Theory of Automata,7,2025,final,0,0.570862352848053,mlp,test
+1080,Theory of Automata,8,2025,final,0,0.15680481493473053,mlp,test
+1081,Theory of Automata,9,2025,final,0,0.07531306892633438,mlp,test
+1082,Theory of Automata,0,2025,mid,0,0.03668257221579552,mlp,test
+1083,Theory of Automata,1,2025,mid,0,0.5865452885627747,mlp,test
+1084,Theory of Automata,2,2025,mid,0,0.6803542971611023,mlp,test
+1085,Theory of Automata,3,2025,mid,0,0.05529976636171341,mlp,test
+1086,Theory of Automata,4,2025,mid,0,0.5905086994171143,mlp,test
+1087,Theory of Automata,5,2025,mid,1,0.5870623588562012,mlp,test
+1088,Theory of Automata,6,2025,mid,0,0.25079938769340515,mlp,test
+1089,Theory of Automata,7,2025,mid,1,0.5644429922103882,mlp,test
+1090,Theory of Automata,8,2025,mid,0,0.1443970501422882,mlp,test
+1091,Theory of Automata,9,2025,mid,0,0.049364861100912094,mlp,test
+1092,Theory of Automata,0,2025,quiz,0,0.0702960267663002,mlp,test
+1093,Theory of Automata,1,2025,quiz,1,0.6160731911659241,mlp,test
+1094,Theory of Automata,2,2025,quiz,1,0.6257627606391907,mlp,test
+1095,Theory of Automata,3,2025,quiz,0,0.11583881825208664,mlp,test
+1096,Theory of Automata,4,2025,quiz,1,0.6029995083808899,mlp,test
+1097,Theory of Automata,5,2025,quiz,1,0.5946125984191895,mlp,test
+1098,Theory of Automata,6,2025,quiz,0,0.4632786214351654,mlp,test
+1099,Theory of Automata,7,2025,quiz,1,0.519748330116272,mlp,test
+1100,Theory of Automata,8,2025,quiz,0,0.2739851176738739,mlp,test
+1101,Theory of Automata,9,2025,quiz,1,0.10335145145654678,mlp,test
+1102,Web Programming,0,2025,final,0,0.0793001726269722,mlp,test
+1103,Web Programming,1,2025,final,0,0.4720517098903656,mlp,test
+1104,Web Programming,2,2025,final,0,0.09534215182065964,mlp,test
+1105,Web Programming,3,2025,final,0,0.42412498593330383,mlp,test
+1106,Web Programming,4,2025,final,0,0.11051420122385025,mlp,test
+1107,Web Programming,5,2025,final,0,0.2730611264705658,mlp,test
+1108,Web Programming,6,2025,final,0,0.5274137854576111,mlp,test
+1109,Web Programming,7,2025,final,0,0.1135135069489479,mlp,test
+1110,Web Programming,8,2025,final,1,0.8819587826728821,mlp,test
+1111,Web Programming,9,2025,final,0,0.08385567367076874,mlp,test
+1112,Web Programming,0,2025,mid,0,0.05952288582921028,mlp,test
+1113,Web Programming,1,2025,mid,0,0.2412569671869278,mlp,test
+1114,Web Programming,2,2025,mid,0,0.09459201246500015,mlp,test
+1115,Web Programming,3,2025,mid,0,0.4260668158531189,mlp,test
+1116,Web Programming,4,2025,mid,0,0.05952288582921028,mlp,test
+1117,Web Programming,5,2025,mid,0,0.3881131112575531,mlp,test
+1118,Web Programming,6,2025,mid,0,0.40254902839660645,mlp,test
+1119,Web Programming,7,2025,mid,0,0.15230467915534973,mlp,test
+1120,Web Programming,8,2025,mid,1,0.907965898513794,mlp,test
+1121,Web Programming,9,2025,mid,0,0.06524554640054703,mlp,test
+1122,Web Programming,0,2025,quiz,0,0.20521928369998932,mlp,test
+1123,Web Programming,1,2025,quiz,0,0.45503419637680054,mlp,test
+1124,Web Programming,2,2025,quiz,0,0.24655717611312866,mlp,test
+1125,Web Programming,3,2025,quiz,1,0.5242610573768616,mlp,test
+1126,Web Programming,4,2025,quiz,0,0.13913573324680328,mlp,test
+1127,Web Programming,5,2025,quiz,1,0.5207334160804749,mlp,test
+1128,Web Programming,6,2025,quiz,0,0.5545769929885864,mlp,test
+1129,Web Programming,7,2025,quiz,0,0.30812883377075195,mlp,test
+1130,Web Programming,8,2025,quiz,1,0.8940499424934387,mlp,test
+1131,Web Programming,9,2025,quiz,0,0.2552727162837982,mlp,test
+1132,Web Programming,0,2026,mid,0,0.043407589197158813,mlp,test
+1133,Web Programming,1,2026,mid,0,0.17839698493480682,mlp,test
+1134,Web Programming,2,2026,mid,0,0.07067948579788208,mlp,test
+1135,Web Programming,3,2026,mid,0,0.5251911282539368,mlp,test
+1136,Web Programming,4,2026,mid,0,0.043407589197158813,mlp,test
+1137,Web Programming,5,2026,mid,0,0.43610039353370667,mlp,test
+1138,Web Programming,6,2026,mid,0,0.3155357539653778,mlp,test
+1139,Web Programming,7,2026,mid,0,0.11269890516996384,mlp,test
+1140,Web Programming,8,2026,mid,1,0.9094768762588501,mlp,test
+1141,Web Programming,9,2026,mid,0,0.04816906154155731,mlp,test

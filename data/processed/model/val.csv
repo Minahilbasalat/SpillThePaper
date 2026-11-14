@@ -1,114 +1,112 @@
 subject,topic_id,topic_label,target_year,target_type,prior_papers,prior_years,topic_count_prior,topic_rate_prior,years_since_last,appeared_last_year,recent_rate,type_rate_prior,label
-Advanced Database Concepts,0,"index, index search, memory, search key",2023,mid,16,3,5,0.3125,5.0,0,0.0,0.1667,0
-Advanced Database Concepts,1,"recoverable, schedule, graph, serializable",2023,mid,16,3,7,0.4375,5.0,0,0.0,0.5,1
-Advanced Database Concepts,2,"log, undo, recovery, redo",2023,mid,16,3,8,0.5,5.0,0,0.0,0.5,1
-Advanced Database Concepts,3,"schedule, transactions, strict, timestamp",2023,mid,16,3,6,0.375,5.0,0,0.0,0.5,0
-Advanced Database Concepts,4,"ca, value occurs, times, times database",2023,mid,16,3,4,0.25,5.0,0,0.0,0.3333,1
-Advanced Database Concepts,5,"query, join, column, transaction",2023,mid,16,3,5,0.3125,5.0,0,0.0,0.1667,1
-Advanced Database Concepts,6,"stored unordered, heap file, unordered heap, file",2023,mid,16,3,4,0.25,5.0,0,0.0,0.1667,0
-Advanced Database Concepts,7,"bytes, level, block, record",2023,mid,16,3,7,0.4375,5.0,0,0.0,0.6667,1
-Artificial Intelligence,0,"player, registration, regression, game",2023,final,41,7,26,0.6341,1.0,1,0.3333,0.7,1
-Artificial Intelligence,1,"fitness, subset, decision, chromosome",2023,final,41,7,19,0.4634,1.0,1,0.3333,0.6,1
-Artificial Intelligence,2,"weights, perceptron, data, training",2023,final,41,7,20,0.4878,1.0,1,0.3333,0.9,1
-Artificial Intelligence,3,"email, spam, ham, perfect",2023,final,41,7,3,0.0732,6.0,0,0.0,0.2,0
-Artificial Intelligence,4,"node, game, pruning, nodes",2023,final,41,7,14,0.3415,1.0,1,0.6667,0.4,0
-Artificial Intelligence,5,"search, goal, problem, path",2023,final,41,7,22,0.5366,1.0,1,0.6667,0.7,1
-Artificial Intelligence,6,"probability, variables, distribution, distributions",2023,final,41,7,5,0.122,4.0,0,0.0,0.4,0
-Artificial Intelligence,7,"pruned, value, containing, containing pruned",2023,final,41,7,8,0.1951,1.0,1,0.3333,0.2,0
-Artificial Intelligence,8,"sheets, rough, rough sheets, heuristic function",2023,final,41,7,9,0.2195,1.0,1,0.6667,0.3,0
-Artificial Intelligence,0,"player, registration, regression, game",2023,mid,41,7,26,0.6341,1.0,1,0.3333,0.4286,0
-Artificial Intelligence,1,"fitness, subset, decision, chromosome",2023,mid,41,7,19,0.4634,1.0,1,0.3333,0.5,1
-Artificial Intelligence,2,"weights, perceptron, data, training",2023,mid,41,7,20,0.4878,1.0,1,0.3333,0.5,1
-Artificial Intelligence,3,"email, spam, ham, perfect",2023,mid,41,7,3,0.0732,6.0,0,0.0,0.0,0
-Artificial Intelligence,4,"node, game, pruning, nodes",2023,mid,41,7,14,0.3415,1.0,1,0.6667,0.6429,1
-Artificial Intelligence,5,"search, goal, problem, path",2023,mid,41,7,22,0.5366,1.0,1,0.6667,0.7143,1
-Artificial Intelligence,6,"probability, variables, distribution, distributions",2023,mid,41,7,5,0.122,4.0,0,0.0,0.0,0
-Artificial Intelligence,7,"pruned, value, containing, containing pruned",2023,mid,41,7,8,0.1951,1.0,1,0.3333,0.4286,0
-Artificial Intelligence,8,"sheets, rough, rough sheets, heuristic function",2023,mid,41,7,9,0.2195,1.0,1,0.6667,0.4286,0
-Artificial Intelligence,0,"player, registration, regression, game",2023,quiz,41,7,26,0.6341,1.0,1,0.3333,0.7647,1
-Artificial Intelligence,1,"fitness, subset, decision, chromosome",2023,quiz,41,7,19,0.4634,1.0,1,0.3333,0.3529,1
-Artificial Intelligence,2,"weights, perceptron, data, training",2023,quiz,41,7,20,0.4878,1.0,1,0.3333,0.2353,1
-Artificial Intelligence,3,"email, spam, ham, perfect",2023,quiz,41,7,3,0.0732,6.0,0,0.0,0.0588,0
-Artificial Intelligence,4,"node, game, pruning, nodes",2023,quiz,41,7,14,0.3415,1.0,1,0.6667,0.0588,0
-Artificial Intelligence,5,"search, goal, problem, path",2023,quiz,41,7,22,0.5366,1.0,1,0.6667,0.2941,1
-Artificial Intelligence,6,"probability, variables, distribution, distributions",2023,quiz,41,7,5,0.122,4.0,0,0.0,0.0588,0
-Artificial Intelligence,7,"pruned, value, containing, containing pruned",2023,quiz,41,7,8,0.1951,1.0,1,0.3333,0.0,0
-Artificial Intelligence,8,"sheets, rough, rough sheets, heuristic function",2023,quiz,41,7,9,0.2195,1.0,1,0.6667,0.0,1
-Compiler Construction,0,"pc, int, instruction, quad",2023,mid,19,7,4,0.2105,4.0,0,0.0,0.0833,0
-Compiler Construction,1,"compiler, interpreter, match, provides",2023,mid,19,7,8,0.4211,2.0,0,1.0,0.5,0
-Compiler Construction,2,"scheme, translation scheme, translation, left recursion",2023,mid,19,7,12,0.6316,2.0,0,1.0,0.6667,0
-Compiler Construction,3,"sum, address, id, int",2023,mid,19,7,11,0.5789,3.0,0,0.0,0.4167,1
-Compiler Construction,4,"example, tokens, regular, token",2023,mid,19,7,12,0.6316,3.0,0,0.0,0.4167,1
-Compiler Construction,5,"precedence, bf, set, operators",2023,mid,19,7,8,0.4211,3.0,0,0.0,0.5,1
-Computer Networks,0,"seg x+, x+, seg, acknowledgement",2023,final,40,7,1,0.025,4.0,0,0.0,0.2,0
-Computer Networks,1,"delay, propagation, link, sends",2023,final,40,7,18,0.45,1.0,1,0.3333,0.8,0
-Computer Networks,2,"segment, port, destination port, port number",2023,final,40,7,6,0.15,1.0,1,0.25,0.2,0
-Computer Networks,3,"packet, switch, switching, message",2023,final,40,7,14,0.35,1.0,1,0.3333,0.0,1
-Computer Networks,4,"layer, protocol, transport, transport layer",2023,final,40,7,17,0.425,1.0,1,0.1667,0.8,1
-Computer Networks,5,"http, object, server, client",2023,final,40,7,7,0.175,1.0,1,0.25,0.2,0
-Computer Networks,6,"address, receiver, dns, sequence",2023,final,40,7,16,0.4,1.0,1,0.4167,0.8,1
-Computer Networks,7,"node, table, network, arp",2023,final,40,7,19,0.475,1.0,1,0.5833,0.8,1
-Computer Networks,8,"rtt, transmission round, round, transmission",2023,final,40,7,8,0.2,1.0,1,0.25,0.6,0
-Computer Networks,0,"seg x+, x+, seg, acknowledgement",2023,mid,40,7,1,0.025,4.0,0,0.0,0.0,0
-Computer Networks,1,"delay, propagation, link, sends",2023,mid,40,7,18,0.45,1.0,1,0.3333,0.4545,1
-Computer Networks,2,"segment, port, destination port, port number",2023,mid,40,7,6,0.15,1.0,1,0.25,0.0909,0
-Computer Networks,3,"packet, switch, switching, message",2023,mid,40,7,14,0.35,1.0,1,0.3333,0.5455,1
-Computer Networks,4,"layer, protocol, transport, transport layer",2023,mid,40,7,17,0.425,1.0,1,0.1667,0.6364,1
-Computer Networks,5,"http, object, server, client",2023,mid,40,7,7,0.175,1.0,1,0.25,0.3636,1
-Computer Networks,6,"address, receiver, dns, sequence",2023,mid,40,7,16,0.4,1.0,1,0.4167,0.8182,1
-Computer Networks,7,"node, table, network, arp",2023,mid,40,7,19,0.475,1.0,1,0.5833,0.4545,0
-Computer Networks,8,"rtt, transmission round, round, transmission",2023,mid,40,7,8,0.2,1.0,1,0.25,0.3636,0
-Computer Networks,0,"seg x+, x+, seg, acknowledgement",2023,quiz,40,7,1,0.025,4.0,0,0.0,0.0,0
-Computer Networks,1,"delay, propagation, link, sends",2023,quiz,40,7,18,0.45,1.0,1,0.3333,0.375,1
-Computer Networks,2,"segment, port, destination port, port number",2023,quiz,40,7,6,0.15,1.0,1,0.25,0.1667,1
-Computer Networks,3,"packet, switch, switching, message",2023,quiz,40,7,14,0.35,1.0,1,0.3333,0.3333,1
-Computer Networks,4,"layer, protocol, transport, transport layer",2023,quiz,40,7,17,0.425,1.0,1,0.1667,0.25,1
-Computer Networks,5,"http, object, server, client",2023,quiz,40,7,7,0.175,1.0,1,0.25,0.0833,1
-Computer Networks,6,"address, receiver, dns, sequence",2023,quiz,40,7,16,0.4,1.0,1,0.4167,0.125,1
-Computer Networks,7,"node, table, network, arp",2023,quiz,40,7,19,0.475,1.0,1,0.5833,0.4167,1
-Computer Networks,8,"rtt, transmission round, round, transmission",2023,quiz,40,7,8,0.2,1.0,1,0.25,0.0417,1
-Computer Networks Lab,0,"command, address, ip, tcp",2023,final,25,4,8,0.32,5.0,0,0.0,0.2222,1
-Computer Networks Lab,1,"pc, seen, whispering borrowing, seen talking",2023,final,25,4,7,0.28,3.0,0,0.0,0.3333,1
-Computer Networks Lab,2,"understanding, make suitable, suitable assumptions, suitable",2023,final,25,4,8,0.32,3.0,0,0.0,0.4444,1
-Computer Networks Lab,3,"delete, delete files, windows ubuntu, windows",2023,final,25,4,4,0.16,3.0,0,0.0,0.0,1
-Computer Networks Lab,4,"server, client, socket, udp",2023,final,25,4,18,0.72,1.0,1,1.0,0.5556,1
-Computer Networks Lab,5,"simulation, ns, finish, set",2023,final,25,4,5,0.2,5.0,0,0.0,0.3333,0
-Computer Networks Lab,6,"lahore, ahmed, xyz, xyz house",2023,final,25,4,2,0.08,5.0,0,0.0,0.2222,0
-Computer Networks Lab,7,"placed, turned placed, turned, watches turned",2023,final,25,4,4,0.16,3.0,0,0.0,0.0,1
-Computer Networks Lab,8,"protect, matching, protect save, protect matching",2023,final,25,4,4,0.16,3.0,0,0.0,0.0,1
-Computer Organization and Assembly Language,0,"array, numbers, elements, work",2023,final,29,8,9,0.3103,1.0,1,0.3333,0.1111,0
-Computer Organization and Assembly Language,1,"clear, screen, pascal, character",2023,final,29,8,10,0.3448,1.0,1,0.5,0.5556,0
-Computer Organization and Assembly Language,2,"mov, ax, dw, bx",2023,final,29,8,16,0.5517,1.0,1,0.6667,0.6667,1
-Computer Organization and Assembly Language,3,"services, bios, service, mode",2023,final,29,8,3,0.1034,9.0,0,0.0,0.3333,0
-Computer Organization and Assembly Language,4,"ee, jo, yooo, ef",2023,final,29,8,2,0.069,4.0,0,0.0,0.0,0
-Computer Organization and Assembly Language,5,"descriptor, table, descriptor table, gdt",2023,final,29,8,3,0.1034,1.0,1,0.1667,0.3333,0
-Computer Organization and Assembly Language,6,"mov, al, ax, ah",2023,final,29,8,7,0.2414,1.0,1,0.1667,0.5556,1
-Computer Organization and Assembly Language,7,"language, assembly language, assembly, open",2023,final,29,8,5,0.1724,4.0,0,0.0,0.2222,0
-Computer Organization and Assembly Language,8,"string, memory, address, jump",2023,final,29,8,14,0.4828,1.0,1,0.3333,0.6667,1
-Computer Organization and Assembly Language,9,"register, instruction, interrupt, int",2023,final,29,8,7,0.2414,1.0,1,0.0833,0.1111,1
-Computer Organization and Assembly Language,0,"array, numbers, elements, work",2023,mid,29,8,9,0.3103,1.0,1,0.3333,0.4667,1
-Computer Organization and Assembly Language,1,"clear, screen, pascal, character",2023,mid,29,8,10,0.3448,1.0,1,0.5,0.3333,0
-Computer Organization and Assembly Language,2,"mov, ax, dw, bx",2023,mid,29,8,16,0.5517,1.0,1,0.6667,0.6,1
-Computer Organization and Assembly Language,3,"services, bios, service, mode",2023,mid,29,8,3,0.1034,9.0,0,0.0,0.0,0
-Computer Organization and Assembly Language,4,"ee, jo, yooo, ef",2023,mid,29,8,2,0.069,4.0,0,0.0,0.0667,0
-Computer Organization and Assembly Language,5,"descriptor, table, descriptor table, gdt",2023,mid,29,8,3,0.1034,1.0,1,0.1667,0.0,0
-Computer Organization and Assembly Language,6,"mov, al, ax, ah",2023,mid,29,8,7,0.2414,1.0,1,0.1667,0.1333,0
-Computer Organization and Assembly Language,7,"language, assembly language, assembly, open",2023,mid,29,8,5,0.1724,4.0,0,0.0,0.1333,0
-Computer Organization and Assembly Language,8,"string, memory, address, jump",2023,mid,29,8,14,0.4828,1.0,1,0.3333,0.4,1
-Computer Organization and Assembly Language,9,"register, instruction, interrupt, int",2023,mid,29,8,7,0.2414,1.0,1,0.0833,0.2667,0
-DLD,0,"gate, high, high inputs, ex gate",2023,final,23,5,1,0.0435,5.0,0,0.0,0.25,0
-DLD,1,"diagram, table, output, circuit",2023,final,23,5,10,0.4348,1.0,1,0.3077,0.75,1
-DLD,2,"line, multiplexer, camscanner, decoder",2023,final,23,5,10,0.4348,1.0,1,0.5385,0.5,1
-DLD,3,"flip flop, flop, flip, characteristic",2023,final,23,5,7,0.3043,2.0,0,0.0769,0.75,1
-DLD,4,"number, bit, binary, convert",2023,final,23,5,12,0.5217,1.0,1,0.3846,1.0,1
-DLD,5,"calculators, dealt seriously, seriously, seriously causing",2023,final,23,5,4,0.1739,2.0,0,0.3077,0.0,0
-DLD,6,"flip flops, flops, flip, assignment",2023,final,23,5,6,0.2609,1.0,1,0.3077,0.75,1
-DLD,7,"sum, form, product, sum products",2023,final,23,5,8,0.3478,1.0,1,0.3846,0.25,0
-DLD,8,"prove, optimize expressions, prove identity, identity optimize",2023,final,23,5,4,0.1739,2.0,0,0.2308,0.0,0
-DW,0,"fact, fact table, table, schema",2023,mid,9,3,5,0.5556,5.0,0,0.0,0.5,1
-DW,1,"deptid, batchid, examine best, justify",2023,mid,9,3,3,0.3333,5.0,0,0.0,0.1667,0
-DW,2,"data, example, systems, briefly",2023,mid,9,3,8,0.8889,5.0,0,0.0,0.8333,1
-DW,3,"carid, bytes, saleid, sale",2023,mid,9,3,4,0.4444,6.0,0,0.0,0.5,1
+Advanced Database Concepts,0,"transactions, transaction, log, written",2023,mid,16,3,6,0.375,5.0,0,0.0,0.5,0
+Advanced Database Concepts,1,"index, index search, memory, search key",2023,mid,16,3,5,0.3125,5.0,0,0.0,0.1667,0
+Advanced Database Concepts,2,"bytes, block, number, file",2023,mid,16,3,7,0.4375,5.0,0,0.0,0.6667,1
+Advanced Database Concepts,3,"schedule, graph, serial, serializable",2023,mid,16,3,7,0.4375,5.0,0,0.0,0.1667,1
+Advanced Database Concepts,4,"recoverable, strict, actions, schedules",2023,mid,16,3,5,0.3125,5.0,0,0.0,0.5,0
+Advanced Database Concepts,5,"query, column, table, selectivity",2023,mid,16,3,4,0.25,5.0,0,0.0,0.0,1
+Advanced Database Concepts,6,"undo, redo, recovery, read",2023,mid,16,3,8,0.5,5.0,0,0.0,0.6667,1
+Artificial Intelligence,0,"weights, regression, classification regression, classification",2023,final,38,7,9,0.2368,3.0,0,0.0,0.3,0
+Artificial Intelligence,1,"fitness, network, chromosome, weights",2023,final,38,7,18,0.4737,1.0,1,0.6667,0.9,1
+Artificial Intelligence,2,"search, path, nodes, expanded",2023,final,38,7,23,0.6053,1.0,1,1.0,0.9,1
+Artificial Intelligence,3,"pruned, containing, containing pruned, tree containing",2023,final,38,7,3,0.0789,3.0,0,0.0,0.2,0
+Artificial Intelligence,4,"data, training, decision, decision tree",2023,final,38,7,19,0.5,1.0,1,0.3333,0.6,1
+Artificial Intelligence,5,"probability, bayes, ham, variables",2023,final,38,7,9,0.2368,4.0,0,0.0,0.6,0
+Artificial Intelligence,6,"game, pruning, tree, minimax",2023,final,38,7,19,0.5,1.0,1,0.6667,0.6,1
+Artificial Intelligence,7,"heuristic, description, admissible, goal",2023,final,38,7,9,0.2368,1.0,1,0.3333,0.0,0
+Artificial Intelligence,8,"subset, sum, set, value",2023,final,38,7,8,0.2105,1.0,1,0.3333,0.5,0
+Artificial Intelligence,9,"uniform, cost, uniform cost, cost search",2023,final,38,7,6,0.1579,1.0,1,0.3333,0.2,0
+Artificial Intelligence,0,"weights, regression, classification regression, classification",2023,mid,38,7,9,0.2368,3.0,0,0.0,0.3571,0
+Artificial Intelligence,1,"fitness, network, chromosome, weights",2023,mid,38,7,18,0.4737,1.0,1,0.6667,0.4286,1
+Artificial Intelligence,2,"search, path, nodes, expanded",2023,mid,38,7,23,0.6053,1.0,1,1.0,0.5714,1
+Artificial Intelligence,3,"pruned, containing, containing pruned, tree containing",2023,mid,38,7,3,0.0789,3.0,0,0.0,0.0714,0
+Artificial Intelligence,4,"data, training, decision, decision tree",2023,mid,38,7,19,0.5,1.0,1,0.3333,0.4286,0
+Artificial Intelligence,5,"probability, bayes, ham, variables",2023,mid,38,7,9,0.2368,4.0,0,0.0,0.1429,0
+Artificial Intelligence,6,"game, pruning, tree, minimax",2023,mid,38,7,19,0.5,1.0,1,0.6667,0.7143,1
+Artificial Intelligence,7,"heuristic, description, admissible, goal",2023,mid,38,7,9,0.2368,1.0,1,0.3333,0.3571,0
+Artificial Intelligence,8,"subset, sum, set, value",2023,mid,38,7,8,0.2105,1.0,1,0.3333,0.2143,0
+Artificial Intelligence,9,"uniform, cost, uniform cost, cost search",2023,mid,38,7,6,0.1579,1.0,1,0.3333,0.2857,1
+Artificial Intelligence,0,"weights, regression, classification regression, classification",2023,quiz,38,7,9,0.2368,3.0,0,0.0,0.0714,0
+Artificial Intelligence,1,"fitness, network, chromosome, weights",2023,quiz,38,7,18,0.4737,1.0,1,0.6667,0.2143,1
+Artificial Intelligence,2,"search, path, nodes, expanded",2023,quiz,38,7,23,0.6053,1.0,1,1.0,0.4286,1
+Artificial Intelligence,3,"pruned, containing, containing pruned, tree containing",2023,quiz,38,7,3,0.0789,3.0,0,0.0,0.0,0
+Artificial Intelligence,4,"data, training, decision, decision tree",2023,quiz,38,7,19,0.5,1.0,1,0.3333,0.5,1
+Artificial Intelligence,5,"probability, bayes, ham, variables",2023,quiz,38,7,9,0.2368,4.0,0,0.0,0.0714,0
+Artificial Intelligence,6,"game, pruning, tree, minimax",2023,quiz,38,7,19,0.5,1.0,1,0.6667,0.2143,0
+Artificial Intelligence,7,"heuristic, description, admissible, goal",2023,quiz,38,7,9,0.2368,1.0,1,0.3333,0.2857,0
+Artificial Intelligence,8,"subset, sum, set, value",2023,quiz,38,7,8,0.2105,1.0,1,0.3333,0.0,0
+Artificial Intelligence,9,"uniform, cost, uniform cost, cost search",2023,quiz,38,7,6,0.1579,1.0,1,0.3333,0.0,0
+Compiler Construction,0,"sum, address, int, actions",2023,mid,19,7,9,0.4737,3.0,0,0.0,0.25,1
+Compiler Construction,1,"precedence, bf, set, operators",2023,mid,19,7,9,0.4737,3.0,0,0.0,0.5833,1
+Compiler Construction,2,"scheme, translation scheme, translation, left",2023,mid,19,7,13,0.6842,2.0,0,1.0,0.6667,0
+Compiler Construction,3,"interpreter, provides, compiler, hybrid",2023,mid,19,7,6,0.3158,2.0,0,1.0,0.5,0
+Compiler Construction,4,"tokens, regular, date, definition",2023,mid,19,7,13,0.6842,3.0,0,0.0,0.5,1
+Computer Networks,0,"node, routing, nodes, tables",2023,final,40,7,8,0.2,1.0,1,0.1667,0.8,1
+Computer Networks,1,"http, object, browser, rtt",2023,final,40,7,10,0.25,1.0,1,0.5,0.4,1
+Computer Networks,2,"segment, tcp, sender, sent",2023,final,40,7,14,0.35,1.0,1,0.4167,0.8,1
+Computer Networks,3,"seg x+, x+, seg, window",2023,final,40,7,2,0.05,4.0,0,0.0,0.2,0
+Computer Networks,4,"diagram, problem, delayed, delayed duplicates",2023,final,40,7,6,0.15,2.0,0,0.1667,0.2,1
+Computer Networks,5,"layer, ip, data, network",2023,final,40,7,16,0.4,1.0,1,0.25,0.8,1
+Computer Networks,6,"packet, destination, switching, source",2023,final,40,7,16,0.4,1.0,1,0.4167,0.2,1
+Computer Networks,7,"delay, frame, sends, propagation",2023,final,40,7,14,0.35,1.0,1,0.25,0.6,1
+Computer Networks,8,"dns, com, fost, rrs",2023,final,40,7,6,0.15,1.0,1,0.1667,0.2,1
+Computer Networks,0,"node, routing, nodes, tables",2023,mid,40,7,8,0.2,1.0,1,0.1667,0.0,0
+Computer Networks,1,"http, object, browser, rtt",2023,mid,40,7,10,0.25,1.0,1,0.5,0.4545,1
+Computer Networks,2,"segment, tcp, sender, sent",2023,mid,40,7,14,0.35,1.0,1,0.4167,0.4545,1
+Computer Networks,3,"seg x+, x+, seg, window",2023,mid,40,7,2,0.05,4.0,0,0.0,0.0909,0
+Computer Networks,4,"diagram, problem, delayed, delayed duplicates",2023,mid,40,7,6,0.15,2.0,0,0.1667,0.2727,0
+Computer Networks,5,"layer, ip, data, network",2023,mid,40,7,16,0.4,1.0,1,0.25,0.6364,1
+Computer Networks,6,"packet, destination, switching, source",2023,mid,40,7,16,0.4,1.0,1,0.4167,0.5455,1
+Computer Networks,7,"delay, frame, sends, propagation",2023,mid,40,7,14,0.35,1.0,1,0.25,0.2727,1
+Computer Networks,8,"dns, com, fost, rrs",2023,mid,40,7,6,0.15,1.0,1,0.1667,0.3636,1
+Computer Networks,0,"node, routing, nodes, tables",2023,quiz,40,7,8,0.2,1.0,1,0.1667,0.1667,1
+Computer Networks,1,"http, object, browser, rtt",2023,quiz,40,7,10,0.25,1.0,1,0.5,0.125,1
+Computer Networks,2,"segment, tcp, sender, sent",2023,quiz,40,7,14,0.35,1.0,1,0.4167,0.2083,1
+Computer Networks,3,"seg x+, x+, seg, window",2023,quiz,40,7,2,0.05,4.0,0,0.0,0.0,0
+Computer Networks,4,"diagram, problem, delayed, delayed duplicates",2023,quiz,40,7,6,0.15,2.0,0,0.1667,0.0833,0
+Computer Networks,5,"layer, ip, data, network",2023,quiz,40,7,16,0.4,1.0,1,0.25,0.2083,1
+Computer Networks,6,"packet, destination, switching, source",2023,quiz,40,7,16,0.4,1.0,1,0.4167,0.375,1
+Computer Networks,7,"delay, frame, sends, propagation",2023,quiz,40,7,14,0.35,1.0,1,0.25,0.3333,1
+Computer Networks,8,"dns, com, fost, rrs",2023,quiz,40,7,6,0.15,1.0,1,0.1667,0.0417,1
+Computer Networks Lab,0,"server, client, parking, client server",2023,final,21,4,6,0.2857,1.0,1,1.0,0.25,1
+Computer Networks Lab,1,"select, appropriate, select appropriate, socket",2023,final,21,4,5,0.2381,5.0,0,0.0,0.0,0
+Computer Networks Lab,2,"capture, connection, number, packet",2023,final,21,4,7,0.3333,5.0,0,0.0,0.0,0
+Computer Networks Lab,3,"ip, address, port, ip address",2023,final,21,4,8,0.381,5.0,0,0.0,0.25,1
+Computer Networks Lab,4,"router, design, interfaces, generic",2023,final,21,4,3,0.1429,5.0,0,0.0,0.25,0
+Computer Networks Lab,5,"udp, data, stops, starts stops",2023,final,21,4,7,0.3333,5.0,0,0.0,0.125,0
+Computer Networks Lab,6,"socket, bind, programming, socket programming",2023,final,21,4,7,0.3333,3.0,0,0.0,0.125,0
+Computer Networks Lab,7,"lahore, ahmed, xyz house, xyz",2023,final,21,4,2,0.0952,5.0,0,0.0,0.25,0
+Computer Networks Lab,8,"bits, bits bits, command, ss",2023,final,21,4,4,0.1905,5.0,0,0.0,0.0,0
+Computer Networks Lab,9,"ns, simulation, set, stop",2023,final,21,4,5,0.2381,5.0,0,0.0,0.25,0
+Computer Organization and Assembly Language,0,"address, physical, physical address, memory",2023,final,29,8,7,0.2414,1.0,1,0.4167,0.4444,0
+Computer Organization and Assembly Language,1,"carry, int, trap, flag",2023,final,29,8,9,0.3103,1.0,1,0.0833,0.3333,0
+Computer Organization and Assembly Language,2,"descriptor, register, instruction, table",2023,final,29,8,7,0.2414,1.0,1,0.1667,0.4444,1
+Computer Organization and Assembly Language,3,"language, assembly language, assembly, file",2023,final,29,8,8,0.2759,1.0,1,0.1667,0.2222,1
+Computer Organization and Assembly Language,4,"jo, ee, yooo, ef",2023,final,29,8,2,0.069,4.0,0,0.0,0.0,0
+Computer Organization and Assembly Language,5,"screen, character, background, check",2023,final,29,8,13,0.4483,1.0,1,0.5833,0.7778,0
+Computer Organization and Assembly Language,6,"array, numbers, dw, bit",2023,final,29,8,9,0.3103,1.0,1,0.25,0.1111,0
+Computer Organization and Assembly Language,7,"mov, ax, mov ax, al",2023,final,29,8,12,0.4138,1.0,1,0.3333,0.7778,1
+Computer Organization and Assembly Language,8,"pascal, calling, pascal calling, conventions",2023,final,29,8,2,0.069,2.0,0,0.0833,0.1111,0
+Computer Organization and Assembly Language,9,"push, instruction, mov, ret",2023,final,29,8,12,0.4138,1.0,1,0.25,0.5556,1
+Computer Organization and Assembly Language,0,"address, physical, physical address, memory",2023,mid,29,8,7,0.2414,1.0,1,0.4167,0.1333,0
+Computer Organization and Assembly Language,1,"carry, int, trap, flag",2023,mid,29,8,9,0.3103,1.0,1,0.0833,0.2667,0
+Computer Organization and Assembly Language,2,"descriptor, register, instruction, table",2023,mid,29,8,7,0.2414,1.0,1,0.1667,0.1333,0
+Computer Organization and Assembly Language,3,"language, assembly language, assembly, file",2023,mid,29,8,8,0.2759,1.0,1,0.1667,0.2667,0
+Computer Organization and Assembly Language,4,"jo, ee, yooo, ef",2023,mid,29,8,2,0.069,4.0,0,0.0,0.0667,0
+Computer Organization and Assembly Language,5,"screen, character, background, check",2023,mid,29,8,13,0.4483,1.0,1,0.5833,0.3333,0
+Computer Organization and Assembly Language,6,"array, numbers, dw, bit",2023,mid,29,8,9,0.3103,1.0,1,0.25,0.4,1
+Computer Organization and Assembly Language,7,"mov, ax, mov ax, al",2023,mid,29,8,12,0.4138,1.0,1,0.3333,0.3333,1
+Computer Organization and Assembly Language,8,"pascal, calling, pascal calling, conventions",2023,mid,29,8,2,0.069,2.0,0,0.0833,0.0667,0
+Computer Organization and Assembly Language,9,"push, instruction, mov, ret",2023,mid,29,8,12,0.4138,1.0,1,0.25,0.4667,1
+DLD,0,"sum, form, cd, product",2023,final,23,5,9,0.3913,1.0,1,0.3846,0.25,0
+DLD,1,"logic, inputs, bit, outputs",2023,final,23,5,5,0.2174,1.0,1,0.0769,1.0,1
+DLD,2,"flip flop, flop, flip, characteristic",2023,final,23,5,6,0.2609,2.0,0,0.0769,0.75,1
+DLD,3,"flip flops, flops, flip, assignment design",2023,final,23,5,5,0.2174,2.0,0,0.2308,0.5,1
+DLD,4,"line, decoder, multiplexer, camscanner",2023,final,23,5,12,0.5217,1.0,1,0.5385,0.75,1
+DLD,5,"number, bit number, bit, bcd",2023,final,23,5,7,0.3043,2.0,0,0.4615,0.25,0
+DLD,6,"diagram, output, circuit, sequence",2023,final,23,5,11,0.4783,1.0,1,0.3077,1.0,1
+DLD,7,"convert, hexadecimal, convert hexadecimal, bit binary",2023,final,23,5,2,0.087,5.0,0,0.0,0.25,0
+DLD,8,"prove, prove identity, optimize expressions, identity optimize",2023,final,23,5,4,0.1739,2.0,0,0.2308,0.0,0
 Data Science,0,"cluster, feature, equation, training examples",2023,final,10,5,5,0.5,3.0,0,0.0,0.6667,0
 Data Science,1,"classifier, suppose figures, logistic classifier, figures represents",2023,final,10,5,5,0.5,3.0,0,0.0,0.6667,0
 Data Science,2,"logistic, regression, function, logistic regression",2023,final,10,5,6,0.6,1.0,1,0.5,0.6667,0
@@ -127,14 +125,18 @@ Data Science,5,"adding new, set adding, training set, adding",2023,mid,10,5,3,0.
 Data Science,6,"imbalanced class, imbalanced, class problems, good",2023,mid,10,5,3,0.3,3.0,0,0.0,0.2857,0
 Data Science,7,"think hypothesis, hypothesis fitting, fitting training, fitting",2023,mid,10,5,3,0.3,4.0,0,0.0,0.1429,0
 Data Science,8,"gradient, descent, gradient descent, cause",2023,mid,10,5,4,0.4,1.0,1,0.5,0.4286,1
-Data Structures,0,"linked, head, function, nodes",2023,mid,24,7,8,0.3333,1.0,1,0.3333,0.5,1
-Data Structures,1,"graph, edges, algorithm, friends",2023,mid,24,7,7,0.2917,1.0,1,0.1111,0.0,0
-Data Structures,2,"camscanner, scanned, scanned camscanner, big",2023,mid,24,7,6,0.25,1.0,1,0.6667,0.5,1
-Data Structures,3,"int, arr, implement, int int",2023,mid,24,7,12,0.5,1.0,1,0.5556,0.6667,1
-Data Structures,4,"attached, file, file attached, cpp file",2023,mid,24,7,3,0.125,1.0,1,0.1111,0.1667,0
-Data Structures,5,"expression, expression tree, prints, print",2023,mid,24,7,3,0.125,3.0,0,0.0,0.0,0
-Data Structures,6,"fun, lo, fy, funl",2023,mid,24,7,2,0.0833,1.0,1,0.2222,0.1667,0
-Data Structures,7,"tree, node, avl, avl tree",2023,mid,24,7,11,0.4583,1.0,1,0.5556,0.5,0
+Data Structures,0,"compute, big, worst big, worst",2023,mid,24,7,3,0.125,1.0,1,0.3333,0.3333,1
+Data Structures,1,"camscanner, scanned, scanned camscanner, sciencepage",2023,mid,24,7,9,0.375,1.0,1,0.7778,0.6667,1
+Data Structures,2,"min, implement, tree, child",2023,mid,24,7,7,0.2917,1.0,1,0.4444,0.3333,0
+Data Structures,3,"input, tree, graph, node",2023,mid,24,7,17,0.7083,1.0,1,0.7778,0.6667,1
+Data Structures,4,"file, attached, file attached, cpp file",2023,mid,24,7,2,0.0833,3.0,0,0.0,0.0,0
+Data Structures,5,"int, arr, int int, arr arr",2023,mid,24,7,7,0.2917,1.0,1,0.3333,0.3333,1
+Data Structures,6,"insert, ptr, new, key",2023,mid,24,7,4,0.1667,1.0,1,0.2222,0.1667,0
+Data Structures,7,"friends, friends friends, sonia, friend",2023,mid,24,7,2,0.0833,3.0,0,0.0,0.0,0
+Data Warehousing and Data Mining,0,"fact, fact table, table, schema",2023,mid,9,3,5,0.5556,5.0,0,0.0,0.5,1
+Data Warehousing and Data Mining,1,"deptid, batchid, examine best, justify",2023,mid,9,3,3,0.3333,5.0,0,0.0,0.1667,0
+Data Warehousing and Data Mining,2,"data, example, systems, briefly",2023,mid,9,3,8,0.8889,5.0,0,0.0,0.8333,1
+Data Warehousing and Data Mining,3,"carid, bytes, saleid, sale",2023,mid,9,3,4,0.4444,6.0,0,0.0,0.5,1
 Database Systems,0,"functional dependencies, functional, dependencies, deptno",2023,final,29,11,5,0.1724,3.0,0,0.0,0.2727,0
 Database Systems,1,"schedule, transactions, serializable, graph",2023,final,29,11,10,0.3448,2.0,0,0.25,0.7273,1
 Database Systems,2,"number, customer, branch, account",2023,final,29,11,15,0.5172,1.0,1,0.75,0.6364,1
@@ -165,56 +167,56 @@ Database Systems,6,"entity, relationship, type, attribute",2023,quiz,29,11,6,0.2
 Database Systems,7,"relational, map, diagram relational, diagram",2023,quiz,29,11,11,0.3793,2.0,0,0.25,0.3333,0
 Database Systems,8,"select, query, sql, join",2023,quiz,29,11,15,0.5172,1.0,1,0.75,0.0,1
 Database Systems,9,"fds, schema, check, keys",2023,quiz,29,11,12,0.4138,1.0,1,0.5,0.0,0
-Design and Analysis of Algorithms,0,"problem, optimal, bcs, problem hint",2023,final,60,9,14,0.2333,1.0,1,0.5,0.75,1
-Design and Analysis of Algorithms,1,"graph, vertex, weight, algorithm",2023,final,60,9,33,0.55,1.0,1,0.8333,1.0,1
-Design and Analysis of Algorithms,2,"true, ln, ln true, lg ln",2023,final,60,9,4,0.0667,5.0,0,0.0,0.0,0
-Design and Analysis of Algorithms,3,"loop, loop invariant, invariant, proof",2023,final,60,9,4,0.0667,10.0,0,0.0,0.0,0
-Design and Analysis of Algorithms,4,"english, algorithm, pseudo argument, english neat",2023,final,60,9,8,0.1333,7.0,0,0.0,0.4167,0
-Design and Analysis of Algorithms,5,"sort, array, merge, element",2023,final,60,9,28,0.4667,1.0,1,0.6667,0.4167,1
-Design and Analysis of Algorithms,6,"big, notation, terms big, oh",2023,final,60,9,8,0.1333,1.0,1,0.3333,0.0833,0
-Design and Analysis of Algorithms,7,"requirements adjacency, requirements, space requirements, space",2023,final,60,9,2,0.0333,7.0,0,0.0,0.0,0
-Design and Analysis of Algorithms,8,"tree, edge, spanning tree, spanning",2023,final,60,9,29,0.4833,1.0,1,0.6667,0.8333,1
-Design and Analysis of Algorithms,0,"problem, optimal, bcs, problem hint",2023,mid,60,9,14,0.2333,1.0,1,0.5,0.2222,1
-Design and Analysis of Algorithms,1,"graph, vertex, weight, algorithm",2023,mid,60,9,33,0.55,1.0,1,0.8333,0.4444,1
-Design and Analysis of Algorithms,2,"true, ln, ln true, lg ln",2023,mid,60,9,4,0.0667,5.0,0,0.0,0.0,0
-Design and Analysis of Algorithms,3,"loop, loop invariant, invariant, proof",2023,mid,60,9,4,0.0667,10.0,0,0.0,0.2222,0
-Design and Analysis of Algorithms,4,"english, algorithm, pseudo argument, english neat",2023,mid,60,9,8,0.1333,7.0,0,0.0,0.1667,0
-Design and Analysis of Algorithms,5,"sort, array, merge, element",2023,mid,60,9,28,0.4667,1.0,1,0.6667,0.6111,1
-Design and Analysis of Algorithms,6,"big, notation, terms big, oh",2023,mid,60,9,8,0.1333,1.0,1,0.3333,0.2222,0
-Design and Analysis of Algorithms,7,"requirements adjacency, requirements, space requirements, space",2023,mid,60,9,2,0.0333,7.0,0,0.0,0.0,0
-Design and Analysis of Algorithms,8,"tree, edge, spanning tree, spanning",2023,mid,60,9,29,0.4833,1.0,1,0.6667,0.6667,1
-Design and Analysis of Algorithms,0,"problem, optimal, bcs, problem hint",2023,quiz,60,9,14,0.2333,1.0,1,0.5,0.0333,0
-Design and Analysis of Algorithms,1,"graph, vertex, weight, algorithm",2023,quiz,60,9,33,0.55,1.0,1,0.8333,0.4333,1
-Design and Analysis of Algorithms,2,"true, ln, ln true, lg ln",2023,quiz,60,9,4,0.0667,5.0,0,0.0,0.1333,0
-Design and Analysis of Algorithms,3,"loop, loop invariant, invariant, proof",2023,quiz,60,9,4,0.0667,10.0,0,0.0,0.0,0
-Design and Analysis of Algorithms,4,"english, algorithm, pseudo argument, english neat",2023,quiz,60,9,8,0.1333,7.0,0,0.0,0.0,0
-Design and Analysis of Algorithms,5,"sort, array, merge, element",2023,quiz,60,9,28,0.4667,1.0,1,0.6667,0.4,0
-Design and Analysis of Algorithms,6,"big, notation, terms big, oh",2023,quiz,60,9,8,0.1333,1.0,1,0.3333,0.1,0
-Design and Analysis of Algorithms,7,"requirements adjacency, requirements, space requirements, space",2023,quiz,60,9,2,0.0333,7.0,0,0.0,0.0667,0
-Design and Analysis of Algorithms,8,"tree, edge, spanning tree, spanning",2023,quiz,60,9,29,0.4833,1.0,1,0.6667,0.2333,1
-HCI,0,"web, appropriate, memory, provide appropriate",2023,mid,17,4,6,0.3529,3.0,0,0.0,0.375,0
-HCI,1,"interface, output, advantages, input",2023,mid,17,4,11,0.6471,1.0,1,0.6667,0.75,0
-HCI,2,"mouse, mouse mouse, click, keyboard",2023,mid,17,4,2,0.1176,1.0,1,0.1667,0.0,0
-HCI,3,"restaurant, ari, hof, specifications",2023,mid,17,4,1,0.0588,5.0,0,0.0,0.0,0
-HCI,4,"english, english text, text device, enter english",2023,mid,17,4,4,0.2353,1.0,1,0.3333,0.375,0
-HCI,5,"goal, apply, model, interaction",2023,mid,17,4,11,0.6471,1.0,1,0.5,0.625,1
-HCI,6,"false, true, statement, memory",2023,mid,17,4,10,0.5882,1.0,1,1.0,0.5,1
-HCI,7,"example, limit, design, gulf",2023,mid,17,4,10,0.5882,1.0,1,1.0,0.25,1
-HCI,8,"applying, applying heuristics, heuristics, rule",2023,mid,17,4,1,0.0588,3.0,0,0.0,0.0,0
-HCI,9,"deletion, rule deletion, ms, law",2023,mid,17,4,3,0.1765,3.0,0,0.0,0.0,0
+Design and Analysis of Algorithms,0,"true, actual, activity selection, activity",2023,final,60,9,2,0.0333,5.0,0,0.0,0.0,0
+Design and Analysis of Algorithms,1,"algorithm, sort, array, graph",2023,final,60,9,55,0.9167,1.0,1,1.0,1.0,1
+Design and Analysis of Algorithms,2,"cycle, print, sequence vertices, exists print",2023,final,60,9,4,0.0667,10.0,0,0.0,0.3333,0
+Design and Analysis of Algorithms,3,"ln, true, ln true, lg ln",2023,final,60,9,4,0.0667,5.0,0,0.0,0.0,0
+Design and Analysis of Algorithms,4,"loop, loop invariant, invariant, proof",2023,final,60,9,4,0.0667,10.0,0,0.0,0.0,0
+Design and Analysis of Algorithms,5,"takes minutes, station, minutes, minutes canal",2023,final,60,9,2,0.0333,7.0,0,0.0,0.0,0
+Design and Analysis of Algorithms,6,"requirements adjacency, space requirements, requirements, space",2023,final,60,9,2,0.0333,7.0,0,0.0,0.0,0
+Design and Analysis of Algorithms,7,"element sum, compare, compare sum, element",2023,final,60,9,2,0.0333,5.0,0,0.0,0.1667,0
+Design and Analysis of Algorithms,8,"tree, spanning tree, spanning, maximum spanning",2023,final,60,9,4,0.0667,10.0,0,0.0,0.3333,0
+Design and Analysis of Algorithms,0,"true, actual, activity selection, activity",2023,mid,60,9,2,0.0333,5.0,0,0.0,0.0,0
+Design and Analysis of Algorithms,1,"algorithm, sort, array, graph",2023,mid,60,9,55,0.9167,1.0,1,1.0,1.0,1
+Design and Analysis of Algorithms,2,"cycle, print, sequence vertices, exists print",2023,mid,60,9,4,0.0667,10.0,0,0.0,0.0,0
+Design and Analysis of Algorithms,3,"ln, true, ln true, lg ln",2023,mid,60,9,4,0.0667,5.0,0,0.0,0.0,0
+Design and Analysis of Algorithms,4,"loop, loop invariant, invariant, proof",2023,mid,60,9,4,0.0667,10.0,0,0.0,0.2222,0
+Design and Analysis of Algorithms,5,"takes minutes, station, minutes, minutes canal",2023,mid,60,9,2,0.0333,7.0,0,0.0,0.0,0
+Design and Analysis of Algorithms,6,"requirements adjacency, space requirements, requirements, space",2023,mid,60,9,2,0.0333,7.0,0,0.0,0.0,0
+Design and Analysis of Algorithms,7,"element sum, compare, compare sum, element",2023,mid,60,9,2,0.0333,5.0,0,0.0,0.0,0
+Design and Analysis of Algorithms,8,"tree, spanning tree, spanning, maximum spanning",2023,mid,60,9,4,0.0667,10.0,0,0.0,0.0,0
+Design and Analysis of Algorithms,0,"true, actual, activity selection, activity",2023,quiz,60,9,2,0.0333,5.0,0,0.0,0.0667,0
+Design and Analysis of Algorithms,1,"algorithm, sort, array, graph",2023,quiz,60,9,55,0.9167,1.0,1,1.0,0.8333,1
+Design and Analysis of Algorithms,2,"cycle, print, sequence vertices, exists print",2023,quiz,60,9,4,0.0667,10.0,0,0.0,0.0,0
+Design and Analysis of Algorithms,3,"ln, true, ln true, lg ln",2023,quiz,60,9,4,0.0667,5.0,0,0.0,0.1333,0
+Design and Analysis of Algorithms,4,"loop, loop invariant, invariant, proof",2023,quiz,60,9,4,0.0667,10.0,0,0.0,0.0,0
+Design and Analysis of Algorithms,5,"takes minutes, station, minutes, minutes canal",2023,quiz,60,9,2,0.0333,7.0,0,0.0,0.0667,0
+Design and Analysis of Algorithms,6,"requirements adjacency, space requirements, requirements, space",2023,quiz,60,9,2,0.0333,7.0,0,0.0,0.0667,0
+Design and Analysis of Algorithms,7,"element sum, compare, compare sum, element",2023,quiz,60,9,2,0.0333,5.0,0,0.0,0.0,0
+Design and Analysis of Algorithms,8,"tree, spanning tree, spanning, maximum spanning",2023,quiz,60,9,4,0.0667,10.0,0,0.0,0.0,0
+HCI,0,"example, design, limit, ui",2023,mid,17,4,6,0.3529,1.0,1,0.5,0.0,0
+HCI,1,"apply, goal, model, execute",2023,mid,17,4,7,0.4118,1.0,1,0.3333,0.125,0
+HCI,2,"user, error, appropriate, web",2023,mid,17,4,12,0.7059,1.0,1,0.6667,0.75,0
+HCI,3,"restaurant, output, ari, input",2023,mid,17,4,6,0.3529,1.0,1,0.1667,0.625,0
+HCI,4,"rule deletion, deletion, rule, ms",2023,mid,17,4,1,0.0588,3.0,0,0.0,0.0,0
+HCI,5,"false, true, statement, true false",2023,mid,17,4,11,0.6471,1.0,1,1.0,0.5,1
+HCI,6,"mouse, mouse mouse, keyboard, click",2023,mid,17,4,3,0.1765,1.0,1,0.1667,0.125,0
+HCI,7,"applying, applying heuristics, heuristics, rule applying",2023,mid,17,4,1,0.0588,3.0,0,0.0,0.0,0
+HCI,8,"hardware, examples, enter english, hardware enter",2023,mid,17,4,4,0.2353,1.0,1,0.3333,0.375,0
+HCI,9,"interface, advantages, correct, typing",2023,mid,17,4,5,0.2941,1.0,1,0.6667,0.125,0
 IOT,0,"internet, things, smart, networks",2023,mid,13,3,4,0.3077,1.0,1,0.125,0.0,1
 IOT,1,"iot, low, domain, challenges",2023,mid,13,3,8,0.6154,1.0,1,0.5,1.0,1
 IOT,2,"byte, bytes, header, length",2023,mid,13,3,6,0.4615,1.0,1,0.75,0.0,1
 IOT,3,"numbers, names, main, address",2023,mid,13,3,7,0.5385,1.0,1,0.625,0.0,1
-IR,0,"memory, index, dictionary, spimi",2023,mid,59,5,10,0.1695,4.0,0,0.0,0.3333,1
-IR,1,"smoothing, language, language modelling, modelling approach",2023,mid,59,5,9,0.1525,4.0,0,0.0,0.1667,0
-IR,2,"document, query, retrieval, idf",2023,mid,59,5,37,0.6271,1.0,1,1.0,1.0,1
-IR,3,"sciences, sciences lahore, lahore, lahore sciences",2023,mid,59,5,27,0.4576,4.0,0,0.0,0.5,0
-IR,4,"rank, rank algorithm, teleportation, graph",2023,mid,59,5,13,0.2203,4.0,0,0.0,0.3333,1
-IR,5,"length, length posting, posting, complexity",2023,mid,59,5,13,0.2203,4.0,0,0.0,0.25,0
-IR,6,"gamma, numbers, encoding, elias",2023,mid,59,5,16,0.2712,4.0,0,0.0,0.0833,0
-IR,7,"precision, relevant, average precision, documents",2023,mid,59,5,20,0.339,4.0,0,0.0,0.5833,1
-IR,8,"clusters, clustering, algorithm, link",2023,mid,59,5,19,0.322,4.0,0,0.0,0.25,0
+IR,0,"distance, avg, similarity, link",2023,mid,59,5,28,0.4746,1.0,1,1.0,0.6667,1
+IR,1,"document, smoothing, query, words",2023,mid,59,5,28,0.4746,1.0,1,1.0,0.75,1
+IR,2,"number, retrieval, information, information retrieval",2023,mid,59,5,32,0.5424,4.0,0,0.0,0.6667,1
+IR,3,"length posting, posting, length, complexity",2023,mid,59,5,10,0.1695,4.0,0,0.0,0.0,0
+IR,4,"precision, average precision, relevant, average",2023,mid,59,5,13,0.2203,4.0,0,0.0,0.4167,1
+IR,5,"encoding, gamma, numbers, elias",2023,mid,59,5,17,0.2881,4.0,0,0.0,0.0833,0
+IR,6,"index, postings, term, retrieval",2023,mid,59,5,25,0.4237,4.0,0,0.0,0.8333,1
+IR,7,"change, means, iterations, change iterations",2023,mid,59,5,10,0.1695,4.0,0,0.0,0.0833,0
+IR,8,"rank, rank algorithm, graph, pages",2023,mid,59,5,16,0.2712,4.0,0,0.0,0.4167,1
 NLP,0,"set perplexity, model assigns, test set, word test",2023,mid,12,4,2,0.1667,4.0,0,0.0,0.0,0
 NLP,1,"word, words, sentence, example",2023,mid,12,4,12,1.0,2.0,0,1.0,1.0,1
 NLP,2,"like, weight, trigram, bikes",2023,mid,12,4,5,0.4167,2.0,0,1.0,0.3333,1
@@ -225,13 +227,13 @@ NLP,6,"translation, machine translation, machine, translation compared",2023,mid
 NLP,7,"object, duty, assert, object assert",2023,mid,12,4,3,0.25,2.0,0,1.0,0.0,0
 NLP,8,"plays, shakespeare, score, zero",2023,mid,12,4,2,0.1667,2.0,0,1.0,0.3333,0
 NLP,9,"neural language, language modeling, modeling, neural",2023,mid,12,4,2,0.1667,2.0,0,1.0,0.0,0
-OOP Lab,0,"task, date, day, hour",2023,final,18,5,4,0.2222,2.0,0,0.25,0.2857,0
-OOP Lab,1,"factors, balance, cgpa, camscanner",2023,final,18,5,6,0.3333,1.0,1,0.5,0.4286,0
-OOP Lab,2,"mylist, example mylist, example, item",2023,final,18,5,1,0.0556,3.0,0,0.0,0.1429,0
-OOP Lab,3,"word, cpp, submit, submission",2023,final,18,5,7,0.3889,1.0,1,0.75,0.2857,0
-OOP Lab,4,"int, array, output, data",2023,final,18,5,8,0.4444,2.0,0,0.5,0.1429,1
-OOP Lab,5,"matrix, matrices, split, sub matrices",2023,final,18,5,4,0.2222,2.0,0,0.25,0.2857,0
-OOP Lab,6,"application, class, installed, new",2023,final,18,5,3,0.1667,2.0,0,0.25,0.2857,0
+OOP Lab,0,"task, hour, addtask, scheduletask",2023,final,18,5,2,0.1111,2.0,0,0.25,0.2857,0
+OOP Lab,1,"application, class, function, parent class",2023,final,18,5,1,0.0556,4.0,0,0.0,0.1429,0
+OOP Lab,2,"matrix, rows, matrices, class",2023,final,18,5,6,0.3333,2.0,0,0.25,0.4286,1
+OOP Lab,3,"line, new, delete, scheduled",2023,final,18,5,8,0.4444,1.0,1,0.5,0.1429,0
+OOP Lab,4,"mylist, example mylist, example, item",2023,final,18,5,1,0.0556,3.0,0,0.0,0.1429,0
+OOP Lab,5,"int, array, word, function",2023,final,18,5,12,0.6667,1.0,1,0.75,0.5714,1
+OOP Lab,6,"prints, cgpa, memory, order",2023,final,18,5,5,0.2778,2.0,0,0.5,0.2857,0
 OS,0,"problem, mutex, stack, wait",2023,final,24,7,8,0.3333,1.0,1,1.0,0.375,0
 OS,1,"int, returns, block, address",2023,final,24,7,7,0.2917,3.0,0,0.0,0.625,0
 OS,2,"scheduling, cpu, waiting, processes",2023,final,24,7,10,0.4167,1.0,1,1.0,0.5,1
@@ -252,85 +254,84 @@ OS,6,"size, address, table, offset",2023,mid,24,7,9,0.375,1.0,1,1.0,0.2222,0
 OS,7,"access, memory, replacement, fault",2023,mid,24,7,8,0.3333,1.0,1,1.0,0.1111,0
 OS,8,"signal, semaphores, wait, values",2023,mid,24,7,7,0.2917,1.0,1,1.0,0.2222,1
 OS,9,"process, program, threads, data",2023,mid,24,7,16,0.6667,1.0,1,1.0,0.8889,1
-Object Oriented Programming,0,"class, public, members, class public",2023,final,67,10,8,0.1194,2.0,0,0.3333,0.1538,0
-Object Oriented Programming,1,"function, example, int, array",2023,final,67,10,36,0.5373,1.0,1,0.6667,0.8462,1
-Object Oriented Programming,2,"constructor, initialize, copy, copy constructor",2023,final,67,10,8,0.1194,1.0,1,0.1667,0.1538,0
-Object Oriented Programming,3,"cout, int, endl, size",2023,final,67,10,24,0.3582,1.0,1,0.6667,0.6923,1
-Object Oriented Programming,4,"print, print cout, cout, void",2023,final,67,10,18,0.2687,1.0,1,0.5,0.2308,1
-Object Oriented Programming,5,"camscanner, scanned, scanned camscanner, teacher",2023,final,67,10,5,0.0746,1.0,1,0.5,0.1538,0
-Object Oriented Programming,6,"option, option option, select correct, select",2023,final,67,10,2,0.0299,3.0,0,0.0,0.0769,0
-Object Oriented Programming,7,"arr, ptr, error, int",2023,final,67,10,17,0.2537,1.0,1,0.1667,0.0769,0
-Object Oriented Programming,0,"class, public, members, class public",2023,mid,67,10,8,0.1194,2.0,0,0.3333,0.2143,0
-Object Oriented Programming,1,"function, example, int, array",2023,mid,67,10,36,0.5373,1.0,1,0.6667,0.8571,1
-Object Oriented Programming,2,"constructor, initialize, copy, copy constructor",2023,mid,67,10,8,0.1194,1.0,1,0.1667,0.2857,0
-Object Oriented Programming,3,"cout, int, endl, size",2023,mid,67,10,24,0.3582,1.0,1,0.6667,0.7143,0
-Object Oriented Programming,4,"print, print cout, cout, void",2023,mid,67,10,18,0.2687,1.0,1,0.5,0.2857,0
-Object Oriented Programming,5,"camscanner, scanned, scanned camscanner, teacher",2023,mid,67,10,5,0.0746,1.0,1,0.5,0.1429,0
-Object Oriented Programming,6,"option, option option, select correct, select",2023,mid,67,10,2,0.0299,3.0,0,0.0,0.0,0
-Object Oriented Programming,7,"arr, ptr, error, int",2023,mid,67,10,17,0.2537,1.0,1,0.1667,0.2143,1
-PF,0,"int, ch, cout, int int",2023,final,13,5,6,0.4615,1.0,1,0.5,0.3333,1
-PF,1,"type variables, variables, type, similar int",2023,final,13,5,3,0.2308,3.0,0,0.0,0.0,0
-PF,2,"function, count, numbers, cout",2023,final,13,5,13,1.0,1.0,1,1.0,1.0,1
-PF,3,"value, ay, smallest, position",2023,final,13,5,3,0.2308,2.0,0,0.5,0.3333,1
-PF,4,"midterm programming, programming fundamentals, fundamentals, programming",2023,final,13,5,4,0.3077,3.0,0,0.0,0.0,0
-PF,5,"num, program segment, segment, num num",2023,final,13,5,4,0.3077,3.0,0,0.0,0.0,0
-PF,6,"value, operators variable, operators, variable value",2023,final,13,5,3,0.2308,3.0,0,0.0,0.0,0
-PP,0,"difference, programming, country, important",2023,final,23,6,7,0.3043,1.0,1,1.0,0.5714,1
-PP,1,"profession, malicious, reasons, information",2023,final,23,6,11,0.4783,1.0,1,1.0,0.7143,1
-PP,2,"quadrant, quadrants, tasks, daily",2023,final,23,6,5,0.2174,1.0,1,1.0,0.5714,0
-PP,3,"law, ethics, example, pakistan",2023,final,23,6,12,0.5217,1.0,1,1.0,0.4286,0
-PP,4,"score, years perform, ability, yes",2023,final,23,6,2,0.087,7.0,0,0.0,0.1429,0
-PP,5,"exam, solve, requirements, framework",2023,final,23,6,12,0.5217,3.0,0,0.0,0.4286,1
-PP,6,"business, market, finance, idea",2023,final,23,6,5,0.2174,1.0,1,0.5,0.2857,0
-PP,7,"integration, consumer, benefits, software",2023,final,23,6,10,0.4348,1.0,1,1.0,0.5714,0
-PP,8,"year, rate, years, value",2023,final,23,6,9,0.3913,3.0,0,0.0,0.5714,0
-PP,9,"company, organization, software, job",2023,final,23,6,22,0.9565,1.0,1,1.0,1.0,1
-PP,0,"difference, programming, country, important",2023,mid,23,6,7,0.3043,1.0,1,1.0,0.25,0
-PP,1,"profession, malicious, reasons, information",2023,mid,23,6,11,0.4783,1.0,1,1.0,0.4167,1
-PP,2,"quadrant, quadrants, tasks, daily",2023,mid,23,6,5,0.2174,1.0,1,1.0,0.0,0
-PP,3,"law, ethics, example, pakistan",2023,mid,23,6,12,0.5217,1.0,1,1.0,0.5,0
-PP,4,"score, years perform, ability, yes",2023,mid,23,6,2,0.087,7.0,0,0.0,0.0833,0
-PP,5,"exam, solve, requirements, framework",2023,mid,23,6,12,0.5217,3.0,0,0.0,0.5833,1
-PP,6,"business, market, finance, idea",2023,mid,23,6,5,0.2174,1.0,1,0.5,0.25,0
-PP,7,"integration, consumer, benefits, software",2023,mid,23,6,10,0.4348,1.0,1,1.0,0.5,0
-PP,8,"year, rate, years, value",2023,mid,23,6,9,0.3913,3.0,0,0.0,0.4167,1
-PP,9,"company, organization, software, job",2023,mid,23,6,22,0.9565,1.0,1,1.0,0.9167,1
-Software Design and Analysis,0,"ond, uses, mermaid, eats",2023,final,23,9,6,0.2609,1.0,1,0.4545,0.1429,0
-Software Design and Analysis,1,"object, oriented, object oriented, mins",2023,final,23,9,5,0.2174,1.0,1,0.1818,0.2857,0
-Software Design and Analysis,2,"diagram, class diagram, class, design",2023,final,23,9,10,0.4348,1.0,1,0.3636,0.5714,1
-Software Design and Analysis,3,"forum, user, message, topics",2023,final,23,9,4,0.1739,1.0,1,0.0909,0.4286,0
-Software Design and Analysis,4,"payment, ae, scan, camscanner",2023,final,23,9,3,0.1304,1.0,1,0.1818,0.0,0
-Software Design and Analysis,5,"duration, design cs, reg, design",2023,final,23,9,7,0.3043,1.0,1,0.3636,0.4286,0
-Software Design and Analysis,6,"cohesion, parameters, column, entry",2023,final,23,9,10,0.4348,1.0,1,0.6364,0.2857,1
-Software Design and Analysis,7,"description, provide, cases, events",2023,final,23,9,6,0.2609,1.0,1,0.2727,0.2857,0
-Software Design and Analysis,8,"module, scanned camscanner, scanned, amodule",2023,final,23,9,4,0.1739,1.0,1,0.2727,0.0,0
-Software Design and Analysis,0,"ond, uses, mermaid, eats",2023,mid,23,9,6,0.2609,1.0,1,0.4545,0.1,1
-Software Design and Analysis,1,"object, oriented, object oriented, mins",2023,mid,23,9,5,0.2174,1.0,1,0.1818,0.2,0
-Software Design and Analysis,2,"diagram, class diagram, class, design",2023,mid,23,9,10,0.4348,1.0,1,0.3636,0.4,1
-Software Design and Analysis,3,"forum, user, message, topics",2023,mid,23,9,4,0.1739,1.0,1,0.0909,0.1,0
-Software Design and Analysis,4,"payment, ae, scan, camscanner",2023,mid,23,9,3,0.1304,1.0,1,0.1818,0.2,0
-Software Design and Analysis,5,"duration, design cs, reg, design",2023,mid,23,9,7,0.3043,1.0,1,0.3636,0.2,0
-Software Design and Analysis,6,"cohesion, parameters, column, entry",2023,mid,23,9,10,0.4348,1.0,1,0.6364,0.5,0
-Software Design and Analysis,7,"description, provide, cases, events",2023,mid,23,9,6,0.2609,1.0,1,0.2727,0.3,0
-Software Design and Analysis,8,"module, scanned camscanner, scanned, amodule",2023,mid,23,9,4,0.1739,1.0,1,0.2727,0.3,0
-Software Engineering,0,"product, transaction, clearly, assumptions",2023,final,14,4,8,0.5714,3.0,0,0.0,0.0,0
-Software Engineering,1,"customer, account, bank, funds",2023,final,14,4,3,0.2143,5.0,0,0.0,0.3333,0
-Software Engineering,2,"function, int, flow, flow graph",2023,final,14,4,5,0.3571,5.0,0,0.0,1.0,0
+Object Oriented Programming,0,"example, array, matrix, function",2023,final,67,10,22,0.3284,1.0,1,0.5,0.7692,1
+Object Oriented Programming,1,"class, data, public, constructor",2023,final,67,10,21,0.3134,1.0,1,0.6667,0.5385,1
+Object Oriented Programming,2,"option, option option, select correct, select",2023,final,67,10,2,0.0299,3.0,0,0.0,0.0769,0
+Object Oriented Programming,3,"print, print cout, cout, void print",2023,final,67,10,21,0.3134,1.0,1,0.1667,0.3077,1
+Object Oriented Programming,4,"int, cout, error, endl",2023,final,67,10,17,0.2537,1.0,1,0.8333,0.4615,1
+Object Oriented Programming,5,"size, int, output, int size",2023,final,67,10,17,0.2537,1.0,1,0.6667,0.3077,1
+Object Oriented Programming,6,"ptr, error, arr, int",2023,final,67,10,12,0.1791,4.0,0,0.0,0.0,0
+Object Oriented Programming,7,"base, base class, forms, google",2023,final,67,10,2,0.0299,3.0,0,0.0,0.0,0
+Object Oriented Programming,8,"bar, foo, count, int",2023,final,67,10,5,0.0746,5.0,0,0.0,0.0769,0
+Object Oriented Programming,9,"cout, teacher, id, array",2023,final,67,10,9,0.1343,1.0,1,0.3333,0.2308,0
+Object Oriented Programming,0,"example, array, matrix, function",2023,mid,67,10,22,0.3284,1.0,1,0.5,0.4286,1
+Object Oriented Programming,1,"class, data, public, constructor",2023,mid,67,10,21,0.3134,1.0,1,0.6667,0.7143,1
+Object Oriented Programming,2,"option, option option, select correct, select",2023,mid,67,10,2,0.0299,3.0,0,0.0,0.0,0
+Object Oriented Programming,3,"print, print cout, cout, void print",2023,mid,67,10,21,0.3134,1.0,1,0.1667,0.3571,0
+Object Oriented Programming,4,"int, cout, error, endl",2023,mid,67,10,17,0.2537,1.0,1,0.8333,0.2857,1
+Object Oriented Programming,5,"size, int, output, int size",2023,mid,67,10,17,0.2537,1.0,1,0.6667,0.4286,0
+Object Oriented Programming,6,"ptr, error, arr, int",2023,mid,67,10,12,0.1791,4.0,0,0.0,0.0,0
+Object Oriented Programming,7,"base, base class, forms, google",2023,mid,67,10,2,0.0299,3.0,0,0.0,0.0714,0
+Object Oriented Programming,8,"bar, foo, count, int",2023,mid,67,10,5,0.0746,5.0,0,0.0,0.2143,0
+Object Oriented Programming,9,"cout, teacher, id, array",2023,mid,67,10,9,0.1343,1.0,1,0.3333,0.2857,0
+PF,0,"value, variable, double, variable value",2023,final,13,5,4,0.3077,1.0,1,0.5,0.0,0
+PF,1,"function, tasks, array, sum",2023,final,13,5,8,0.6154,2.0,0,0.5,1.0,1
+PF,2,"num, int, tpu, cout",2023,final,13,5,8,0.6154,1.0,1,0.5,0.3333,1
+PF,3,"cout, int, ch, int cout",2023,final,13,5,10,0.7692,1.0,1,0.5,0.6667,1
+PF,4,"count, square free, square, free",2023,final,13,5,2,0.1538,3.0,0,0.0,0.0,1
+PF,5,"value, smallest, position, ay",2023,final,13,5,2,0.1538,2.0,0,0.5,0.3333,1
+PP,0,"difference, vs, programming, training",2023,final,23,6,6,0.2609,1.0,1,1.0,0.4286,1
+PP,1,"score, organization, professional, consumer",2023,final,23,6,19,0.8261,1.0,1,1.0,0.8571,1
+PP,2,"quadrant, quadrants, tasks, team",2023,final,23,6,7,0.3043,1.0,1,1.0,0.7143,1
+PP,3,"law, ethics, common, term",2023,final,23,6,10,0.4348,1.0,1,1.0,0.5714,0
+PP,4,"liability, limited, term, strict",2023,final,23,6,8,0.3478,3.0,0,0.0,0.0,0
+PP,5,"payment, installments, buying, yearly",2023,final,23,6,4,0.1739,3.0,0,0.0,0.1429,0
+PP,6,"involved, pakistan, steps, legislative",2023,final,23,6,5,0.2174,3.0,0,0.0,0.0,0
+PP,7,"company, customers, product, problem",2023,final,23,6,16,0.6957,1.0,1,1.0,1.0,1
+PP,8,"trial, reservation, public, safety",2023,final,23,6,8,0.3478,1.0,1,0.5,0.2857,0
+PP,9,"years, year, value, rate",2023,final,23,6,7,0.3043,3.0,0,0.0,0.4286,0
+PP,0,"difference, vs, programming, training",2023,mid,23,6,6,0.2609,1.0,1,1.0,0.25,0
+PP,1,"score, organization, professional, consumer",2023,mid,23,6,19,0.8261,1.0,1,1.0,0.9167,1
+PP,2,"quadrant, quadrants, tasks, team",2023,mid,23,6,7,0.3043,1.0,1,1.0,0.0833,0
+PP,3,"law, ethics, common, term",2023,mid,23,6,10,0.4348,1.0,1,1.0,0.3333,0
+PP,4,"liability, limited, term, strict",2023,mid,23,6,8,0.3478,3.0,0,0.0,0.5833,1
+PP,5,"payment, installments, buying, yearly",2023,mid,23,6,4,0.1739,3.0,0,0.0,0.25,1
+PP,6,"involved, pakistan, steps, legislative",2023,mid,23,6,5,0.2174,3.0,0,0.0,0.3333,0
+PP,7,"company, customers, product, problem",2023,mid,23,6,16,0.6957,1.0,1,1.0,0.6667,1
+PP,8,"trial, reservation, public, safety",2023,mid,23,6,8,0.3478,1.0,1,0.5,0.25,0
+PP,9,"years, year, value, rate",2023,mid,23,6,7,0.3043,3.0,0,0.0,0.3333,1
+Software Design and Analysis,0,"programming, module, parameters, cohesion",2023,final,23,9,7,0.3043,1.0,1,0.4545,0.2857,0
+Software Design and Analysis,1,"forum, message, user, topic",2023,final,23,9,4,0.1739,1.0,1,0.0909,0.4286,0
+Software Design and Analysis,2,"sequence, sequence diagram, diagram, association",2023,final,23,9,9,0.3913,1.0,1,0.4545,0.2857,1
+Software Design and Analysis,3,"design, object, date, design exam",2023,final,23,9,9,0.3913,1.0,1,0.2727,0.5714,1
+Software Design and Analysis,4,"uses, mermaid, void, issue",2023,final,23,9,3,0.1304,1.0,1,0.2727,0.0,0
+Software Design and Analysis,5,"diagram, class diagram, class, diagram showing",2023,final,23,9,10,0.4348,1.0,1,0.3636,0.4286,1
+Software Design and Analysis,6,"object, object oriented, oriented, duration",2023,final,23,9,7,0.3043,1.0,1,0.3636,0.2857,0
+Software Design and Analysis,0,"programming, module, parameters, cohesion",2023,mid,23,9,7,0.3043,1.0,1,0.4545,0.1,0
+Software Design and Analysis,1,"forum, message, user, topic",2023,mid,23,9,4,0.1739,1.0,1,0.0909,0.1,0
+Software Design and Analysis,2,"sequence, sequence diagram, diagram, association",2023,mid,23,9,9,0.3913,1.0,1,0.4545,0.6,1
+Software Design and Analysis,3,"design, object, date, design exam",2023,mid,23,9,9,0.3913,1.0,1,0.2727,0.3,0
+Software Design and Analysis,4,"uses, mermaid, void, issue",2023,mid,23,9,3,0.1304,1.0,1,0.2727,0.0,0
+Software Design and Analysis,5,"diagram, class diagram, class, diagram showing",2023,mid,23,9,10,0.4348,1.0,1,0.3636,0.5,0
+Software Design and Analysis,6,"object, object oriented, oriented, duration",2023,mid,23,9,7,0.3043,1.0,1,0.3636,0.3,0
+Software Engineering,0,"transaction, dfd, level dfd, atm",2023,final,14,4,6,0.4286,3.0,0,0.0,0.3333,0
+Software Engineering,1,"customer, account, bank, funds",2023,final,14,4,4,0.2857,5.0,0,0.0,0.3333,0
+Software Engineering,2,"function, int, graph, flow graph",2023,final,14,4,5,0.3571,5.0,0,0.0,1.0,0
 Software Engineering,3,"stands, linked, shelf, capability",2023,final,14,4,1,0.0714,6.0,0,0.0,0.0,0
 Software Engineering,4,"software, model, requirements, process",2023,final,14,4,11,0.7857,3.0,0,0.0,1.0,1
-Software Engineering,5,"cases, values, high, test",2023,final,14,4,8,0.5714,5.0,0,0.0,1.0,1
-Software Engineering,0,"product, transaction, clearly, assumptions",2023,mid,14,4,8,0.5714,3.0,0,0.0,0.625,1
-Software Engineering,1,"customer, account, bank, funds",2023,mid,14,4,3,0.2143,5.0,0,0.0,0.25,1
-Software Engineering,2,"function, int, flow, flow graph",2023,mid,14,4,5,0.3571,5.0,0,0.0,0.125,0
+Software Engineering,5,"values, cases, high, test",2023,final,14,4,8,0.5714,5.0,0,0.0,1.0,1
+Software Engineering,0,"transaction, dfd, level dfd, atm",2023,mid,14,4,6,0.4286,3.0,0,0.0,0.5,1
+Software Engineering,1,"customer, account, bank, funds",2023,mid,14,4,4,0.2857,5.0,0,0.0,0.125,1
+Software Engineering,2,"function, int, graph, flow graph",2023,mid,14,4,5,0.3571,5.0,0,0.0,0.125,1
 Software Engineering,3,"stands, linked, shelf, capability",2023,mid,14,4,1,0.0714,6.0,0,0.0,0.0,0
 Software Engineering,4,"software, model, requirements, process",2023,mid,14,4,11,0.7857,3.0,0,0.0,0.875,1
-Software Engineering,5,"cases, values, high, test",2023,mid,14,4,8,0.5714,5.0,0,0.0,0.375,0
-Software Engineering,0,"product, transaction, clearly, assumptions",2023,quiz,14,4,8,0.5714,3.0,0,0.0,1.0,1
-Software Engineering,1,"customer, account, bank, funds",2023,quiz,14,4,3,0.2143,5.0,0,0.0,0.0,0
-Software Engineering,2,"function, int, flow, flow graph",2023,quiz,14,4,5,0.3571,5.0,0,0.0,0.3333,1
+Software Engineering,5,"values, cases, high, test",2023,mid,14,4,8,0.5714,5.0,0,0.0,0.375,0
+Software Engineering,0,"transaction, dfd, level dfd, atm",2023,quiz,14,4,6,0.4286,3.0,0,0.0,0.3333,0
+Software Engineering,1,"customer, account, bank, funds",2023,quiz,14,4,4,0.2857,5.0,0,0.0,0.6667,0
+Software Engineering,2,"function, int, graph, flow graph",2023,quiz,14,4,5,0.3571,5.0,0,0.0,0.3333,1
 Software Engineering,3,"stands, linked, shelf, capability",2023,quiz,14,4,1,0.0714,6.0,0,0.0,0.3333,0
 Software Engineering,4,"software, model, requirements, process",2023,quiz,14,4,11,0.7857,3.0,0,0.0,0.3333,1
-Software Engineering,5,"cases, values, high, test",2023,quiz,14,4,8,0.5714,5.0,0,0.0,0.6667,1
+Software Engineering,5,"values, cases, high, test",2023,quiz,14,4,8,0.5714,5.0,0,0.0,0.6667,1
 Software Requirements Engineering,0,"measures, goal, elevator, sy",2023,mid,8,3,8,1.0,2.0,0,1.0,1.0,1
 Software Requirements Engineering,1,"requirements engineering, engineering, process, requirements",2023,mid,8,3,5,0.625,2.0,0,0.5,0.8333,0
 Software Requirements Engineering,2,"home, smart home, smart, allow",2023,mid,8,3,4,0.5,2.0,0,0.5,0.6667,0
@@ -341,43 +342,43 @@ Software Requirements Engineering,1,"requirements engineering, engineering, proc
 Software Requirements Engineering,2,"home, smart home, smart, allow",2023,quiz,8,3,4,0.5,2.0,0,0.5,0.0,1
 Software Requirements Engineering,3,"make, schedule, make assumptions, requirements engineer",2023,quiz,8,3,4,0.5,3.0,0,0.0,0.0,0
 Software Requirements Engineering,4,"requirements, wrong, non functional, non",2023,quiz,8,3,2,0.25,4.0,0,0.0,0.0,1
-Theory of Automata,0,"camscanner, scanned camscanner, scanned, xb",2023,final,35,8,9,0.2571,1.0,1,0.375,0.5556,0
-Theory of Automata,1,"null, true, check, false",2023,final,35,8,21,0.6,1.0,1,0.125,0.6667,1
-Theory of Automata,2,"non, regular, prove, pumping",2023,final,35,8,13,0.3714,1.0,1,0.25,0.3333,1
-Theory of Automata,3,"diagram, required, dfa, automata",2023,final,35,8,11,0.3143,1.0,1,0.25,0.3333,0
-Theory of Automata,4,"dfa, nfa, nfa dfa, convert",2023,final,35,8,12,0.3429,1.0,1,0.125,0.4444,0
-Theory of Automata,5,"decidable, recognizable, car, problem",2023,final,35,8,6,0.1714,3.0,0,0.0,0.3333,0
-Theory of Automata,6,"tape, machine, tm, turing machine",2023,final,35,8,8,0.2286,1.0,1,0.25,0.6667,1
-Theory of Automata,7,"expression, regular expression, regular, elimination",2023,final,35,8,10,0.2857,1.0,1,0.5,0.4444,0
-Theory of Automata,8,"extended transition, extended, transition, problem design",2023,final,35,8,6,0.1714,1.0,1,0.625,0.1111,0
-Theory of Automata,9,"ba, ab, ab ba, applying",2023,final,35,8,3,0.0857,3.0,0,0.0,0.3333,0
-Theory of Automata,0,"camscanner, scanned camscanner, scanned, xb",2023,mid,35,8,9,0.2571,1.0,1,0.375,0.3333,1
-Theory of Automata,1,"null, true, check, false",2023,mid,35,8,21,0.6,1.0,1,0.125,0.75,1
-Theory of Automata,2,"non, regular, prove, pumping",2023,mid,35,8,13,0.3714,1.0,1,0.25,0.4167,1
-Theory of Automata,3,"diagram, required, dfa, automata",2023,mid,35,8,11,0.3143,1.0,1,0.25,0.5,1
-Theory of Automata,4,"dfa, nfa, nfa dfa, convert",2023,mid,35,8,12,0.3429,1.0,1,0.125,0.3333,1
-Theory of Automata,5,"decidable, recognizable, car, problem",2023,mid,35,8,6,0.1714,3.0,0,0.0,0.1667,0
-Theory of Automata,6,"tape, machine, tm, turing machine",2023,mid,35,8,8,0.2286,1.0,1,0.25,0.0833,0
-Theory of Automata,7,"expression, regular expression, regular, elimination",2023,mid,35,8,10,0.2857,1.0,1,0.5,0.5,1
-Theory of Automata,8,"extended transition, extended, transition, problem design",2023,mid,35,8,6,0.1714,1.0,1,0.625,0.0833,1
-Theory of Automata,9,"ba, ab, ab ba, applying",2023,mid,35,8,3,0.0857,3.0,0,0.0,0.0,1
-Theory of Automata,0,"camscanner, scanned camscanner, scanned, xb",2023,quiz,35,8,9,0.2571,1.0,1,0.375,0.0,0
-Theory of Automata,1,"null, true, check, false",2023,quiz,35,8,21,0.6,1.0,1,0.125,0.4286,1
-Theory of Automata,2,"non, regular, prove, pumping",2023,quiz,35,8,13,0.3714,1.0,1,0.25,0.3571,0
-Theory of Automata,3,"diagram, required, dfa, automata",2023,quiz,35,8,11,0.3143,1.0,1,0.25,0.1429,0
-Theory of Automata,4,"dfa, nfa, nfa dfa, convert",2023,quiz,35,8,12,0.3429,1.0,1,0.125,0.2857,1
-Theory of Automata,5,"decidable, recognizable, car, problem",2023,quiz,35,8,6,0.1714,3.0,0,0.0,0.0714,0
-Theory of Automata,6,"tape, machine, tm, turing machine",2023,quiz,35,8,8,0.2286,1.0,1,0.25,0.0714,0
-Theory of Automata,7,"expression, regular expression, regular, elimination",2023,quiz,35,8,10,0.2857,1.0,1,0.5,0.0,1
-Theory of Automata,8,"extended transition, extended, transition, problem design",2023,quiz,35,8,6,0.1714,1.0,1,0.625,0.2857,0
-Theory of Automata,9,"ba, ab, ab ba, applying",2023,quiz,35,8,3,0.0857,3.0,0,0.0,0.0,0
+Theory of Automata,0,"xb, au, st, camscanner",2023,final,33,8,2,0.0606,1.0,1,0.125,0.1111,0
+Theory of Automata,1,"null, number, note, cfg",2023,final,33,8,16,0.4848,1.0,1,0.25,0.5556,0
+Theory of Automata,2,"language, non, pumping, pumping lemma",2023,final,33,8,16,0.4848,1.0,1,0.25,0.7778,1
+Theory of Automata,3,"false, true, true false, decidable",2023,final,33,8,3,0.0909,3.0,0,0.0,0.0,0
+Theory of Automata,4,"dfa, nfa, diagram, nfa dfa",2023,final,33,8,15,0.4545,1.0,1,0.25,0.5556,1
+Theory of Automata,5,"a+b, check, sheet, cab",2023,final,33,8,11,0.3333,1.0,1,0.125,0.5556,0
+Theory of Automata,6,"tape, turing, machine, tm",2023,final,33,8,10,0.303,1.0,1,0.25,0.6667,1
+Theory of Automata,7,"finite, expression, regular expression, regular",2023,final,33,8,12,0.3636,1.0,1,0.5,0.5556,0
+Theory of Automata,8,"extended, extended transition, ab, transition",2023,final,33,8,9,0.2727,1.0,1,0.625,0.2222,0
+Theory of Automata,9,"ba, ab, ab ba, applying",2023,final,33,8,3,0.0909,4.0,0,0.0,0.2222,0
+Theory of Automata,0,"xb, au, st, camscanner",2023,mid,33,8,2,0.0606,1.0,1,0.125,0.0833,0
+Theory of Automata,1,"null, number, note, cfg",2023,mid,33,8,16,0.4848,1.0,1,0.25,0.5833,1
+Theory of Automata,2,"language, non, pumping, pumping lemma",2023,mid,33,8,16,0.4848,1.0,1,0.25,0.5833,1
+Theory of Automata,3,"false, true, true false, decidable",2023,mid,33,8,3,0.0909,3.0,0,0.0,0.0833,1
+Theory of Automata,4,"dfa, nfa, diagram, nfa dfa",2023,mid,33,8,15,0.4545,1.0,1,0.25,0.5,1
+Theory of Automata,5,"a+b, check, sheet, cab",2023,mid,33,8,11,0.3333,1.0,1,0.125,0.3333,1
+Theory of Automata,6,"tape, turing, machine, tm",2023,mid,33,8,10,0.303,1.0,1,0.25,0.1667,0
+Theory of Automata,7,"finite, expression, regular expression, regular",2023,mid,33,8,12,0.3636,1.0,1,0.5,0.5,1
+Theory of Automata,8,"extended, extended transition, ab, transition",2023,mid,33,8,9,0.2727,1.0,1,0.625,0.25,1
+Theory of Automata,9,"ba, ab, ab ba, applying",2023,mid,33,8,3,0.0909,4.0,0,0.0,0.0,1
+Theory of Automata,0,"xb, au, st, camscanner",2023,quiz,33,8,2,0.0606,1.0,1,0.125,0.0,0
+Theory of Automata,1,"null, number, note, cfg",2023,quiz,33,8,16,0.4848,1.0,1,0.25,0.3333,1
+Theory of Automata,2,"language, non, pumping, pumping lemma",2023,quiz,33,8,16,0.4848,1.0,1,0.25,0.1667,1
+Theory of Automata,3,"false, true, true false, decidable",2023,quiz,33,8,3,0.0909,3.0,0,0.0,0.1667,0
+Theory of Automata,4,"dfa, nfa, diagram, nfa dfa",2023,quiz,33,8,15,0.4545,1.0,1,0.25,0.3333,1
+Theory of Automata,5,"a+b, check, sheet, cab",2023,quiz,33,8,11,0.3333,1.0,1,0.125,0.1667,1
+Theory of Automata,6,"tape, turing, machine, tm",2023,quiz,33,8,10,0.303,1.0,1,0.25,0.1667,0
+Theory of Automata,7,"finite, expression, regular expression, regular",2023,quiz,33,8,12,0.3636,1.0,1,0.5,0.0833,1
+Theory of Automata,8,"extended, extended transition, ab, transition",2023,quiz,33,8,9,0.2727,1.0,1,0.625,0.3333,0
+Theory of Automata,9,"ba, ab, ab ba, applying",2023,quiz,33,8,3,0.0909,4.0,0,0.0,0.0833,0
 Web Programming,0,"values, ng, model, controller",2023,mid,41,5,3,0.0732,5.0,0,0.0,0.0,0
 Web Programming,1,"xml, xml document, web application, web",2023,mid,41,5,13,0.3171,5.0,0,0.0,0.0667,0
 Web Programming,2,"open, readystate, method, xmlhttprequest",2023,mid,41,5,5,0.122,5.0,0,0.0,0.1333,0
-Web Programming,3,"elements, style, apply, type",2023,mid,41,5,14,0.3415,4.0,0,0.0,0.4,0
-Web Programming,4,"notes, tape eraser, tape, unauthorized material",2023,mid,41,5,3,0.0732,5.0,0,0.0,0.0667,0
-Web Programming,5,"react, text, image, entity",2023,mid,41,5,25,0.6098,4.0,0,0.0,0.8,1
+Web Programming,3,"elements, style, apply, choose",2023,mid,41,5,14,0.3415,4.0,0,0.0,0.4,0
+Web Programming,4,"notes, dictionaries, written notes, notes dictionaries",2023,mid,41,5,3,0.0732,5.0,0,0.0,0.0,0
+Web Programming,5,"text, image, href, language",2023,mid,41,5,13,0.3171,4.0,0,0.0,0.4,0
 Web Programming,6,"false, true, true false, jsx",2023,mid,41,5,15,0.3659,4.0,0,0.0,0.2667,0
 Web Programming,7,"mvc, routing, asp, asp net",2023,mid,41,5,7,0.1707,4.0,0,0.0,0.2667,0
-Web Programming,8,"javascript, program, implementation, url",2023,mid,41,5,25,0.6098,4.0,0,0.0,0.7333,1
+Web Programming,8,"react, javascript, current, program",2023,mid,41,5,34,0.8293,4.0,0,0.0,1.0,1
 Web Programming,9,"server, data, remote, remote server",2023,mid,41,5,4,0.0976,4.0,0,0.0,0.0,0
