@@ -188,7 +188,7 @@ def build_row(row, container_folders, alias_lookup, extraction):
     record["page_count"] = info.get("page_count")
     record["char_count"] = info.get("char_count", 0)
     record["word_count"] = info.get("word_count", 0)
-    record["has_text"] = info.get("extraction_method") in ("pdf_text", "docx") and info.get("char_count", 0) > 0
+    record["has_text"] = info.get("extraction_method") in ("pdf_text", "docx", "ocr") and info.get("char_count", 0) > 0
     text_path = TEXT_DIR / f"{row.file_id}.txt"
     text = text_path.read_text(encoding="utf-8") if record["has_text"] and text_path.exists() else ""
     record["total_marks"] = parse_total_marks(text) if text else None

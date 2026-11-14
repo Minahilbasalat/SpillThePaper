@@ -34,269 +34,350 @@ row_idx,subject,topic_id,target_year,target_type,label,score,model,split
 32,Artificial Intelligence,6,2023,quiz,0,1.0,all_positive,val
 33,Artificial Intelligence,7,2023,quiz,0,1.0,all_positive,val
 34,Artificial Intelligence,8,2023,quiz,1,1.0,all_positive,val
-35,Compiler Construction,0,2023,mid,1,1.0,all_positive,val
+35,Compiler Construction,0,2023,mid,0,1.0,all_positive,val
 36,Compiler Construction,1,2023,mid,0,1.0,all_positive,val
 37,Compiler Construction,2,2023,mid,0,1.0,all_positive,val
 38,Compiler Construction,3,2023,mid,1,1.0,all_positive,val
-39,Compiler Construction,4,2023,mid,0,1.0,all_positive,val
-40,Computer Networks,0,2023,mid,1,1.0,all_positive,val
-41,Computer Networks,1,2023,mid,1,1.0,all_positive,val
-42,Computer Networks,2,2023,mid,1,1.0,all_positive,val
-43,Computer Networks,3,2023,mid,0,1.0,all_positive,val
-44,Computer Networks,4,2023,mid,1,1.0,all_positive,val
-45,Computer Networks,5,2023,mid,0,1.0,all_positive,val
-46,Computer Networks,6,2023,mid,1,1.0,all_positive,val
-47,Computer Networks,7,2023,mid,0,1.0,all_positive,val
-48,Computer Networks,8,2023,mid,0,1.0,all_positive,val
-49,Computer Networks,9,2023,mid,0,1.0,all_positive,val
-50,Computer Networks,0,2023,quiz,0,1.0,all_positive,val
-51,Computer Networks,1,2023,quiz,1,1.0,all_positive,val
-52,Computer Networks,2,2023,quiz,1,1.0,all_positive,val
-53,Computer Networks,3,2023,quiz,1,1.0,all_positive,val
-54,Computer Networks,4,2023,quiz,1,1.0,all_positive,val
-55,Computer Networks,5,2023,quiz,1,1.0,all_positive,val
-56,Computer Networks,6,2023,quiz,1,1.0,all_positive,val
-57,Computer Networks,7,2023,quiz,0,1.0,all_positive,val
-58,Computer Networks,8,2023,quiz,1,1.0,all_positive,val
-59,Computer Networks,9,2023,quiz,0,1.0,all_positive,val
-60,Computer Organization and Assembly Language,0,2023,final,0,1.0,all_positive,val
-61,Computer Organization and Assembly Language,1,2023,final,1,1.0,all_positive,val
-62,Computer Organization and Assembly Language,2,2023,final,0,1.0,all_positive,val
-63,Computer Organization and Assembly Language,3,2023,final,0,1.0,all_positive,val
-64,Computer Organization and Assembly Language,4,2023,final,1,1.0,all_positive,val
-65,Computer Organization and Assembly Language,5,2023,final,0,1.0,all_positive,val
-66,Computer Organization and Assembly Language,6,2023,final,0,1.0,all_positive,val
-67,Computer Organization and Assembly Language,7,2023,final,1,1.0,all_positive,val
-68,Computer Organization and Assembly Language,8,2023,final,0,1.0,all_positive,val
-69,Computer Organization and Assembly Language,9,2023,final,0,1.0,all_positive,val
-70,Computer Organization and Assembly Language,0,2023,mid,0,1.0,all_positive,val
-71,Computer Organization and Assembly Language,1,2023,mid,1,1.0,all_positive,val
-72,Computer Organization and Assembly Language,2,2023,mid,0,1.0,all_positive,val
-73,Computer Organization and Assembly Language,3,2023,mid,0,1.0,all_positive,val
-74,Computer Organization and Assembly Language,4,2023,mid,0,1.0,all_positive,val
-75,Computer Organization and Assembly Language,5,2023,mid,0,1.0,all_positive,val
-76,Computer Organization and Assembly Language,6,2023,mid,0,1.0,all_positive,val
-77,Computer Organization and Assembly Language,7,2023,mid,0,1.0,all_positive,val
-78,Computer Organization and Assembly Language,8,2023,mid,0,1.0,all_positive,val
-79,Computer Organization and Assembly Language,9,2023,mid,0,1.0,all_positive,val
-80,DLD,0,2023,final,1,1.0,all_positive,val
-81,DLD,1,2023,final,0,1.0,all_positive,val
-82,DLD,2,2023,final,0,1.0,all_positive,val
-83,DLD,3,2023,final,1,1.0,all_positive,val
-84,DLD,4,2023,final,1,1.0,all_positive,val
-85,DLD,5,2023,final,1,1.0,all_positive,val
-86,DLD,6,2023,final,0,1.0,all_positive,val
-87,DLD,7,2023,final,0,1.0,all_positive,val
-88,DW,0,2023,mid,1,1.0,all_positive,val
-89,DW,1,2023,mid,0,1.0,all_positive,val
-90,DW,2,2023,mid,1,1.0,all_positive,val
-91,DW,3,2023,mid,1,1.0,all_positive,val
-92,Data Science,0,2023,final,0,1.0,all_positive,val
-93,Data Science,1,2023,final,0,1.0,all_positive,val
-94,Data Science,2,2023,final,0,1.0,all_positive,val
-95,Data Science,3,2023,final,0,1.0,all_positive,val
-96,Data Science,4,2023,final,1,1.0,all_positive,val
-97,Data Science,5,2023,final,0,1.0,all_positive,val
-98,Data Science,6,2023,final,0,1.0,all_positive,val
-99,Data Science,7,2023,final,0,1.0,all_positive,val
-100,Data Science,8,2023,final,0,1.0,all_positive,val
-101,Data Science,0,2023,mid,0,1.0,all_positive,val
-102,Data Science,1,2023,mid,0,1.0,all_positive,val
-103,Data Science,2,2023,mid,1,1.0,all_positive,val
-104,Data Science,3,2023,mid,1,1.0,all_positive,val
-105,Data Science,4,2023,mid,1,1.0,all_positive,val
-106,Data Science,5,2023,mid,0,1.0,all_positive,val
-107,Data Science,6,2023,mid,0,1.0,all_positive,val
-108,Data Science,7,2023,mid,0,1.0,all_positive,val
-109,Data Science,8,2023,mid,1,1.0,all_positive,val
-110,Database Systems,0,2023,final,1,1.0,all_positive,val
-111,Database Systems,1,2023,final,1,1.0,all_positive,val
-112,Database Systems,2,2023,final,1,1.0,all_positive,val
-113,Database Systems,3,2023,final,0,1.0,all_positive,val
-114,Database Systems,4,2023,final,0,1.0,all_positive,val
-115,Database Systems,5,2023,final,1,1.0,all_positive,val
-116,Database Systems,6,2023,final,1,1.0,all_positive,val
-117,Database Systems,7,2023,final,0,1.0,all_positive,val
-118,Database Systems,8,2023,final,0,1.0,all_positive,val
-119,Database Systems,0,2023,mid,0,1.0,all_positive,val
-120,Database Systems,1,2023,mid,1,1.0,all_positive,val
-121,Database Systems,2,2023,mid,1,1.0,all_positive,val
-122,Database Systems,3,2023,mid,0,1.0,all_positive,val
-123,Database Systems,4,2023,mid,1,1.0,all_positive,val
-124,Database Systems,5,2023,mid,0,1.0,all_positive,val
-125,Database Systems,6,2023,mid,0,1.0,all_positive,val
-126,Database Systems,7,2023,mid,1,1.0,all_positive,val
-127,Database Systems,8,2023,mid,0,1.0,all_positive,val
-128,Database Systems,0,2023,quiz,0,1.0,all_positive,val
-129,Database Systems,1,2023,quiz,0,1.0,all_positive,val
-130,Database Systems,2,2023,quiz,0,1.0,all_positive,val
-131,Database Systems,3,2023,quiz,0,1.0,all_positive,val
-132,Database Systems,4,2023,quiz,0,1.0,all_positive,val
-133,Database Systems,5,2023,quiz,0,1.0,all_positive,val
-134,Database Systems,6,2023,quiz,1,1.0,all_positive,val
-135,Database Systems,7,2023,quiz,0,1.0,all_positive,val
-136,Database Systems,8,2023,quiz,0,1.0,all_positive,val
-137,Design and Analysis of Algorithms,0,2023,final,0,1.0,all_positive,val
-138,Design and Analysis of Algorithms,1,2023,final,0,1.0,all_positive,val
-139,Design and Analysis of Algorithms,2,2023,final,0,1.0,all_positive,val
-140,Design and Analysis of Algorithms,3,2023,final,0,1.0,all_positive,val
-141,Design and Analysis of Algorithms,4,2023,final,1,1.0,all_positive,val
-142,Design and Analysis of Algorithms,5,2023,final,1,1.0,all_positive,val
-143,Design and Analysis of Algorithms,6,2023,final,1,1.0,all_positive,val
-144,Design and Analysis of Algorithms,7,2023,final,1,1.0,all_positive,val
-145,Design and Analysis of Algorithms,8,2023,final,1,1.0,all_positive,val
-146,Design and Analysis of Algorithms,0,2023,mid,0,1.0,all_positive,val
-147,Design and Analysis of Algorithms,1,2023,mid,0,1.0,all_positive,val
-148,Design and Analysis of Algorithms,2,2023,mid,0,1.0,all_positive,val
-149,Design and Analysis of Algorithms,3,2023,mid,0,1.0,all_positive,val
-150,Design and Analysis of Algorithms,4,2023,mid,1,1.0,all_positive,val
-151,Design and Analysis of Algorithms,5,2023,mid,1,1.0,all_positive,val
-152,Design and Analysis of Algorithms,6,2023,mid,1,1.0,all_positive,val
-153,Design and Analysis of Algorithms,7,2023,mid,0,1.0,all_positive,val
-154,Design and Analysis of Algorithms,8,2023,mid,0,1.0,all_positive,val
-155,HCI,0,2023,mid,0,1.0,all_positive,val
-156,HCI,1,2023,mid,0,1.0,all_positive,val
-157,HCI,2,2023,mid,0,1.0,all_positive,val
-158,HCI,3,2023,mid,0,1.0,all_positive,val
-159,HCI,4,2023,mid,0,1.0,all_positive,val
-160,HCI,5,2023,mid,0,1.0,all_positive,val
-161,HCI,6,2023,mid,1,1.0,all_positive,val
-162,HCI,7,2023,mid,1,1.0,all_positive,val
-163,HCI,8,2023,mid,0,1.0,all_positive,val
-164,HCI,9,2023,mid,0,1.0,all_positive,val
-165,IOT,0,2023,mid,1,1.0,all_positive,val
-166,IOT,1,2023,mid,1,1.0,all_positive,val
-167,IOT,2,2023,mid,1,1.0,all_positive,val
-168,IOT,3,2023,mid,1,1.0,all_positive,val
-169,IR,0,2023,mid,0,1.0,all_positive,val
-170,IR,1,2023,mid,1,1.0,all_positive,val
-171,IR,2,2023,mid,0,1.0,all_positive,val
-172,IR,3,2023,mid,0,1.0,all_positive,val
-173,IR,4,2023,mid,0,1.0,all_positive,val
-174,IR,5,2023,mid,0,1.0,all_positive,val
-175,IR,6,2023,mid,0,1.0,all_positive,val
-176,IR,7,2023,mid,0,1.0,all_positive,val
-177,IR,8,2023,mid,0,1.0,all_positive,val
-178,IR,9,2023,mid,0,1.0,all_positive,val
-179,NLP,0,2023,mid,0,1.0,all_positive,val
-180,NLP,1,2023,mid,1,1.0,all_positive,val
-181,NLP,2,2023,mid,1,1.0,all_positive,val
-182,NLP,3,2023,mid,0,1.0,all_positive,val
-183,NLP,4,2023,mid,0,1.0,all_positive,val
-184,NLP,5,2023,mid,0,1.0,all_positive,val
-185,NLP,6,2023,mid,0,1.0,all_positive,val
-186,NLP,7,2023,mid,0,1.0,all_positive,val
-187,NLP,8,2023,mid,0,1.0,all_positive,val
-188,NLP,9,2023,mid,0,1.0,all_positive,val
-189,OOP Lab,0,2023,final,1,1.0,all_positive,val
-190,OOP Lab,1,2023,final,0,1.0,all_positive,val
-191,OOP Lab,2,2023,final,0,1.0,all_positive,val
-192,OOP Lab,3,2023,final,0,1.0,all_positive,val
-193,OS,0,2023,final,0,1.0,all_positive,val
-194,OS,1,2023,final,0,1.0,all_positive,val
-195,OS,2,2023,final,1,1.0,all_positive,val
-196,OS,3,2023,final,0,1.0,all_positive,val
-197,OS,4,2023,final,1,1.0,all_positive,val
-198,OS,5,2023,final,0,1.0,all_positive,val
-199,OS,6,2023,final,1,1.0,all_positive,val
-200,OS,7,2023,final,1,1.0,all_positive,val
-201,OS,8,2023,final,1,1.0,all_positive,val
-202,OS,9,2023,final,1,1.0,all_positive,val
-203,OS,0,2023,mid,0,1.0,all_positive,val
-204,OS,1,2023,mid,0,1.0,all_positive,val
-205,OS,2,2023,mid,1,1.0,all_positive,val
-206,OS,3,2023,mid,1,1.0,all_positive,val
-207,OS,4,2023,mid,1,1.0,all_positive,val
-208,OS,5,2023,mid,0,1.0,all_positive,val
-209,OS,6,2023,mid,0,1.0,all_positive,val
-210,OS,7,2023,mid,0,1.0,all_positive,val
-211,OS,8,2023,mid,0,1.0,all_positive,val
-212,OS,9,2023,mid,1,1.0,all_positive,val
-213,Object Oriented Programming,0,2023,final,0,1.0,all_positive,val
-214,Object Oriented Programming,1,2023,final,1,1.0,all_positive,val
-215,Object Oriented Programming,2,2023,final,0,1.0,all_positive,val
-216,Object Oriented Programming,3,2023,final,0,1.0,all_positive,val
-217,Object Oriented Programming,4,2023,final,1,1.0,all_positive,val
-218,Object Oriented Programming,5,2023,final,0,1.0,all_positive,val
-219,Object Oriented Programming,6,2023,final,1,1.0,all_positive,val
-220,Object Oriented Programming,7,2023,final,0,1.0,all_positive,val
-221,Object Oriented Programming,8,2023,final,1,1.0,all_positive,val
-222,Object Oriented Programming,0,2023,mid,1,1.0,all_positive,val
-223,Object Oriented Programming,1,2023,mid,0,1.0,all_positive,val
-224,Object Oriented Programming,2,2023,mid,0,1.0,all_positive,val
-225,Object Oriented Programming,3,2023,mid,0,1.0,all_positive,val
-226,Object Oriented Programming,4,2023,mid,1,1.0,all_positive,val
-227,Object Oriented Programming,5,2023,mid,0,1.0,all_positive,val
-228,Object Oriented Programming,6,2023,mid,0,1.0,all_positive,val
-229,Object Oriented Programming,7,2023,mid,0,1.0,all_positive,val
-230,Object Oriented Programming,8,2023,mid,0,1.0,all_positive,val
-231,PF,0,2023,final,1,1.0,all_positive,val
-232,PF,1,2023,final,0,1.0,all_positive,val
-233,PF,2,2023,final,1,1.0,all_positive,val
-234,PF,3,2023,final,1,1.0,all_positive,val
-235,PP,0,2023,final,1,1.0,all_positive,val
-236,PP,1,2023,final,1,1.0,all_positive,val
-237,PP,2,2023,final,0,1.0,all_positive,val
-238,PP,3,2023,final,0,1.0,all_positive,val
-239,PP,4,2023,final,0,1.0,all_positive,val
-240,PP,5,2023,final,1,1.0,all_positive,val
-241,PP,6,2023,final,0,1.0,all_positive,val
-242,PP,7,2023,final,0,1.0,all_positive,val
-243,PP,8,2023,final,0,1.0,all_positive,val
-244,PP,9,2023,final,1,1.0,all_positive,val
-245,PP,0,2023,mid,0,1.0,all_positive,val
-246,PP,1,2023,mid,1,1.0,all_positive,val
-247,PP,2,2023,mid,0,1.0,all_positive,val
-248,PP,3,2023,mid,0,1.0,all_positive,val
-249,PP,4,2023,mid,0,1.0,all_positive,val
-250,PP,5,2023,mid,1,1.0,all_positive,val
-251,PP,6,2023,mid,0,1.0,all_positive,val
-252,PP,7,2023,mid,0,1.0,all_positive,val
-253,PP,8,2023,mid,1,1.0,all_positive,val
-254,PP,9,2023,mid,1,1.0,all_positive,val
-255,Software Engineering,0,2023,mid,1,1.0,all_positive,val
-256,Software Engineering,1,2023,mid,1,1.0,all_positive,val
-257,Software Engineering,2,2023,mid,0,1.0,all_positive,val
-258,Software Engineering,3,2023,mid,0,1.0,all_positive,val
-259,Software Engineering,4,2023,mid,1,1.0,all_positive,val
-260,Software Engineering,5,2023,mid,0,1.0,all_positive,val
-261,Software Engineering,0,2023,quiz,1,1.0,all_positive,val
-262,Software Engineering,1,2023,quiz,0,1.0,all_positive,val
-263,Software Engineering,2,2023,quiz,1,1.0,all_positive,val
-264,Software Engineering,3,2023,quiz,0,1.0,all_positive,val
-265,Software Engineering,4,2023,quiz,1,1.0,all_positive,val
-266,Software Engineering,5,2023,quiz,1,1.0,all_positive,val
-267,Theory of Automata,0,2023,final,0,1.0,all_positive,val
-268,Theory of Automata,1,2023,final,0,1.0,all_positive,val
-269,Theory of Automata,2,2023,final,1,1.0,all_positive,val
-270,Theory of Automata,3,2023,final,0,1.0,all_positive,val
-271,Theory of Automata,4,2023,final,0,1.0,all_positive,val
-272,Theory of Automata,5,2023,final,1,1.0,all_positive,val
-273,Theory of Automata,6,2023,final,0,1.0,all_positive,val
-274,Theory of Automata,7,2023,final,1,1.0,all_positive,val
-275,Theory of Automata,0,2023,mid,0,1.0,all_positive,val
-276,Theory of Automata,1,2023,mid,1,1.0,all_positive,val
-277,Theory of Automata,2,2023,mid,0,1.0,all_positive,val
-278,Theory of Automata,3,2023,mid,0,1.0,all_positive,val
-279,Theory of Automata,4,2023,mid,0,1.0,all_positive,val
-280,Theory of Automata,5,2023,mid,1,1.0,all_positive,val
-281,Theory of Automata,6,2023,mid,0,1.0,all_positive,val
-282,Theory of Automata,7,2023,mid,0,1.0,all_positive,val
-283,Theory of Automata,0,2023,quiz,0,1.0,all_positive,val
-284,Theory of Automata,1,2023,quiz,1,1.0,all_positive,val
-285,Theory of Automata,2,2023,quiz,0,1.0,all_positive,val
-286,Theory of Automata,3,2023,quiz,0,1.0,all_positive,val
-287,Theory of Automata,4,2023,quiz,0,1.0,all_positive,val
-288,Theory of Automata,5,2023,quiz,1,1.0,all_positive,val
-289,Theory of Automata,6,2023,quiz,0,1.0,all_positive,val
-290,Theory of Automata,7,2023,quiz,0,1.0,all_positive,val
-291,Web Programming,0,2023,mid,0,1.0,all_positive,val
-292,Web Programming,1,2023,mid,0,1.0,all_positive,val
-293,Web Programming,2,2023,mid,1,1.0,all_positive,val
-294,Web Programming,3,2023,mid,0,1.0,all_positive,val
-295,Web Programming,4,2023,mid,0,1.0,all_positive,val
-296,Web Programming,5,2023,mid,0,1.0,all_positive,val
-297,Web Programming,6,2023,mid,0,1.0,all_positive,val
-298,Web Programming,7,2023,mid,0,1.0,all_positive,val
-299,Web Programming,8,2023,mid,0,1.0,all_positive,val
-300,Web Programming,9,2023,mid,0,1.0,all_positive,val
+39,Compiler Construction,4,2023,mid,1,1.0,all_positive,val
+40,Compiler Construction,5,2023,mid,1,1.0,all_positive,val
+41,Computer Networks,0,2023,final,0,1.0,all_positive,val
+42,Computer Networks,1,2023,final,0,1.0,all_positive,val
+43,Computer Networks,2,2023,final,0,1.0,all_positive,val
+44,Computer Networks,3,2023,final,1,1.0,all_positive,val
+45,Computer Networks,4,2023,final,1,1.0,all_positive,val
+46,Computer Networks,5,2023,final,0,1.0,all_positive,val
+47,Computer Networks,6,2023,final,1,1.0,all_positive,val
+48,Computer Networks,7,2023,final,1,1.0,all_positive,val
+49,Computer Networks,8,2023,final,0,1.0,all_positive,val
+50,Computer Networks,0,2023,mid,0,1.0,all_positive,val
+51,Computer Networks,1,2023,mid,1,1.0,all_positive,val
+52,Computer Networks,2,2023,mid,0,1.0,all_positive,val
+53,Computer Networks,3,2023,mid,1,1.0,all_positive,val
+54,Computer Networks,4,2023,mid,1,1.0,all_positive,val
+55,Computer Networks,5,2023,mid,1,1.0,all_positive,val
+56,Computer Networks,6,2023,mid,1,1.0,all_positive,val
+57,Computer Networks,7,2023,mid,0,1.0,all_positive,val
+58,Computer Networks,8,2023,mid,0,1.0,all_positive,val
+59,Computer Networks,0,2023,quiz,0,1.0,all_positive,val
+60,Computer Networks,1,2023,quiz,1,1.0,all_positive,val
+61,Computer Networks,2,2023,quiz,1,1.0,all_positive,val
+62,Computer Networks,3,2023,quiz,1,1.0,all_positive,val
+63,Computer Networks,4,2023,quiz,1,1.0,all_positive,val
+64,Computer Networks,5,2023,quiz,1,1.0,all_positive,val
+65,Computer Networks,6,2023,quiz,1,1.0,all_positive,val
+66,Computer Networks,7,2023,quiz,1,1.0,all_positive,val
+67,Computer Networks,8,2023,quiz,1,1.0,all_positive,val
+68,Computer Networks Lab,0,2023,final,1,1.0,all_positive,val
+69,Computer Networks Lab,1,2023,final,1,1.0,all_positive,val
+70,Computer Networks Lab,2,2023,final,1,1.0,all_positive,val
+71,Computer Networks Lab,3,2023,final,1,1.0,all_positive,val
+72,Computer Networks Lab,4,2023,final,1,1.0,all_positive,val
+73,Computer Networks Lab,5,2023,final,0,1.0,all_positive,val
+74,Computer Networks Lab,6,2023,final,0,1.0,all_positive,val
+75,Computer Networks Lab,7,2023,final,1,1.0,all_positive,val
+76,Computer Networks Lab,8,2023,final,1,1.0,all_positive,val
+77,Computer Organization and Assembly Language,0,2023,final,0,1.0,all_positive,val
+78,Computer Organization and Assembly Language,1,2023,final,0,1.0,all_positive,val
+79,Computer Organization and Assembly Language,2,2023,final,1,1.0,all_positive,val
+80,Computer Organization and Assembly Language,3,2023,final,0,1.0,all_positive,val
+81,Computer Organization and Assembly Language,4,2023,final,0,1.0,all_positive,val
+82,Computer Organization and Assembly Language,5,2023,final,0,1.0,all_positive,val
+83,Computer Organization and Assembly Language,6,2023,final,1,1.0,all_positive,val
+84,Computer Organization and Assembly Language,7,2023,final,0,1.0,all_positive,val
+85,Computer Organization and Assembly Language,8,2023,final,1,1.0,all_positive,val
+86,Computer Organization and Assembly Language,9,2023,final,1,1.0,all_positive,val
+87,Computer Organization and Assembly Language,0,2023,mid,1,1.0,all_positive,val
+88,Computer Organization and Assembly Language,1,2023,mid,0,1.0,all_positive,val
+89,Computer Organization and Assembly Language,2,2023,mid,1,1.0,all_positive,val
+90,Computer Organization and Assembly Language,3,2023,mid,0,1.0,all_positive,val
+91,Computer Organization and Assembly Language,4,2023,mid,0,1.0,all_positive,val
+92,Computer Organization and Assembly Language,5,2023,mid,0,1.0,all_positive,val
+93,Computer Organization and Assembly Language,6,2023,mid,0,1.0,all_positive,val
+94,Computer Organization and Assembly Language,7,2023,mid,0,1.0,all_positive,val
+95,Computer Organization and Assembly Language,8,2023,mid,1,1.0,all_positive,val
+96,Computer Organization and Assembly Language,9,2023,mid,0,1.0,all_positive,val
+97,DLD,0,2023,final,0,1.0,all_positive,val
+98,DLD,1,2023,final,1,1.0,all_positive,val
+99,DLD,2,2023,final,1,1.0,all_positive,val
+100,DLD,3,2023,final,1,1.0,all_positive,val
+101,DLD,4,2023,final,1,1.0,all_positive,val
+102,DLD,5,2023,final,0,1.0,all_positive,val
+103,DLD,6,2023,final,1,1.0,all_positive,val
+104,DLD,7,2023,final,0,1.0,all_positive,val
+105,DLD,8,2023,final,0,1.0,all_positive,val
+106,DW,0,2023,mid,1,1.0,all_positive,val
+107,DW,1,2023,mid,0,1.0,all_positive,val
+108,DW,2,2023,mid,1,1.0,all_positive,val
+109,DW,3,2023,mid,1,1.0,all_positive,val
+110,Data Science,0,2023,final,0,1.0,all_positive,val
+111,Data Science,1,2023,final,0,1.0,all_positive,val
+112,Data Science,2,2023,final,0,1.0,all_positive,val
+113,Data Science,3,2023,final,0,1.0,all_positive,val
+114,Data Science,4,2023,final,1,1.0,all_positive,val
+115,Data Science,5,2023,final,0,1.0,all_positive,val
+116,Data Science,6,2023,final,0,1.0,all_positive,val
+117,Data Science,7,2023,final,0,1.0,all_positive,val
+118,Data Science,8,2023,final,0,1.0,all_positive,val
+119,Data Science,0,2023,mid,0,1.0,all_positive,val
+120,Data Science,1,2023,mid,0,1.0,all_positive,val
+121,Data Science,2,2023,mid,1,1.0,all_positive,val
+122,Data Science,3,2023,mid,1,1.0,all_positive,val
+123,Data Science,4,2023,mid,1,1.0,all_positive,val
+124,Data Science,5,2023,mid,0,1.0,all_positive,val
+125,Data Science,6,2023,mid,0,1.0,all_positive,val
+126,Data Science,7,2023,mid,0,1.0,all_positive,val
+127,Data Science,8,2023,mid,1,1.0,all_positive,val
+128,Data Structures,0,2023,mid,1,1.0,all_positive,val
+129,Data Structures,1,2023,mid,0,1.0,all_positive,val
+130,Data Structures,2,2023,mid,1,1.0,all_positive,val
+131,Data Structures,3,2023,mid,1,1.0,all_positive,val
+132,Data Structures,4,2023,mid,0,1.0,all_positive,val
+133,Data Structures,5,2023,mid,0,1.0,all_positive,val
+134,Data Structures,6,2023,mid,0,1.0,all_positive,val
+135,Data Structures,7,2023,mid,0,1.0,all_positive,val
+136,Database Systems,0,2023,final,0,1.0,all_positive,val
+137,Database Systems,1,2023,final,1,1.0,all_positive,val
+138,Database Systems,2,2023,final,1,1.0,all_positive,val
+139,Database Systems,3,2023,final,1,1.0,all_positive,val
+140,Database Systems,4,2023,final,0,1.0,all_positive,val
+141,Database Systems,5,2023,final,1,1.0,all_positive,val
+142,Database Systems,6,2023,final,0,1.0,all_positive,val
+143,Database Systems,7,2023,final,1,1.0,all_positive,val
+144,Database Systems,8,2023,final,1,1.0,all_positive,val
+145,Database Systems,9,2023,final,1,1.0,all_positive,val
+146,Database Systems,0,2023,mid,0,1.0,all_positive,val
+147,Database Systems,1,2023,mid,0,1.0,all_positive,val
+148,Database Systems,2,2023,mid,0,1.0,all_positive,val
+149,Database Systems,3,2023,mid,1,1.0,all_positive,val
+150,Database Systems,4,2023,mid,1,1.0,all_positive,val
+151,Database Systems,5,2023,mid,1,1.0,all_positive,val
+152,Database Systems,6,2023,mid,0,1.0,all_positive,val
+153,Database Systems,7,2023,mid,0,1.0,all_positive,val
+154,Database Systems,8,2023,mid,1,1.0,all_positive,val
+155,Database Systems,9,2023,mid,1,1.0,all_positive,val
+156,Database Systems,0,2023,quiz,0,1.0,all_positive,val
+157,Database Systems,1,2023,quiz,0,1.0,all_positive,val
+158,Database Systems,2,2023,quiz,1,1.0,all_positive,val
+159,Database Systems,3,2023,quiz,0,1.0,all_positive,val
+160,Database Systems,4,2023,quiz,1,1.0,all_positive,val
+161,Database Systems,5,2023,quiz,0,1.0,all_positive,val
+162,Database Systems,6,2023,quiz,0,1.0,all_positive,val
+163,Database Systems,7,2023,quiz,0,1.0,all_positive,val
+164,Database Systems,8,2023,quiz,1,1.0,all_positive,val
+165,Database Systems,9,2023,quiz,0,1.0,all_positive,val
+166,Design and Analysis of Algorithms,0,2023,final,1,1.0,all_positive,val
+167,Design and Analysis of Algorithms,1,2023,final,1,1.0,all_positive,val
+168,Design and Analysis of Algorithms,2,2023,final,0,1.0,all_positive,val
+169,Design and Analysis of Algorithms,3,2023,final,0,1.0,all_positive,val
+170,Design and Analysis of Algorithms,4,2023,final,0,1.0,all_positive,val
+171,Design and Analysis of Algorithms,5,2023,final,1,1.0,all_positive,val
+172,Design and Analysis of Algorithms,6,2023,final,0,1.0,all_positive,val
+173,Design and Analysis of Algorithms,7,2023,final,0,1.0,all_positive,val
+174,Design and Analysis of Algorithms,8,2023,final,1,1.0,all_positive,val
+175,Design and Analysis of Algorithms,0,2023,mid,1,1.0,all_positive,val
+176,Design and Analysis of Algorithms,1,2023,mid,1,1.0,all_positive,val
+177,Design and Analysis of Algorithms,2,2023,mid,0,1.0,all_positive,val
+178,Design and Analysis of Algorithms,3,2023,mid,0,1.0,all_positive,val
+179,Design and Analysis of Algorithms,4,2023,mid,0,1.0,all_positive,val
+180,Design and Analysis of Algorithms,5,2023,mid,1,1.0,all_positive,val
+181,Design and Analysis of Algorithms,6,2023,mid,0,1.0,all_positive,val
+182,Design and Analysis of Algorithms,7,2023,mid,0,1.0,all_positive,val
+183,Design and Analysis of Algorithms,8,2023,mid,1,1.0,all_positive,val
+184,Design and Analysis of Algorithms,0,2023,quiz,0,1.0,all_positive,val
+185,Design and Analysis of Algorithms,1,2023,quiz,1,1.0,all_positive,val
+186,Design and Analysis of Algorithms,2,2023,quiz,0,1.0,all_positive,val
+187,Design and Analysis of Algorithms,3,2023,quiz,0,1.0,all_positive,val
+188,Design and Analysis of Algorithms,4,2023,quiz,0,1.0,all_positive,val
+189,Design and Analysis of Algorithms,5,2023,quiz,0,1.0,all_positive,val
+190,Design and Analysis of Algorithms,6,2023,quiz,0,1.0,all_positive,val
+191,Design and Analysis of Algorithms,7,2023,quiz,0,1.0,all_positive,val
+192,Design and Analysis of Algorithms,8,2023,quiz,1,1.0,all_positive,val
+193,HCI,0,2023,mid,0,1.0,all_positive,val
+194,HCI,1,2023,mid,0,1.0,all_positive,val
+195,HCI,2,2023,mid,0,1.0,all_positive,val
+196,HCI,3,2023,mid,0,1.0,all_positive,val
+197,HCI,4,2023,mid,0,1.0,all_positive,val
+198,HCI,5,2023,mid,1,1.0,all_positive,val
+199,HCI,6,2023,mid,1,1.0,all_positive,val
+200,HCI,7,2023,mid,1,1.0,all_positive,val
+201,HCI,8,2023,mid,0,1.0,all_positive,val
+202,HCI,9,2023,mid,0,1.0,all_positive,val
+203,IOT,0,2023,mid,1,1.0,all_positive,val
+204,IOT,1,2023,mid,1,1.0,all_positive,val
+205,IOT,2,2023,mid,1,1.0,all_positive,val
+206,IOT,3,2023,mid,1,1.0,all_positive,val
+207,IR,0,2023,mid,1,1.0,all_positive,val
+208,IR,1,2023,mid,0,1.0,all_positive,val
+209,IR,2,2023,mid,1,1.0,all_positive,val
+210,IR,3,2023,mid,0,1.0,all_positive,val
+211,IR,4,2023,mid,1,1.0,all_positive,val
+212,IR,5,2023,mid,0,1.0,all_positive,val
+213,IR,6,2023,mid,0,1.0,all_positive,val
+214,IR,7,2023,mid,1,1.0,all_positive,val
+215,IR,8,2023,mid,0,1.0,all_positive,val
+216,NLP,0,2023,mid,0,1.0,all_positive,val
+217,NLP,1,2023,mid,1,1.0,all_positive,val
+218,NLP,2,2023,mid,1,1.0,all_positive,val
+219,NLP,3,2023,mid,0,1.0,all_positive,val
+220,NLP,4,2023,mid,0,1.0,all_positive,val
+221,NLP,5,2023,mid,0,1.0,all_positive,val
+222,NLP,6,2023,mid,0,1.0,all_positive,val
+223,NLP,7,2023,mid,0,1.0,all_positive,val
+224,NLP,8,2023,mid,0,1.0,all_positive,val
+225,NLP,9,2023,mid,0,1.0,all_positive,val
+226,OOP Lab,0,2023,final,0,1.0,all_positive,val
+227,OOP Lab,1,2023,final,0,1.0,all_positive,val
+228,OOP Lab,2,2023,final,0,1.0,all_positive,val
+229,OOP Lab,3,2023,final,0,1.0,all_positive,val
+230,OOP Lab,4,2023,final,1,1.0,all_positive,val
+231,OOP Lab,5,2023,final,0,1.0,all_positive,val
+232,OOP Lab,6,2023,final,0,1.0,all_positive,val
+233,OS,0,2023,final,0,1.0,all_positive,val
+234,OS,1,2023,final,0,1.0,all_positive,val
+235,OS,2,2023,final,1,1.0,all_positive,val
+236,OS,3,2023,final,0,1.0,all_positive,val
+237,OS,4,2023,final,1,1.0,all_positive,val
+238,OS,5,2023,final,0,1.0,all_positive,val
+239,OS,6,2023,final,1,1.0,all_positive,val
+240,OS,7,2023,final,1,1.0,all_positive,val
+241,OS,8,2023,final,1,1.0,all_positive,val
+242,OS,9,2023,final,1,1.0,all_positive,val
+243,OS,0,2023,mid,0,1.0,all_positive,val
+244,OS,1,2023,mid,0,1.0,all_positive,val
+245,OS,2,2023,mid,1,1.0,all_positive,val
+246,OS,3,2023,mid,1,1.0,all_positive,val
+247,OS,4,2023,mid,1,1.0,all_positive,val
+248,OS,5,2023,mid,0,1.0,all_positive,val
+249,OS,6,2023,mid,0,1.0,all_positive,val
+250,OS,7,2023,mid,0,1.0,all_positive,val
+251,OS,8,2023,mid,1,1.0,all_positive,val
+252,OS,9,2023,mid,1,1.0,all_positive,val
+253,Object Oriented Programming,0,2023,final,0,1.0,all_positive,val
+254,Object Oriented Programming,1,2023,final,1,1.0,all_positive,val
+255,Object Oriented Programming,2,2023,final,0,1.0,all_positive,val
+256,Object Oriented Programming,3,2023,final,1,1.0,all_positive,val
+257,Object Oriented Programming,4,2023,final,1,1.0,all_positive,val
+258,Object Oriented Programming,5,2023,final,0,1.0,all_positive,val
+259,Object Oriented Programming,6,2023,final,0,1.0,all_positive,val
+260,Object Oriented Programming,7,2023,final,0,1.0,all_positive,val
+261,Object Oriented Programming,0,2023,mid,0,1.0,all_positive,val
+262,Object Oriented Programming,1,2023,mid,1,1.0,all_positive,val
+263,Object Oriented Programming,2,2023,mid,0,1.0,all_positive,val
+264,Object Oriented Programming,3,2023,mid,0,1.0,all_positive,val
+265,Object Oriented Programming,4,2023,mid,0,1.0,all_positive,val
+266,Object Oriented Programming,5,2023,mid,0,1.0,all_positive,val
+267,Object Oriented Programming,6,2023,mid,0,1.0,all_positive,val
+268,Object Oriented Programming,7,2023,mid,1,1.0,all_positive,val
+269,PF,0,2023,final,1,1.0,all_positive,val
+270,PF,1,2023,final,0,1.0,all_positive,val
+271,PF,2,2023,final,1,1.0,all_positive,val
+272,PF,3,2023,final,1,1.0,all_positive,val
+273,PF,4,2023,final,0,1.0,all_positive,val
+274,PF,5,2023,final,0,1.0,all_positive,val
+275,PF,6,2023,final,0,1.0,all_positive,val
+276,PP,0,2023,final,1,1.0,all_positive,val
+277,PP,1,2023,final,1,1.0,all_positive,val
+278,PP,2,2023,final,0,1.0,all_positive,val
+279,PP,3,2023,final,0,1.0,all_positive,val
+280,PP,4,2023,final,0,1.0,all_positive,val
+281,PP,5,2023,final,1,1.0,all_positive,val
+282,PP,6,2023,final,0,1.0,all_positive,val
+283,PP,7,2023,final,0,1.0,all_positive,val
+284,PP,8,2023,final,0,1.0,all_positive,val
+285,PP,9,2023,final,1,1.0,all_positive,val
+286,PP,0,2023,mid,0,1.0,all_positive,val
+287,PP,1,2023,mid,1,1.0,all_positive,val
+288,PP,2,2023,mid,0,1.0,all_positive,val
+289,PP,3,2023,mid,0,1.0,all_positive,val
+290,PP,4,2023,mid,0,1.0,all_positive,val
+291,PP,5,2023,mid,1,1.0,all_positive,val
+292,PP,6,2023,mid,0,1.0,all_positive,val
+293,PP,7,2023,mid,0,1.0,all_positive,val
+294,PP,8,2023,mid,1,1.0,all_positive,val
+295,PP,9,2023,mid,1,1.0,all_positive,val
+296,Software Design and Analysis,0,2023,final,0,1.0,all_positive,val
+297,Software Design and Analysis,1,2023,final,0,1.0,all_positive,val
+298,Software Design and Analysis,2,2023,final,1,1.0,all_positive,val
+299,Software Design and Analysis,3,2023,final,0,1.0,all_positive,val
+300,Software Design and Analysis,4,2023,final,0,1.0,all_positive,val
+301,Software Design and Analysis,5,2023,final,0,1.0,all_positive,val
+302,Software Design and Analysis,6,2023,final,1,1.0,all_positive,val
+303,Software Design and Analysis,7,2023,final,0,1.0,all_positive,val
+304,Software Design and Analysis,8,2023,final,0,1.0,all_positive,val
+305,Software Design and Analysis,0,2023,mid,1,1.0,all_positive,val
+306,Software Design and Analysis,1,2023,mid,0,1.0,all_positive,val
+307,Software Design and Analysis,2,2023,mid,1,1.0,all_positive,val
+308,Software Design and Analysis,3,2023,mid,0,1.0,all_positive,val
+309,Software Design and Analysis,4,2023,mid,0,1.0,all_positive,val
+310,Software Design and Analysis,5,2023,mid,0,1.0,all_positive,val
+311,Software Design and Analysis,6,2023,mid,0,1.0,all_positive,val
+312,Software Design and Analysis,7,2023,mid,0,1.0,all_positive,val
+313,Software Design and Analysis,8,2023,mid,0,1.0,all_positive,val
+314,Software Engineering,0,2023,final,0,1.0,all_positive,val
+315,Software Engineering,1,2023,final,0,1.0,all_positive,val
+316,Software Engineering,2,2023,final,0,1.0,all_positive,val
+317,Software Engineering,3,2023,final,0,1.0,all_positive,val
+318,Software Engineering,4,2023,final,1,1.0,all_positive,val
+319,Software Engineering,5,2023,final,1,1.0,all_positive,val
+320,Software Engineering,0,2023,mid,1,1.0,all_positive,val
+321,Software Engineering,1,2023,mid,1,1.0,all_positive,val
+322,Software Engineering,2,2023,mid,0,1.0,all_positive,val
+323,Software Engineering,3,2023,mid,0,1.0,all_positive,val
+324,Software Engineering,4,2023,mid,1,1.0,all_positive,val
+325,Software Engineering,5,2023,mid,0,1.0,all_positive,val
+326,Software Engineering,0,2023,quiz,1,1.0,all_positive,val
+327,Software Engineering,1,2023,quiz,0,1.0,all_positive,val
+328,Software Engineering,2,2023,quiz,1,1.0,all_positive,val
+329,Software Engineering,3,2023,quiz,0,1.0,all_positive,val
+330,Software Engineering,4,2023,quiz,1,1.0,all_positive,val
+331,Software Engineering,5,2023,quiz,1,1.0,all_positive,val
+332,Software Requirements Engineering,0,2023,mid,1,1.0,all_positive,val
+333,Software Requirements Engineering,1,2023,mid,0,1.0,all_positive,val
+334,Software Requirements Engineering,2,2023,mid,0,1.0,all_positive,val
+335,Software Requirements Engineering,3,2023,mid,0,1.0,all_positive,val
+336,Software Requirements Engineering,4,2023,mid,0,1.0,all_positive,val
+337,Software Requirements Engineering,0,2023,quiz,1,1.0,all_positive,val
+338,Software Requirements Engineering,1,2023,quiz,1,1.0,all_positive,val
+339,Software Requirements Engineering,2,2023,quiz,1,1.0,all_positive,val
+340,Software Requirements Engineering,3,2023,quiz,0,1.0,all_positive,val
+341,Software Requirements Engineering,4,2023,quiz,1,1.0,all_positive,val
+342,Theory of Automata,0,2023,final,0,1.0,all_positive,val
+343,Theory of Automata,1,2023,final,1,1.0,all_positive,val
+344,Theory of Automata,2,2023,final,1,1.0,all_positive,val
+345,Theory of Automata,3,2023,final,0,1.0,all_positive,val
+346,Theory of Automata,4,2023,final,0,1.0,all_positive,val
+347,Theory of Automata,5,2023,final,0,1.0,all_positive,val
+348,Theory of Automata,6,2023,final,1,1.0,all_positive,val
+349,Theory of Automata,7,2023,final,0,1.0,all_positive,val
+350,Theory of Automata,8,2023,final,0,1.0,all_positive,val
+351,Theory of Automata,9,2023,final,0,1.0,all_positive,val
+352,Theory of Automata,0,2023,mid,1,1.0,all_positive,val
+353,Theory of Automata,1,2023,mid,1,1.0,all_positive,val
+354,Theory of Automata,2,2023,mid,1,1.0,all_positive,val
+355,Theory of Automata,3,2023,mid,1,1.0,all_positive,val
+356,Theory of Automata,4,2023,mid,1,1.0,all_positive,val
+357,Theory of Automata,5,2023,mid,0,1.0,all_positive,val
+358,Theory of Automata,6,2023,mid,0,1.0,all_positive,val
+359,Theory of Automata,7,2023,mid,1,1.0,all_positive,val
+360,Theory of Automata,8,2023,mid,1,1.0,all_positive,val
+361,Theory of Automata,9,2023,mid,1,1.0,all_positive,val
+362,Theory of Automata,0,2023,quiz,0,1.0,all_positive,val
+363,Theory of Automata,1,2023,quiz,1,1.0,all_positive,val
+364,Theory of Automata,2,2023,quiz,0,1.0,all_positive,val
+365,Theory of Automata,3,2023,quiz,0,1.0,all_positive,val
+366,Theory of Automata,4,2023,quiz,1,1.0,all_positive,val
+367,Theory of Automata,5,2023,quiz,0,1.0,all_positive,val
+368,Theory of Automata,6,2023,quiz,0,1.0,all_positive,val
+369,Theory of Automata,7,2023,quiz,1,1.0,all_positive,val
+370,Theory of Automata,8,2023,quiz,0,1.0,all_positive,val
+371,Theory of Automata,9,2023,quiz,0,1.0,all_positive,val
+372,Web Programming,0,2023,mid,0,1.0,all_positive,val
+373,Web Programming,1,2023,mid,0,1.0,all_positive,val
+374,Web Programming,2,2023,mid,0,1.0,all_positive,val
+375,Web Programming,3,2023,mid,0,1.0,all_positive,val
+376,Web Programming,4,2023,mid,0,1.0,all_positive,val
+377,Web Programming,5,2023,mid,1,1.0,all_positive,val
+378,Web Programming,6,2023,mid,0,1.0,all_positive,val
+379,Web Programming,7,2023,mid,0,1.0,all_positive,val
+380,Web Programming,8,2023,mid,1,1.0,all_positive,val
+381,Web Programming,9,2023,mid,0,1.0,all_positive,val

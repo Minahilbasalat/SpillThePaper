@@ -1,11 +1,11 @@
 subject,topic_id,topic_label,n_fp,n_test_rows
-PP,5,"exam, solve, requirements, framework",5,6
-Theory of Automata,6,"initial, deterministic, deterministic finite, finite",5,6
-Database Systems,4,"customer, number, branch, account",4,7
-Database Systems,7,"update, key, tuple, constraint",4,7
-Theory of Automata,5,"dfa, required, nfa, table",4,6
-PP,1,"profession, malicious, reasons, information",3,6
-PP,3,"law, ethics, example, pakistan",3,6
-PP,8,"year, rate, years, value",3,6
-Design and Analysis of Algorithms,4,"recurrence, sum, function, left",3,4
-Design and Analysis of Algorithms,7,"tree, edge, prove, graph",3,4
+PP,5,"exam, solve, requirements, framework",7,7
+Database Systems,4,"update, tuple, key, constraint",5,8
+Artificial Intelligence,0,"player, registration, regression, game",5,7
+PP,3,"law, ethics, example, pakistan",5,7
+Discrete Structures,3,"discrete, cs, cs discrete, discrete structures",5,6
+Database Systems,9,"fds, schema, check, keys",4,8
+Object Oriented Programming,4,"print, print cout, cout, void",4,7
+PP,8,"year, rate, years, value",4,7
+Computer Networks Lab,2,"understanding, make suitable, suitable assumptions, suitable",4,6
+DLD,3,"flip flop, flop, flip, characteristic",4,6

@@ -1,17 +1,17 @@
 {
   "logreg": {
     "params": {
-      "C": 0.01
+      "C": 0.1
     },
-    "val_auc": 0.8470871538390294
+    "val_auc": 0.8408989764129952
   },
   "random_forest": {
     "params": {
-      "n_estimators": 300,
+      "n_estimators": 100,
       "max_depth": 5,
       "min_samples_leaf": 5
     },
-    "val_auc": 0.8265721959803649
+    "val_auc": 0.821400756564308
   },
-  "reference_topic_rate_prior_val_auc": 0.8201583773270353
+  "reference_topic_rate_prior_val_auc": 0.8207471072541166
 }

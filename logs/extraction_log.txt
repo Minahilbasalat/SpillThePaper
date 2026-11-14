@@ -40,3 +40,57 @@
 [2026-10-18 02:35:55] Files with errors: 1
 [2026-10-18 02:35:55]   error 975e746493d9: BadZipFile: File is not a zip file
 [2026-10-18 02:35:55] Saved C:\Dev\SpillThePaper\data\processed\extraction_results.csv
+[2026-11-14 04:08:47] OCR: 1123 files flagged, 0 already done, 20 to do (4 workers)
+[2026-11-14 04:09:23]   progress: 20/20
+[2026-11-14 04:09:23] OCR status: {'ok': 10, 'rejected_low_quality': 10}
+[2026-11-14 04:09:23] accepted files: median 581 words, median confidence 83.8
+[2026-11-14 04:09:23] extraction_results.csv updated: 10 files now have OCR text
+[2026-11-14 04:09:58] OCR: 1123 files flagged, 20 already done, 1103 to do (5 workers)
+[2026-11-14 04:11:13]   progress: 25/1103
+[2026-11-14 04:12:06]   progress: 50/1103
+[2026-11-14 04:13:12]   progress: 75/1103
+[2026-11-14 04:15:21]   progress: 100/1103
+[2026-11-14 04:16:47]   progress: 125/1103
+[2026-11-14 04:17:42]   progress: 150/1103
+[2026-11-14 04:18:09]   progress: 175/1103
+[2026-11-14 04:20:58]   progress: 200/1103
+[2026-11-14 04:23:40]   progress: 225/1103
+[2026-11-14 04:26:36]   progress: 250/1103
+[2026-11-14 04:30:41]   progress: 275/1103
+[2026-11-14 04:35:01]   progress: 300/1103
+[2026-11-14 04:37:14]   progress: 325/1103
+[2026-11-14 04:39:54]   progress: 350/1103
+[2026-11-14 04:41:58]   progress: 375/1103
+[2026-11-14 04:45:19]   progress: 400/1103
+[2026-11-14 04:48:05]   progress: 425/1103
+[2026-11-14 04:51:29]   progress: 450/1103
+[2026-11-14 04:53:22]   progress: 475/1103
+[2026-11-14 04:55:55]   progress: 500/1103
+[2026-11-14 04:58:02]   progress: 525/1103
+[2026-11-14 05:00:14]   progress: 550/1103
+[2026-11-14 05:03:51]   progress: 575/1103
+[2026-11-14 05:07:18]   progress: 600/1103
+[2026-11-14 05:10:00]   progress: 625/1103
+[2026-11-14 05:12:37]   progress: 650/1103
+[2026-11-14 05:15:28]   progress: 675/1103
+[2026-11-14 05:18:10]   progress: 700/1103
+[2026-11-14 05:20:22]   progress: 725/1103
+[2026-11-14 05:25:04]   progress: 750/1103
+[2026-11-14 05:26:56]   progress: 775/1103
+[2026-11-14 05:30:50]   progress: 800/1103
+[2026-11-14 05:34:42]   progress: 825/1103
+[2026-11-14 05:39:43]   progress: 850/1103
+[2026-11-14 05:45:08]   progress: 875/1103
+[2026-11-14 05:46:39]   progress: 900/1103
+[2026-11-14 05:47:33]   progress: 925/1103
+[2026-11-14 05:48:17]   progress: 950/1103
+[2026-11-14 05:48:34]   progress: 975/1103
+[2026-11-14 05:49:42]   progress: 1000/1103
+[2026-11-14 05:49:55]   progress: 1025/1103
+[2026-11-14 05:50:26]   progress: 1050/1103
+[2026-11-14 05:50:51]   progress: 1075/1103
+[2026-11-14 05:51:27]   progress: 1100/1103
+[2026-11-14 05:51:29]   progress: 1103/1103
+[2026-11-14 05:51:30] OCR status: {'ok': 742, 'rejected_low_quality': 379, 'error': 2}
+[2026-11-14 05:51:30] accepted files: median 400 words, median confidence 82.2
+[2026-11-14 05:51:30] extraction_results.csv updated: 742 files now have OCR text

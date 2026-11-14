@@ -73,3 +73,28 @@
 [2026-10-22 16:07:20] Saved eda/09_correlation.png
 [2026-10-22 16:07:20] Spearman correlations: {'year vs page_count': 0.02, 'year vs word_count': 0.13, 'year vs total_marks': -0.07, 'year vs question_count_est': -0.12, 'page_count vs word_count': 0.81, 'page_count vs total_marks': 0.66, 'page_count vs question_count_est': 0.54, 'word_count vs total_marks': 0.71, 'word_count vs question_count_est': 0.53, 'total_marks vs question_count_est': 0.55}
 [2026-10-22 16:07:20] EDA finished
+[2026-11-14 05:53:57] EDA on 2873 clean papers (3443 before cleaning)
+[2026-11-14 05:53:58] Saved eda/01_papers_by_type.png
+[2026-11-14 05:53:58] Papers by type before: {'quiz': 1400, 'mid': 1215, 'final': 819, 'exam_unspecified': 9}  after: {'quiz': 1171, 'mid': 1009, 'final': 684, 'exam_unspecified': 9}
+[2026-11-14 05:53:58] Saved eda/02_papers_by_subject.png
+[2026-11-14 05:53:58] Subjects: 131; median papers per subject: 11; subjects with fewer than 5 papers: 31; top 5: {'Web Programming': 211, 'Computer Networks': 149, 'Design and Analysis of Algorithms': 128, 'Object Oriented Programming': 92, 'Artificial Intelligence': 83}
+[2026-11-14 05:53:59] Saved eda/03_papers_by_year.png
+[2026-11-14 05:53:59] Year known: 2392/2873; year range 2005-2026; busiest years: {2018: 413, 2024: 360, 2025: 275}
+[2026-11-14 05:53:59] Papers by term: {'Fall': 1154, 'Spring': 1031, 'Unknown': 683, 'Summer': 5}
+[2026-11-14 05:54:00] Saved eda/04_subject_year_heatmap.png
+[2026-11-14 05:54:00] Heatmap: share of empty subject-year cells among top 15 subjects: 56%
+[2026-11-14 05:54:00] Saved eda/05_missing_values.png
+[2026-11-14 05:54:00] Missing values: subject 0.1%; assessment_type = exam_unspecified 0.3%; year 15.3%; term (season) 7.9%; assessment_number (mid/quiz only) 14.3%; section_raw 94.9%; text (has_text = False) 11.1%; total_marks (among papers with text) 42.7%; question_count_est (among papers with text) 31.5%
+[2026-11-14 05:54:00] Saved eda/06_text_coverage.png
+[2026-11-14 05:54:00] Share of papers WITHOUT text by type (%): {'quiz': 8.6, 'mid': 11.0, 'final': 19.6, 'exam_unspecified': 55.6}
+[2026-11-14 05:54:00] Subjects with zero readable papers: 0 of 130
+[2026-11-14 05:54:01] Saved eda/07_cleaning_funnel.png
+[2026-11-14 05:54:01] Cleaning: start -0 -> 3443; exact_duplicate -160 -> 3283; same_text_duplicate -50 -> 3233; merged_compilation -51 -> 3182; solution_companion -309 -> 2873
+[2026-11-14 05:54:03] Saved eda/08_numeric_boxplots.png
+[2026-11-14 05:54:03] Median page_count by type: {'exam_unspecified': 1.0, 'final': 4.0, 'mid': 3.0, 'quiz': 2.0}
+[2026-11-14 05:54:03] Median word_count by type: {'exam_unspecified': 1380.5, 'final': 965.0, 'mid': 534.0, 'quiz': 211.0}
+[2026-11-14 05:54:03] Median total_marks by type: {'exam_unspecified': 75.0, 'final': 70.0, 'mid': 30.0, 'quiz': 15.0}
+[2026-11-14 05:54:03] Median question_count_est by type: {'exam_unspecified': 4.0, 'final': 4.0, 'mid': 3.0, 'quiz': 2.0}
+[2026-11-14 05:54:04] Saved eda/09_correlation.png
+[2026-11-14 05:54:04] Spearman correlations: {'year vs page_count': 0.02, 'year vs word_count': 0.15, 'year vs total_marks': 0.04, 'year vs question_count_est': -0.15, 'page_count vs word_count': 0.81, 'page_count vs total_marks': 0.57, 'page_count vs question_count_est': 0.48, 'word_count vs total_marks': 0.67, 'word_count vs question_count_est': 0.46, 'total_marks vs question_count_est': 0.48}
+[2026-11-14 05:54:04] EDA finished

@@ -46,3 +46,19 @@
 [2026-10-22 16:07:05]   subject_paper_count_z: mean=0.0, std=1.0
 [2026-10-22 16:07:05] year_missing rows (kept missing): 525
 [2026-10-22 16:07:05] Saved C:\Dev\SpillThePaper\data\processed\features.csv and feature_strategy.csv
+[2026-11-14 05:53:42] Building features for 2873 clean papers
+[2026-11-14 05:53:43] features.csv: 2873 rows x 27 columns
+[2026-11-14 05:53:43] One-hot columns: ['type_exam_unspecified', 'type_final', 'type_mid', 'type_quiz', 'term_Fall', 'term_Spring', 'term_Summer', 'term_Unknown']
+[2026-11-14 05:53:43]   page_count: z-score after log1p; skewness 4.5; 226 missing filled with median of assessment type + page_count_missing flag
+[2026-11-14 05:53:43]   word_count: z-score after log1p; skewness 2.6; 351 missing filled with median of assessment type + word_count_missing flag
+[2026-11-14 05:53:43]   total_marks: z-score after log1p; skewness 1.12; 1404 missing filled with median of assessment type + total_marks_missing flag
+[2026-11-14 05:53:43]   question_count_est: z-score after log1p; skewness 2.84; 1153 missing filled with median of assessment type + question_count_est_missing flag
+[2026-11-14 05:53:43]   subject_paper_count: z-score after log1p; skewness 1.44; derived from subject (frequency encoding)
+[2026-11-14 05:53:43] Scaling check (should be mean ~0, std ~1):
+[2026-11-14 05:53:43]   page_count_z: mean=-0.0, std=1.0
+[2026-11-14 05:53:43]   word_count_z: mean=0.0, std=1.0
+[2026-11-14 05:53:43]   total_marks_z: mean=-0.0, std=1.0
+[2026-11-14 05:53:43]   question_count_est_z: mean=-0.0, std=1.0
+[2026-11-14 05:53:43]   subject_paper_count_z: mean=0.0, std=1.0
+[2026-11-14 05:53:43] year_missing rows (kept missing): 481
+[2026-11-14 05:53:43] Saved C:\Dev\SpillThePaper\data\processed\features.csv and feature_strategy.csv
