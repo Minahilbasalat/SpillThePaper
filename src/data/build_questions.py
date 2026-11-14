@@ -1,7 +1,8 @@
-"""Segment every readable clean paper into questions.
+﻿"""Segment every readable clean paper into questions.
 
 Writes:
   data/interim/questions.csv                  (question text, NOT in Git)
+  data/interim/questions_dropped.csv          (exam rules that were removed, NOT in Git)
   data/processed/question_segmentation_summary.csv  (counts only, in Git)
 
 Usage:
@@ -13,12 +14,14 @@ from pathlib import Path
 
 import pandas as pd
 
+from src.data.clean_questions import is_instruction, normalised, strip_furniture
 from src.data.load_text import load_papers_with_text
 from src.data.segment_questions import segment_questions
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT_QUESTIONS = ROOT / "data" / "interim" / "questions.csv"
 OUT_SUMMARY = ROOT / "data" / "processed" / "question_segmentation_summary.csv"
+OUT_DROPPED = ROOT / "data" / "interim" / "questions_dropped.csv"      # audit trail, NOT in Git
 
 
 def build_questions(papers: pd.DataFrame) -> pd.DataFrame:
@@ -34,9 +37,20 @@ def build_questions(papers: pd.DataFrame) -> pd.DataFrame:
                 "is_solution": rec.is_solution,
                 "q_index": i,
                 "method": method,
-                "q_text": q,
+                "q_text": strip_furniture(q),
             })
     return pd.DataFrame(rows)
+
+
+def drop_instructions(questions: pd.DataFrame):
+    """Remove exam rules that were mistaken for questions. Returns (kept, dropped)."""
+    norm = questions["q_text"].map(normalised)
+    repeats = questions.groupby([questions["subject"], norm])["file_id"].transform("nunique")
+    drop = pd.Series([is_instruction(t, r) for t, r in zip(questions["q_text"], repeats)],
+                     index=questions.index)
+    kept = questions[~drop].copy()
+    kept["q_index"] = kept.groupby("file_id").cumcount() + 1
+    return kept.reset_index(drop=True), questions[drop].reset_index(drop=True)
 
 
 def summarise(papers: pd.DataFrame, questions: pd.DataFrame) -> pd.DataFrame:
@@ -71,10 +85,12 @@ def main():
                 print("  -", q[:130])
         return
 
-    questions = build_questions(papers)
+    questions, dropped = drop_instructions(build_questions(papers))
     OUT_QUESTIONS.parent.mkdir(parents=True, exist_ok=True)
     questions.to_csv(OUT_QUESTIONS, index=False)
+    dropped.to_csv(OUT_DROPPED, index=False)
     summary = summarise(papers, questions)
+    summary.loc[len(summary)] = ("instructions_dropped", len(dropped))
     summary.to_csv(OUT_SUMMARY, index=False)
     print(summary.to_string(index=False))
     print("saved:", OUT_QUESTIONS)

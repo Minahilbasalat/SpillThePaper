@@ -28,4 +28,4 @@ models/*.joblib
 
 results/dummy/
 models/
-.pytest_cache/
+.pytest_cache/rebuild.log
