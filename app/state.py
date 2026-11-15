@@ -25,3 +25,10 @@ def preselect_prediction(subject: str, kind: str | None = None) -> None:
         st.session_state[PREDICT_EXAM] = exam
     else:
         st.session_state.pop(PREDICT_EXAM, None)
+
+
+def take_preselection() -> tuple[str | None, str | None]:
+    """Read and clear the subject/exam chosen on the Past papers page (used once)."""
+    subject = st.session_state.pop(PREDICT_SUBJECT, None)
+    exam = st.session_state.pop(PREDICT_EXAM, None)
+    return subject, exam
