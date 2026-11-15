@@ -22,6 +22,11 @@ import time
 
 import requests
 
+try:
+    from dotenv import load_dotenv
+    load_dotenv()            # reads a .env file in the project folder, if there is one
+except ImportError:
+    pass
 # provider -> (API key variable, URL, default model, wire format)
 PROVIDERS = {
     "gemini": ("GEMINI_API_KEY",
