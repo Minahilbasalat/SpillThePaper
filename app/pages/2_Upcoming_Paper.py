@@ -5,9 +5,10 @@ from datetime import date
 import state
 import streamlit as st
 import theme
-from common import get_generator, get_library, get_predictor
+from common import get_generator, get_library, get_predictor, get_solutions
 from components import inputs
 from components import predicted
+from components import solved
 from components import timer
 from components import predict_form as form
 from src.inference.documents import extract_text
@@ -22,6 +23,7 @@ form.inject_css()
 inputs.inject_css()
 predicted.inject_css()
 timer.inject_css()
+solved.inject_css()
 lib = get_library()
 pred = get_predictor()
 
@@ -45,6 +47,7 @@ st.session_state.setdefault("up_syll_msg", "")
 st.session_state.setdefault("up_revealed", [])
 st.session_state.setdefault("up_pdf", None)
 st.session_state.setdefault("up_exam_timer", True)
+st.session_state.setdefault("up_solutions", None)
 
 # Subject and exam chosen on the Past papers page ("Predict the next one").
 _pre_subject, _pre_exam = state.take_preselection()
@@ -428,6 +431,7 @@ def generate(subject: str, exam: str, advanced: dict) -> str | None:
     st.session_state["up_revealed"] = []
     st.session_state["up_pdf"] = None
     timer.reset()
+    st.session_state["up_solutions"] = None
     st.session_state["up_paper"] = paper
     st.session_state["up_screen"] = "paper"
     st.rerun()
@@ -656,10 +660,126 @@ def exam_screen(paper: dict) -> None:
             st.button("Finish exam", key="ex_finish", on_click=leave_exam)
 
 
-def next_step_screen(paper: dict) -> None:
-    st.button("\u2190 Back to paper", key="up_back_paper", on_click=go, args=("paper",))
-    theme.title_last("Declassified", paper["title"])
-    st.write("The solved paper is built in the next step.")
+# ---------- solved paper screen ----------
+def solutions_for(paper: dict) -> dict:
+    """Archive solutions (instant), computed once per paper and kept in session state."""
+    stored = st.session_state["up_solutions"]
+    if stored is None:
+        try:
+            with st.spinner("Looking up solutions in the archive..."):
+                items = list(get_solutions().solve_paper(paper, allow_ai=False))
+        except Exception:
+            items = []
+        stored = {"items": items, "pdf": None}
+        st.session_state["up_solutions"] = stored
+    return stored
+
+
+def generate_ai(paper: dict, stored: dict, missing: list[int]) -> None:
+    """Ask the AI for the questions without an archive solution, one by one with a progress bar."""
+    service = get_solutions()
+    items = list(stored["items"])
+    bar = st.progress(0.0, text="Asking the AI (a few seconds per question)...")
+    for step, i in enumerate(missing, 1):
+        try:
+            items[i] = service.solve(paper["subject"], paper["questions"][i], allow_ai=True)
+        except Exception:
+            items[i] = dict(items[i], note="The AI solution could not be generated. Please try again.")
+        bar.progress(step / len(missing), text=f"AI solution {step} of {len(missing)}")
+    bar.empty()
+    st.session_state["up_solutions"] = {"items": items, "pdf": None}
+
+
+def solved_pdf(paper: dict, stored: dict) -> bytes:
+    if stored["pdf"] is None:
+        try:
+            stored["pdf"] = paper_to_pdf(paper, solutions=stored["items"])
+        except Exception:
+            stored["pdf"] = b""
+    return stored["pdf"]
+
+
+def solution_card(index: int, question: dict, entry: dict) -> None:
+    source = entry.get("source", "none")
+    label = predicted.question_label(question, index)
+    with st.container(key=f"sq-{index}"):
+        st.markdown(
+            solved.card_header(
+                label, question.get("topic_label"), question.get("marks"),
+                bool(question.get("leetcode_style")), source,
+            ),
+            unsafe_allow_html=True,
+        )
+        with st.expander("Show the question"):
+            st.markdown(
+                f'<div class="sq-q">{theme.esc(question.get("text", ""))}</div>', unsafe_allow_html=True
+            )
+        text = str(entry.get("text") or "")
+        if source == "none" or not text.strip():
+            theme.notice(str(entry.get("note") or "No solution is available for this question yet."))
+            return
+        for kind, part in solved.split_blocks(text):
+            if kind == "code":
+                st.markdown(solved.code_markup(part), unsafe_allow_html=True)
+            else:
+                st.markdown(part)
+        if entry.get("note"):
+            st.markdown(f'<div class="sq-note">{theme.esc(entry["note"])}</div>', unsafe_allow_html=True)
+
+
+def solved_screen(paper: dict) -> None:
+    stored = solutions_for(paper)
+    items = stored["items"]
+    questions = paper.get("questions") or []
+
+    c_title, c_back, c_up = st.columns([3.2, 1, 1.2], vertical_alignment="bottom")
+    c_title.markdown(
+        '<div class="kicker">Declassified</div>'
+        '<div class="sp-title">The <span class="hl">solved</span> paper</div>',
+        unsafe_allow_html=True,
+    )
+    c_back.button("\u2190 Back to paper", key="up_back_paper", on_click=go, args=("paper",))
+    with c_up:
+        with st.container(key="sv-up-top"):
+            st.button("Upload my solution", key="sv_up_top", disabled=True)
+    st.caption("Archive solutions can be partial, and AI solutions must be checked before you trust them.")
+
+    main, side = st.columns([3.1, 1.15], gap="large")
+    with main:
+        if not items:
+            theme.notice("Solutions could not be loaded right now. Go back to the paper and try again.")
+        for i, entry in enumerate(items):
+            if i < len(questions):
+                solution_card(i, questions[i], entry)
+    with side:
+        for i, entry in enumerate(items):
+            scheme = entry.get("marking_scheme")
+            if scheme and i < len(questions):
+                label = predicted.question_label(questions[i], i)
+                theme.note(f"mark-{i}", f"Marking scheme {label}", str(scheme), "yellow", "R")
+        theme.note(
+            "slipped", "", "Solved it yourself first? Upload a photo and we will mark where you slipped.", "pink", "L"
+        )
+        with st.container(key="sv-up"):
+            st.button("Upload my solution " + theme.ARROW, key="sv_up", disabled=True)
+        st.markdown('<div class="soon">Coming soon</div>', unsafe_allow_html=True)
+
+        missing = [i for i, e in enumerate(items) if e.get("source") == "none"]
+        if get_solutions().ai_available():
+            if missing and st.button("Generate missing solutions with AI", key="up_gen_ai"):
+                generate_ai(paper, stored, missing)
+                st.rerun()
+        else:
+            st.caption("AI solutions are switched off (no API key set).")
+
+        if items:
+            data = solved_pdf(paper, stored)
+            if data:
+                with st.container(key="sv-pdf"):
+                    st.download_button(
+                        "Download solved paper as PDF", data, file_name="solved_paper.pdf",
+                        mime="application/pdf", key="up_solved_pdf_btn",
+                    )
 
 
 _paper = st.session_state["up_paper"]
@@ -669,6 +789,6 @@ if _paper and _screen == "paper":
 elif _paper and _screen == "exam":
     exam_screen(_paper)
 elif _paper and _screen == "solved":
-    next_step_screen(_paper)
+    solved_screen(_paper)
 else:
     form_screen()
