@@ -7,26 +7,32 @@ or in a chat message.
     GEMINI_API_KEY   or  GROQ_API_KEY  or  MISTRAL_API_KEY  or  ANTHROPIC_API_KEY
     LLM_PROVIDER     optional: gemini | groq | mistral | anthropic
                      (default: the first of these whose key is set, in this order)
-    LLM_MODEL        optional: model name of that provider (model names change, if a request
-                     says "model not found" copy a current name from the provider's dashboard)
+    LLM_VISION_MODEL optional: model that reads photos (default: Gemini/Anthropic read photos with
+                     the normal model; Groq/Mistral use the model named in VISION_MODELS below)
+    LLM_MODEL        optional: model name of that provider (see the defaults below; model names
+                     change, if a request says "model not found" copy a current name from the
+                     provider's dashboard)
 
 Windows PowerShell (this window only):   $env:GEMINI_API_KEY = "paste-key-here"
 Check that it works:                     python -m src.inference.llm
 
+The rest of the app only needs `.available`, `.model` and `.complete(system, user, max_tokens)`.
 Every failure (no internet, timeout, quota, bad key, empty answer) is raised as LLMError with a
 readable message, so a page can show it instead of crashing."""
 from __future__ import annotations
 
+import base64
 import os
 import time
 
 import requests
 
-try:
+try:                                     # optional: read keys from a .env file in the project folder
     from dotenv import load_dotenv
-    load_dotenv()            # reads a .env file in the project folder, if there is one
+    load_dotenv()
 except ImportError:
     pass
+
 # provider -> (API key variable, URL, default model, wire format)
 PROVIDERS = {
     "gemini": ("GEMINI_API_KEY",
@@ -39,6 +45,10 @@ PROVIDERS = {
     "anthropic": ("ANTHROPIC_API_KEY", "https://api.anthropic.com/v1/messages",
                   "claude-sonnet-5-5", "anthropic"),
 }
+# Model used to READ IMAGES (handwritten answers). None = the normal model also reads images.
+# Names change: if a request says "model not found", set LLM_VISION_MODEL to a current vision model.
+VISION_MODELS = {"gemini": None, "anthropic": None,
+                 "groq": "meta-llama/llama-4-scout-17b-16e-instruct", "mistral": "pixtral-12b-2409"}
 RETRY_STATUS = (429, 500, 502, 503, 504, 529)
 MAX_WAIT_S = 20
 
@@ -74,6 +84,7 @@ class LLMClient:
     def describe(self) -> str:
         return f"{self.provider} / {self.model}" if self.available else "no API key set"
 
+    # -------------------------------------------------------------------- request
     def _request(self, system: str, user: str, max_tokens: int):
         key_var, url, _default, wire = PROVIDERS[self.provider]
         if wire == "anthropic":
@@ -100,11 +111,8 @@ class LLMClient:
         except (KeyError, IndexError, TypeError, AttributeError):
             return ""
 
-    def complete(self, system: str, user: str, max_tokens: int = 1200) -> str:
-        if not self.available:
-            raise LLMError("no API key is set (GEMINI_API_KEY, GROQ_API_KEY, MISTRAL_API_KEY or "
-                           "ANTHROPIC_API_KEY)")
-        url, headers, body, wire = self._request(system, user, max_tokens)
+    def _send(self, url: str, headers: dict, body: dict, wire: str) -> str:
+        """POST with retries; returns the answer text or raises LLMError with a readable message."""
         last = ""
         for attempt in range(3):
             try:
@@ -135,10 +143,56 @@ class LLMClient:
         if last.startswith(("401", "403")):
             hint = " - check the API key"
         elif last.startswith("404"):
-            hint = " - model not found: set LLM_MODEL to a current model name from the provider"
+            hint = " - model not found: set LLM_MODEL (or LLM_VISION_MODEL) to a current model name"
         elif last.startswith("429"):
             hint = " - quota or rate limit reached: wait a minute and try again"
         raise LLMError(f"the {self.provider} request failed ({last}){hint}")
+
+    def complete(self, system: str, user: str, max_tokens: int = 1200) -> str:
+        if not self.available:
+            raise LLMError("no API key is set (GEMINI_API_KEY, GROQ_API_KEY, MISTRAL_API_KEY or "
+                           "ANTHROPIC_API_KEY)")
+        url, headers, body, wire = self._request(system, user, max_tokens)
+        return self._send(url, headers, body, wire)
+
+    # ------------------------------------------------------------------- photos
+    @property
+    def vision_model(self) -> str:
+        env = os.environ.get("LLM_VISION_MODEL")
+        if env:
+            return env
+        v = VISION_MODELS.get(self.provider)
+        return self.model if v is None else v
+
+    @property
+    def supports_vision(self) -> bool:
+        return bool(self.available and self.vision_model)
+
+    def complete_vision(self, system: str, user: str, images: list, max_tokens: int = 2500) -> str:
+        """Like complete(), with photos: images = [(mime_type, bytes), ...] (jpeg or png)."""
+        if not self.available:
+            raise LLMError("no API key is set (GEMINI_API_KEY, GROQ_API_KEY, MISTRAL_API_KEY or "
+                           "ANTHROPIC_API_KEY)")
+        if not images:
+            raise LLMError("no image was given")
+        key_var, url, _default, wire = PROVIDERS[self.provider]
+        enc = [(mime, base64.b64encode(data).decode("ascii")) for mime, data in images]
+        if wire == "anthropic":
+            headers = {"x-api-key": self.api_key, "anthropic-version": "2023-06-01",
+                       "content-type": "application/json"}
+            content = [{"type": "image", "source": {"type": "base64", "media_type": m, "data": b}}
+                       for m, b in enc] + [{"type": "text", "text": user}]
+            body = {"model": self.vision_model, "max_tokens": max_tokens, "system": system,
+                    "messages": [{"role": "user", "content": content}]}
+        else:
+            headers = {"Authorization": f"Bearer {self.api_key}", "content-type": "application/json"}
+            content = [{"type": "text", "text": user}] + [
+                {"type": "image_url", "image_url": {"url": f"data:{m};base64,{b}"}} for m, b in enc]
+            budget = max_tokens * 3 if self.provider == "gemini" else max_tokens
+            body = {"model": self.vision_model, "max_tokens": budget, "temperature": 0.0,
+                    "messages": [{"role": "system", "content": system},
+                                 {"role": "user", "content": content}]}
+        return self._send(url, headers, body, wire)
 
 
 def main():

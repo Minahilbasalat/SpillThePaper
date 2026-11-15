@@ -27,3 +27,18 @@ def get_solutions():
     """One shared SolutionService (archive solutions + optional AI solutions)."""
     from src.inference.solutions import SolutionService
     return SolutionService()
+
+
+
+@st.cache_resource
+def get_llm():
+    """One shared language-model client (reads GEMINI_API_KEY / GROQ_API_KEY ... once)."""
+    from src.inference.llm import LLMClient
+    return LLMClient()
+
+
+@st.cache_resource
+def get_results():
+    """One shared store of the student's marked attempts (data/cache/results.json)."""
+    from src.inference.results import ResultsStore
+    return ResultsStore()
