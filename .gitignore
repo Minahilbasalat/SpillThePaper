@@ -30,3 +30,5 @@ results/dummy/
 models/
 .pytest_cache/rebuild.log
 runtime_bundle.zip
+data/cache/
+_backup_before_update*/

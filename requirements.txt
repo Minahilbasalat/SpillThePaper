@@ -1,4 +1,4 @@
-﻿pandas
+pandas
 matplotlib
 seaborn
 pyyaml
@@ -11,5 +11,6 @@ joblib>=1.3
 pytest>=8.0
 pillow
 pytesseract
-streamlit
+streamlit>=1.39
 plotly
+fpdf2
