@@ -5,12 +5,17 @@ import state
 import streamlit as st
 import theme
 from common import get_generator, get_library, get_predictor
+from components import inputs
 from components import predict_form as form
+from src.inference.documents import extract_text
 from src.inference.errors import LowConfidenceError
 from src.inference.library import default_duration
+from src.inference.syllabus import default_scope, parse_syllabus
+from src.inference.uploads import ingest_papers
 
 theme.setup("Upcoming paper", active="upcoming")
 form.inject_css()
+inputs.inject_css()
 lib = get_library()
 pred = get_predictor()
 
@@ -27,6 +32,10 @@ st.session_state.setdefault("up_exam", "final")
 st.session_state.setdefault("up_minutes", default_duration("final"))
 st.session_state.setdefault("up_custom", False)
 st.session_state.setdefault("up_timer_on", True)
+st.session_state.setdefault("up_topics", [])
+st.session_state.setdefault("up_upload", None)
+st.session_state.setdefault("up_syll_items", [])
+st.session_state.setdefault("up_syll_msg", "")
 
 # Subject and exam chosen on the Past papers page ("Predict the next one").
 _pre_subject, _pre_exam = state.take_preselection()
@@ -40,6 +49,7 @@ if _pre_exam:
     st.session_state["up_custom"] = False
 
 
+# ---------- callbacks ----------
 def pick_subject(name: str) -> None:
     st.session_state["up_subject"] = name
     st.session_state["up_more_sel"] = None
@@ -74,19 +84,51 @@ def back_to_form() -> None:
     st.session_state["up_screen"] = "form"
 
 
+def _add_topics(items: list[str]) -> None:
+    topics = st.session_state["up_topics"]
+    known = {t.lower() for t in topics}
+    for item in items:
+        text = item.strip()
+        if text and text.lower() not in known:
+            topics.append(text)
+            known.add(text.lower())
+
+
+def add_topic() -> None:
+    _add_topics([st.session_state.get("up_topic_in", "")])
+    st.session_state["up_topic_in"] = ""
+
+
+def remove_topic(index: int) -> None:
+    topics = st.session_state["up_topics"]
+    if 0 <= index < len(topics):
+        del topics[index]
+
+
+def add_more_topics() -> None:
+    _add_topics(list(st.session_state.get("up_syll_more", [])))
+    st.session_state["up_syll_more"] = []
+
+
+def clear_upload() -> None:
+    st.session_state["up_upload"] = None
+
+
 def effective_minutes() -> int:
     if st.session_state["up_custom"]:
         return int(st.session_state.get("up_custom_min", 120))
     return int(st.session_state["up_minutes"])
 
 
+# ---------- card 1: subject and exam ----------
 def unsupported_note(subject: str) -> None:
     reason = None
     try:
         reason = lib.overview(subject).get("reason_if_unsupported")
     except Exception:
         pass
-    theme.notice(reason or "Prediction is not available for this subject yet. You can still read its past papers.")
+    detail = f" ({reason})" if reason else ""
+    theme.notice(f"Prediction is not available for this subject yet{detail}. You can still read its past papers.")
     st.page_link("pages/1_Past_Papers.py", label="Browse past papers " + theme.ARROW)
 
 
@@ -124,6 +166,179 @@ def subject_exam_card() -> None:
         st.radio("Year of the exam", [YEAR, YEAR + 1], horizontal=True, key="up_year")
 
 
+# ---------- card 2: upload recent papers ----------
+def ingest(subject: str, files: list, entries: list[dict]) -> None:
+    payload = [
+        {
+            "name": f.name,
+            "data": f.getvalue(),
+            "year": e["year"],
+            "assessment_type": e["type"],
+            "number": e["number"],
+        }
+        for f, e in zip(files, entries)
+    ]
+    try:
+        with st.spinner("Reading your papers (scans can take a moment)..."):
+            result = ingest_papers(subject, payload)
+    except (ValueError, RuntimeError) as err:
+        theme.notice(str(err))
+        return
+    except Exception:
+        theme.notice("These papers could not be read. Try another file or a clearer scan.")
+        return
+    st.session_state["up_upload"] = {"subject": subject, "result": result, "names": [f.name for f in files]}
+
+
+def upload_result(subject: str) -> None:
+    stored = st.session_state["up_upload"]
+    if not stored or stored["subject"] != subject:
+        return
+    result = stored["result"]
+    names = stored["names"]
+    accepted = inputs.count_of(getattr(result, "n_papers", 0))
+    questions = inputs.count_of(getattr(result, "questions", 0))
+    if accepted == len(names):
+        st.markdown(inputs.chips_markup(names), unsafe_allow_html=True)
+    else:
+        st.markdown(
+            f'<div class="found">{accepted} of {len(names)} files accepted. Read the messages below.</div>',
+            unsafe_allow_html=True,
+        )
+    st.markdown(
+        f'<div class="found">{questions} question(s) found. They are used for this prediction only.</div>',
+        unsafe_allow_html=True,
+    )
+    for message in list(getattr(result, "warnings", []) or []):
+        st.caption(str(message))
+    st.button("Remove uploaded papers", key="up_clear_upload", on_click=clear_upload)
+
+
+def upload_card(subject: str | None) -> None:
+    supported = subject in SUPPORTED
+    with st.container(key="card-2"):
+        st.markdown(form.card_heading(2, "Upload recent papers", optional=True), unsafe_allow_html=True)
+        st.markdown(
+            '<div class="card-note">More recent papers means a sharper prediction.</div>',
+            unsafe_allow_html=True,
+        )
+        files = st.file_uploader(
+            "Drop PDFs, photos or docs here",
+            type=inputs.FILE_TYPES,
+            accept_multiple_files=True,
+            key="up_files",
+        )
+        entries: list[dict] = []
+        for i, f in enumerate(files or []):
+            c_name, c_year, c_kind, c_num = st.columns([2.6, 1, 1.2, 1.1], vertical_alignment="bottom")
+            c_name.markdown(f'<div class="fname">{theme.esc(f.name)}</div>', unsafe_allow_html=True)
+            year = c_year.number_input(
+                "Year", 2000, YEAR + 1, inputs.guess_year(f.name, YEAR), key=f"up_fy_{i}_{f.name}"
+            )
+            kind = c_kind.selectbox(
+                "Type",
+                inputs.KINDS,
+                index=inputs.KINDS.index(inputs.guess_kind(f.name)),
+                format_func=lambda k: inputs.KIND_LABELS[k],
+                key=f"up_fk_{i}_{f.name}",
+            )
+            number = c_num.number_input("Number (0 = none)", 0, 10, 0, key=f"up_fn_{i}_{f.name}")
+            entries.append({"year": int(year), "type": kind, "number": int(number) or None})
+        if not supported:
+            st.caption("Uploads need a subject that supports prediction.")
+        elif files and st.button("Read these papers", key="up_ingest"):
+            ingest(subject, list(files), entries)
+        if supported:
+            upload_result(subject)
+
+
+# ---------- card 3: syllabus ----------
+def read_syllabus(file, exam: str) -> None:
+    """Turn an uploaded syllabus into chips (once per file)."""
+    sig = f"{file.name}:{file.size}"
+    if st.session_state.get("up_syll_sig") == sig:
+        return
+    st.session_state["up_syll_sig"] = sig
+    st.session_state["up_syll_msg"] = ""
+    try:
+        with st.spinner("Reading the syllabus..."):
+            result = extract_text(file.name, file.getvalue())
+            parsed = parse_syllabus(result["text"])
+            keep = default_scope(parsed, exam)
+    except (ValueError, RuntimeError) as err:
+        st.session_state["up_syll_msg"] = str(err)
+        return
+    except Exception:
+        st.session_state["up_syll_msg"] = "This syllabus could not be read. Add the topics by hand."
+        return
+    items = parsed["items"]
+    if not items:
+        st.session_state["up_syll_msg"] = "No syllabus items were found in this file. Add the topics by hand."
+        return
+    chosen = [items[i] for i in keep if 0 <= i < len(items)] or items
+    _add_topics(chosen)
+    st.session_state["up_syll_items"] = items
+    message = f"{len(chosen)} of {len(items)} items selected for this exam. Remove what is not included."
+    if result.get("warning"):
+        message += f" {result['warning']}"
+    st.session_state["up_syll_msg"] = message
+
+
+def topic_chips() -> None:
+    topics = st.session_state["up_topics"]
+    if not topics:
+        st.markdown(
+            '<div class="card-note">No syllabus added: every topic of the subject is considered.</div>',
+            unsafe_allow_html=True,
+        )
+        return
+    for start in range(0, len(topics), 4):
+        cols = st.columns(4, gap="small")
+        for offset, col in enumerate(cols):
+            i = start + offset
+            if i >= len(topics):
+                break
+            with col:
+                with st.container(key=f"topic-{i}"):
+                    st.button(f"{topics[i]} \u00d7", key=f"up_rm_{i}", on_click=remove_topic, args=(i,))
+
+
+def syllabus_card(exam: str) -> None:
+    with st.container(key="card-3"):
+        st.markdown(form.card_heading(3, "Syllabus for this paper"), unsafe_allow_html=True)
+        st.markdown(
+            '<div class="card-note">The syllabus changes every semester. Add exactly what is included.</div>',
+            unsafe_allow_html=True,
+        )
+        topic_chips()
+        c_in, c_add = st.columns([4, 0.8], gap="small", vertical_alignment="bottom")
+        c_in.text_input(
+            "Add a topic",
+            placeholder="Add a topic, e.g. Hashing",
+            label_visibility="collapsed",
+            key="up_topic_in",
+            on_change=add_topic,
+        )
+        with c_add:
+            with st.container(key="up_topic_add"):
+                st.button("Add", key="up_add_btn", on_click=add_topic)
+        file = st.file_uploader("Or upload syllabus PDF", type=inputs.FILE_TYPES, key="up_syll_file")
+        if file is not None:
+            read_syllabus(file, exam)
+        if st.session_state["up_syll_msg"]:
+            st.caption(st.session_state["up_syll_msg"])
+        others = [i for i in st.session_state["up_syll_items"] if i not in st.session_state["up_topics"]]
+        if others:
+            with st.expander(f"Other items found in the file ({len(others)})"):
+                st.multiselect("Add to the syllabus", others, key="up_syll_more", on_change=add_more_topics)
+        st.checkbox("Strict syllabus (only questions that match these topics)", key="up_strict")
+        st.markdown(
+            '<div class="card-note">Syllabus matching compares words, so it is approximate.</div>',
+            unsafe_allow_html=True,
+        )
+
+
+# ---------- card 4: timer ----------
 def timer_card() -> None:
     timer_on = st.session_state["up_timer_on"]
     with st.container(key="card-4"):
@@ -145,6 +360,7 @@ def timer_card() -> None:
             st.number_input("Minutes", min_value=5, max_value=360, value=120, step=5, key="up_custom_min")
 
 
+# ---------- right column ----------
 def difficulty_note(subject: str | None, exam: str) -> None:
     pct = None
     if subject in SUPPORTED:
@@ -167,6 +383,8 @@ def difficulty_note(subject: str | None, exam: str) -> None:
 
 def generate(subject: str, exam: str, advanced: dict) -> str | None:
     """Build the paper; returns an error message, or None when the paper is stored."""
+    stored = st.session_state["up_upload"]
+    extra = stored["result"] if stored and stored["subject"] == subject else None
     try:
         with st.spinner("Reading the archive and building your paper..."):
             paper = get_generator().generate(
@@ -174,11 +392,12 @@ def generate(subject: str, exam: str, advanced: dict) -> str | None:
                 exam,
                 int(st.session_state["up_year"]),
                 model=advanced["model"],
-                syllabus_items=None,
-                extra=None,
+                syllabus_items=list(st.session_state["up_topics"]) or None,
+                extra=extra,
                 n_questions=advanced["n_questions"] or None,
                 total_marks=advanced["total_marks"] or None,
                 explore_share=advanced["explore_share"],
+                strict_syllabus=bool(st.session_state.get("up_strict", False)),
             )
     except LowConfidenceError as err:
         return str(err)
@@ -229,6 +448,8 @@ def form_screen() -> None:
     left, right = st.columns([2.4, 1], gap="large")
     with left:
         subject_exam_card()
+        upload_card(st.session_state["up_subject"])
+        syllabus_card(st.session_state["up_exam"])
         timer_card()
     with right:
         right_column()
