@@ -43,22 +43,26 @@ def clean_label(text: str) -> str:
     text = re.sub(r"\[\s*CLO[^\]]*\]\s*", "", text, flags=re.I)         # course-outcome tags
     return _LABEL.sub("", text, count=1).strip()
 
+
 def fit_marks(raw, total) -> tuple[np.ndarray, int]:
-    """Whole-number marks, every question >= 1, adding up to EXACTLY the returned total."""
+    """Whole-number marks, every question >= 1, adding up to EXACTLY the returned total.
+    The returned total equals `total` (rounded) unless that is smaller than the number of
+    questions, in which case every question gets 1 mark and the total is the question count."""
     raw = np.asarray(raw, dtype=float)
     n = len(raw)
     total = max(int(round(total)), n)
     base = raw * total / raw.sum() if raw.sum() > 0 else np.full(n, total / n)
     m = np.maximum(1, np.round(base)).astype(int)
-    while m.sum() > total:
+    while m.sum() > total:                       # take from the largest mark that is still > 1
         i = int(np.argmax(m))
         if m[i] <= 1:
             break
         m[i] -= 1
-    while m.sum() < total:
+    while m.sum() < total:                       # give to the question rounded down the most
         i = int(np.argmax(base - m))
         m[i] += 1
     return m.astype(float), total
+
 
 def _jaccard(a: str, b: str) -> float:
     x, y = set(_TOKEN.findall(a.lower())), set(_TOKEN.findall(b.lower()))
@@ -87,7 +91,13 @@ class PaperGenerator:
     def generate(self, subject: str, exam: str, year: int, model: str = "logreg",
                  syllabus_items=None, extra=None, n_questions: int | None = None,
                  total_marks: float | None = None, explore_share: float = 0.2,
-                 strict_syllabus: bool = False, seed: int | None = None) -> dict:
+                 strict_syllabus: bool = False, seed: int | None = None,
+                 focus: dict | None = None, focus_share: float = 0.5,
+                 avoid_texts=None) -> dict:
+        """focus = {topic_id: weakness 0..1}: a personalised paper. about `focus_share` of the main
+        questions come from these topics (weakest first); the rest still follow the prediction and
+        the "less-predicted" slots stay. avoid_texts = question texts left out (e.g. the paper the
+        student just attempted). Without focus/avoid_texts the result is exactly as before."""
         exam = exam.lower()
         atype = "mid" if exam.startswith("mid") else exam
         rng = np.random.default_rng(
@@ -99,6 +109,9 @@ class PaperGenerator:
                                  None if extra is None else extra.papers,
                                  None if extra is None else extra.incidence)
         pool = self._pool(subject, extra)
+        if avoid_texts:
+            avoid = set(avoid_texts) | {clean_label(t) for t in avoid_texts}
+            pool = pool[~pool["question_text"].isin(avoid)].reset_index(drop=True)
         notes = []
 
         # ---- syllabus: a soft preference (and an optional filter), never a guarantee
@@ -131,19 +144,28 @@ class PaperGenerator:
         n_explore = 0 if n < 4 else min(n // 2, max(1, round(explore_share * n)))
         n_main = n - n_explore
         topic_slots = []
-        remaining = list(weight)
+        focus = {int(t): float(w) for t, w in (focus or {}).items() if int(t) in weight and w > 0}
+        if focus and n_main >= 2:
+            n_focus = min(len(focus), max(1, round(focus_share * n_main)), n_main - 1)
+            ft = list(focus)
+            fw = np.array([focus[t] for t in ft])
+            for t in rng.choice(ft, size=n_focus, replace=False, p=fw / fw.sum()):
+                topic_slots.append((int(t), False, True))
+        else:
+            focus = {}
+        remaining = [t for t in weight if t not in {s_[0] for s_ in topic_slots}] or list(weight)
         while len(topic_slots) < n_main:
             if not remaining:
                 remaining = list(weight)
             w = np.array([weight[t] ** 2 + 1e-6 for t in remaining])
             t = int(rng.choice(remaining, p=w / w.sum()))
             remaining.remove(t)
-            topic_slots.append((t, False))
+            topic_slots.append((t, False, False))
         low = [t for t in weight if t not in {s[0] for s in topic_slots} and weight[t] < thr]
         low = low or [t for t in weight if t not in {s[0] for s in topic_slots}] or list(weight)
         for _ in range(n_explore):
             t = int(rng.choice(low))
-            topic_slots.append((t, True))
+            topic_slots.append((t, True, False))
             if len(low) > 1:
                 low.remove(t)
 
@@ -155,7 +177,7 @@ class PaperGenerator:
         pool["recency"] = (pool["year"] - ymin) / max(ymax - ymin, 1)
 
         chosen = []
-        for topic, explore in topic_slots:
+        for topic, explore, is_focus in topic_slots:
             want_t = str(rng.choice(tk, p=tp / tp.sum()))
             want_d = str(rng.choice(dk, p=dp / dp.sum() if dp.sum() else None))
             cand = pool[pool["topic_id"] == topic]
@@ -176,7 +198,7 @@ class PaperGenerator:
             t_id = int(r["topic_id"])
             chosen.append({
                 "question_text": r["question_text"], "marks_src": r["marks"], "qtype": r["qtype"],
-                "difficulty": r["difficulty"], "topic_id": t_id, "explore": explore,
+                "difficulty": r["difficulty"], "topic_id": t_id, "explore": explore, "focus": is_focus,
                 "topic_probability": round(float(probs.get(t_id, 0.0)), 3),
                 "topic_rank": rank_of.get(t_id),
                 "syllabus_match": None if pd.isna(r["syl"]) else round(float(r["syl"]), 2),
@@ -203,7 +225,9 @@ class PaperGenerator:
         questions = []
         for i, c in enumerate(chosen, start=1):
             lab = self.lib.topic_label(subject, c["topic_id"])
-            reason = ("Less-predicted area, included so surprises are not missed" if c["explore"]
+            reason = (f"Targets a weak area of yours ({focus.get(c['topic_id'], 0):.0%} of its marks were lost)"
+                      if c["focus"] else
+                      "Less-predicted area, included so surprises are not missed" if c["explore"]
                       else f"Likely topic (rank {c['topic_rank']} of {len(weight)}, "
                            f"probability {c['topic_probability']:.2f})")
             level = max(1, 5 - int(5 * (c["topic_rank"] - 1) / max(len(weight), 1)))
@@ -214,9 +238,13 @@ class PaperGenerator:
                 "solution_source": c["solution_source"],
                 "marks_note": c["marks_note"], "qtype": c["qtype"], "difficulty": c["difficulty"],
                 "topic_id": c["topic_id"], "topic_label": lab, "solution": c["solution"],
-                "reason": reason, "explore": c["explore"], "topic_probability": c["topic_probability"],
+                "reason": reason, "explore": c["explore"], "focus": c["focus"], "topic_probability": c["topic_probability"],
                 "syllabus_match": c["syllabus_match"], "source": c["source"]})
 
+        if focus:
+            notes.insert(0, f"Personalised: {sum(q['focus'] for q in questions)} question(s) target your "
+                            "weak topics; the others still follow the prediction, and some cover "
+                            "less-predicted areas.")
         notes.insert(0, "These are real past questions chosen for the predicted topics; they are "
                         "not newly written questions.")
         notes.append(f"Structure follows {bp['papers_used']} real past {label(exam)} paper(s) "
@@ -239,5 +267,6 @@ class PaperGenerator:
             "realised": {"difficulty_mix": {k: round(float(cnt.get(k, 0)), 2) for k in DIFF_RANK},
                          "coding_questions": sum(q["qtype"] == "code" for q in questions),
                          "problem_solving_questions": sum(q["qtype"] in ("code", "numerical", "proof_derivation") for q in questions),
-                         "explore_questions": sum(q["explore"] for q in questions)},
+                         "explore_questions": sum(q["explore"] for q in questions),
+                         "focus_questions": sum(q["focus"] for q in questions)},
         }
