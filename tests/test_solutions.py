@@ -7,6 +7,11 @@ from src.inference.export import paper_to_pdf
 from src.inference.llm import LLMClient, LLMError
 from src.inference.solutions import SolutionService
 
+@pytest.fixture(autouse=True)
+def no_keys(monkeypatch):
+    for v in ("GEMINI_API_KEY", "GROQ_API_KEY", "MISTRAL_API_KEY", "ANTHROPIC_API_KEY",
+              "LLM_PROVIDER", "LLM_MODEL"):
+        monkeypatch.delenv(v, raising=False)
 Q = {"number": 1, "text": "Explain the three way handshake used by TCP.", "marks": 5,
      "topic_label": "tcp", "solution": None, "solution_source": None, "low_quality": False}
 
@@ -42,7 +47,7 @@ def test_ai_solution_is_cached_and_labelled(tmp_path):
 def test_without_ai_the_answer_is_honest(tmp_path):
     svc = SolutionService(LLMClient(api_key=""), tmp_path)
     r = svc.solve("CN", Q)
-    assert r["source"] == "none" and "ANTHROPIC_API_KEY" in r["note"]
+    assert r["source"] == "none" and "API key" in r["note"]
 
 
 def test_garbled_question_is_not_solved(tmp_path):
@@ -69,14 +74,14 @@ def test_llm_client_calls_the_api_and_reports_errors(monkeypatch):
         sent.update(url=url, body=json, headers=headers)
         return Resp(200, {"content": [{"type": "text", "text": "hello"}]})
     monkeypatch.setattr(llm_module.requests, "post", fake_post)
-    c = LLMClient(api_key="k", model="m")
+    c = LLMClient(provider="anthropic", api_key="k", model="m")
     assert c.complete("sys", "usr") == "hello"
     assert sent["headers"]["x-api-key"] == "k" and sent["body"]["model"] == "m"
     monkeypatch.setattr(llm_module.requests, "post", lambda *a, **k: Resp(400, {"error": "bad"}))
     with pytest.raises(LLMError):
         c.complete("sys", "usr")
     with pytest.raises(LLMError):
-        LLMClient(api_key="").complete("s", "u")
+        LLMClient(provider="anthropic", api_key="").complete("s", "u")
 
 
 def test_pdf_export_with_solutions():

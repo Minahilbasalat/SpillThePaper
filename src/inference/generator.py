@@ -43,6 +43,22 @@ def clean_label(text: str) -> str:
     text = re.sub(r"\[\s*CLO[^\]]*\]\s*", "", text, flags=re.I)         # course-outcome tags
     return _LABEL.sub("", text, count=1).strip()
 
+def fit_marks(raw, total) -> tuple[np.ndarray, int]:
+    """Whole-number marks, every question >= 1, adding up to EXACTLY the returned total."""
+    raw = np.asarray(raw, dtype=float)
+    n = len(raw)
+    total = max(int(round(total)), n)
+    base = raw * total / raw.sum() if raw.sum() > 0 else np.full(n, total / n)
+    m = np.maximum(1, np.round(base)).astype(int)
+    while m.sum() > total:
+        i = int(np.argmax(m))
+        if m[i] <= 1:
+            break
+        m[i] -= 1
+    while m.sum() < total:
+        i = int(np.argmax(base - m))
+        m[i] += 1
+    return m.astype(float), total
 
 def _jaccard(a: str, b: str) -> float:
     x, y = set(_TOKEN.findall(a.lower())), set(_TOKEN.findall(b.lower()))
@@ -174,8 +190,11 @@ class PaperGenerator:
         fill = float(np.median(known)) if known else total / max(len(chosen), 1)
         raw = np.array([c["marks_src"] if pd.notna(c["marks_src"]) else fill for c in chosen], dtype=float)
         raw = np.clip(raw, 0.5 * fill, 2.0 * fill)          # parsed marks are noisy: cap the extremes
-        scaled = np.maximum(1, np.round(raw * total / raw.sum())) if raw.sum() > 0 else raw
-        scaled[np.argmax(scaled)] += total - scaled.sum()
+        wanted_total = total
+        scaled, total = fit_marks(raw, total)
+        if total != round(wanted_total):
+            notes.append(f"The usual total ({wanted_total:.0f}) is smaller than the number of "
+                         f"questions, so every question carries 1 mark (total {total}).")
         for c, m, was in zip(chosen, scaled, [pd.notna(c["marks_src"]) for c in chosen]):
             c["marks"] = float(m)
             c["marks_note"] = "scaled from the original question" if was else "estimated"

@@ -17,7 +17,7 @@ from src.data.question_features import build_question_table
 from src.data.segment_questions import segment_questions
 from src.data.text_quality import load_known_words
 from src.inference.documents import extract_text
-from src.inference.topic_assign import assign_topics
+from src.inference.topic_assign import assign_topics, has_topic_model
 
 
 @dataclass
@@ -35,12 +35,20 @@ class UploadResult:
 
 def ingest_papers(subject: str, files: list[dict]) -> UploadResult:
     res, papers, qs = UploadResult(), [], []
+    if not has_topic_model(subject):
+        res.warnings.append(f"'{subject}' has no topic model, so uploaded papers cannot be used.")
+        return res
+    seen = set()
     for f in files:
         name = f["name"]
         try:
             ex = extract_text(name, f["data"])
-        except (ValueError, RuntimeError) as e:
+        except (ValueError, RuntimeError) as e:        # unsupported type, too large, OCR missing
             res.warnings.append(f"{name}: {e}")
+            continue
+        except Exception as e:                          # damaged or renamed file
+            res.warnings.append(f"{name}: this file could not be read ({type(e).__name__}); "
+                                "is it damaged or renamed?")
             continue
         if ex["warning"]:
             res.warnings.append(f"{name}: {ex['warning']}")
@@ -51,6 +59,10 @@ def ingest_papers(subject: str, files: list[dict]) -> UploadResult:
             res.warnings.append(f"{name}: no questions could be found in this file")
             continue
         fid = "up-" + hashlib.sha1(f["data"]).hexdigest()[:10]
+        if fid in seen:
+            res.warnings.append(f"{name}: the same file was uploaded twice, it is counted once")
+            continue
+        seen.add(fid)
         kind = exam_kind(f["assessment_type"], f.get("number"))
         topics = assign_topics(subject, chunks)
         papers.append({"file_id": fid, "subject": subject, "year": int(f["year"]),

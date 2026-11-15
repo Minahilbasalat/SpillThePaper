@@ -15,7 +15,7 @@ import re
 from pathlib import Path
 
 from src.inference import config as C
-from src.inference.llm import LLMClient, LLMError
+from src.inference.llm import LLMClient
 
 SYSTEM = (
     "You are a careful teaching assistant for FAST-NUCES (Pakistan) computer science courses. "
@@ -82,7 +82,7 @@ class SolutionService:
         if not (allow_ai and self.ai_available()):
             return {"text": "", "marking_scheme": None, "source": "none",
                     "note": "No archived solution exists for this question, and AI solutions are "
-                            "not switched on (set ANTHROPIC_API_KEY)."}
+                            ""not switched on (no API key is set, see docs/backend_api.md)."."}
         cache = self._load()
         key = self._key(subject, question["text"])
         if key not in cache:
@@ -90,8 +90,12 @@ class SolutionService:
                     f"Marks: {question.get('marks') or 'n/a'}\nQuestion:\n{question['text']}")
             try:
                 text, scheme = _parse(self.llm.complete(SYSTEM, user))
-            except LLMError as e:
-                return {"text": "", "marking_scheme": None, "source": "none", "note": str(e)}
+            except Exception as e:          # LLMError, or anything a custom client raises
+                return {"text": "", "marking_scheme": None, "source": "none",
+                        "note": f"AI solution failed: {e}" if str(e) else "AI solution failed."}
+            if not text:
+                return {"text": "", "marking_scheme": None, "source": "none",
+                        "note": "The AI returned an empty answer. Try again."}
             cache[key] = {"text": text, "marking_scheme": scheme}
             self._save()
         item = cache[key]

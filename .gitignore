@@ -11,6 +11,7 @@ __pycache__/
 
 # Secrets / editor / OS
 .env
+.streamlit/secrets.toml
 .vscode/
 .DS_Store
 Thumbs.db
@@ -28,7 +29,9 @@ models/*.joblib
 
 results/dummy/
 models/
-.pytest_cache/rebuild.log
+.pytest_cache/
+rebuild.log
+
 runtime_bundle.zip
 data/cache/
 _backup_before_update*/
