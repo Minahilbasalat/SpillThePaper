@@ -8,6 +8,7 @@ import streamlit as st
 
 ARROW = "\u2192"
 DOT = "\u00b7"
+FOLDER_COLORS = ["yellow", "pink", "blue", "orange"]
 
 PAGES = [
     ("home", "Home", "Home.py"),
@@ -32,7 +33,7 @@ CSS = """
 
 .logo{font-family:'Archivo Black',sans-serif;font-size:1.45rem;letter-spacing:.02em;color:var(--ink);}
 .st-key-topnav [data-testid="stPageLink"] a{background:var(--cream);border:2px solid var(--ink);
-border-radius:10px;padding:.35rem .9rem;justify-content:center;min-height:0;text-decoration:none;}
+border-radius:10px;padding:.35rem .9rem;justify-content:center;min-height:0;text-decoration:none;width:100%;}
 .st-key-topnav [data-testid="stPageLink"] a p{font-weight:700;font-size:.82rem;color:var(--ink);
 white-space:nowrap;margin:0;}
 
@@ -81,6 +82,45 @@ padding:1.3rem 1.8rem 1.5rem;box-shadow:6px 6px 0 var(--red);margin-top:2.4rem;}
 .step-n{font-family:'Archivo Black',sans-serif;font-size:2.1rem;color:var(--lime);line-height:1;margin-bottom:.35rem;}
 .step-t{color:var(--cream);font-size:.86rem;line-height:1.35;}
 @media (max-width:900px){.steps{grid-template-columns:repeat(2,1fr);}}
+
+.stApp [data-testid="stButton"]>button{background:var(--cream);border:2px solid var(--ink);border-radius:3px;
+color:var(--ink);box-shadow:4px 4px 0 var(--ink);padding:.5rem 1.1rem;min-height:0;}
+.stApp [data-testid="stButton"]>button p{font-weight:700;color:var(--ink);margin:0;}
+.stApp [data-testid="stButton"]>button:hover{background:var(--yellow);border-color:var(--ink);color:var(--ink);}
+
+[data-testid="InputInstructions"]{display:none;}
+.st-key-past_search [data-baseweb="input"]{background:var(--cream) !important;border:2px solid var(--ink) !important;
+border-radius:2px !important;box-shadow:5px 5px 0 var(--ink);}
+.st-key-past_search [data-baseweb="base-input"]{background:transparent !important;}
+.st-key-past_search input{background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23111111' stroke-width='3'%3E%3Ccircle cx='10' cy='10' r='7'/%3E%3Cpath d='M15 15l6 6'/%3E%3C/svg%3E") no-repeat 14px center !important;
+padding:.75rem .8rem .75rem 2.8rem !important;font-size:.95rem;color:var(--ink);}
+
+[class*="st-key-folder-"]{position:relative;background:var(--cream);border:2px solid var(--ink);border-radius:3px;
+box-shadow:6px 6px 0 var(--ink);padding:1rem 1.2rem .9rem;margin-top:1.4rem;gap:0;}
+[class*="st-key-folder-"]::before{content:"";position:absolute;top:-22px;left:-2px;width:104px;height:22px;
+border:2px solid var(--ink);border-bottom:0;border-radius:8px 8px 0 0;background:var(--yellow);}
+[class*="st-key-folder-yellow"]::before{background:var(--yellow);}
+[class*="st-key-folder-pink"]::before{background:var(--pink);}
+[class*="st-key-folder-blue"]::before{background:var(--blue);}
+[class*="st-key-folder-orange"]::before{background:var(--orange);}
+[class*="st-key-folder-"]:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--ink);}
+[class*="st-key-folder-"] [data-testid="stElementContainer"]{position:static;}
+[class*="st-key-folder-"] [data-testid="stButton"]{position:absolute;inset:0;}
+[class*="st-key-folder-"] [data-testid="stButton"]>button{width:100%;height:100%;opacity:0 !important;box-shadow:none !important;}
+.folder-body{min-height:9.2rem;display:flex;flex-direction:column;justify-content:space-between;}
+.folder-name{font-family:'Archivo Black',sans-serif;font-size:1.3rem;line-height:1.15;color:var(--ink);}
+.folder-kinds{font-family:'Special Elite',monospace;font-size:.72rem;color:var(--ink);}
+.folder-count{font-family:'Special Elite',monospace;font-size:.72rem;background:var(--yellow);padding:0 .15rem;}
+
+.st-key-banner{background:var(--pink);border:2px solid var(--ink);border-radius:2px;box-shadow:6px 6px 0 var(--ink);
+transform:rotate(-.7deg);padding:1.2rem 1.6rem;margin-top:2.4rem;}
+.banner-t{font-family:'Caveat',cursive;font-weight:700;font-size:1.6rem;color:var(--ink);}
+.st-key-cta-banner [data-testid="stPageLink"] a{background:var(--ink) !important;border:2px solid var(--ink);
+border-radius:3px;padding:.65rem 1.1rem;justify-content:center;text-decoration:none;}
+.st-key-cta-banner [data-testid="stPageLink"] a p{color:var(--lime) !important;font-weight:700;margin:0;}
+
+.notice{background:var(--cream);border:2px dashed var(--ink);padding:1rem 1.3rem;
+font-family:'Special Elite',monospace;font-size:.95rem;color:var(--ink);margin:1rem 0;}
 """
 
 
@@ -128,6 +168,16 @@ def title(kicker: str, plain: str, highlighted: str) -> None:
     )
 
 
+def title_last(kicker: str, text: str) -> None:
+    """Like title(), highlighting the last word of a backend-provided text."""
+    head, _, last = text.rpartition(" ")
+    title(kicker, head, last)
+
+
+def notice(text: str) -> None:
+    st.markdown(f'<div class="notice">{esc(text)}</div>', unsafe_allow_html=True)
+
+
 def note(key: str, heading: str, body: str, color: str, tilt: str, target: str | None = None) -> None:
     """A tilted sticky note (color: yellow/pink/blue/orange, tilt: L or R).
     With a target page the whole note is clickable."""
@@ -146,3 +196,15 @@ def steps_strip(items: list[str]) -> None:
         for i, text in enumerate(items, 1)
     )
     st.markdown(f'<div class="steps">{cells}</div>', unsafe_allow_html=True)
+
+
+def folder_markup(name: str, kinds: str, papers: int) -> str:
+    """Inside of a subject folder card: name on top, exam kinds and paper count below."""
+    n = int(papers)
+    label = f"{n} paper" + ("" if n == 1 else "s")
+    return (
+        '<div class="folder-body">'
+        f'<div class="folder-name">{esc(name)}</div>'
+        f'<div><div class="folder-kinds">{esc(kinds)}</div>'
+        f'<span class="folder-count">{label}</span></div></div>'
+    )
