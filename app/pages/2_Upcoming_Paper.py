@@ -8,6 +8,7 @@ import theme
 from common import get_generator, get_library, get_predictor
 from components import inputs
 from components import predicted
+from components import timer
 from components import predict_form as form
 from src.inference.documents import extract_text
 from src.inference.export import paper_to_pdf
@@ -20,6 +21,7 @@ theme.setup("Upcoming paper", active="upcoming")
 form.inject_css()
 inputs.inject_css()
 predicted.inject_css()
+timer.inject_css()
 lib = get_library()
 pred = get_predictor()
 
@@ -425,6 +427,7 @@ def generate(subject: str, exam: str, advanced: dict) -> str | None:
     st.session_state["up_exam_timer"] = bool(st.session_state["up_timer_on"])
     st.session_state["up_revealed"] = []
     st.session_state["up_pdf"] = None
+    timer.reset()
     st.session_state["up_paper"] = paper
     st.session_state["up_screen"] = "paper"
     st.rerun()
@@ -481,6 +484,29 @@ def exam_label(paper: dict) -> str:
     return labels.get(paper.get("exam_kind")) or labels.get(st.session_state["up_exam"], "")
 
 
+def exam_minutes(paper: dict) -> int | None:
+    """Minutes for the exam timer (editable on the paper screen), or None when the timer is off."""
+    minutes = paper.get("duration_minutes")
+    if not (st.session_state["up_exam_timer"] and minutes):
+        return None
+    return int(st.session_state.get(f"up_exam_min_{int(minutes)}", minutes))
+
+
+def start_exam() -> None:
+    paper = st.session_state["up_paper"]
+    chosen = exam_minutes(paper)
+    if chosen:
+        timer.start(chosen * 60)
+    else:
+        timer.reset()
+    st.session_state["up_screen"] = "exam"
+
+
+def leave_exam() -> None:
+    timer.reset()
+    st.session_state["up_screen"] = "paper"
+
+
 def pdf_bytes(paper: dict) -> bytes:
     if st.session_state["up_pdf"] is None:
         try:
@@ -512,18 +538,20 @@ def question_row(index: int, question: dict) -> None:
 def next_move(paper: dict) -> None:
     with st.container(key="next-move"):
         st.markdown('<div class="nm-h">Your next move</div>', unsafe_allow_html=True)
-        minutes = paper.get("duration_minutes")
-        if st.session_state["up_exam_timer"] and minutes:
-            label = "Start with timer " + predicted.hhmmss(int(minutes) * 60)
-        else:
-            label = "Start exam mode"
+        chosen = exam_minutes(paper)
+        label = "Start with timer " + predicted.hhmmss(chosen * 60) if chosen else "Start exam mode"
         with st.container(key="mv-start"):
-            st.button(label, key="up_start_exam", on_click=go, args=("exam",))
+            st.button(label, key="up_start_exam", on_click=start_exam)
         with st.container(key="mv-solution"):
             st.button("See solution", key="up_see_solution", on_click=go, args=("solved",))
         with st.container(key="mv-upload"):
             st.button("Upload my solution", key="up_upload_solution", disabled=True)
         st.markdown('<div class="soon">Coming soon</div>', unsafe_allow_html=True)
+        if chosen:
+            st.number_input(
+                "Timer minutes (you can change it)", 5, 360, int(paper["duration_minutes"]), 5,
+                key=f"up_exam_min_{int(paper['duration_minutes'])}",
+            )
         data = pdf_bytes(paper)
         if data:
             name = re.sub(r"[^A-Za-z0-9]+", "_", str(paper.get("title", "paper"))).strip("_") or "paper"
@@ -575,17 +603,72 @@ def paper_screen(paper: dict) -> None:
     how_it_was_made(paper)
 
 
-def next_step_screen(paper: dict, screen: str) -> None:
+def exam_question(index: int, question: dict) -> None:
+    c_num, c_body = st.columns([0.8, 8], vertical_alignment="top")
+    c_num.markdown(
+        f'<div class="qn">{theme.esc(predicted.question_label(question, index))}</div>',
+        unsafe_allow_html=True,
+    )
+    marks = question.get("marks")
+    chip = ""
+    if marks is not None and marks == marks:
+        chip = f' <span class="qchip">{float(marks):g} marks</span>'
+    text = theme.esc(question.get("text", "")).replace("\n", "<br>")
+    c_body.markdown(f'<div class="qt">{text}{chip}</div>', unsafe_allow_html=True)
+
+
+def exam_screen(paper: dict) -> None:
+    """Exam mode: questions with marks only, live clock on the right."""
+    st.markdown("<style>.st-key-topnav{display:none !important;}</style>", unsafe_allow_html=True)
+    title = f"{paper.get('subject', '')} {exam_label(paper)}".strip()
+    c_logo, c_badge, c_exit = st.columns([3, 4, 1.2], vertical_alignment="center")
+    c_logo.markdown('<div class="logo">SPILL THE PAPER</div>', unsafe_allow_html=True)
+    c_badge.markdown(
+        f'<div style="text-align:right"><span class="exam-badge">EXAM MODE {theme.DOT} {theme.esc(title)}</span></div>',
+        unsafe_allow_html=True,
+    )
+    c_exit.button("Exit exam", key="ex_exit", on_click=leave_exam)
+
+    main, side = st.columns([3.1, 1.15], gap="large")
+    with main:
+        with st.container(key="exam-card"):
+            st.markdown(
+                '<div class="kicker">Solve on paper, then photograph your answers</div>'
+                f'<div class="ph-h">{theme.esc(title)}</div><div class="dash"></div>',
+                unsafe_allow_html=True,
+            )
+            for i, question in enumerate(paper.get("questions") or []):
+                with st.container(key=f"eq-{i}"):
+                    exam_question(i, question)
+    with side:
+        if timer.active():
+            timer.clock()
+        else:
+            st.markdown(
+                '<div class="st-key-timer-off">Timer is off for this exam. Take your time.</div>',
+                unsafe_allow_html=True,
+            )
+        theme.note("tip", "", "Start with the marks you are sure of. Coding question last.", "yellow", "L")
+        with st.container(key="ex-finish-up"):
+            st.button("Finish and upload my solution " + theme.ARROW, key="ex_finish_up", disabled=True)
+        st.markdown('<div class="soon">Coming soon</div>', unsafe_allow_html=True)
+        with st.container(key="ex-finish"):
+            st.button("Finish exam", key="ex_finish", on_click=leave_exam)
+
+
+def next_step_screen(paper: dict) -> None:
     st.button("\u2190 Back to paper", key="up_back_paper", on_click=go, args=("paper",))
-    theme.title_last("Exam mode" if screen == "exam" else "Declassified", paper["title"])
-    st.write("This screen is built in the next step.")
+    theme.title_last("Declassified", paper["title"])
+    st.write("The solved paper is built in the next step.")
 
 
 _paper = st.session_state["up_paper"]
 _screen = st.session_state["up_screen"]
 if _paper and _screen == "paper":
     paper_screen(_paper)
-elif _paper and _screen in ("exam", "solved"):
-    next_step_screen(_paper, _screen)
+elif _paper and _screen == "exam":
+    exam_screen(_paper)
+elif _paper and _screen == "solved":
+    next_step_screen(_paper)
 else:
     form_screen()
