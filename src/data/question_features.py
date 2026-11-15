@@ -170,7 +170,7 @@ def add_difficulty(df: pd.DataFrame) -> pd.DataFrame:
 
 
 # ----------------------------------------------------------------------- the table
-def build_question_table(q: pd.DataFrame) -> pd.DataFrame:
+def build_question_table(q: pd.DataFrame, known_words=None) -> pd.DataFrame:
     """q: questions_topics.csv (file_id, subject, year, assessment_type, is_solution,
     q_index, method, q_text, topic_id). Returns one row per question with the new columns."""
     d = q.copy()
@@ -183,6 +183,13 @@ def build_question_table(q: pd.DataFrame) -> pd.DataFrame:
     d["marks_source"] = [m[1] for m in marks]
     d["qtype"] = d["question_text"].map(question_type)
     d["bloom"] = d["question_text"].map(bloom_level)
+    if known_words is not None:
+        from src.data.text_quality import LOW_QUALITY, quality
+        d["quality"] = [round(quality(t, known_words), 3) for t in d["question_text"]]
+        d["low_quality"] = d["quality"] < LOW_QUALITY
+    else:
+        d["quality"], d["low_quality"] = 1.0, False
+    d["solution_source"] = d["has_solution"].map({True: "inline", False: ""})
     d["from_solution_paper"] = d["is_solution"].astype(bool)
     # a chunk from a solution paper whose answer we could not separate may still contain
     # the answer text: keep it for statistics but never show it as an example question

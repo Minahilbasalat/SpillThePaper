@@ -9,8 +9,10 @@ Outputs:
   data/processed/topic_catalog.csv        subject, topic_id, keywords, counts
   data/processed/subject_eligibility.csv  which subjects get topics, and why not
 """
+import re
 from pathlib import Path
 
+import joblib
 import pandas as pd
 from sklearn.cluster import KMeans
 from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS, TfidfVectorizer
@@ -23,6 +25,7 @@ IN_QUESTIONS = ROOT / "data" / "interim" / "questions.csv"
 OUT_QUESTIONS = ROOT / "data" / "interim" / "questions_topics.csv"
 OUT_CATALOG = ROOT / "data" / "processed" / "topic_catalog.csv"
 OUT_ELIGIBILITY = ROOT / "data" / "processed" / "subject_eligibility.csv"
+OUT_MODELS = ROOT / "models" / "topics"        # fitted TF-IDF + KMeans per subject (NOT in Git)
 
 # ---- settings (these go in the report's settings table) ----
 MIN_TRAIN_PAPERS = 6      # a subject needs this many train-period papers ...
@@ -48,6 +51,10 @@ EXAM_STOPWORDS = {
 }
 STOP_WORDS = sorted(set(ENGLISH_STOP_WORDS) | EXAM_STOPWORDS)
 TOKEN_PATTERN = r"(?u)\b[a-zA-Z][a-zA-Z+#]{1,}\b"   # keeps tokens like c++ and c#
+
+
+def subject_slug(subject: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "_", subject.lower()).strip("_")
 
 
 def make_vectorizer() -> TfidfVectorizer:
@@ -111,6 +118,9 @@ def main():
                 vec, km, k, score = fit
                 row.update(eligible=True, k=k, silhouette=round(score, 4))
                 kw = topic_keywords(vec, km)
+                OUT_MODELS.mkdir(parents=True, exist_ok=True)
+                joblib.dump({"vectorizer": vec, "kmeans": km},
+                            OUT_MODELS / f"{subject_slug(subject)}.joblib")
                 g = grp.copy()
                 g["topic_id"] = km.predict(vec.transform(g["q_text"]))
                 assigned.append(g)

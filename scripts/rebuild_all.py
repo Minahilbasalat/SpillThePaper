@@ -1,8 +1,7 @@
-﻿"""Rebuild the whole pipeline in the right order, stopping at the first failure.
+"""Rebuild the whole pipeline in the right order, stopping at the first failure.
 
     python scripts/rebuild_all.py                 # everything after the OCR step
     python scripts/rebuild_all.py --from topics   # restart from one step
-    python scripts/rebuild_all.py --from papers --to qtable
     python scripts/rebuild_all.py --dry-run       # only print the commands
     python scripts/rebuild_all.py --list
 Steps are listed in STEPS; add new stages (syllabus topics, model v2, ...) there.
@@ -22,6 +21,7 @@ STEPS = [
     ("eda",       [PY, "data scripts/08_eda.py"]),
     ("questions", [PY, "-m", "src.data.build_questions"]),
     ("topics",    [PY, "-m", "src.data.topics"]),
+    ("pair",      [PY, "-m", "src.data.pair_solutions"]),
     ("qtable",    [PY, "-m", "src.data.build_question_table"]),
     ("dataset",   [PY, "-m", "src.data.build_dataset"]),
     ("preprocess", [PY, "-m", "src.models.preprocess"]),
