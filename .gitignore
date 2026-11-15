@@ -35,3 +35,4 @@ rebuild.log
 runtime_bundle.zip
 data/cache/
 _backup_before_update*/
+runtime_bundle/

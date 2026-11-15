@@ -82,7 +82,7 @@ class SolutionService:
         if not (allow_ai and self.ai_available()):
             return {"text": "", "marking_scheme": None, "source": "none",
                     "note": "No archived solution exists for this question, and AI solutions are "
-                            ""not switched on (no API key is set, see docs/backend_api.md)."."}
+                            "not switched on (no API key is set)."}
         cache = self._load()
         key = self._key(subject, question["text"])
         if key not in cache:
