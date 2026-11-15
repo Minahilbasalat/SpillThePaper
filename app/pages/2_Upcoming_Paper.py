@@ -1,4 +1,5 @@
 import bootstrap  # noqa: F401
+import re
 from datetime import date
 
 import state
@@ -6,8 +7,10 @@ import streamlit as st
 import theme
 from common import get_generator, get_library, get_predictor
 from components import inputs
+from components import predicted
 from components import predict_form as form
 from src.inference.documents import extract_text
+from src.inference.export import paper_to_pdf
 from src.inference.errors import LowConfidenceError
 from src.inference.library import default_duration
 from src.inference.syllabus import default_scope, parse_syllabus
@@ -16,6 +19,7 @@ from src.inference.uploads import ingest_papers
 theme.setup("Upcoming paper", active="upcoming")
 form.inject_css()
 inputs.inject_css()
+predicted.inject_css()
 lib = get_library()
 pred = get_predictor()
 
@@ -36,6 +40,9 @@ st.session_state.setdefault("up_topics", [])
 st.session_state.setdefault("up_upload", None)
 st.session_state.setdefault("up_syll_items", [])
 st.session_state.setdefault("up_syll_msg", "")
+st.session_state.setdefault("up_revealed", [])
+st.session_state.setdefault("up_pdf", None)
+st.session_state.setdefault("up_exam_timer", True)
 
 # Subject and exam chosen on the Past papers page ("Predict the next one").
 _pre_subject, _pre_exam = state.take_preselection()
@@ -82,6 +89,16 @@ def toggle_timer() -> None:
 
 def back_to_form() -> None:
     st.session_state["up_screen"] = "form"
+
+
+def go(screen: str) -> None:
+    st.session_state["up_screen"] = screen
+
+
+def reveal(index: int) -> None:
+    shown = set(st.session_state["up_revealed"])
+    shown.add(index)
+    st.session_state["up_revealed"] = sorted(shown)
 
 
 def _add_topics(items: list[str]) -> None:
@@ -405,6 +422,9 @@ def generate(subject: str, exam: str, advanced: dict) -> str | None:
         return "Something went wrong while building the paper. Please try again."
     if st.session_state["up_timer_on"]:
         paper["duration_minutes"] = effective_minutes()
+    st.session_state["up_exam_timer"] = bool(st.session_state["up_timer_on"])
+    st.session_state["up_revealed"] = []
+    st.session_state["up_pdf"] = None
     st.session_state["up_paper"] = paper
     st.session_state["up_screen"] = "paper"
     st.rerun()
@@ -455,15 +475,117 @@ def form_screen() -> None:
         right_column()
 
 
+# ---------- predicted paper screen ----------
+def exam_label(paper: dict) -> str:
+    labels = dict(form.EXAMS)
+    return labels.get(paper.get("exam_kind")) or labels.get(st.session_state["up_exam"], "")
+
+
+def pdf_bytes(paper: dict) -> bytes:
+    if st.session_state["up_pdf"] is None:
+        try:
+            st.session_state["up_pdf"] = paper_to_pdf(paper)
+        except Exception:
+            st.session_state["up_pdf"] = b""
+    return st.session_state["up_pdf"]
+
+
+def question_row(index: int, question: dict) -> None:
+    redacted = bool(question.get("explore")) and index not in st.session_state["up_revealed"]
+    with st.container(key=f"pq-{index}"):
+        c_num, c_body = st.columns([0.8, 8], vertical_alignment="top")
+        c_num.markdown(
+            f'<div class="qn">{theme.esc(predicted.question_label(question, index))}</div>',
+            unsafe_allow_html=True,
+        )
+        with c_body:
+            if redacted:
+                st.markdown(predicted.redacted_markup(), unsafe_allow_html=True)
+                c_tag, c_btn, _ = st.columns([1.6, 1.8, 3], vertical_alignment="center")
+                c_tag.markdown('<span class="tag-explore">Less-predicted area</span>', unsafe_allow_html=True)
+                with c_btn:
+                    st.button("Declassify this question", key=f"declass-{index}", on_click=reveal, args=(index,))
+            else:
+                st.markdown(predicted.question_markup(question), unsafe_allow_html=True)
+
+
+def next_move(paper: dict) -> None:
+    with st.container(key="next-move"):
+        st.markdown('<div class="nm-h">Your next move</div>', unsafe_allow_html=True)
+        minutes = paper.get("duration_minutes")
+        if st.session_state["up_exam_timer"] and minutes:
+            label = "Start with timer " + predicted.hhmmss(int(minutes) * 60)
+        else:
+            label = "Start exam mode"
+        with st.container(key="mv-start"):
+            st.button(label, key="up_start_exam", on_click=go, args=("exam",))
+        with st.container(key="mv-solution"):
+            st.button("See solution", key="up_see_solution", on_click=go, args=("solved",))
+        with st.container(key="mv-upload"):
+            st.button("Upload my solution", key="up_upload_solution", disabled=True)
+        st.markdown('<div class="soon">Coming soon</div>', unsafe_allow_html=True)
+        data = pdf_bytes(paper)
+        if data:
+            name = re.sub(r"[^A-Za-z0-9]+", "_", str(paper.get("title", "paper"))).strip("_") or "paper"
+            with st.container(key="mv-dl"):
+                st.download_button("Download as PDF", data, file_name=f"{name}.pdf", mime="application/pdf", key="up_pdf_btn")
+        else:
+            st.caption("PDF export is not available right now.")
+    st.markdown(
+        '<div class="fine">Questions are real past questions chosen for likely topics. '
+        'The squares are a ranking, not an exact chance.</div>',
+        unsafe_allow_html=True,
+    )
+
+
+def how_it_was_made(paper: dict) -> None:
+    with st.expander("How this paper was made"):
+        for line in paper.get("notes") or []:
+            st.markdown(f"- {line}")
+        st.markdown("- Difficulty is a proxy built from past papers. Syllabus matching compares words and is approximate.")
+        fig = predicted.topic_figure(paper.get("topics"))
+        if fig is not None:
+            st.plotly_chart(fig, use_container_width=True)
+            st.caption(
+                "Yellow = Likely, blue = Possible, grey = Unlikely. "
+                "A red diamond means the topic was already examined earlier this year."
+            )
+
+
 def paper_screen(paper: dict) -> None:
     st.button("\u2190 Change inputs", key="up_back_form", on_click=back_to_form)
-    theme.title_last("Tentative paper", paper["title"])
-    st.write(f"{len(paper['questions'])} questions generated. The predicted paper screen is built in the next step.")
-    for line in paper.get("notes", []):
-        st.caption(line)
+    main, side = st.columns([3.1, 1.15], gap="large")
+    with main:
+        with st.container(key="paper-hero"):
+            st.markdown(
+                predicted.header_markup(
+                    paper.get("subject", ""), exam_label(paper),
+                    paper.get("duration_minutes"), paper.get("total_marks"),
+                ),
+                unsafe_allow_html=True,
+            )
+            questions = paper.get("questions") or []
+            if not questions:
+                theme.notice("No questions could be chosen for these inputs. Read the notes below.")
+            for i, question in enumerate(questions):
+                question_row(i, question)
+    with side:
+        theme.note("real", "Difficulty", predicted.realised_text(paper), "yellow", "R")
+        next_move(paper)
+    how_it_was_made(paper)
 
 
-if st.session_state["up_screen"] == "paper" and st.session_state["up_paper"]:
-    paper_screen(st.session_state["up_paper"])
+def next_step_screen(paper: dict, screen: str) -> None:
+    st.button("\u2190 Back to paper", key="up_back_paper", on_click=go, args=("paper",))
+    theme.title_last("Exam mode" if screen == "exam" else "Declassified", paper["title"])
+    st.write("This screen is built in the next step.")
+
+
+_paper = st.session_state["up_paper"]
+_screen = st.session_state["up_screen"]
+if _paper and _screen == "paper":
+    paper_screen(_paper)
+elif _paper and _screen in ("exam", "solved"):
+    next_step_screen(_paper, _screen)
 else:
     form_screen()
