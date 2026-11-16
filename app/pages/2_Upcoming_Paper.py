@@ -6,6 +6,7 @@ import state
 import streamlit as st
 import theme
 from common import get_generator, get_library, get_predictor, get_solutions
+from results_state import open_results
 from components import inputs
 from components import predicted
 from components import solved
@@ -549,8 +550,7 @@ def next_move(paper: dict) -> None:
         with st.container(key="mv-solution"):
             st.button("See solution", key="up_see_solution", on_click=go, args=("solved",))
         with st.container(key="mv-upload"):
-            st.button("Upload my solution", key="up_upload_solution", disabled=True)
-        st.markdown('<div class="soon">Coming soon</div>', unsafe_allow_html=True)
+            st.button("Upload my solution", key="up_upload_solution", on_click=open_results, args=(paper,))
         if chosen:
             st.number_input(
                 "Timer minutes (you can change it)", 5, 360, int(paper["duration_minutes"]), 5,
@@ -654,8 +654,7 @@ def exam_screen(paper: dict) -> None:
             )
         theme.note("tip", "", "Start with the marks you are sure of. Coding question last.", "yellow", "L")
         with st.container(key="ex-finish-up"):
-            st.button("Finish and upload my solution " + theme.ARROW, key="ex_finish_up", disabled=True)
-        st.markdown('<div class="soon">Coming soon</div>', unsafe_allow_html=True)
+            st.button("Finish and upload my solution " + theme.ARROW, key="ex_finish_up", on_click=open_results, args=(paper,))
         with st.container(key="ex-finish"):
             st.button("Finish exam", key="ex_finish", on_click=leave_exam)
 
@@ -741,7 +740,7 @@ def solved_screen(paper: dict) -> None:
     c_back.button("\u2190 Back to paper", key="up_back_paper", on_click=go, args=("paper",))
     with c_up:
         with st.container(key="sv-up-top"):
-            st.button("Upload my solution", key="sv_up_top", disabled=True)
+            st.button("Upload my solution", key="sv_up_top", on_click=open_results, args=(paper,))
     st.caption("Archive solutions can be partial, and AI solutions must be checked before you trust them.")
 
     main, side = st.columns([3.1, 1.15], gap="large")
@@ -761,8 +760,7 @@ def solved_screen(paper: dict) -> None:
             "slipped", "", "Solved it yourself first? Upload a photo and we will mark where you slipped.", "pink", "L"
         )
         with st.container(key="sv-up"):
-            st.button("Upload my solution " + theme.ARROW, key="sv_up", disabled=True)
-        st.markdown('<div class="soon">Coming soon</div>', unsafe_allow_html=True)
+            st.button("Upload my solution " + theme.ARROW, key="sv_up", on_click=open_results, args=(paper,))
 
         missing = [i for i, e in enumerate(items) if e.get("source") == "none"]
         if get_solutions().ai_available():
