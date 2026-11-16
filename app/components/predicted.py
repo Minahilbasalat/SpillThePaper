@@ -107,6 +107,12 @@ def question_markup(question: dict) -> str:
         chips.append('<span class="qchip blue">LeetCode-style</span>')
     if question.get("explore"):
         chips.append('<span class="tag-explore">Less-predicted area</span>')
+    if question.get("ai_written"):
+        chips.append('<span class="qchip blue">AI-written</span>')
+    elif question.get("ai_mode") == "tidy":
+        chips.append('<span class="qchip">Tidied by AI</span>')
+    if question.get("needs_figure"):
+        chips.append('<span class="qchip warn">refers to a diagram: see the original paper</span>')
     text = esc(question.get("text", "")).replace("\n", "<br>")
     return f'<div class="qt">{text}</div><div class="qchips">{"".join(chips)}</div>'
 

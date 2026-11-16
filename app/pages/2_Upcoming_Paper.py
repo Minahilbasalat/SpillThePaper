@@ -17,6 +17,8 @@ from src.inference.errors import LowConfidenceError
 from src.inference.library import default_duration
 from src.inference.syllabus import default_scope, parse_syllabus
 from src.inference.uploads import ingest_papers
+from src.inference.variants import rewrite_paper
+from common import get_llm
 
 theme.setup("Upcoming paper", active="upcoming")
 form.inject_css()
@@ -413,7 +415,6 @@ def generate(subject: str, exam: str, advanced: dict) -> str | None:
                 subject,
                 exam,
                 int(st.session_state["up_year"]),
-                model=advanced["model"],
                 syllabus_items=list(st.session_state["up_topics"]) or None,
                 extra=extra,
                 n_questions=advanced["n_questions"] or None,
@@ -425,6 +426,14 @@ def generate(subject: str, exam: str, advanced: dict) -> str | None:
         return str(err)
     except Exception:
         return "Something went wrong while building the paper. Please try again."
+    style = advanced.get("style", "real")
+    if style != "real":
+        try:
+            with st.spinner("Asking the AI to write the questions (a few seconds for each)..."):
+                paper = rewrite_paper(paper, get_llm(), mode=style)
+        except Exception:
+            paper["notes"] = list(paper.get("notes") or []) + [
+                "The AI step failed, so the questions are the real past questions."]
     if st.session_state["up_timer_on"]:
         paper["duration_minutes"] = effective_minutes()
     st.session_state["up_exam_timer"] = bool(st.session_state["up_timer_on"])
@@ -454,12 +463,19 @@ def right_column() -> None:
             disabled=subject not in SUPPORTED,
         )
     st.markdown(
-        '<div class="fine">Predicted questions are real past questions chosen for the topics most likely to come.</div>',
+        '<div class="fine">Predicted questions are real past questions chosen for the topics most likely to come, unless you switch on the AI under Advanced.</div>',
         unsafe_allow_html=True,
     )
     with st.expander("Advanced"):
+        style = "real"
+        if get_llm().available:
+            styles = {"Real past questions": "real", "Real questions, tidied by AI": "tidy",
+                      "New similar questions, written by AI": "new"}
+            style = styles[st.selectbox("Question style", list(styles), key="up_style")]
+        else:
+            st.caption("AI question writing is off (no API key set): the questions are real past questions.")
         advanced = {
-            "model": st.selectbox("Model", pred.model_names(), key="up_model"),
+            "style": style,
             "n_questions": int(st.number_input("Number of questions (0 = automatic)", 0, 30, 0, key="up_nq")),
             "total_marks": int(st.number_input("Total marks (0 = automatic)", 0, 500, 0, step=5, key="up_marks")),
             "explore_share": float(st.slider("Share of less-predicted questions", 0.0, 0.5, 0.2, 0.05, key="up_explore")),

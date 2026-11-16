@@ -19,6 +19,7 @@ import pandas as pd
 
 from src.data.exam_kinds import exam_kind, label, sort_key
 from src.inference import config as C
+from src.inference.formatting import format_question, needs_figure
 
 DEFAULT_DURATION_MIN = {"quiz": 30, "mid": 60, "final": 180}     # students may change these
 _SKIP_TYPES = {"fragment"}
@@ -43,6 +44,8 @@ class Library:
     def __init__(self):
         q = pd.read_csv(C.QUESTION_TABLE_CSV, dtype={"file_id": str})
         q["year"] = q["year"].astype(int)
+        q["needs_figure"] = q["question_text"].astype(str).map(needs_figure)       # decided on the raw text
+        q["question_text"] = q["question_text"].astype(str).map(format_question)   # readable layout
         self.q = q
         q["low_quality"] = q["low_quality"].astype(bool) if "low_quality" in q else False
         # readable: could be shown to a student (garbled OCR is flagged, not hidden);
@@ -191,7 +194,7 @@ class Library:
                        "difficulty": r.difficulty, "topic_id": tid,
                        "topic_label": self.topic_label(first["subject"], tid), "solution": sol,
                        "solution_source": (r.solution_source if sol else None),
-                       "low_quality": bool(r.low_quality)})
+                       "low_quality": bool(r.low_quality), "needs_figure": bool(r.needs_figure)})
         kind = first["exam_kind"]
         return {"title": f"{first['subject']} - {label(kind)} {int(first['year'])}",
                 "subject": first["subject"], "assessment_type": first["assessment_type"],
