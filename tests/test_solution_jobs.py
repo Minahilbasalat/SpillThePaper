@@ -70,7 +70,7 @@ def test_failures_are_reported_not_cached_and_do_not_stop_the_others(tmp_path):
     job = SolutionJob(SolutionService(ai, tmp_path), PAPER)
     wait(job)
     s = job.snapshot()
-    assert s[1]["source"] == "none" and "failed" in s[1]["note"] and "again" in s[1]["note"] and s[2]["source"] == "ai"
+    assert s[1]["source"] == "none" and "could not write" in s[1]["note"] and "again" in s[1]["note"] and s[2]["source"] == "ai"
     again = Slow(fail_on="nothing")
     again.gate.set()
     job2 = SolutionJob(SolutionService(again, tmp_path), PAPER)

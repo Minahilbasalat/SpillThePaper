@@ -18,7 +18,7 @@ import threading
 from concurrent.futures import ThreadPoolExecutor
 
 WAITING = "This solution is being written by the AI. Wait a moment, it will appear here by itself."
-MAX_WORKERS = 4                      # free AI plans limit requests per minute: more threads would not help
+MAX_WORKERS = 2                      # free AI plans limit requests per minute: more threads would not help
 
 
 class SolutionJob:
@@ -52,7 +52,7 @@ class SolutionJob:
             r = {"text": "", "marking_scheme": None, "source": "none", "note": f"The AI could not write this one ({e})."}
         if r["source"] == "none":
             r = dict(r, note=(r.get("note") or "The AI could not write this solution.") +
-                     " Open this page again to retry.")
+                     " Open this page again in a minute to retry.")
         with self._lock:
             self._items[i] = {"number": q["number"], **r}
             self._waiting.discard(i)

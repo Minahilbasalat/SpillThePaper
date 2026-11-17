@@ -9,9 +9,15 @@ or in a chat message.
                      (default: the first of these whose key is set, in this order)
     LLM_VISION_MODEL optional: model that reads photos (default: Gemini/Anthropic read photos with
                      the normal model; Groq/Mistral use the model named in VISION_MODELS below)
-    LLM_MODEL        optional: model name of that provider (see the defaults below; model names
-                     change, if a request says "model not found" copy a current name from the
-                     provider's dashboard)
+    LLM_MODEL        optional: model name for the main provider (see the defaults below; model
+                     names change, if a request says "model not found" copy a current name from
+                     the provider's dashboard)
+    GEMINI_MODEL / GROQ_MODEL / MISTRAL_MODEL / ANTHROPIC_MODEL
+                     optional: model name of one provider (wins over LLM_MODEL for that provider)
+
+If the main provider fails (quota, busy, wrong model) the client tries the next model of the same
+provider (FALLBACK_MODELS, its own quota) and then every other provider whose key is set, so a
+Groq key next to the Gemini key is a safety net.
 
 Windows PowerShell (this window only):   $env:GEMINI_API_KEY = "paste-key-here"
 Check that it works:                     python -m src.inference.llm
@@ -37,7 +43,7 @@ except ImportError:
 PROVIDERS = {
     "gemini": ("GEMINI_API_KEY",
                "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
-               "gemini-flash-latest", "openai"),
+               "gemini-3.8-flash", "openai"),
     "groq": ("GROQ_API_KEY", "https://api.groq.com/openai/v1/chat/completions",
              "llama-3.3-70b-versatile", "openai"),
     "mistral": ("MISTRAL_API_KEY", "https://api.mistral.ai/v1/chat/completions",
@@ -49,6 +55,10 @@ PROVIDERS = {
 # Names change: if a request says "model not found", set LLM_VISION_MODEL to a current vision model.
 VISION_MODELS = {"gemini": None, "anthropic": None,
                  "groq": "meta-llama/llama-4-scout-17b-16e-instruct", "mistral": "pixtral-12b-2409"}
+# Second choice of the SAME provider (each Gemini model has its own free quota)
+FALLBACK_MODELS = {"gemini": ["gemini-3.5-flash-lite"], "groq": ["openai/gpt-oss-20b"]}
+MODEL_ENV = {"gemini": "GEMINI_MODEL", "groq": "GROQ_MODEL", "mistral": "MISTRAL_MODEL",
+             "anthropic": "ANTHROPIC_MODEL"}
 RETRY_STATUS = (429, 500, 502, 503, 504, 529)
 MAX_WAIT_S = 20
 
@@ -74,15 +84,56 @@ class LLMClient:
         self.api_key = api_key or (os.environ.get(PROVIDERS[self.provider][0], "")
                                    if self.provider else "")
         default_model = PROVIDERS[self.provider][2] if self.provider else ""
-        self.model = model or os.environ.get("LLM_MODEL") or default_model
+        main = pick_provider() if self.provider else None
+        generic = os.environ.get("LLM_MODEL") if self.provider == main else None   # LLM_MODEL = main provider only
+        self.model = (model or (os.environ.get(MODEL_ENV[self.provider], "").strip() if self.provider else "")
+                      or generic or default_model)
         self.timeout = timeout
+        self._single = False               # True for the helper clients used inside the fallback chain
 
     @property
     def available(self) -> bool:
         return bool(self.provider and self.api_key)
 
     def describe(self) -> str:
-        return f"{self.provider} / {self.model}" if self.available else "no API key set"
+        if not self.available:
+            return "no API key set"
+        extra = [f"{c.provider} / {c.model}" for c in self._chain()[1:]]
+        return f"{self.provider} / {self.model}" + (f"  (then: {', '.join(extra)})" if extra else "")
+
+    def _chain(self) -> list:
+        """Clients to try in order: this one, the fallback model(s) of its provider, other providers with a key."""
+        if self._single:
+            return [self]
+        out = [self]
+        seen = {(self.provider, self.model)}
+
+        def add(provider, key, model):
+            if (provider, model) not in seen and key:
+                seen.add((provider, model))
+                c = LLMClient(provider=provider, api_key=key, model=model, timeout=self.timeout)
+                c._single = True
+                out.append(c)
+        for m in FALLBACK_MODELS.get(self.provider, []):
+            add(self.provider, self.api_key, m)
+        for prov, spec in PROVIDERS.items():
+            if prov != self.provider:
+                key = os.environ.get(spec[0], "")
+                add(prov, key, os.environ.get(MODEL_ENV[prov], "").strip() or spec[2])
+                for m in FALLBACK_MODELS.get(prov, []):
+                    add(prov, key, m)
+        return out
+
+    def _run(self, call):
+        """Try every client of the chain; raise one readable LLMError if all fail."""
+        errors = []
+        for c in self._chain():
+            try:
+                return call(c)
+            except LLMError as e:
+                errors.append(f"{c.provider}/{c.model}: {e}")
+        raise LLMError(errors[0] if len(errors) == 1 else
+                       "every AI model failed - " + " | ".join(errors))
 
     # -------------------------------------------------------------------- request
     def _request(self, system: str, user: str, max_tokens: int):
@@ -131,7 +182,7 @@ class LLMClient:
                                    "LLM_MODEL to another model)")
                 return text
             last = f"{r.status_code}: {r.text[:200]}"
-            if r.status_code in RETRY_STATUS and attempt < 2:
+            if r.status_code in RETRY_STATUS and attempt < (1 if r.status_code == 429 else 2):
                 try:
                     wait = float(r.headers.get("retry-after", 2 * (attempt + 1)))
                 except ValueError:
@@ -139,16 +190,25 @@ class LLMClient:
                 time.sleep(min(wait, MAX_WAIT_S))
                 continue
             break
-        hint = ""
         if last.startswith(("401", "403")):
-            hint = " - check the API key"
+            msg = f"the API key was refused ({last[:3]}) - check the API key"
         elif last.startswith("404"):
-            hint = " - model not found: set LLM_MODEL (or LLM_VISION_MODEL) to a current model name"
+            msg = "model not found (404) - set LLM_MODEL (or LLM_VISION_MODEL) to a current model name"
         elif last.startswith("429"):
-            hint = " - quota or rate limit reached: wait a minute and try again"
-        raise LLMError(f"the {self.provider} request failed ({last}){hint}")
+            msg = "quota or rate limit reached (429) - wait a minute and try again"
+        else:
+            msg = f"request failed ({last})"
+        raise LLMError(f"the {self.provider} {msg}")
 
     def complete(self, system: str, user: str, max_tokens: int = 1200) -> str:
+        if not self.available:
+            raise LLMError("no API key is set (GEMINI_API_KEY, GROQ_API_KEY, MISTRAL_API_KEY or "
+                           "ANTHROPIC_API_KEY)")
+        if self._single:
+            return self._complete_one(system, user, max_tokens)
+        return self._run(lambda c: c._complete_one(system, user, max_tokens))
+
+    def _complete_one(self, system: str, user: str, max_tokens: int) -> str:
         if not self.available:
             raise LLMError("no API key is set (GEMINI_API_KEY, GROQ_API_KEY, MISTRAL_API_KEY or "
                            "ANTHROPIC_API_KEY)")
@@ -170,6 +230,15 @@ class LLMClient:
 
     def complete_vision(self, system: str, user: str, images: list, max_tokens: int = 2500) -> str:
         """Like complete(), with photos: images = [(mime_type, bytes), ...] (jpeg or png)."""
+        if not self.available:
+            raise LLMError("no API key is set (GEMINI_API_KEY, GROQ_API_KEY, MISTRAL_API_KEY or "
+                           "ANTHROPIC_API_KEY)")
+        if self._single:
+            return self._vision_one(system, user, images, max_tokens)
+        return self._run(lambda c: c._vision_one(system, user, images, max_tokens)
+                         if c.supports_vision else (_ for _ in ()).throw(LLMError("no vision model")))
+
+    def _vision_one(self, system: str, user: str, images: list, max_tokens: int) -> str:
         if not self.available:
             raise LLMError("no API key is set (GEMINI_API_KEY, GROQ_API_KEY, MISTRAL_API_KEY or "
                            "ANTHROPIC_API_KEY)")

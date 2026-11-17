@@ -92,7 +92,7 @@ def test_network_failures_become_llm_errors(monkeypatch):
         raise requests.ConnectionError("no internet")
     monkeypatch.setattr(L.requests, "post", boom)
     with pytest.raises(LLMError, match="ConnectionError"):
-        LLMClient(provider="groq", api_key="k").complete("s", "u")
+        LLMClient(provider="mistral", api_key="k").complete("s", "u")      # mistral has no fallback model
     assert len(calls) == 3
     monkeypatch.setattr(L.requests, "post", lambda *a, **k: (_ for _ in ()).throw(requests.Timeout()))
     with pytest.raises(LLMError):
@@ -151,3 +151,39 @@ def test_vision_model_choice(monkeypatch):
     monkeypatch.setenv("LLM_VISION_MODEL", "my-vision")
     assert LLMClient(provider="groq", api_key="k").vision_model == "my-vision"
     assert not LLMClient().supports_vision
+
+
+def test_fallback_chain_and_model_names(monkeypatch):
+    """A quota error on the first Gemini model moves on to the next model, then to Groq (if it has a key)."""
+    monkeypatch.setenv("GEMINI_API_KEY", "g")
+    monkeypatch.setenv("GROQ_API_KEY", "q")
+    c = LLMClient()
+    assert c.provider == "gemini" and c.model == "gemini-3.8-flash"
+    order = [(x.provider, x.model) for x in c._chain()]
+    assert order[0] == ("gemini", "gemini-3.8-flash") and ("gemini", "gemini-3.5-flash-lite") in order
+    assert order[-1][0] == "groq" or ("groq", "llama-3.3-70b-versatile") in order
+    seen = []
+
+    def post(url, json=None, headers=None, timeout=None):
+        seen.append(json["model"])
+        if "generativelanguage" in url:
+            return Resp(429, {"e": 1})
+        return openai_reply("from groq")
+    monkeypatch.setattr(L.requests, "post", post)
+    assert c.complete("s", "u") == "from groq"
+    assert seen[0] == "gemini-3.8-flash" and seen[-1] == "llama-3.3-70b-versatile"
+    monkeypatch.setattr(L.requests, "post", lambda *a, **k: Resp(429, {"e": 1}))
+    with pytest.raises(LLMError, match="every AI model failed") as e:
+        c.complete("s", "u")
+    assert "429" in str(e.value) and "{" not in str(e.value)               # no raw JSON shown to the student
+
+
+def test_model_env_variables(monkeypatch):
+    monkeypatch.setenv("GEMINI_API_KEY", "g")
+    monkeypatch.setenv("GROQ_API_KEY", "q")
+    monkeypatch.setenv("LLM_MODEL", "my-gemini")                           # LLM_MODEL = the main provider only
+    monkeypatch.setenv("GROQ_MODEL", "my-groq")
+    assert LLMClient().model == "my-gemini"
+    assert ("groq", "my-groq") in [(x.provider, x.model) for x in LLMClient()._chain()]
+    monkeypatch.setenv("GEMINI_MODEL", "specific")
+    assert LLMClient().model == "specific"
