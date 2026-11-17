@@ -6,8 +6,11 @@ from fpdf import FPDF
 
 
 def _t(s) -> str:
-    return str(s if s is not None else "").replace("\u2019", "'").replace("\u2013", "-") \
-        .encode("latin-1", "replace").decode("latin-1")
+    s = str(s if s is not None else "")
+    for old, new in (("\u2019", "'"), ("\u2018", "'"), ("\u201c", '"'), ("\u201d", '"'),
+                     ("\u2013", "-"), ("\u2014", "-"), ("\u2022", "-"), ("\u2026", "...")):
+        s = s.replace(old, new)
+    return s.encode("latin-1", "replace").decode("latin-1")
 
 
 def paper_to_pdf(paper: dict, solutions: list[dict] | None = None) -> bytes:
@@ -23,8 +26,10 @@ def paper_to_pdf(paper: dict, solutions: list[dict] | None = None) -> bytes:
     pdf.cell(0, 6, _t(meta), new_x="LMARGIN", new_y="NEXT")
     if paper.get("source") == "predicted":
         pdf.set_font("Helvetica", "I", 9)
-        pdf.multi_cell(0, 5, "Tentative paper built from real past questions. It is a study aid, "
-                             "not a guarantee of what will appear.", new_x="LMARGIN", new_y="NEXT")
+        what = ("Tentative paper with questions written by AI from real past questions"
+                if paper.get("question_style") == "new" else "Tentative paper built from real past questions")
+        pdf.multi_cell(0, 5, what + ". It is a study aid, not a guarantee of what will appear.",
+                       new_x="LMARGIN", new_y="NEXT")
     pdf.ln(3)
     sol = {s["number"]: s for s in (solutions or [])}
     for q in paper["questions"]:

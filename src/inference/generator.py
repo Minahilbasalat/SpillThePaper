@@ -25,6 +25,7 @@ import numpy as np
 import pandas as pd
 
 from src.data.exam_kinds import label
+from src.inference.formatting import format_question, looks_broken, needs_figure
 from src.inference.library import default_duration
 from src.inference.syllabus import SyllabusMatcher
 
@@ -74,17 +75,28 @@ class PaperGenerator:
         self.pred, self.lib = predictor, library
 
     # ------------------------------------------------------------------ pool
-    def _pool(self, subject, extra):
+    def _pool(self, subject, extra, allow_figures=True):
         u = self.lib.usable
-        pool = u[(u["subject"] == subject) & u["topic_id"].notna()][POOL_COLS].copy()
+        if "needs_figure" not in u:
+            u = u.assign(needs_figure=u["question_text"].astype(str).map(needs_figure))
+        pool = u[(u["subject"] == subject) & u["topic_id"].notna()][POOL_COLS + ["needs_figure"]].copy()
         if extra is not None and len(extra.questions):
             eq = extra.questions
             eq = eq[(~eq["contaminated"].astype(bool)) & (eq["qtype"] != "fragment")
                     & (~eq["low_quality"].astype(bool))]
-            pool = pd.concat([pool, eq[POOL_COLS]], ignore_index=True)
+            eq = eq[POOL_COLS].assign(needs_figure=eq["question_text"].astype(str).map(needs_figure))
+            pool = pd.concat([pool, eq], ignore_index=True)
         pool["topic_id"] = pool["topic_id"].astype(int)
-        pool["question_text"] = pool["question_text"].map(clean_label)
+        pool["needs_figure"] = pool["needs_figure"].astype(bool)
+        pool["question_text"] = pool["question_text"].map(clean_label).map(format_question)
         pool = pool[pool["question_text"].str.split().str.len() >= MIN_WORDS]
+        usable = pool[~pool["question_text"].map(looks_broken)]     # cut-off fragments and scan damage
+        if len(usable) >= max(25, len(pool) // 2):
+            pool = usable
+        if not allow_figures:           # questions that need a diagram are used only if enough others exist
+            ok = pool[~pool["needs_figure"]]
+            if len(ok) >= max(25, len(pool) // 2):
+                pool = ok
         return pool.reset_index(drop=True)
 
     # -------------------------------------------------------------- generate
@@ -93,7 +105,7 @@ class PaperGenerator:
                  total_marks: float | None = None, explore_share: float = 0.2,
                  strict_syllabus: bool = False, seed: int | None = None,
                  focus: dict | None = None, focus_share: float = 0.5,
-                 avoid_texts=None) -> dict:
+                 avoid_texts=None, allow_figures: bool = False) -> dict:
         """focus = {topic_id: weakness 0..1}: a personalised paper. about `focus_share` of the main
         questions come from these topics (weakest first); the rest still follow the prediction and
         the "less-predicted" slots stay. avoid_texts = question texts left out (e.g. the paper the
@@ -108,7 +120,7 @@ class PaperGenerator:
         pred = self.pred.predict(subject, exam, year, model,
                                  None if extra is None else extra.papers,
                                  None if extra is None else extra.incidence)
-        pool = self._pool(subject, extra)
+        pool = self._pool(subject, extra, allow_figures)
         if avoid_texts:
             avoid = set(avoid_texts) | {clean_label(t) for t in avoid_texts}
             pool = pool[~pool["question_text"].isin(avoid)].reset_index(drop=True)
@@ -202,7 +214,7 @@ class PaperGenerator:
                 "topic_probability": round(float(probs.get(t_id, 0.0)), 3),
                 "topic_rank": rank_of.get(t_id),
                 "syllabus_match": None if pd.isna(r["syl"]) else round(float(r["syl"]), 2),
-                "source": f"{label(r['exam_kind'])} {int(r['year'])}",
+                "source": f"{label(r['exam_kind'])} {int(r['year'])}", "needs_figure": bool(r["needs_figure"]),
                 "solution": r["solution_text"] if isinstance(r["solution_text"], str) and r["solution_text"] else None,
                 "solution_source": r["solution_source"] if isinstance(r["solution_text"], str) and r["solution_text"] else None,
             })
@@ -239,7 +251,8 @@ class PaperGenerator:
                 "marks_note": c["marks_note"], "qtype": c["qtype"], "difficulty": c["difficulty"],
                 "topic_id": c["topic_id"], "topic_label": lab, "solution": c["solution"],
                 "reason": reason, "explore": c["explore"], "focus": c["focus"], "topic_probability": c["topic_probability"],
-                "syllabus_match": c["syllabus_match"], "source": c["source"]})
+                "syllabus_match": c["syllabus_match"], "source": c["source"],
+                "needs_figure": c["needs_figure"]})
 
         if focus:
             notes.insert(0, f"Personalised: {sum(q['focus'] for q in questions)} question(s) target your "
@@ -247,6 +260,10 @@ class PaperGenerator:
                             "less-predicted areas.")
         notes.insert(0, "These are real past questions chosen for the predicted topics; they are "
                         "not newly written questions.")
+        n_fig = sum(q["needs_figure"] for q in questions)
+        if n_fig:
+            notes.append(f"{n_fig} question(s) refer to a diagram or figure that is not shown here; "
+                         "open the original paper to see it.")
         notes.append(f"Structure follows {bp['papers_used']} real past {label(exam)} paper(s) "
                      f"({bp['scope']}): about {bp['questions']:.0f} questions, {bp['total_marks'] or total:.0f} marks.")
         if exam in ("mid1", "mid2") and not pred.attrs["phase_adjusted"]:

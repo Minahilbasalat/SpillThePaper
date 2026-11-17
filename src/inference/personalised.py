@@ -41,7 +41,7 @@ def generate_personalised(generator, subject: str, exam: str, year: int, analysi
     if analysis is None and (store is None or not store.attempts(subject)):
         raise ValueError("there are no marked answers yet: mark a paper first")
     focus = weak_focus(subject, analysis, store)
-    avoid = [q["text"] for q in source_paper["questions"]] if source_paper else None
+    avoid = [q.get("raw_text") or q["text"] for q in source_paper["questions"]] if source_paper else None
     paper = generator.generate(subject, exam, year, focus={t: v["weakness"] for t, v in focus.items()},
                                avoid_texts=avoid, **kwargs)
     paper["title"] = paper["title"].replace("Predicted", "Personalised", 1)
