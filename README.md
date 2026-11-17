@@ -1,279 +1,178 @@
 # SpillThePaper
 
-**AI-powered analysis of historical FAST-NUCES exam papers, aiming to produce a tentative prediction of an upcoming paper and personalised practice.**
+**From past papers to a predicted, solved and personalised exam.** An AI study tool for FAST-NUCES students: it learns from the archive of past quizzes, mids and finals, forecasts which topics are likely to come, generates a tentative paper with a realistic structure and timer, shows solutions, grades your own answers from photos, finds your weak areas and builds a personalised follow-up paper.
 
-AI course project, **Track A (Application Development)**.
+AI course project, **Track A (Application Development)**. It is a study aid and does **not** guarantee what will appear in a real exam.
 
-> **Current status: Deliverables 1 and 2 complete (Phases 1 to 4).**
-> The data foundation, a supervised dataset, three trained models and a full evaluation exist.
-> The tentative-paper generator, personalisation, web application and deployment are future phases (see below).
+> **Status: all phases complete (Deliverables 1, 2 and 3).** Hosted app: _add your link here after deployment_.
 
 ---
 
-## 1. What is SpillThePaper?
+## 1. What it does
 
-Students preparing for exams have access to many past mid, final and quiz papers, but the archive is large, unstructured and inconsistent. SpillThePaper's long-term goal is to turn it into evidence-based preparation:
+| Page | What you can do |
+|---|---|
+| **Home** | Overview and entry to the three tools |
+| **Past papers** | Browse all 130 subjects, grouped into Final, Mid 1, Mid 2 and Quiz n; open the original file on GitHub or read readable papers as questions |
+| **Upcoming paper** | Pick a subject and exam, optionally upload recent papers and a syllabus, set the number of questions and marks; get a topic forecast and a predicted paper (likelihood per question, "How this paper was made", timer, exam mode, solved paper, PDF download) |
+| **My results** | Upload photos of your answers, review the marks, see weak and strong areas and your history, and generate a **personalised paper** |
 
-1. analyse past papers (topics, question types, marks, recency, assessment type),
-2. compare them with the **current** syllabus,
-3. estimate how likely syllabus areas are to appear (keeping some lower-probability areas, to stay honest about uncertainty),
-4. generate a tentative paper with a realistic structure,
-5. let a student attempt it, find weak areas, and generate a personalised follow-up paper.
+Inference is real time: the models are loaded once and a paper is generated in well under a second. Optional language-model steps (AI-written questions, AI solutions, photo grading) need an API key; without one the app still works with real, tidied past questions and archived solutions.
 
-It is a study aid. It does **not** guarantee what will appear in an actual exam.
-
-**Target audience:** FAST-NUCES undergraduate students preparing for courses with enough historical paper data.
-
-## 2. Project status
-
-| Phase | Description | Status |
-|---|---|---|
-| 1 | Problem definition (problem statement, audience, AI justification) | Done (Deliverable 1 report) |
-| 2 | Data acquisition and preprocessing (collection, cleaning, feature strategy, EDA) | Done (Deliverable 1) |
-| 3 | Model architecture and implementation (question segmentation, topic discovery, supervised dataset, three models, hyperparameter tuning) | **Done (Deliverable 2)** |
-| 4 | Training and evaluation (time-based validation, metrics, error analysis, bias check) | **Done (Deliverable 2)** |
-| 5 | Output (hosted web application) | Not started |
-| 6 | Final documentation and report | Not started |
-
-## 3. Data source
-
-Papers and course outlines come from the public GitHub archive
-[Academic-Time-Machine](https://github.com/saleha-muzammil/Academic-Time-Machine) (student-contributed, not curated).
-
-* The collection in the report was pinned to commit `e0e197577432957a5fad0f76d2ab92d78f48e1d8`. The commit used is also recorded in `logs/collection_log.txt` and `data/processed/repo_tree.csv`.
-* **Raw papers are not stored in this repository.** The scripts download them into `data/raw/` (excluded by `.gitignore`), so the dataset is reproducible without redistributing files.
-* The archive contains **no reliable professor information** for papers or quizzes, so professor-specific analysis is not part of this project.
-
-## 4. Data pipeline (Phase 2)
-
-All code is in [`data scripts/`](data%20scripts). Rules are in [`config/`](config), so **adding a new subject, semester or paper to the archive needs no code change**.
-
-| Step | Script | What it does | Main output |
-|---|---|---|---|
-| 1 | `01_discover.py` | Lists every file in the archive through the GitHub API (no papers downloaded) | `data/processed/repo_tree.csv` |
-| 2 | `02_filter.py` | Keeps quizzes, mids, finals and course outlines using configurable rules; lists every excluded file with its reason | `selected_files.csv`, `excluded_files.csv` |
-| 3 | `03_download.py` | Downloads the selected files (resumable, streamed to disk) and records size and SHA-256 | `collection_manifest.csv` |
-| 4 | `04_extract.py` | Extracts text (PyMuPDF for PDFs, python-docx for Word); flags scans and photos as *needs OCR* | `extraction_results.csv` |
-| 5 | `05_build_papers.py` | Builds the papers table: subject, assessment type and number, term, year, flags; reports missing values | `papers.csv`, `outlines.csv`, `missing_values_report.csv` |
-| 6 | `06_clean.py` | Removes duplicates, treats invalid values as missing, flags numeric outliers | `papers_clean.csv`, `papers_flagged.csv`, `cleaning_summary.csv`, `outlier_bounds.csv` |
-| 7 | `07_features.py` | Encoding, scaling and normalisation strategy, applied only where meaningful | `features.csv`, `feature_strategy.csv` |
-| 8 | `08_eda.py` | Nine exploratory charts and a log of the numbers behind them | `eda/*.png`, `logs/eda_log.txt` |
-
-Helper tools: `check_aliases.py` (validates the subject-name mapping) and `peek_subject.py` (shows the first lines of papers from given subject folders, to check whether two folder names are the same course).
-
-## 5. Phase 3: from papers to a supervised task and models
-
-Deliverable 1 produced no labels, so Phase 3 first defines a prediction target.
-
-**Task.** One row is a (subject, topic, target exam) triple. The label is 1 if the topic appears in at least one paper of that subject, year and assessment type. All features use only papers from strictly earlier years. The model estimates the probability that a topic appears.
-
-| Stage | Code | What it does |
-|---|---|---|
-| Text loader | `src/data/load_text.py` | Joins `papers_clean.csv` with the extracted text (1,638 papers with readable text and a known year) |
-| Question segmentation | `src/data/segment_questions.py`, `build_questions.py` | Splits papers into 7,780 questions; removes solutions, grading tables and header text |
-| Topic discovery | `src/data/topics.py` | Per subject: TF-IDF and KMeans (K chosen by silhouette), fitted on training years only; 28 subjects and 220 topics qualify |
-| Dataset builder | `src/data/build_dataset.py` | Builds the leakage-safe dataset and the time-based split |
-| Preprocessing | `src/models/preprocess.py` | Imputation, one-hot encoding and scaling, fitted on the training split only |
-| Baselines | `src/models/baselines.py` | Logistic regression and random forest (Scikit-Learn) |
-| MLP | `src/models/mlp.py`, `train_mlp.py`, `tune.py` | PyTorch multi-layer perceptron (12-16-8-1, dropout 0.4, Adam), random search over 40 configurations with 3 seeds each |
-
-**Dataset and split (by time, not random):**
-
-| Split | Target years | Rows | Positive rate | Target exams |
-|---|---|---|---|---|
-| Train | 2014 to 2022 | 1,421 | 0.473 | 166 |
-| Validation | 2023 | 301 | 0.392 | 36 |
-| Test | 2024 to 2026 | 568 | 0.347 | 67 |
-
-The committed files are `data/processed/model/train.csv`, `val.csv` and `test.csv`; the schema is in `docs/dataset_schema.md`. Models, hyperparameters and decision thresholds are chosen on validation only; the test split is evaluated once.
-
-## 6. Phase 4: evaluation
-
-Code: `src/evaluation/`. Documentation: `docs/evaluation.md`.
-
-* **Metrics:** precision, recall, F1, AUC-ROC, PR-AUC and Brier score, with 95% intervals from a cluster bootstrap (whole target exams are resampled, 1,000 resamples).
-* **Baselines:** four non-learned rules (count of earlier appearances at least 5, appeared last year, raw topic rate, all positive).
-* **Error analysis and bias check:** breakdowns by assessment type, year, history, topic familiarity, subject, coverage tier and subject kind (`results/error_analysis_*.csv`, `results/bias_check*.csv`).
-
-## 7. Results (test split)
-
-Thresholds were fixed on validation. Intervals are 95% cluster-bootstrap intervals.
-
-| Model | AUC-ROC | F1 |
-|---|---|---|
-| Logistic regression | 0.839 [0.796, 0.880] | 0.686 |
-| Random forest | 0.843 [0.804, 0.881] | 0.703 |
-| MLP (PyTorch) | 0.849 [0.811, 0.886] | 0.704 |
-| Rule: appeared last year | 0.827 [0.787, 0.865] | 0.672 |
-| Rule: count of at least 5 | 0.822 [0.783, 0.859] | 0.585 |
-| Raw topic rate | 0.787 [0.742, 0.830] | 0.608 |
-
-**Honest summary.** The learned models are competitive with, but not demonstrably better than, simple history rules: all AUC-ROC intervals overlap. They are clearly more precise than the "appeared at least 5 times" rule, which flags 81% of the test rows. Quizzes and Computer Networks are the weakest cases, probabilities are overestimated, and the test split contains no topic that never appeared before. See the Deliverable 2 report for the full analysis.
-
-## 8. Model weights
-
-Weight files are not stored in Git. They are hosted on Google Drive:
-
-**https://drive.google.com/drive/folders/1IQb9xincr7PjG4kQvqEmj8jBBezRqQRZ?usp=drive_link**
-
-The folder contains `mlp_best.pt` (final MLP, 353 parameters), `preprocess.joblib` (preprocessing fitted on the training split), `logreg.joblib` and `random_forest.joblib`. Download them into the `models/` folder (excluded by `.gitignore`). Re-running the training scripts reproduces the committed predictions in `results/predictions/` exactly.
-
-## 9. Repository structure
+## 2. How it works
 
 ```text
-SpillThePaper/
-├── README.md
-├── .gitignore
-├── requirements.txt
-├── config/              # filter rules, assessment rules, subject name mapping
-├── data scripts/        # Phase 2 code (steps 01-08)
-├── src/
-│   ├── data/            # Phase 3: questions, topics, supervised dataset
-│   ├── models/          # Phase 3: preprocessing, baselines, MLP, tuning, predictions
-│   └── evaluation/      # Phase 4: metrics, baselines, error analysis, bias check
-├── tests/               # unit tests (including the dataset leakage test)
-├── docs/                # dataset schema, data settings, models, evaluation
-├── data/
-│   ├── raw/             # downloaded papers        (NOT in Git)
-│   ├── interim/         # extracted text, questions (NOT in Git)
-│   └── processed/       # small result tables (CSV); model/ holds train, val, test
-├── models/              # model weights            (NOT in Git, see section 8)
-├── results/             # tuning, predictions, metrics, error analysis, bias check
-├── eda/                 # exploratory charts (PNG)
-├── logs/                # execution logs (collection, extraction, cleaning, EDA)
-└── report/              # report sources and PDFs; report/figures holds the figures
+Archive (GitHub) -> collect, clean, OCR -> question bank (10,538 questions: marks, type, difficulty)
+   -> per-subject topics (TF-IDF + KMeans) -> topic-appearance dataset (time-split, leakage-safe)
+   -> models (logistic regression, random forest, PyTorch MLP) -> Predictor + blueprints
+   -> Paper generator -> solutions / PDF -> grading, weak areas, personalised paper -> Streamlit UI
 ```
 
-## 10. Setup
+* **Prediction task.** One row = (subject, topic, target exam); label = does the topic appear? Features use only earlier years.
+* **Generator.** Structure (questions, marks, type and difficulty mix) comes from real past papers; topics come from the model, with about 20% reserved for less-likely areas. Questions are real past questions chosen for the predicted topics; an optional AI step rewrites them as new similar questions, with the real tidied question as the fallback.
+* **Solutions.** Archived solutions first; missing ones are written by the AI in the background and cached.
+* **Personalisation.** Weakness from your latest attempt (70%) and history (30%) tilts about half of the main questions toward weak topics.
 
-Requirements: Python 3.10 or newer and Git. The results in the reports were produced with Python 3.14, scikit-learn 1.9.1 and PyTorch 2.15.0 (CPU).
+## 3. Results
+
+Time-based split: train 2014-2022 (1,940 rows), validation 2023 (383), test 2024-2026 (1,142 rows, 138 exams). Thresholds are chosen on validation; intervals are 95% cluster-bootstrap.
+
+| Model | AUC-ROC (test) | Precision | Recall | F1 |
+|---|---|---|---|---|
+| Logistic regression | 0.850 [0.823, 0.876] | 0.630 | 0.800 | 0.705 |
+| Random forest | **0.871** [0.848, 0.892] | 0.673 | 0.822 | 0.740 |
+| MLP (PyTorch, 12-16-8-1, 353 parameters) | 0.857 [0.831, 0.881] | 0.577 | 0.901 | 0.703 |
+| Rule: appeared last year | 0.836 [0.813, 0.860] | 0.584 | 0.770 | 0.665 |
+| Raw topic rate | 0.834 [0.808, 0.860] | 0.545 | 0.901 | 0.679 |
+| Rule: count of at least 5 | 0.824 [0.797, 0.852] | 0.458 | 0.980 | 0.625 |
+
+**Honest summary.** The learned models rank slightly better than simple history rules and are clearly more precise than the "appeared at least five times" rule, but the intervals still overlap with the best rule, so we do not claim a statistically separated gain. Quizzes are the weakest exam type, probabilities are over-estimated (read them as rankings), and the test split has no topic that never appeared before. Full analysis, error analysis and bias check: see the final report.
+
+## 4. Quick start
+
+Requirements: Python 3.10+ and Git (results were produced with Python 3.14, scikit-learn 1.9.1, PyTorch 2.15.0 CPU). OCR needs the Tesseract program installed (only for rebuilding the data).
 
 ```powershell
 git clone https://github.com/Minahilbasalat/SpillThePaper.git
 cd SpillThePaper
 python -m venv venv
-venv\Scripts\Activate.ps1          # Windows PowerShell
-# source venv/bin/activate         # macOS / Linux
+venv\Scripts\Activate.ps1          # macOS / Linux: source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-If a package such as `torch` cannot be installed on your Python version, create the environment with an older Python (for example `py -3.12 -m venv venv`).
+**Get the trained models and the question bank** (not stored in Git; see section 6):
 
-Check the installation:
+```powershell
+python scripts/get_runtime.py <URL-of-runtime_bundle.zip>
+```
+
+**Run the tests and the app:**
 
 ```powershell
 python -m pytest tests -q
+streamlit run app/Home.py
 ```
 
-## 11. Running the code
+**Optional AI features.** Create a file named `.env` in the project folder (it is git-ignored; never commit keys):
 
-Run everything from the project root with the virtual environment active.
-
-### 11.1 Models and evaluation (no raw data needed)
-
-The committed tables in `data/processed/model/` are the inputs, so the Phase 2 download is not required.
-
-```powershell
-python -m src.models.baselines          # logistic regression and random forest, tuned on validation
-python -m src.models.tune               # random search for the MLP (40 configurations x 3 seeds)
-python -m src.models.train_mlp          # final MLP with the selected configuration
-python -m src.models.export_predictions # results/predictions/<model>_<split>.csv
-python -m src.models.plots              # architecture, curves and tuning figures
-
-python -m src.evaluation.baselines      # rule baselines
-python -m src.evaluation.evaluate       # metrics with intervals, ROC, PR, calibration, confusion figures
-python -m src.evaluation.error_analysis
-python -m src.evaluation.bias_check
-python -m src.evaluation.contribution_table   # run on main after all branches are merged
+```text
+GEMINI_API_KEY=your-key
+GROQ_API_KEY=your-groq-key        # optional second provider used as a fallback
+GEMINI_MODEL=gemini-3.8-flash     # optional, any provider has GROQ_MODEL / MISTRAL_MODEL / ANTHROPIC_MODEL
 ```
 
-Details: `docs/models.md` and `docs/evaluation.md`.
+Check it: `python -m src.inference.llm`. If the main model hits a quota error, the client tries the next model of the same provider and then every other provider with a key.
 
-### 11.2 Rebuilding the dataset (needs the Phase 2 outputs)
+## 5. Reproducing the data and models
 
-These scripts read the extracted text in `data/interim/text/` produced by the Phase 2 pipeline (section 11.3).
-
-```powershell
-python -m src.data.build_questions      # segment papers into questions
-python -m src.data.topics               # per-subject topics (training years only)
-python -m src.data.build_dataset        # train, validation and test in data/processed/model/
-python -m src.data.make_dummy_dataset   # random dummy data with the same schema, for development only
-```
-
-### 11.3 Phase 2 scripts
+All commands run from the project root. The committed tables in `data/processed/model/` are enough to retrain models; the raw download is only needed to rebuild the data.
 
 ```powershell
+# Phase 2: data (code in "data scripts/")
 python "data scripts/01_discover.py"
 python "data scripts/02_filter.py"
-python "data scripts/03_download.py" --limit 20   # quick test first
-python "data scripts/03_download.py"              # full download
+python "data scripts/03_download.py"        # about 2.4 GB, resumable
 python "data scripts/04_extract.py"
+python "data scripts/04b_ocr.py"            # OCR of scanned papers (needs Tesseract)
 python "data scripts/05_build_papers.py"
 python "data scripts/06_clean.py"
 python "data scripts/07_features.py"
 python "data scripts/08_eda.py"
+
+# Everything after extraction in one go (questions, topics, dataset, models, evaluation)
+python scripts/rebuild_all.py               # supports --from and --to
+
+# Phases 3-4 step by step
+python -m src.models.baselines
+python -m src.models.tune                   # random search, 40 configurations x 3 seeds
+python -m src.models.train_mlp
+python -m src.models.export_predictions
+python -m src.models.plots
+python -m src.evaluation.evaluate
+python -m src.evaluation.error_analysis
+python -m src.evaluation.bias_check
+
+# Figures of the final report
+python scripts/make_report_figures.py
 ```
 
-Notes:
+## 6. Model weights and runtime bundle
 
-* The full download was about 2.4 GB (3,567 files) and took roughly one and a half to two hours in our run. It can be stopped and re-run; finished files are skipped.
-* If step 1 reports a GitHub *rate limit*, set a personal token first: `$env:GITHUB_TOKEN="<token>"` (never commit a token).
-* The archive keeps growing, so a new run on the latest commit can give slightly different numbers than the reports. The commit used is recorded in the logs.
-* Step 5 reads `config/subject_aliases.yaml` if it exists. Check it with `python "data scripts/check_aliases.py"`.
+Large binary files are not in Git. Weights (`mlp_best.pt`, `preprocess.joblib`, `logreg.joblib`, `random_forest.joblib`) are hosted here:
 
-## 12. Key numbers
+**https://drive.google.com/drive/folders/1IQb9xincr7PjG4kQvqEmj8jBBezRqQRZ?usp=drive_link**
 
-**Phase 2 (Deliverable 1)**, from the logs in `logs/` and the tables in `data/processed/`:
+The application also needs the **runtime bundle** (`runtime_bundle.zip`, 43 files, about 5 MB: trained models, 37 per-subject topic models and the question bank). Build it with `python scripts/make_runtime_bundle.py`, host it (for example as a GitHub Release asset) and fetch it with `python scripts/get_runtime.py <url>` or put the link in `config/runtime_url.txt`. The question bank is derived from exam papers and is therefore not redistributed inside the repository.
 
-| Item | Value |
+## 7. Repository structure
+
+```text
+SpillThePaper/
+├── README.md, requirements.txt, .gitignore
+├── app/                 # Streamlit app: Home.py, pages/ (Past papers, Upcoming paper, My results), components/
+├── config/              # filter rules, assessment rules, subject aliases
+├── data scripts/        # Phase 2: collection, extraction, OCR, cleaning, features, EDA
+├── src/
+│   ├── data/            # OCR, question segmentation, cleaning, question features, topics, dataset
+│   ├── models/          # preprocessing, baselines, MLP, tuning, plots
+│   ├── evaluation/      # metrics, baselines, error analysis, bias check, contribution table
+│   └── inference/       # backend: library, predictor, syllabus, uploads, generator, solutions,
+│                        #   LLM client, question rewriting, grading, results, personalised paper, PDF export
+├── scripts/             # rebuild_all, get_runtime, make_runtime_bundle, diagnose, make_report_figures
+├── tests/               # 200+ automated tests (no network or API key needed)
+├── docs/                # dataset schema, data settings, models, evaluation, backend API
+├── data/                # raw/ and interim/ are NOT in Git; processed/ holds small tables
+├── models/              # weights (NOT in Git, see section 6)
+├── results/             # tuning, predictions, metrics, error analysis, bias check
+├── eda/, logs/          # exploratory charts and run logs
+└── report/              # LaTeX reports (Deliverables 1, 2 and the final report) and figures
+```
+
+## 8. Testing
+
+`python -m pytest tests -q` runs 200+ tests: no leakage (target-year changes never alter features), serving features equal training features, saved topic models reproduce stored topic ids, metrics and bootstrap, question segmentation and cleaning, syllabus parser, generator (structure, determinism), solution service and background jobs, the LLM client (mocked HTTP, fallback), grading and personalisation, and every Streamlit page.
+
+## 9. Limitations
+
+* Predicted questions are mostly real past questions; probabilities are rankings and over-estimated; difficulty is a proxy.
+* Learned models are not statistically separated from the best simple rule; no cold-start (never-seen topic) evidence.
+* Topics are keyword clusters (median silhouette 0.093), not syllabus topics.
+* Only 37 of 127 subjects have enough history; 349 clean papers (mostly handwritten) stay unreadable.
+* Marks parse for about half of the questions; question-type accuracy has not been measured against hand labels.
+* Archived solutions can be partial; AI solutions and photo grading must be checked by the student; free API plans have rate limits.
+* The generator has not yet been scored paper by paper against real exams.
+* No instructor-specific analysis (no reliable instructor data).
+
+## 10. Team
+
+| Name | Roll number |
 |---|---|
-| Files in the archive (at the collected commit) | 8,562 |
-| Files selected (quiz 1,400, mid 1,215, final 819, outline 124, unspecified exam 9) | 3,567 |
-| Files downloaded without failure | 3,567 |
-| Text extracted (PDF 2,132, Word 311) | 2,443 |
-| Flagged for OCR (scanned PDF or photo) | 1,123 |
-| Exam papers in the papers table | 3,443 |
-| Papers after removing duplicates, merged compilations and solution companions | 2,874 |
-| Clean papers with readable text | 1,823 |
-| Subject labels in the clean table | 131 |
-| Year known (clean papers) | 2,349 of 2,874 (years 2008 to 2026) |
+| Minahil Basalat | 24L-3082 |
+| Iman Abid | 24L-0707 |
+| Khadija Rao | 24L-3042 |
 
-**Phases 3 and 4 (Deliverable 2):**
+The commit-to-module mapping is in `results/contribution_table.csv` (run `python -m src.evaluation.contribution_table`).
 
-| Item | Value |
-|---|---|
-| Papers with readable text and a known year | 1,638 |
-| Questions segmented | 7,780 (from 1,575 papers) |
-| Subjects with enough history / topics | 28 of 105 / 220 |
-| Supervised dataset | 2,290 rows (1,421 train, 301 validation, 568 test) |
-| MLP parameters | 353 |
+## 11. Acknowledgements and data notes
 
-## 13. Limitations
-
-* About one third of exam papers (32.6%) have no extractable text (scans and photographs), most often finals. 24 subjects have no readable paper.
-* Topics come from unsupervised clustering with low silhouette scores (median 0.097); some clusters capture generic wording instead of course content, and the labels inherit this noise.
-* Only 28 of 105 subjects have enough history for the models; the test split contains almost only theory subjects and no topic that never appeared before.
-* The validation split has 36 target exams and the test split 67, so small metric differences are noise.
-* The positive rate falls over time (0.473, 0.392, 0.347) and predicted probabilities are too high.
-* A simple history rule ("appeared last year") ranks topics about as well as the learned models.
-* Subject coverage is uneven (median 11 papers per subject; 31 subjects have fewer than five).
-* Year, term, assessment type and number are parsed with rules from paths and headers; accuracy on a manually labelled sample has not been measured. The same holds for question segmentation.
-* Total marks and question counts are estimates from text patterns and are missing for about a third of readable papers.
-* Solution files without a plain companion are kept (flagged), so some question text may repeat.
-* No professor-specific analysis (no reliable instructor information for papers or quizzes).
-* The source archive is community-maintained and may contain mislabelled or incomplete files. Course outlines come from different terms, so none can be assumed to be the current syllabus.
-
-## 14. Team
-
-| Name | Roll number | Main modules |
-|---|---|---|
-| Minahil Basalat | 24L-3082 | `src/data`, dataset and settings documentation, integration |
-| Iman Abid | 24L-0707 | `src/evaluation`, evaluation documentation |
-| Khadija Rao | 24L-3042 | `src/models`, model documentation |
-
-The full commit-to-module mapping is in `results/contribution_table.csv` and `results/contribution_commits.csv`, and in the Deliverable 2 report.
-
-## 15. Acknowledgements and data notes
-
-* Past papers and outlines come from the community archive *Academic-Time-Machine*; credit to its maintainers and contributors.
-* Raw files are not redistributed here. Course outlines may name instructors; instructor names are not used or published in this project.
+Past papers and outlines come from the community archive [Academic-Time-Machine](https://github.com/saleha-muzammil/Academic-Time-Machine) (pinned commit `e0e197577432957a5fad0f76d2ab92d78f48e1d8`); credit to its maintainers and contributors. Raw papers are not redistributed; scripts download them into the git-ignored `data/raw/`.
