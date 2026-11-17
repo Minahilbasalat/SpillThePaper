@@ -63,7 +63,7 @@ pip install -r requirements.txt
 **Get the trained models and the question bank** (not stored in Git; see section 6):
 
 ```powershell
-python scripts/get_runtime.py <URL-of-runtime_bundle.zip>
+python scripts/get_runtime.py
 ```
 
 **Run the tests and the app:**
@@ -122,7 +122,7 @@ Large binary files are not in Git. Weights (`mlp_best.pt`, `preprocess.joblib`, 
 
 **https://drive.google.com/drive/folders/1IQb9xincr7PjG4kQvqEmj8jBBezRqQRZ?usp=drive_link**
 
-The application also needs the **runtime bundle** (`runtime_bundle.zip`, 43 files, about 5 MB: trained models, 37 per-subject topic models and the question bank). Build it with `python scripts/make_runtime_bundle.py`, host it (for example as a GitHub Release asset) and fetch it with `python scripts/get_runtime.py <url>` or put the link in `config/runtime_url.txt`. The question bank is derived from exam papers and is therefore not redistributed inside the repository.
+The application also needs the **runtime bundle** (`runtime_bundle.zip`, 43 files, about 5 MB: trained models, 37 per-subject topic models and the question bank). The bundle is `runtime_bundle.zip`, hosted in the same Drive folder. Its link is stored in `config/runtime_url.txt`, so `python scripts/get_runtime.py` downloads and unpacks it automatically. The question bank is derived from exam papers and is therefore not redistributed inside the repository.
 
 ## 7. Repository structure
 

@@ -83,7 +83,7 @@ Phase & Content and section \\
 3: Model architecture & Task definition, topic discovery, features, models, MLP, loss, optimiser, tuning (Sections~\ref{sec:task}, \ref{sec:models}) \\
 4: Training and evaluation & Validation strategy, metrics, results, error analysis, bias check (Section~\ref{sec:eval}) \\
 5: Application & Backend, language-model layer, grading and personalisation, user interface (Sections~\ref{sec:backend}--\ref{sec:ui}) \\
-6: Documentation & Testing, limitations, future work, reproducibility (Sections~\ref{sec:testing}--\ref{sec:repro}) \\
+6: Documentation & Testing, limitations, possible extensions, reproducibility (Sections~\ref{sec:testing}--\ref{sec:repro}) \\
 \bottomrule
 \end{tabular}
 \caption{Phases of the project and where this report covers them.}
@@ -970,18 +970,15 @@ real paper); only the topic-level models are evaluated quantitatively.
 \end{itemize}
 
 %=====================================================================
-\section{Future Work}
+\section{Possible Extensions}
 \label{sec:future}
-\begin{enumerate}
-\item A paired bootstrap of model versus rule, and a paper-level backtest of the generator (how many topics of the real exam
-it covers, against simple baselines).
-\item Production mode: fit topics and models on all years so newer courses are supported.
-\item Add-your-own-subject for unsupported subjects, and an OCR rescue pass for papers that a vision model could read.
-\item Hand-labelling a sample of question types and difficulty to quote a measured accuracy.
-\item Semantic (embedding) matching for syllabus items and topics, richer question-level features for the models, and a study of
-cold-start topics once the data contain them.
-\item Public deployment of the Streamlit application.
-\end{enumerate}
+The project is complete for the scope set in Section~\ref{sec:problem}. The limitations above point to extensions that were
+deliberately left outside this scope:
+\begin{itemize}
+\item a paired bootstrap of model versus rule, and a paper-level backtest of the generator against real exams;
+\item fitting topics and models on all years so that newer courses are supported, and letting students add their own subject;
+\item a measured accuracy for question types and difficulty from a hand-labelled sample, and embedding-based syllabus matching.
+\end{itemize}
 
 %=====================================================================
 \section{Conclusion}
@@ -1010,7 +1007,7 @@ evaluation), \texttt{src/inference/} (the backend), \texttt{app/} (the interface
 
 %=====================================================================
 \begin{thebibliography}{99}\small
-\bibitem{atm} S.~Muzammil et al., \emph{Academic-Time-Machine}: a student-maintained archive of FAST-NUCES past papers, GitHub repository, \url{https://github.com/saleha-muzammil/Academic-Time-Machine} (pinned commit e0e1975).
+\bibitem{atm} saleha-muzammil and contributors, \emph{Academic-Time-Machine}: a student-maintained archive of FAST-NUCES past papers, GitHub repository, \url{https://github.com/saleha-muzammil/Academic-Time-Machine} (pinned commit e0e1975).
 \bibitem{sklearn} F.~Pedregosa et al., ``Scikit-learn: Machine learning in Python,'' \emph{Journal of Machine Learning Research}, vol.~12, pp.~2825--2830, 2011.
 \bibitem{pytorch} A.~Paszke et al., ``PyTorch: An imperative style, high-performance deep learning library,'' in \emph{Advances in Neural Information Processing Systems 32}, 2019.
 \bibitem{adam} D.~P. Kingma and J.~Ba, ``Adam: A method for stochastic optimization,'' in \emph{International Conference on Learning Representations (ICLR)}, 2015.

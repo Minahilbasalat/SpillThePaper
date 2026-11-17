@@ -15,3 +15,4 @@ streamlit>=1.40
 plotly
 fpdf2
 python-dotenv
+gdown
