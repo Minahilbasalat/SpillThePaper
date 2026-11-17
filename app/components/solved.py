@@ -29,7 +29,7 @@ line-height:1.5;padding:1rem 1.1rem;overflow-x:auto;white-space:pre;margin:.4rem
 .st-key-sv-up [data-testid="stElementContainer"],.st-key-sv-up [data-testid="stButton"],
 .st-key-sv-up-top [data-testid="stElementContainer"],.st-key-sv-up-top [data-testid="stButton"]{width:100% !important;}
 .stApp .st-key-sv-up button,.stApp .st-key-sv-up-top button{width:100%;background:var(--ink) !important;
-border:2px solid var(--ink);border-radius:3px;box-shadow:5px 5px 0 var(--red) !important;padding:.8rem 1rem;opacity:.55;}
+border:2px solid var(--ink);border-radius:3px;box-shadow:5px 5px 0 var(--red) !important;padding:.8rem 1rem;}
 .stApp .st-key-sv-up-top button{box-shadow:none !important;padding:.5rem 1rem;}
 .stApp .st-key-sv-up button p,.stApp .st-key-sv-up-top button p{color:var(--lime) !important;font-weight:700;}
 .st-key-sv-pdf,.st-key-sv-pdf [data-testid="stElementContainer"],.st-key-sv-pdf [data-testid="stDownloadButton"]{width:100% !important;}

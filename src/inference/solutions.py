@@ -98,7 +98,7 @@ class SolutionService:
                 text, scheme = _parse(self.llm.complete(SYSTEM, user))
             except Exception as e:          # LLMError, or anything a custom client raises
                 return {"text": "", "marking_scheme": None, "source": "none",
-                        "note": f"AI solution failed: {e}" if str(e) else "AI solution failed."}
+                        "note": f"The AI could not write this solution right now: {e}." if str(e) else "The AI could not write this solution right now."}
             if not text:
                 return {"text": "", "marking_scheme": None, "source": "none",
                         "note": "The AI returned an empty answer. Try again."}

@@ -39,7 +39,7 @@ gap:.8rem;margin-top:1.4rem;}
 .stApp .st-key-mv-start button{background:var(--ink) !important;box-shadow:5px 5px 0 var(--red) !important;}
 .stApp .st-key-mv-start button p{color:var(--lime) !important;}
 .stApp .st-key-mv-solution button{background:var(--pink) !important;}
-.stApp .st-key-mv-upload button{background:var(--blue) !important;opacity:.55;}
+.stApp .st-key-mv-upload button{background:var(--blue) !important;}
 .stApp .st-key-mv-dl button{background:transparent !important;border:0 !important;box-shadow:none !important;
 text-decoration:underline;padding:.2rem;}
 .soon{font-family:'Special Elite',monospace;font-size:.7rem;color:var(--ink);margin-top:-.4rem;}
