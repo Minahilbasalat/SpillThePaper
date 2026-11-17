@@ -1,5 +1,6 @@
-"""The optional AI step (tidy / new questions). The AI is replaced by a fake: no key, no internet."""
+"""The AI step on a paper (new questions / tidied questions), one batched call. The AI is a fake."""
 import json
+import re
 
 import pytest
 
@@ -7,6 +8,12 @@ from src.inference.variants import rewrite_paper
 
 ORIG = ("Write a C++ program that reads n integers into a dynamic array, finds the largest value and the "
         "smallest value, and prints both of them. Use pointers for all array access and free the memory.")
+NEW = ("Design a C++ function that receives a pointer to a dynamically allocated array of student marks and "
+       "returns the average mark. Show how the array is created in main and released afterwards.")
+NEW2 = ("Implement a C++ class Stack backed by a dynamically allocated array with push, pop and peek, and "
+        "explain what happens to the memory when the stack is destroyed.")
+TIDY = ("Write a C++ program that reads n integers into a dynamic array,\nfinds the largest value and the "
+        "smallest value,\nand prints both of them.\nUse pointers for all array access and free the memory.")
 
 
 def paper():
@@ -21,94 +28,90 @@ def paper():
 
 
 class Fake:
+    """script: one dict {number: question text or None} per call; the last one repeats."""
     available, provider, model = True, "fake", "m"
 
-    def __init__(self, question=None, diagram=False, fail=False):
-        self.question, self.diagram, self.fail, self.calls = question, diagram, fail, 0
+    def __init__(self, *script, diagram=False, fail=False):
+        self.script, self.diagram, self.fail, self.calls, self.prompts = list(script), diagram, fail, 0, []
 
     def complete(self, system, user, max_tokens=1200):
         self.calls += 1
+        self.prompts.append(user)
         if self.fail:
             raise RuntimeError("quota")
-        return json.dumps({"question": self.question, "needs_diagram": self.diagram})
+        plan = self.script[min(self.calls, len(self.script)) - 1]
+        nums = [int(n) for n in re.findall(r"\[#(\d+)\]", user)]
+        return json.dumps({"questions": [{"number": n, "question": plan.get(n), "needs_diagram": self.diagram}
+                                         for n in nums if n in plan]})
 
 
-TIDY = "Write a C++ program that reads n integers into a dynamic array,\nfinds the largest value and the smallest value,\nand prints both of them.\nUse pointers for all array access and free the memory."
-NEW = ("Design a C++ function that receives a pointer to a dynamically allocated array of student marks and "
-       "returns the average mark. Show how the array is created in main and released afterwards.")
-
-
-def test_tidy_keeps_the_real_question(tmp_path):
-    out = rewrite_paper(paper(), Fake(TIDY), "tidy", cache_path=tmp_path / "c.json")
-    q = out["questions"][0]
-    assert q["text"] == TIDY and q["raw_text"] == ORIG and q["ai_mode"] == "tidy" and not q.get("ai_written")
-    assert q["solution"] == "int main(){}" and q["needs_figure"] is False         # same question: solution stays
-    assert out["question_style"] == "tidy" and any("tidied by the AI" in n for n in out["notes"])
-    assert paper()["questions"][0]["text"] == ORIG                                   # input untouched
-
-
-def test_tidy_that_changes_the_question_is_rejected(tmp_path):
-    out = rewrite_paper(paper(), Fake(NEW), "tidy", cache_path=tmp_path / "c.json")
-    assert out["questions"][0]["text"] == ORIG and out["question_style"] == "real"
-    assert any("could not be tidied" in n for n in out["notes"])
-
-
-def test_new_question_replaces_text_and_drops_the_old_solution(tmp_path):
-    out = rewrite_paper(paper(), Fake(NEW), "new", cache_path=tmp_path / "c.json")
-    q = out["questions"][0]
-    assert q["text"] == NEW and q["raw_text"] == ORIG and q["ai_written"] and q["based_on"] == "Final 2023"
-    assert q["solution"] is None and q["solution_source"] is None and q["marks"] == 10
+def test_one_call_writes_the_whole_paper(tmp_path):
+    ai = Fake({1: NEW, 2: NEW2})
+    out = rewrite_paper(paper(), ai, "new", cache_path=tmp_path / "c.json")
+    assert ai.calls == 1
+    q1, q2 = out["questions"]
+    assert q1["text"] == NEW and q2["text"] == NEW2 and q1["raw_text"] == ORIG
+    assert q1["ai_written"] and q1["ai_mode"] == "new" and q1["based_on"] == "Final 2023" and q1["marks"] == 10
+    assert q1["solution"] is None and q1["solution_source"] is None and q1["needs_figure"] is False
     assert out["question_style"] == "new" and out["notes"][0].startswith("AI-written")
     assert not any(n.startswith("These are real past") for n in out["notes"])
+    assert paper()["questions"][0]["text"] == ORIG                                  # the input is untouched
 
 
-@pytest.mark.parametrize("reply, why", [(ORIG, "a copy"), ("Too short.", "short"), ("As an AI I cannot write that "
-                                        "question for you because it is not allowed in this context.", "refusal"),
-                                        (None, "no question")])
-def test_bad_new_questions_keep_the_real_one(tmp_path, reply, why):
-    out = rewrite_paper(paper(), Fake(reply), "new", cache_path=tmp_path / "c.json")
-    assert [q["text"] for q in out["questions"]][0] == ORIG, why
-    assert out["question_style"] == "real" and any("could not be rewritten" in n for n in out["notes"])
+def test_tidy_keeps_the_real_question_and_its_solution(tmp_path):
+    out = rewrite_paper(paper(), Fake({1: TIDY}), "tidy", cache_path=tmp_path / "c.json")
+    q = out["questions"][0]
+    assert q["text"] == TIDY and q["raw_text"] == ORIG and q["ai_mode"] == "tidy" and not q.get("ai_written")
+    assert q["solution"] == "int main(){}" and out["question_style"] == "tidy"
+    assert out["questions"][1]["text"].startswith("Write a C++")                    # no answer for Q2: kept
+
+
+def test_only_the_failed_question_is_asked_again(tmp_path):
+    ai = Fake({1: NEW, 2: ORIG}, {2: NEW2})                  # first reply: Q2 is a copy, second call fixes it
+    out = rewrite_paper(paper(), ai, "new", cache_path=tmp_path / "c.json")
+    assert ai.calls == 2 and "[#1]" not in ai.prompts[1] and "[#2]" in ai.prompts[1]
+    assert [q["text"] for q in out["questions"]] == [NEW, NEW2]
+
+
+@pytest.mark.parametrize("reply", [ORIG, "Too short.", None,
+                                   "As an AI I cannot write that question for you because it is not allowed."])
+def test_bad_answers_keep_the_real_tidied_question(tmp_path, reply):
+    out = rewrite_paper(paper(), Fake({1: reply, 2: reply}), "new", cache_path=tmp_path / "c.json")
+    assert out["questions"][0]["text"] == ORIG and out["question_style"] == "real"
+    assert any("kept the real past question" in n for n in out["notes"])
 
 
 def test_diagram_questions_are_not_rewritten(tmp_path):
-    out = rewrite_paper(paper(), Fake(NEW, diagram=True), "new", cache_path=tmp_path / "c.json")
+    out = rewrite_paper(paper(), Fake({1: NEW, 2: NEW2}, diagram=True), "new", cache_path=tmp_path / "c.json")
     assert out["questions"][0]["text"] == ORIG
-    out = rewrite_paper(paper(), Fake(TIDY, diagram=True), "tidy", cache_path=tmp_path / "c.json")
+    out = rewrite_paper(paper(), Fake({1: TIDY, 2: TIDY}, diagram=True), "tidy", cache_path=tmp_path / "d.json")
     assert out["questions"][0]["needs_figure"] is True
 
 
-def test_ai_down_stops_after_one_failed_call_and_cache_saves_calls(tmp_path):
-    p = paper()
-    p["questions"] += [dict(p["questions"][0], number=n) for n in (3, 4, 5)]
+def test_ai_down_is_one_failed_call_and_the_cache_saves_calls(tmp_path):
     bad = Fake(fail=True)
-    out = rewrite_paper(p, bad, "new", cache_path=tmp_path / "c.json")
-    assert bad.calls == 1 and all(q["text"] in (ORIG, ORIG + " Also count the values.") for q in out["questions"])
-    ok = Fake(NEW)
+    out = rewrite_paper(paper(), bad, "new", cache_path=tmp_path / "c.json")
+    assert bad.calls == 1 and out["questions"][0]["text"] == ORIG and "not available" in out["notes"][-1]
+    ok = Fake({1: NEW, 2: NEW2})
     rewrite_paper(paper(), ok, "new", cache_path=tmp_path / "d.json")
-    n = ok.calls
     again = rewrite_paper(paper(), ok, "new", cache_path=tmp_path / "d.json")
-    assert ok.calls == n and again["questions"][0]["text"] == NEW                       # served from the cache
+    assert ok.calls == 1 and again["questions"][0]["text"] == NEW                    # second time: from the cache
 
 
-def test_no_key_and_bad_mode(tmp_path):
+def test_no_key_bad_mode_and_running_twice(tmp_path):
     class Off:
         available = False
     out = rewrite_paper(paper(), Off(), "new", cache_path=tmp_path / "c.json")
     assert out["questions"][0]["text"] == ORIG and any("switched off" in n for n in out["notes"])
     with pytest.raises(ValueError):
-        rewrite_paper(paper(), Fake(NEW), "other")
-
-
-def test_running_twice_does_not_repeat_the_work(tmp_path):
-    ok = Fake(NEW)
-    once = rewrite_paper(paper(), ok, "new", cache_path=tmp_path / "c.json")
-    n = ok.calls
-    twice = rewrite_paper(once, ok, "new", cache_path=tmp_path / "c.json")
-    assert ok.calls == n and twice is once
+        rewrite_paper(paper(), Fake({}), "other")
+    ok = Fake({1: NEW, 2: NEW2})
+    once = rewrite_paper(paper(), ok, "new", cache_path=tmp_path / "e.json")
+    assert rewrite_paper(once, ok, "new", cache_path=tmp_path / "e.json") is once and ok.calls == 1
 
 
 def test_progress_callback(tmp_path):
     seen = []
-    rewrite_paper(paper(), Fake(NEW), "new", progress=lambda i, n: seen.append((i, n)), cache_path=tmp_path / "c.json")
-    assert seen == [(1, 2), (2, 2)]
+    rewrite_paper(paper(), Fake({1: NEW, 2: NEW2}), "new", progress=lambda i, n: seen.append((i, n)),
+                  cache_path=tmp_path / "c.json")
+    assert seen == [(2, 2)]

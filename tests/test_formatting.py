@@ -67,6 +67,27 @@ def test_every_real_question_formats_safely():
     import pandas as pd
     t = pd.read_csv(C.QUESTION_TABLE_CSV)["question_text"].astype(str)
     f = t.map(format_question)
-    assert (f.str.len() > 0).all()
+    assert (f.str.len() > 0).mean() > 0.99                                  # only pure header text vanishes
     assert (f.map(format_question) == f).all()
     assert 0.0 < t.map(needs_figure).mean() < 0.2                          # a minority, not everything
+
+
+def test_page_headers_and_scanner_watermarks_are_removed():
+    t = ("Question 2 Spring 2025 Department of Computer Science Lahore Campus Explain A* search in detail. "
+         "Scanned with CamScanner [BLANK PAGE FOR WORKING] School of Computer Science Page 3 of 7")
+    assert format_question(t) == "Explain A* search in detail."
+    assert format_question(format_question(t)) == format_question(t)
+
+
+@pytest.mark.parametrize("text, broken", [
+    ("Correct Statement: Minimax always results in an optimal decision against a perfect player", True),
+    ("d. If you are allowed to assign A-F arbitrarily, what is the MAXIMUM number of leaves that can be pruned?", True),
+    ("The activation function g(x) is given below: ? ? ??? ?? ?< ? and more words in this sentence here", True),
+    ("Seg 3 (Seq 150, Len 10) Host B Buffer Space", True),
+    ("Explain the difference between a process and a thread and give two examples of each.", False),
+    ("a. Write a function that reverses a linked list in place. b. State its time complexity.", False),
+    ("Consider the following relation and find all candidate keys; justify each of your answers.", False),
+])
+def test_looks_broken(text, broken):
+    from src.inference.formatting import looks_broken
+    assert looks_broken(format_question(text)) is broken

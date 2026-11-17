@@ -18,6 +18,7 @@ from src.inference.library import default_duration
 from src.inference.syllabus import default_scope, parse_syllabus
 from src.inference.uploads import ingest_papers
 from src.inference.variants import rewrite_paper
+from src.inference.solution_jobs import SolutionJob
 from common import get_llm
 
 theme.setup("Upcoming paper", active="upcoming")
@@ -426,14 +427,13 @@ def generate(subject: str, exam: str, advanced: dict) -> str | None:
         return str(err)
     except Exception:
         return "Something went wrong while building the paper. Please try again."
-    style = advanced.get("style", "real")
-    if style != "real":
+    if get_llm().available:          # the AI writes new similar questions; a failed one keeps the real (tidied) question
         try:
-            with st.spinner("Asking the AI to write the questions (a few seconds for each)..."):
-                paper = rewrite_paper(paper, get_llm(), mode=style)
+            with st.spinner("The AI is writing new questions from real past ones (about 10-20 seconds)..."):
+                paper = rewrite_paper(paper, get_llm(), mode="new")
         except Exception:
             paper["notes"] = list(paper.get("notes") or []) + [
-                "The AI step failed, so the questions are the real past questions."]
+                "The AI step failed, so the questions are the real past questions (tidied)."]
     if st.session_state["up_timer_on"]:
         paper["duration_minutes"] = effective_minutes()
     st.session_state["up_exam_timer"] = bool(st.session_state["up_timer_on"])
@@ -442,6 +442,7 @@ def generate(subject: str, exam: str, advanced: dict) -> str | None:
     timer.reset()
     st.session_state["up_solutions"] = None
     st.session_state["up_paper"] = paper
+    solutions_for(paper)          # the AI starts writing the missing solutions now, in the background
     st.session_state["up_screen"] = "paper"
     st.rerun()
     return None
@@ -463,19 +464,13 @@ def right_column() -> None:
             disabled=subject not in SUPPORTED,
         )
     st.markdown(
-        '<div class="fine">Predicted questions are real past questions chosen for the topics most likely to come, unless you switch on the AI under Advanced.</div>',
+        '<div class="fine">Questions are based on real past questions chosen for the topics most likely to come. With an API key set, the AI rewrites them as new similar questions.</div>',
         unsafe_allow_html=True,
     )
     with st.expander("Advanced"):
-        style = "real"
-        if get_llm().available:
-            styles = {"Real past questions": "real", "Real questions, tidied by AI": "tidy",
-                      "New similar questions, written by AI": "new"}
-            style = styles[st.selectbox("Question style", list(styles), key="up_style")]
-        else:
-            st.caption("AI question writing is off (no API key set): the questions are real past questions.")
+        if not get_llm().available:
+            st.caption("The AI is off (no API key set): you get tidied real past questions and archived solutions only.")
         advanced = {
-            "style": style,
             "n_questions": int(st.number_input("Number of questions (0 = automatic)", 0, 30, 0, key="up_nq")),
             "total_marks": int(st.number_input("Total marks (0 = automatic)", 0, 500, 0, step=5, key="up_marks")),
             "explore_share": float(st.slider("Share of less-predicted questions", 0.0, 0.5, 0.2, 0.05, key="up_explore")),
@@ -580,7 +575,7 @@ def next_move(paper: dict) -> None:
         else:
             st.caption("PDF export is not available right now.")
     st.markdown(
-        '<div class="fine">Questions are real past questions chosen for likely topics. '
+        '<div class="fine">Questions are based on real past questions chosen for likely topics (AI-written ones are tagged). '
         'The squares are a ranking, not an exact chance.</div>',
         unsafe_allow_html=True,
     )
@@ -588,9 +583,8 @@ def next_move(paper: dict) -> None:
 
 def how_it_was_made(paper: dict) -> None:
     with st.expander("How this paper was made"):
-        for line in paper.get("notes") or []:
+        for line in predicted.how_made_lines(paper):
             st.markdown(f"- {line}")
-        st.markdown("- Difficulty is a proxy built from past papers. Syllabus matching compares words and is approximate.")
         fig = predicted.topic_figure(paper.get("topics"))
         if fig is not None:
             st.plotly_chart(fig, use_container_width=True)
@@ -678,38 +672,19 @@ def exam_screen(paper: dict) -> None:
 
 # ---------- solved paper screen ----------
 def solutions_for(paper: dict) -> dict:
-    """Archive solutions (instant), computed once per paper and kept in session state."""
+    """Solutions of this paper: archive ones at once, the others are written by the AI in the background
+    (started when the paper is made, see SolutionJob). Kept in session state."""
     stored = st.session_state["up_solutions"]
-    if stored is None:
-        try:
-            with st.spinner("Looking up solutions in the archive..."):
-                items = list(get_solutions().solve_paper(paper, allow_ai=False))
-        except Exception:
-            items = []
-        stored = {"items": items, "pdf": None}
+    if stored is None or stored.get("paper") is not paper:
+        stored = {"job": SolutionJob(get_solutions(), paper), "paper": paper, "pdf": None}
         st.session_state["up_solutions"] = stored
     return stored
-
-
-def generate_ai(paper: dict, stored: dict, missing: list[int]) -> None:
-    """Ask the AI for the questions without an archive solution, one by one with a progress bar."""
-    service = get_solutions()
-    items = list(stored["items"])
-    bar = st.progress(0.0, text="Asking the AI (a few seconds per question)...")
-    for step, i in enumerate(missing, 1):
-        try:
-            items[i] = service.solve(paper["subject"], paper["questions"][i], allow_ai=True)
-        except Exception:
-            items[i] = dict(items[i], note="The AI solution could not be generated. Please try again.")
-        bar.progress(step / len(missing), text=f"AI solution {step} of {len(missing)}")
-    bar.empty()
-    st.session_state["up_solutions"] = {"items": items, "pdf": None}
 
 
 def solved_pdf(paper: dict, stored: dict) -> bytes:
     if stored["pdf"] is None:
         try:
-            stored["pdf"] = paper_to_pdf(paper, solutions=stored["items"])
+            stored["pdf"] = paper_to_pdf(paper, solutions=stored["job"].snapshot())
         except Exception:
             stored["pdf"] = b""
     return stored["pdf"]
@@ -743,9 +718,21 @@ def solution_card(index: int, question: dict, entry: dict) -> None:
             st.markdown(f'<div class="sq-note">{theme.esc(entry["note"])}</div>', unsafe_allow_html=True)
 
 
+def solution_cards(questions: list, job, polling: bool) -> None:
+    """The solution cards. While the AI is still writing they redraw themselves every 2 seconds."""
+    if job.pending:
+        st.caption(f"The AI is writing {job.pending} solution(s) in the background. They appear here by themselves.")
+    for i, entry in enumerate(job.snapshot()):
+        if i < len(questions):
+            solution_card(i, questions[i], entry)
+    if polling and not job.pending:
+        st.rerun()                  # everything is written: redraw the whole page (marking schemes, PDF)
+
+
 def solved_screen(paper: dict) -> None:
     stored = solutions_for(paper)
-    items = stored["items"]
+    job = stored["job"]
+    items = job.snapshot()
     questions = paper.get("questions") or []
 
     c_title, c_back, c_up = st.columns([3.2, 1, 1.2], vertical_alignment="bottom")
@@ -764,9 +751,10 @@ def solved_screen(paper: dict) -> None:
     with main:
         if not items:
             theme.notice("Solutions could not be loaded right now. Go back to the paper and try again.")
-        for i, entry in enumerate(items):
-            if i < len(questions):
-                solution_card(i, questions[i], entry)
+        if job.pending:
+            st.fragment(run_every=2)(solution_cards)(questions, job, True)
+        else:
+            solution_cards(questions, job, False)
     with side:
         for i, entry in enumerate(items):
             scheme = entry.get("marking_scheme")
@@ -780,15 +768,12 @@ def solved_screen(paper: dict) -> None:
             st.button("Upload my solution " + theme.ARROW, key="sv_up", disabled=True)
         st.markdown('<div class="soon">Coming soon</div>', unsafe_allow_html=True)
 
-        missing = [i for i, e in enumerate(items) if e.get("source") == "none"]
-        if get_solutions().ai_available():
-            if missing and st.button("Generate missing solutions with AI", key="up_gen_ai"):
-                generate_ai(paper, stored, missing)
-                st.rerun()
-        else:
-            st.caption("AI solutions are switched off (no API key set).")
+        if not get_solutions().ai_available():
+            st.caption("AI solutions are switched off (no API key set). Only archived solutions are shown.")
+        elif job.pending:
+            st.caption("The AI is writing the missing solutions in the background.")
 
-        if items:
+        if items and not job.pending:
             data = solved_pdf(paper, stored)
             if data:
                 with st.container(key="sv-pdf"):

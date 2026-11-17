@@ -25,7 +25,7 @@ import numpy as np
 import pandas as pd
 
 from src.data.exam_kinds import label
-from src.inference.formatting import format_question, needs_figure
+from src.inference.formatting import format_question, looks_broken, needs_figure
 from src.inference.library import default_duration
 from src.inference.syllabus import SyllabusMatcher
 
@@ -90,6 +90,9 @@ class PaperGenerator:
         pool["needs_figure"] = pool["needs_figure"].astype(bool)
         pool["question_text"] = pool["question_text"].map(clean_label).map(format_question)
         pool = pool[pool["question_text"].str.split().str.len() >= MIN_WORDS]
+        usable = pool[~pool["question_text"].map(looks_broken)]     # cut-off fragments and scan damage
+        if len(usable) >= max(25, len(pool) // 2):
+            pool = usable
         if not allow_figures:           # questions that need a diagram are used only if enough others exist
             ok = pool[~pool["needs_figure"]]
             if len(ok) >= max(25, len(pool) // 2):

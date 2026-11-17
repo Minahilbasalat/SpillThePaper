@@ -1,12 +1,14 @@
 """Optional AI step on a generated paper (needs an API key, see llm.py).
 
-    rewrite_paper(paper, llm, mode="tidy" | "new", variation=0, progress=None) -> new paper dict
+    rewrite_paper(paper, llm, mode="new" | "tidy", variation=0, progress=None) -> new paper dict
 
 mode "tidy": the SAME real question, rewritten with clean layout (line breaks, bullets, code lines,
              stray headers removed). Meaning, numbers, sub-parts and difficulty must not change.
 mode "new" : a NEW question on the same topic, type, difficulty and length, based on the real past
              question (different scenario and numbers). Its archive solution no longer applies, so
              it is removed (the solution page then writes a fresh one, or says there is none).
+
+ONE AI call handles the whole paper (fast); questions already in the cache cost nothing.
 
 Safety: every answer is checked (not empty, not a copy for "new", not a different question for
 "tidy", sensible length, no diagram needed). Anything that fails the check keeps the REAL
@@ -29,6 +31,11 @@ from src.inference import config as C
 
 _TOKEN = re.compile(r"[a-z0-9]+")
 MAX_FAILED_CALLS = 1
+
+BATCH_RULES = (
+    " You get SEVERAL questions, each marked [#number]. Handle each one on its own and return every number "
+    'you were given: reply with ONLY a JSON object {"questions": [{"number": <int>, "question": '
+    '"<text>", "needs_diagram": false}, ...]}.')
 
 SYSTEM_TIDY = (
     "You are a careful exam editor. The text of a university exam question was read from a PDF and its "
@@ -125,10 +132,35 @@ class _Cache:
             pass                                               # a cache that cannot be written is not an error
 
 
-def rewrite_paper(paper: dict, llm, mode: str = "tidy", variation: int = 0, progress=None,
+def _items(reply: str) -> dict:
+    """{number: {"q": text, "d": needs_diagram}} from a batch reply ({} when it is not usable)."""
+    data = _json_from(reply)
+    rows = data.get("questions") if isinstance(data, dict) else data if isinstance(data, list) else None
+    out = {}
+    for r in rows or []:
+        try:
+            out[int(r["number"])] = {"q": _tidy_text(str(r["question"])), "d": bool(r.get("needs_diagram"))}
+        except (KeyError, TypeError, ValueError, AttributeError):
+            continue
+    return out
+
+
+def _batch_prompt(paper: dict, qs: list, mode: str, variation: int) -> str:
+    lines = [f"Subject: {paper.get('subject', '')}"]
+    if mode == "new" and variation:
+        lines.append(f"Variation number: {variation}")
+    for q in qs:
+        lines.append(f"\n[#{q['number']}] Topic: {q.get('topic_label') or '-'} | Type: {q.get('qtype') or '-'} | "
+                     f"Difficulty: {q.get('difficulty') or '-'} | Marks: {q.get('marks') or '-'}\n"
+                     f"Real past question:\n{q['text']}")
+    return "\n".join(lines)
+
+
+def rewrite_paper(paper: dict, llm, mode: str = "new", variation: int = 0, progress=None,
                   cache_path: Path | None = None) -> dict:
-    """Return a copy of `paper` whose questions are tidied or newly written by the AI.
-    progress(done, total) is called after every question (for a progress bar)."""
+    """Return a copy of `paper` whose questions are newly written ("new") or tidied ("tidy") by the AI.
+    A question the AI could not handle keeps its real past text. progress(done, total) is called when
+    the AI has answered."""
     if mode not in ("tidy", "new"):
         raise ValueError("mode must be 'tidy' or 'new'")
     if paper.get("ai_step") == mode:                      # already done for this paper: do not repeat
@@ -140,48 +172,53 @@ def rewrite_paper(paper: dict, llm, mode: str = "tidy", variation: int = 0, prog
             "The AI is switched off (no API key is set), so the questions are the real past questions."]
         return out
     cache, qs = _Cache(cache_path), out["questions"]
-    system = SYSTEM_TIDY if mode == "tidy" else SYSTEM_NEW
+    system = (SYSTEM_TIDY if mode == "tidy" else SYSTEM_NEW) + BATCH_RULES
     model_id = f"{getattr(llm, 'provider', '')}/{getattr(llm, 'model', '')}"
-    done, failed, errors_in_a_row = [], [], 0
-    for i, q in enumerate(qs):
-        original = q["text"]
-        key = hashlib.sha1(f"{model_id}|{mode}|{variation}|{original}".encode()).hexdigest()
-        hit = cache.data.get(key)
-        if hit is None and errors_in_a_row < MAX_FAILED_CALLS:
-            user = (f"Subject: {out.get('subject', '')}\nTopic: {q.get('topic_label') or '-'}\n"
-                    f"Type: {q.get('qtype') or '-'}\nDifficulty: {q.get('difficulty') or '-'}\n"
-                    f"Marks: {q.get('marks') or '-'}\n"
-                    + (f"Variation number: {variation}\n" if mode == "new" else "")
-                    + f"\nReal past question:\n{original}")
-            try:
-                data = _json_from(llm.complete(system, user, 1500))
-                errors_in_a_row = 0
-                if isinstance(data, dict) and isinstance(data.get("question"), str):
-                    hit = {"q": _tidy_text(data["question"]), "d": bool(data.get("needs_diagram"))}
-                    cache.data[key] = hit
-            except Exception:
-                errors_in_a_row += 1
-        reason = None
-        if hit is None:
-            reason = "the AI did not answer"
-        else:
-            reason = _check(mode, original, hit["q"], hit["d"])
-        if reason:
+    key = lambda q: hashlib.sha1(f"b1|{model_id}|{mode}|{variation}|{q['text']}".encode()).hexdigest()
+    got = {q["number"]: cache.data[key(q)] for q in qs if key(q) in cache.data}
+    todo = [q for q in qs if q["number"] not in got]
+    ai_alive = True
+    for attempt in range(2):                              # second round only for answers that failed the check
+        if not todo or not ai_alive:
+            break
+        try:
+            reply = llm.complete(system, _batch_prompt(out, todo, mode, variation),
+                                 min(1500 + 450 * len(todo), 4000))
+        except Exception:
+            ai_alive = False                              # the client already retried: the AI is down
+            break
+        items = _items(reply)
+        if not items:
+            ai_alive = False
+            break
+        retry = []
+        for q in todo:
+            hit = items.get(q["number"])
+            if hit is not None and _check(mode, q["text"], hit["q"], hit["d"]) is None:
+                got[q["number"]] = hit
+                cache.data[key(q)] = hit
+            else:
+                retry.append(q)
+                if hit is not None and hit["d"] and mode == "tidy":
+                    q["needs_figure"] = True
+        todo = retry
+    if progress:
+        progress(len(qs), len(qs))
+    done, failed = [], []
+    for q in qs:
+        hit = got.get(q["number"])
+        if hit is None or _check(mode, q["text"], hit["q"], hit["d"]):
             failed.append(q["number"])
-            if hit is not None and hit["d"] and mode == "tidy":
-                q["needs_figure"] = True
-        else:
-            q["raw_text"] = original
-            q["text"] = hit["q"]
-            q["ai_mode"] = mode
-            q["needs_figure"] = False
-            if mode == "new":
-                q["ai_written"] = True
-                q["based_on"] = q.get("source")
-                q["solution"], q["solution_source"] = None, None   # the archive answer is for the OLD question
-            done.append(q["number"])
-        if progress:
-            progress(i + 1, len(qs))
+            continue
+        q["raw_text"] = q["text"]
+        q["text"] = hit["q"]
+        q["ai_mode"] = mode
+        q["needs_figure"] = False
+        if mode == "new":
+            q["ai_written"] = True
+            q["based_on"] = q.get("source")
+            q["solution"], q["solution_source"] = None, None   # the archive answer is for the OLD question
+        done.append(q["number"])
     cache.save()
     out["question_style"] = mode if done else "real"
     notes = [n for n in (out.get("notes") or []) if not (done and mode == "new" and n.startswith("These are real past"))]
@@ -193,7 +230,7 @@ def rewrite_paper(paper: dict, llm, mode: str = "tidy", variation: int = 0, prog
         notes.insert(0, "Question(s) " + ", ".join(map(str, done)) + " were tidied by the AI (layout only; "
                         "the content is the real past question).")
     if failed:
-        notes.append("Question(s) " + ", ".join(map(str, failed)) + " could not be " +
-                     ("tidied" if mode == "tidy" else "rewritten") + " by the AI and keep the real past text.")
+        notes.append("Question(s) " + ", ".join(map(str, failed)) + " kept the real past question (tidied) because "
+                     "the AI " + ("was not available." if not ai_alive else "did not give a usable rewrite."))
     out["notes"] = notes
     return out

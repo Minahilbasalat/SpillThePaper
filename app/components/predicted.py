@@ -124,6 +124,41 @@ def redacted_markup() -> str:
     )
 
 
+def how_made_lines(paper: dict) -> list[str]:
+    """Plain sentences for 'How this paper was made' (no jargon)."""
+    bp = paper.get("blueprint") or {}
+    kind = str(paper.get("exam_kind") or "")
+    exam = {"final": "Final", "mid1": "Mid 1", "mid2": "Mid 2", "mid": "Mid"}.get(kind, "Quiz" if kind.startswith("quiz") else kind)
+    qs = paper.get("questions") or []
+    n = len(qs)
+    lines = []
+    if bp.get("papers_used"):
+        own = bp.get("scope") == "subject"
+        lines.append(f"We studied {bp['papers_used']} past {exam} papers" + (" of this subject" if own else
+                     " (this subject has too few, so papers of all subjects were used for the structure)") +
+                     " and ranked the topics by how likely they are to come again, giving recent years more weight.")
+        if bp.get("questions"):
+            lines.append(f"A typical {exam} has about {float(bp['questions']):.0f} questions and "
+                         f"{float(bp.get('total_marks') or paper.get('total_marks') or 0):.0f} marks, so this paper does too.")
+    explore = int((paper.get("realised") or {}).get("explore_questions") or 0)
+    if explore:
+        lines.append(f"{explore} of {n} questions come from less-likely topics (marked 'Less-predicted area'), "
+                     "so a surprise topic does not catch you out.")
+    focus = int((paper.get("realised") or {}).get("focus_questions") or 0)
+    if paper.get("personalised") and focus:
+        lines.append(f"{focus} question(s) target the topics you were weak in; the others still follow the prediction.")
+    ai = sum(1 for q in qs if q.get("ai_written"))
+    if ai:
+        lines.append(f"{ai} question(s) were written by the AI from real past questions (tagged 'AI-written'); "
+                     f"the other {n - ai} are real past questions, tidied for reading.")
+    else:
+        lines.append("All questions are real past questions, tidied for reading.")
+    keys = ("diagram", "Too few earlier", "smaller than", "uploaded", "kept the real", "switched off", "could not", "failed")
+    lines += [x for x in (paper.get("notes") or []) if any(k in x for k in keys) and x not in lines]
+    lines.append("This is a study aid, not a guarantee of what will appear. Difficulty is estimated from past papers.")
+    return lines
+
+
 def realised_text(paper: dict) -> str:
     """Sentence for the yellow Difficulty note, written from paper['realised']."""
     realised = paper.get("realised") or {}

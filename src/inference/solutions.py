@@ -10,6 +10,7 @@ Order of preference (every answer says where it came from, nothing is presented 
 from __future__ import annotations
 
 import hashlib
+import threading
 import json
 import re
 from pathlib import Path
@@ -48,6 +49,7 @@ class SolutionService:
         self.llm = llm if llm is not None else LLMClient()
         self.cache_path = Path(cache_dir or C.CACHE_DIR) / "solutions.json"
         self._cache = None
+        self._lock = threading.RLock()          # solutions are written by several threads at once
 
     def ai_available(self) -> bool:
         return bool(getattr(self.llm, "available", False))
@@ -79,13 +81,17 @@ class SolutionService:
         if question.get("low_quality"):
             return {"text": "", "marking_scheme": None, "source": "none",
                     "note": "The text of this question is garbled (bad scan), so no solution is attempted."}
-        if not (allow_ai and self.ai_available()):
+        if not self.ai_available():
             return {"text": "", "marking_scheme": None, "source": "none",
                     "note": "No archived solution exists for this question, and AI solutions are "
-                            "not switched on (no API key is set)."}
-        cache = self._load()
+                            "switched off (no API key is set)."}
+        if not allow_ai:
+            return {"text": "", "marking_scheme": None, "source": "none",
+                    "note": "No archived solution exists for this question. The AI is writing one: wait a moment."}
         key = self._key(subject, question["text"])
-        if key not in cache:
+        with self._lock:
+            hit = self._load().get(key)
+        if hit is None:
             user = (f"Course: {subject}\nTopic: {question.get('topic_label') or 'n/a'}\n"
                     f"Marks: {question.get('marks') or 'n/a'}\nQuestion:\n{question['text']}")
             try:
@@ -96,9 +102,11 @@ class SolutionService:
             if not text:
                 return {"text": "", "marking_scheme": None, "source": "none",
                         "note": "The AI returned an empty answer. Try again."}
-            cache[key] = {"text": text, "marking_scheme": scheme}
-            self._save()
-        item = cache[key]
+            hit = {"text": text, "marking_scheme": scheme}
+            with self._lock:
+                self._load()[key] = hit
+                self._save()
+        item = hit
         return {"text": item["text"], "marking_scheme": item["marking_scheme"], "source": "ai",
                 "note": NOTES["ai"]}
 
