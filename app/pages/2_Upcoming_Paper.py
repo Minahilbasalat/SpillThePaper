@@ -189,7 +189,6 @@ def subject_exam_card() -> None:
             with col:
                 with st.container(key=f"exam-{mode}-{i}"):
                     st.button(label, key=f"up_exam_{value}", on_click=choose_exam, args=(value,))
-        st.radio("Year of the exam", [YEAR, YEAR + 1], horizontal=True, key="up_year")
 
 
 # ---------- card 2: upload recent papers ----------
@@ -416,7 +415,7 @@ def generate(subject: str, exam: str, advanced: dict) -> str | None:
             paper = get_generator().generate(
                 subject,
                 exam,
-                int(st.session_state["up_year"]),
+                YEAR,
                 syllabus_items=list(st.session_state["up_topics"]) or None,
                 extra=extra,
                 n_questions=advanced["n_questions"] or None,

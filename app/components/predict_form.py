@@ -53,7 +53,6 @@ box-shadow:6px 6px 0 var(--red) !important;width:100%;padding:1rem;border-radius
 [class*="st-key-exam-"] [data-testid="stButton"]>button{padding:.9rem .5rem !important;}
 [data-testid="stExpander"] summary{background:var(--cream) !important;}
 [data-testid="stExpander"] summary:hover{background:var(--yellow) !important;}
-.st-key-up_year label p{font-size:.8rem;}
 """
 
 
