@@ -4,6 +4,7 @@ save it to the history and generate a personalised paper."""
 import bootstrap  # noqa: F401  (puts the project root on sys.path)
 
 import datetime
+import time
 
 import streamlit as st
 import theme
@@ -16,6 +17,7 @@ from src.inference.errors import LowConfidenceError
 from src.inference.grading import grade_paper, manual_grades, override, read_answers, split_answers
 from src.inference.personalised import generate_personalised
 from src.inference.results import analyse
+from src.inference.solution_jobs import SolutionJob
 
 ss = st.session_state
 theme.setup("My results", active="results")
@@ -55,7 +57,7 @@ def to_review() -> None:
 def to_marking() -> None:
     ss["res_answers"] = {q["number"]: (ss.get(f"res_ans_{q['number']}") or "").strip()
                          for q in ss["res_paper"]["questions"]}
-    for key in ("res_grades", "res_analysis", "res_saved_id", "res_solutions"):
+    for key in ("res_grades", "res_analysis", "res_saved_id"):
         ss.pop(key, None)
     clear_score_keys()
     go("marking")
@@ -205,12 +207,33 @@ def review() -> None:
 
 
 # ---------------------------------------------------------------------- marking
+def solution_job(paper: dict) -> SolutionJob:
+    """The solutions of the paper being marked. When it is the paper whose solutions were already opened on
+    the 'See solution' page, that same job is reused (so the AI solutions written there show up here too);
+    otherwise one is started: archive solutions at once, the missing ones written by the AI in the background."""
+    stored = ss.get("up_solutions")
+    if stored and stored.get("paper") is paper:
+        return stored["job"]
+    mine = ss.get("res_job")
+    if mine and mine["paper"] is paper:
+        return mine["job"]
+    job = SolutionJob(get_solutions(), paper)
+    ss["res_job"] = {"job": job, "paper": paper}
+    return job
+
+
 def start_manual() -> None:
     paper, answers = ss["res_paper"], ss["res_answers"]
-    set_grades(grade_paper(paper, answers, solutions=ss["res_solutions"], llm=get_llm(), allow_ai=False))
+    set_grades(grade_paper(paper, answers, solutions=solution_job(paper).snapshot(), llm=get_llm(), allow_ai=False))
 
 
-def run_ai_marking(paper: dict, answers: dict, solutions: list) -> None:
+def run_ai_marking(paper: dict, answers: dict, job: SolutionJob) -> None:
+    if job.pending:      # the AI marks against the reference solutions, so let the missing ones finish first
+        with st.spinner("Waiting for the reference solutions the AI is still writing..."):
+            deadline = time.time() + 90
+            while job.pending and time.time() < deadline:
+                time.sleep(1)
+    solutions = job.snapshot()
     grades: list[dict] = []
     progress = st.progress(0.0, text="Marking with AI...")
     for i, q in enumerate(paper["questions"], 1):
@@ -221,9 +244,9 @@ def run_ai_marking(paper: dict, answers: dict, solutions: list) -> None:
 
 def reference_markup(solution: dict | None) -> None:
     text = (solution or {}).get("text") or ""
-    if not text:
-        st.markdown('<div class="rs-note">No reference solution is available for this question.</div>',
-                    unsafe_allow_html=True)
+    if not text:      # neither the archive nor the AI has a solution: say why (or that the AI is still writing it)
+        note = (solution or {}).get("note") or "No reference solution is available for this question."
+        st.markdown(f'<div class="rs-note">{esc(note)}</div>', unsafe_allow_html=True)
         return
     if solution.get("source") == "ai":
         st.markdown('<span class="rs-badge weak">AI-generated: verify</span>', unsafe_allow_html=True)
@@ -236,7 +259,15 @@ def reference_markup(solution: dict | None) -> None:
             st.markdown(part)
 
 
-def grade_card(q: dict, g: dict, solution: dict | None) -> None:
+def reference_block(job: SolutionJob, number: int, polling: bool) -> None:
+    """The reference solution of one question. While the AI is still writing it, it redraws every 2 seconds."""
+    solution = next((e for e in job.snapshot() if e["number"] == number), None)
+    reference_markup(solution)
+    if polling and not job.pending:
+        st.rerun()      # everything is written: redraw the page once so polling stops
+
+
+def grade_card(q: dict, g: dict, job: SolutionJob) -> None:
     n = g["number"]
     with st.container(key=f"rs-card-g{n}"):
         st.markdown(ui.grade_header(f"Q{n}", g), unsafe_allow_html=True)
@@ -249,7 +280,10 @@ def grade_card(q: dict, g: dict, solution: dict | None) -> None:
         st.markdown('<div class="rs-note">Your answer:</div>' + ui.answer_markup(g.get("answer") or ""),
                     unsafe_allow_html=True)
         with st.expander("Reference solution"):
-            reference_markup(solution)
+            if job.pending:
+                st.fragment(run_every=2)(reference_block)(job, n, True)
+            else:
+                reference_block(job, n, False)
         if not g.get("marks_known", True):
             st.caption("Marks not stated for this question, counted as 1.")
         st.number_input(f"Your mark for Q{n} (out of {g['marks']:g})", min_value=0.0, max_value=float(g["marks"]),
@@ -260,10 +294,7 @@ def grade_card(q: dict, g: dict, solution: dict | None) -> None:
 def marking() -> None:
     paper, answers, llm = ss["res_paper"], ss["res_answers"], get_llm()
     title_row("Step 3 of 4", "Mark your", "answers")
-    if ss.get("res_solutions") is None:
-        ss["res_solutions"] = get_solutions().solve_paper(paper, allow_ai=False)
-    solutions = ss["res_solutions"]
-    sols = {s["number"]: s for s in solutions}
+    job = solution_job(paper)
 
     if ss.get("res_grades") is None:
         if llm.available:
@@ -276,7 +307,7 @@ def marking() -> None:
                 c2.button("I will mark myself", key="res_manual", on_click=start_manual)
                 c3.button("Back", key="res_back_marking0", on_click=to_review)
             if ai:
-                run_ai_marking(paper, answers, solutions)
+                run_ai_marking(paper, answers, job)
                 st.rerun()
             return
         start_manual()  # no key: the student marks against the reference solutions
@@ -290,7 +321,7 @@ def marking() -> None:
                      " (the service may be busy). Mark them yourself below, or go back and try again.")
     by_number = {q["number"]: q for q in paper["questions"]}
     for g in grades:
-        grade_card(by_number[g["number"]], g, sols.get(g["number"]))
+        grade_card(by_number[g["number"]], g, job)
 
     c1, c2, _ = st.columns([1.5, 1.3, 2.2])
     if c1.button("Show my weak areas", key="rs-go-report", disabled=not ui.can_report(grades)):
@@ -363,12 +394,6 @@ def report() -> None:
 
 
 # ----------------------------------------------------------------- personalised
-def new_seed() -> None:
-    opts = dict(ss.get("res_personalised") or {})
-    opts["seed"] = int(opts.get("seed") or 0) + 1
-    ss["res_personalised"] = opts
-
-
 def personalised() -> None:
     paper = ss["res_paper"]
     title_row("Made for you", "Personalised", "paper")
@@ -391,18 +416,16 @@ def personalised() -> None:
                                key="res_year")
         size = c3.selectbox("Number of questions", ["Auto"] + list(range(3, 9)), key="res_n")
         st.caption("More questions give a better picture of your weak areas.")
-        seed = (ss.get("res_personalised") or {}).get("seed")
-        b1, b2, b3, _ = st.columns([1.3, 1.4, 1, 1.6])
+        b1, b2, _ = st.columns([1.3, 1, 3])
         go_btn = b1.button("Generate", key="rs-go-generate")
-        b2.button("Another version", key="res_seed", on_click=new_seed)
-        b3.button("Back", key="res_back_personal", on_click=go, args=("report",))
+        b2.button("Back", key="res_back_personal", on_click=go, args=("report",))
     if not go_btn:
         return
     try:
         with st.spinner("Building your personalised paper..."):
             p = generate_personalised(get_generator(), paper["subject"], exam, int(year), analysis=analysis,
                                       store=get_results(), source_paper=paper,
-                                      n_questions=None if size == "Auto" else int(size), seed=seed)
+                                      n_questions=None if size == "Auto" else int(size))
     except LowConfidenceError as e:
         theme.notice(f"A personalised paper is not available for this subject: {e}")
     except ValueError as e:

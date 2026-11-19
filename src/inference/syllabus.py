@@ -30,14 +30,33 @@ ADMIN = re.compile(r"(e-?mail|credit\s*hours?|class\s*venue|class\s*meeting|offi
                    r"edition|isbn|plo\s*\d|clo\s*\d|ta\s*name|office\s*location|\bname\s*:|location\s*:|"
                    r"objective\s*of\s*the\s*course|course\s*information|learning\s*outcomes?)", _F)
 JUNK_LINE = re.compile(r"^(?:chapters?\s*[\d,\s&-]*|module|no\.?\s*of\s*lectures?|reference\s*text|"
-                       r"supplement(?:ary)?\s*text.*|from\s+\w+.*|week|topics?|lectures?|hours?|"
+                       r"supplement(?:ary)?\s*text.*|from\s+\w+.*|week|topics?|lectures?|lecture\s*details?|book|hours?|"
                        r"page\s*\d+\s*(?:of\s*\d+)?|[\d\s,.-]+|[-–•·*]+|total:?|"
                        r"\[?subject to.*|availability.*)$", _F)
+# Course description forms (e.g. the NCEAC form) have no "Course Outline" heading: the topics sit in a
+# table headed "Topics to be Covered ... Week | Lecture Details | Book Chapters" and end where the
+# "Laboratory Projects" / "Class Time Spent" rows begin.
+TABLE_STARTS = (re.compile(r"lecture\s*details(?:\s*book\s*chapters)?", _F),     # the column header: most precise
+                re.compile(r"topics?\s+to\s+be\s+covered", _F))
+TABLE_END = re.compile(r"(laboratory\s*projects|programming\s*assignments\s*done|class\s*time\s*spent|"
+                       r"oral\s*and\s*written|instructor\s*name|reference\s*material|text\s*books?)", _F)
+# Lines that are never a topic, wherever they appear: form headers, page headers/footers, grading
+# weights, timings, names and titles.
+NOISE = re.compile(r"(\bnceac\b|national\s+computing|accreditation|course\s+description\s+form|"
+                   r"\binstitution\b|\bprogram\s*\(s\)|\bfast-nuces\b|\bbsc?s\b|\bbsse\b|"
+                   r"course\s+(?:code|title|goals?|description|learning|instructor)\b|"
+                   r"assessment\s+instruments|with\s+weights|\bhomework\b|catalog\s+description|mapping\s+of|\bclo\b|\bplo\b|"
+                   r"\d+\s*%|\b\d{1,2}:\d{2}\b|"
+                   r"\b(?:mon|tues?|wednes|thurs?|fri|satur|sun)days?\b|"
+                   r"\b(?:dr|prof|mr|mrs|ms|engr)\.\s|\bdate\s*:|"
+                   r"grading\s+scheme|minimum\s+requirement|class\s+participation|"
+                   r"\(assume\b|half-hour|instruction\s+and|"
+                   r"programming\s+assignments\s+done|laboratory\s+projects)", _F)
 MID_MARK = re.compile(r"\bmid[\s-]*(?:term)?\b[\s-]*(?:exam(?:ination)?s?)?[\s:#-]*"
                       r"(?:no\.?\s*)?(1|2|i{1,2}|one|two)\b", _F)
 FINAL_MARK = re.compile(r"\bfinal\s*exam", _F)
 WEEK_PREFIX = re.compile(r"^(?:week|lecture|lec|module|unit|chapter|topic)\s*\d+\s*[:.\-–)]*\s*", _F)
-BULLET = re.compile(r"^[\s•·*\-–\u2022\u25cf\u25aa)]+|^\(?\d{1,2}[.)]\s+")
+BULLET = re.compile(r"^[\s•·*\-–\u2212\u2022\u25cf\u25aa)]+|^\(?\d{1,2}[.)]\s+")
 STOP = sorted(set(ENGLISH_STOP_WORDS) | {"question", "questions", "marks", "mark", "write",
                                          "explain", "following", "given", "consider", "show",
                                          "state", "define", "describe", "discuss", "list",
@@ -62,7 +81,17 @@ def _section(text: str) -> str:
         chunk = text[m.start(): e.start() if e else len(text)]
         if sum(_topic_like(ln.strip()) for ln in chunk.split("\n")) >= 8:
             best = chunk
-    return best if best is not None else text
+    if best is not None:
+        return best
+    # No "course outline" style heading: use the topics table of a course description form.
+    for start in TABLE_STARTS:
+        m = start.search(text)
+        if m:
+            e = TABLE_END.search(text, m.end())
+            chunk = text[m.end(): e.start() if e else len(text)]
+            if sum(_topic_like(ln.strip()) for ln in chunk.split("\n")) >= 5:
+                return chunk
+    return text
 
 
 def parse_syllabus(text: str) -> dict:
@@ -90,7 +119,7 @@ def parse_syllabus(text: str) -> dict:
             continue
         ln = WEEK_PREFIX.sub("", ln).strip()
         ln = re.sub(r"^no\.?\s+of\s+", "", ln, flags=_F)
-        if JUNK_LINE.match(ln) or ADMIN.search(ln) or START.fullmatch(ln.strip(" :")) \
+        if JUNK_LINE.match(ln) or ADMIN.search(ln) or NOISE.search(ln) or START.fullmatch(ln.strip(" :")) \
                 or END.fullmatch(ln.strip(" :")) or re.match(r"^topics?\s+(?:to be covered|detail)", ln, _F):
             continue
         if ln.startswith("(") and len(ln.split()) <= 3:        # leftovers like "(Tentative)"
@@ -104,7 +133,10 @@ def parse_syllabus(text: str) -> dict:
     # glue wrapped lines: a line ending with a connector continues on the next one
     glued = []
     for it in items:
-        if glued and re.search(r"(?:\b(?:of|and|to|the|in|for|with|on|a|an)|[,&(-])$", glued[-1], _F):
+        continues = bool(glued) and (
+            re.search(r"(?:\b(?:of|and|to|the|in|for|with|on|a|an)|[,&(-])$", glued[-1], _F)
+            or (not list_mode and it[:1].islower()))          # "... best-case" / "and worst-case ..."
+        if continues:
             glued[-1] = glued[-1] + " " + it
         else:
             glued.append(it)
