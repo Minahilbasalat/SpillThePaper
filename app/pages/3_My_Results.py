@@ -14,6 +14,7 @@ from components import solved
 from theme import DOT, esc
 
 from src.inference.errors import LowConfidenceError
+from src.inference.layout import blocks_html
 from src.inference.grading import grade_paper, manual_grades, override, read_answers, split_answers
 from src.inference.personalised import generate_personalised
 from src.inference.results import analyse
@@ -199,7 +200,7 @@ def review() -> None:
             label = f"Q{n} {DOT} {q['topic_label']}" if q.get("topic_label") else f"Q{n}"
             st.markdown(f'<div class="rs-t">{esc(label)}</div>', unsafe_allow_html=True)
             with st.expander("Show the question"):
-                st.markdown(f'<div class="rs-ans">{esc(q.get("text", ""))}</div>', unsafe_allow_html=True)
+                st.markdown(f'<div class="rs-ans">{blocks_html(q.get("text", ""))}</div>', unsafe_allow_html=True)
             st.text_area(f"Your answer to Q{n}", key=f"res_ans_{n}", height=150)
     c1, c2, _ = st.columns([1.4, 1, 2.6])
     c1.button("Mark my answers", key="rs-go-mark", on_click=to_marking)
@@ -276,7 +277,7 @@ def grade_card(q: dict, g: dict, job: SolutionJob) -> None:
             st.markdown(f'<div class="rs-text">{esc(line)}</div>', unsafe_allow_html=True)
         st.markdown(ui.missing_markup(g.get("missing") or []), unsafe_allow_html=True)
         with st.expander("Show the question"):
-            st.markdown(f'<div class="rs-ans">{esc(q.get("text", ""))}</div>', unsafe_allow_html=True)
+            st.markdown(f'<div class="rs-ans">{blocks_html(q.get("text", ""))}</div>', unsafe_allow_html=True)
         st.markdown('<div class="rs-note">Your answer:</div>' + ui.answer_markup(g.get("answer") or ""),
                     unsafe_allow_html=True)
         with st.expander("Reference solution"):

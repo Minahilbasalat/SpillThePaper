@@ -6,6 +6,8 @@ import pandas as pd
 import streamlit as st
 from theme import DOT, esc
 
+from src.inference.layout import blocks_html
+
 CSS = """
 .st-key-paper-hero{position:relative;background:var(--cream);border:2px solid var(--ink);border-radius:3px;
 box-shadow:8px 8px 0 var(--ink);transform:rotate(-.6deg);padding:2rem 2.4rem 1.6rem;margin-top:.9rem;gap:.2rem;}
@@ -18,6 +20,8 @@ background:rgba(255,213,66,.9);border:1px solid rgba(0,0,0,.12);transform:rotate
 [class*="st-key-pq-"]{padding:.7rem 0;gap:.3rem;}
 .qn{font-family:'Archivo Black',sans-serif;font-size:2rem;line-height:1.1;color:var(--ink);}
 .qt{font-family:'Special Elite',monospace;font-size:1.02rem;line-height:1.5;color:var(--ink);}
+.ql{margin:.2rem 0;}
+.qpart{margin:.45rem 0 .15rem 1.2rem;}
 .qchips{display:flex;flex-wrap:wrap;gap:.45rem;align-items:center;margin-top:.55rem;}
 .qchip{display:inline-block;border:1.5px solid var(--ink);padding:.05rem .45rem;font-family:'Special Elite',monospace;
 font-size:.72rem;color:var(--ink);}
@@ -113,7 +117,7 @@ def question_markup(question: dict) -> str:
         chips.append('<span class="qchip">Tidied by AI</span>')
     if question.get("needs_figure"):
         chips.append('<span class="qchip warn">refers to a diagram: see the original paper</span>')
-    text = esc(question.get("text", "")).replace("\n", "<br>")
+    text = blocks_html(question.get("text", ""))      # parts on their own lines, code in a code block
     return f'<div class="qt">{text}</div><div class="qchips">{"".join(chips)}</div>'
 
 

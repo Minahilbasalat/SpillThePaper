@@ -14,6 +14,8 @@ from __future__ import annotations
 
 import re
 
+from src.inference.layout import restore_parts
+
 _TAGS = re.compile(r"\s*(?:\(\s*CLO[^)]{0,12}\)|\[\s*CLO[^\]]{0,12}\]"
                    r"|\(\s*(?:Max\.?\s*)?Marks?\s*[-:=]?\s*\d+(?:\.\d+)?\s*\)"
                    r"|\[\s*(?:Max\.?\s*)?Marks?\s*[-:=]?\s*\d+(?:\.\d+)?\s*\])\s*", re.I)
@@ -57,6 +59,7 @@ def format_question(text: str) -> str:
     t = _KEYWORD.sub("\n", t)
     t = _COMMENT.sub("\n", t)
     t = _CODE_START.sub("\n", t)
+    t = restore_parts(t)                                  # i. / ii. / (a) / (b) parts on their own lines
     lines = [re.sub(r"[ \t]+", " ", ln).strip() for ln in t.split("\n")]
     t = "\n".join(lines)
     t = re.sub(r"\n{3,}", "\n\n", t).strip()

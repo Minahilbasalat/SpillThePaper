@@ -15,6 +15,7 @@ from components import predict_form as form
 from src.inference.documents import extract_text
 from src.inference.export import paper_to_pdf
 from src.inference.errors import LowConfidenceError
+from src.inference.layout import blocks_html
 from src.inference.library import default_duration
 from src.inference.syllabus import default_scope, parse_syllabus
 from src.inference.uploads import ingest_papers
@@ -625,8 +626,8 @@ def exam_question(index: int, question: dict) -> None:
     marks = question.get("marks")
     chip = ""
     if marks is not None and marks == marks:
-        chip = f' <span class="qchip">{float(marks):g} marks</span>'
-    text = theme.esc(question.get("text", "")).replace("\n", "<br>")
+        chip = f'<div class="qchips"><span class="qchip">{float(marks):g} marks</span></div>'
+    text = blocks_html(question.get("text", ""))
     c_body.markdown(f'<div class="qt">{text}{chip}</div>', unsafe_allow_html=True)
 
 
@@ -701,7 +702,7 @@ def solution_card(index: int, question: dict, entry: dict) -> None:
         )
         with st.expander("Show the question"):
             st.markdown(
-                f'<div class="sq-q">{theme.esc(question.get("text", ""))}</div>', unsafe_allow_html=True
+                f'<div class="sq-q">{blocks_html(question.get("text", ""))}</div>', unsafe_allow_html=True
             )
         text = str(entry.get("text") or "")
         if source == "none" or not text.strip():

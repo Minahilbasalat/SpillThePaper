@@ -1,8 +1,10 @@
 import bootstrap  # noqa: F401
+import state
 import streamlit as st
 import theme
 
 theme.setup("Home", active="home")
+state.reset_predict_form()      # a new prediction always starts with an empty form
 
 HERO_HTML = (
     '<div class="hero-top">'
